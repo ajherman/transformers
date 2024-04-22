@@ -1,0 +1,10 @@
+
+Inactive Modules:
+  1) miniconda3
+
+
+Activating Modules:
+  1) miniconda3/py311_23.11.0
+
+srun: warning: can't run 1 processes on 6 nodes, setting nnodes to 1
+srun: error: cn430: task 0: Exited with exit code 1
