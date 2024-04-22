@@ -1,0 +1,350 @@
+2024-04-22 11:06:12.644983: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-04-22 11:06:13.828017: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+04/22/2024 11:06:18 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 3, distributed training: False, 16-bits training: False
+04/22/2024 11:06:18 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=3,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'gradient_accumulation_kwargs': None},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_steps=None,
+eval_strategy=no,
+evaluation_strategy=None,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/tmp/test-clm/runs/Apr22_11-06-18_gpu01.cluster,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=3.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/tmp/test-clm,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=8,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+resume_from_checkpoint=None,
+run_name=/tmp/test-clm,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+split_batches=None,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+https://huggingface.co/datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/README.md not found in cache or force_download set to True, downloading to /home/ajherman/.cache/huggingface/datasets/downloads/e7fdaf06e560e1f2bdb064790b974c34f912ab812c3b0f50b2161a07600fbd7a.3ad2f1f748d80960de1308fe764631e2c1360712b66e9f5c53a5171eb6b1a06b.incomplete
+04/22/2024 11:06:19 - INFO - datasets.utils.file_utils - https://huggingface.co/datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/README.md not found in cache or force_download set to True, downloading to /home/ajherman/.cache/huggingface/datasets/downloads/e7fdaf06e560e1f2bdb064790b974c34f912ab812c3b0f50b2161a07600fbd7a.3ad2f1f748d80960de1308fe764631e2c1360712b66e9f5c53a5171eb6b1a06b.incomplete
+Downloading readme:   0%|          | 0.00/10.5k [00:00<?, ?B/s]Downloading readme: 100%|██████████| 10.5k/10.5k [00:00<00:00, 29.3MB/s]
+storing https://huggingface.co/datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/README.md in cache at /home/ajherman/.cache/huggingface/datasets/downloads/e7fdaf06e560e1f2bdb064790b974c34f912ab812c3b0f50b2161a07600fbd7a.3ad2f1f748d80960de1308fe764631e2c1360712b66e9f5c53a5171eb6b1a06b
+04/22/2024 11:06:19 - INFO - datasets.utils.file_utils - storing https://huggingface.co/datasets/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/README.md in cache at /home/ajherman/.cache/huggingface/datasets/downloads/e7fdaf06e560e1f2bdb064790b974c34f912ab812c3b0f50b2161a07600fbd7a.3ad2f1f748d80960de1308fe764631e2c1360712b66e9f5c53a5171eb6b1a06b
+creating metadata file for /home/ajherman/.cache/huggingface/datasets/downloads/e7fdaf06e560e1f2bdb064790b974c34f912ab812c3b0f50b2161a07600fbd7a.3ad2f1f748d80960de1308fe764631e2c1360712b66e9f5c53a5171eb6b1a06b
+04/22/2024 11:06:19 - INFO - datasets.utils.file_utils - creating metadata file for /home/ajherman/.cache/huggingface/datasets/downloads/e7fdaf06e560e1f2bdb064790b974c34f912ab812c3b0f50b2161a07600fbd7a.3ad2f1f748d80960de1308fe764631e2c1360712b66e9f5c53a5171eb6b1a06b
+Generating dataset wikitext (/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+04/22/2024 11:06:24 - INFO - datasets.builder - Generating dataset wikitext (/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Downloading and preparing dataset wikitext/wikitext-2-raw-v1 to /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3...
+04/22/2024 11:06:24 - INFO - datasets.builder - Downloading and preparing dataset wikitext/wikitext-2-raw-v1 to /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3...
+Dataset not on Hf google storage. Downloading and preparing it from source
+04/22/2024 11:06:24 - INFO - datasets.builder - Dataset not on Hf google storage. Downloading and preparing it from source
+hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/test-00000-of-00001.parquet not found in cache or force_download set to True, downloading to /home/ajherman/.cache/huggingface/datasets/downloads/5e548f01091b2f01906ea7be35b8a1a6aa74842629dc550b7a02ca0821f1002d.incomplete
+04/22/2024 11:06:24 - INFO - datasets.utils.file_utils - hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/test-00000-of-00001.parquet not found in cache or force_download set to True, downloading to /home/ajherman/.cache/huggingface/datasets/downloads/5e548f01091b2f01906ea7be35b8a1a6aa74842629dc550b7a02ca0821f1002d.incomplete
+Downloading data:   0%|          | 0.00/733k [00:00<?, ?B/s]Downloading data: 100%|██████████| 733k/733k [00:00<00:00, 5.50MB/s]Downloading data: 100%|██████████| 733k/733k [00:00<00:00, 5.37MB/s]
+storing hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/test-00000-of-00001.parquet in cache at /home/ajherman/.cache/huggingface/datasets/downloads/5e548f01091b2f01906ea7be35b8a1a6aa74842629dc550b7a02ca0821f1002d
+04/22/2024 11:06:24 - INFO - datasets.utils.file_utils - storing hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/test-00000-of-00001.parquet in cache at /home/ajherman/.cache/huggingface/datasets/downloads/5e548f01091b2f01906ea7be35b8a1a6aa74842629dc550b7a02ca0821f1002d
+creating metadata file for /home/ajherman/.cache/huggingface/datasets/downloads/5e548f01091b2f01906ea7be35b8a1a6aa74842629dc550b7a02ca0821f1002d
+04/22/2024 11:06:24 - INFO - datasets.utils.file_utils - creating metadata file for /home/ajherman/.cache/huggingface/datasets/downloads/5e548f01091b2f01906ea7be35b8a1a6aa74842629dc550b7a02ca0821f1002d
+hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/train-00000-of-00001.parquet not found in cache or force_download set to True, downloading to /home/ajherman/.cache/huggingface/datasets/downloads/e7f32d67ecf57307f5bc9834102f2f01ad03802eea0fdfc86172a9ec98676280.incomplete
+04/22/2024 11:06:24 - INFO - datasets.utils.file_utils - hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/train-00000-of-00001.parquet not found in cache or force_download set to True, downloading to /home/ajherman/.cache/huggingface/datasets/downloads/e7f32d67ecf57307f5bc9834102f2f01ad03802eea0fdfc86172a9ec98676280.incomplete
+Downloading data:   0%|          | 0.00/6.36M [00:00<?, ?B/s]Downloading data:  66%|██████▌   | 4.19M/6.36M [00:00<00:00, 26.8MB/s]Downloading data: 100%|██████████| 6.36M/6.36M [00:00<00:00, 37.1MB/s]
+storing hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/train-00000-of-00001.parquet in cache at /home/ajherman/.cache/huggingface/datasets/downloads/e7f32d67ecf57307f5bc9834102f2f01ad03802eea0fdfc86172a9ec98676280
+04/22/2024 11:06:25 - INFO - datasets.utils.file_utils - storing hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/train-00000-of-00001.parquet in cache at /home/ajherman/.cache/huggingface/datasets/downloads/e7f32d67ecf57307f5bc9834102f2f01ad03802eea0fdfc86172a9ec98676280
+creating metadata file for /home/ajherman/.cache/huggingface/datasets/downloads/e7f32d67ecf57307f5bc9834102f2f01ad03802eea0fdfc86172a9ec98676280
+04/22/2024 11:06:25 - INFO - datasets.utils.file_utils - creating metadata file for /home/ajherman/.cache/huggingface/datasets/downloads/e7f32d67ecf57307f5bc9834102f2f01ad03802eea0fdfc86172a9ec98676280
+hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/validation-00000-of-00001.parquet not found in cache or force_download set to True, downloading to /home/ajherman/.cache/huggingface/datasets/downloads/300e51c2d3e98b6cf3739090e25ea220d1a568457b1b2d97857e1cf71da48434.incomplete
+04/22/2024 11:06:25 - INFO - datasets.utils.file_utils - hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/validation-00000-of-00001.parquet not found in cache or force_download set to True, downloading to /home/ajherman/.cache/huggingface/datasets/downloads/300e51c2d3e98b6cf3739090e25ea220d1a568457b1b2d97857e1cf71da48434.incomplete
+Downloading data:   0%|          | 0.00/657k [00:00<?, ?B/s]Downloading data: 100%|██████████| 657k/657k [00:00<00:00, 6.36MB/s]Downloading data: 100%|██████████| 657k/657k [00:00<00:00, 6.19MB/s]
+storing hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/validation-00000-of-00001.parquet in cache at /home/ajherman/.cache/huggingface/datasets/downloads/300e51c2d3e98b6cf3739090e25ea220d1a568457b1b2d97857e1cf71da48434
+04/22/2024 11:06:25 - INFO - datasets.utils.file_utils - storing hf://datasets/wikitext@b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-2-raw-v1/validation-00000-of-00001.parquet in cache at /home/ajherman/.cache/huggingface/datasets/downloads/300e51c2d3e98b6cf3739090e25ea220d1a568457b1b2d97857e1cf71da48434
+creating metadata file for /home/ajherman/.cache/huggingface/datasets/downloads/300e51c2d3e98b6cf3739090e25ea220d1a568457b1b2d97857e1cf71da48434
+04/22/2024 11:06:25 - INFO - datasets.utils.file_utils - creating metadata file for /home/ajherman/.cache/huggingface/datasets/downloads/300e51c2d3e98b6cf3739090e25ea220d1a568457b1b2d97857e1cf71da48434
+Downloading took 0.0 min
+04/22/2024 11:06:25 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+Checksum Computation took 0.0 min
+04/22/2024 11:06:25 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+Generating test split
+04/22/2024 11:06:25 - INFO - datasets.builder - Generating test split
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split:  23%|██▎       | 1000/4358 [00:00<00:00, 3614.14 examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 15041.48 examples/s]
+Generating train split
+04/22/2024 11:06:25 - INFO - datasets.builder - Generating train split
+Generating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 36718/36718 [00:00<00:00, 454517.55 examples/s]
+Generating validation split
+04/22/2024 11:06:26 - INFO - datasets.builder - Generating validation split
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 275719.13 examples/s]
+All the splits matched successfully.
+04/22/2024 11:06:26 - INFO - datasets.utils.info_utils - All the splits matched successfully.
+Dataset wikitext downloaded and prepared to /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3. Subsequent calls will reuse this data.
+04/22/2024 11:06:26 - INFO - datasets.builder - Dataset wikitext downloaded and prepared to /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3. Subsequent calls will reuse this data.
+[INFO|configuration_utils.py:726] 2024-04-22 11:06:26,263 >> loading configuration file config.json from cache at /home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/config.json
+[INFO|configuration_utils.py:789] 2024-04-22 11:06:26,265 >> Model config GPT2Config {
+  "_name_or_path": "openai-community/gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+[INFO|configuration_utils.py:726] 2024-04-22 11:06:26,472 >> loading configuration file config.json from cache at /home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/config.json
+[INFO|configuration_utils.py:789] 2024-04-22 11:06:26,473 >> Model config GPT2Config {
+  "_name_or_path": "openai-community/gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 11:06:27,421 >> loading file vocab.json from cache at /home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/vocab.json
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 11:06:27,421 >> loading file merges.txt from cache at /home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/merges.txt
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 11:06:27,421 >> loading file tokenizer.json from cache at /home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/tokenizer.json
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 11:06:27,421 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 11:06:27,421 >> loading file special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 11:06:27,421 >> loading file tokenizer_config.json from cache at /home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/tokenizer_config.json
+[INFO|configuration_utils.py:726] 2024-04-22 11:06:27,422 >> loading configuration file config.json from cache at /home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/config.json
+[INFO|configuration_utils.py:789] 2024-04-22 11:06:27,424 >> Model config GPT2Config {
+  "_name_or_path": "openai-community/gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+[INFO|modeling_utils.py:3430] 2024-04-22 11:06:33,040 >> loading weights file model.safetensors from cache at /home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/model.safetensors
+[INFO|configuration_utils.py:936] 2024-04-22 11:06:33,289 >> Generate config GenerationConfig {
+  "bos_token_id": 50256,
+  "eos_token_id": 50256
+}
+
+[INFO|modeling_utils.py:4171] 2024-04-22 11:06:33,982 >> All model checkpoint weights were used when initializing GPT2LMHeadModel.
+
+[INFO|modeling_utils.py:4179] 2024-04-22 11:06:33,982 >> All the weights of GPT2LMHeadModel were initialized from the model checkpoint at openai-community/gpt2.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use GPT2LMHeadModel for predictions without further training.
+[INFO|configuration_utils.py:891] 2024-04-22 11:06:34,169 >> loading configuration file generation_config.json from cache at /home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/generation_config.json
+[INFO|configuration_utils.py:936] 2024-04-22 11:06:34,170 >> Generate config GenerationConfig {
+  "bos_token_id": 50256,
+  "eos_token_id": 50256
+}
+
+Running tokenizer on dataset:   0%|          | 0/4358 [00:00<?, ? examples/s]Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-b2e16238c8af3793.arrow
+04/22/2024 11:06:34 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-b2e16238c8af3793.arrow
+Running tokenizer on dataset:  23%|██▎       | 1000/4358 [00:00<00:00, 6365.58 examples/s]Running tokenizer on dataset:  46%|████▌     | 2000/4358 [00:00<00:00, 7462.37 examples/s]Running tokenizer on dataset:  69%|██████▉   | 3000/4358 [00:00<00:00, 7369.85 examples/s]Running tokenizer on dataset:  92%|█████████▏| 4000/4358 [00:00<00:00, 7939.74 examples/s]Running tokenizer on dataset: 100%|██████████| 4358/4358 [00:00<00:00, 7573.03 examples/s]
+Running tokenizer on dataset:   0%|          | 0/36718 [00:00<?, ? examples/s]Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-92bf6de7c233c345.arrow
+04/22/2024 11:06:34 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-92bf6de7c233c345.arrow
+Running tokenizer on dataset:   3%|▎         | 1000/36718 [00:00<00:04, 8206.67 examples/s]Running tokenizer on dataset:   5%|▌         | 2000/36718 [00:00<00:07, 4355.96 examples/s]Running tokenizer on dataset:   8%|▊         | 3000/36718 [00:00<00:06, 5612.88 examples/s]Running tokenizer on dataset:  11%|█         | 4000/36718 [00:00<00:05, 6361.34 examples/s]Running tokenizer on dataset:  14%|█▎        | 5000/36718 [00:00<00:04, 7230.18 examples/s]Running tokenizer on dataset:  16%|█▋        | 6000/36718 [00:00<00:03, 7740.68 examples/s]Running tokenizer on dataset:  19%|█▉        | 7000/36718 [00:01<00:03, 7464.00 examples/s]Running tokenizer on dataset:  22%|██▏       | 8000/36718 [00:01<00:03, 7488.64 examples/s]Running tokenizer on dataset:  25%|██▍       | 9000/36718 [00:01<00:03, 7699.61 examples/s]Running tokenizer on dataset:  27%|██▋       | 10000/36718 [00:01<00:03, 7792.77 examples/s]Running tokenizer on dataset:  30%|██▉       | 11000/36718 [00:01<00:03, 7738.81 examples/s]Running tokenizer on dataset:  33%|███▎      | 12000/36718 [00:01<00:03, 7914.86 examples/s]Running tokenizer on dataset:  35%|███▌      | 13000/36718 [00:01<00:03, 7840.03 examples/s]Running tokenizer on dataset:  38%|███▊      | 14000/36718 [00:01<00:02, 8040.87 examples/s]Running tokenizer on dataset:  41%|████      | 15000/36718 [00:02<00:02, 8182.96 examples/s]Running tokenizer on dataset:  44%|████▎     | 16000/36718 [00:02<00:02, 7765.19 examples/s]Running tokenizer on dataset:  46%|████▋     | 17000/36718 [00:02<00:02, 7700.54 examples/s]Running tokenizer on dataset:  49%|████▉     | 18000/36718 [00:02<00:02, 7862.64 examples/s]Running tokenizer on dataset:  52%|█████▏    | 19000/36718 [00:02<00:02, 8153.36 examples/s]Running tokenizer on dataset:  54%|█████▍    | 20000/36718 [00:02<00:02, 8203.20 examples/s]Running tokenizer on dataset:  57%|█████▋    | 21000/36718 [00:02<00:01, 8014.73 examples/s]Running tokenizer on dataset:  60%|█████▉    | 22000/36718 [00:02<00:01, 7948.20 examples/s]Running tokenizer on dataset:  63%|██████▎   | 23000/36718 [00:03<00:01, 8046.11 examples/s]Running tokenizer on dataset:  65%|██████▌   | 24000/36718 [00:03<00:01, 8432.69 examples/s]Running tokenizer on dataset:  68%|██████▊   | 25000/36718 [00:03<00:01, 8663.07 examples/s]Running tokenizer on dataset:  71%|███████   | 26000/36718 [00:03<00:01, 8522.55 examples/s]Running tokenizer on dataset:  74%|███████▎  | 27000/36718 [00:03<00:01, 8153.49 examples/s]Running tokenizer on dataset:  76%|███████▋  | 28000/36718 [00:03<00:01, 7934.63 examples/s]Running tokenizer on dataset:  79%|███████▉  | 29000/36718 [00:03<00:00, 8217.20 examples/s]Running tokenizer on dataset:  82%|████████▏ | 30000/36718 [00:03<00:00, 8138.16 examples/s]Running tokenizer on dataset:  84%|████████▍ | 31000/36718 [00:04<00:00, 7698.67 examples/s]Running tokenizer on dataset:  87%|████████▋ | 32000/36718 [00:04<00:00, 7663.12 examples/s]Running tokenizer on dataset:  90%|████████▉ | 33000/36718 [00:04<00:00, 7599.69 examples/s]Running tokenizer on dataset:  93%|█████████▎| 34000/36718 [00:04<00:00, 7516.06 examples/s]Running tokenizer on dataset:  95%|█████████▌| 35000/36718 [00:04<00:00, 7736.47 examples/s]Running tokenizer on dataset:  98%|█████████▊| 36000/36718 [00:04<00:00, 7640.80 examples/s]Running tokenizer on dataset: 100%|██████████| 36718/36718 [00:04<00:00, 7630.70 examples/s]
+Running tokenizer on dataset:   0%|          | 0/3760 [00:00<?, ? examples/s]Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-86a699c3e237b1c1.arrow
+04/22/2024 11:06:39 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-86a699c3e237b1c1.arrow
+Running tokenizer on dataset:  27%|██▋       | 1000/3760 [00:00<00:00, 9226.04 examples/s]Running tokenizer on dataset:  53%|█████▎    | 2000/3760 [00:00<00:00, 8060.57 examples/s]Running tokenizer on dataset:  80%|███████▉  | 3000/3760 [00:00<00:00, 7610.34 examples/s]Running tokenizer on dataset: 100%|██████████| 3760/3760 [00:00<00:00, 7618.86 examples/s]
+Grouping texts in chunks of 1024:   0%|          | 0/4358 [00:00<?, ? examples/s]Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-0a0a14ee4996f2c0.arrow
+04/22/2024 11:06:40 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-0a0a14ee4996f2c0.arrow
+Grouping texts in chunks of 1024:  23%|██▎       | 1000/4358 [00:00<00:00, 9412.37 examples/s]Grouping texts in chunks of 1024:  69%|██████▉   | 3000/4358 [00:00<00:00, 11872.10 examples/s]Grouping texts in chunks of 1024: 100%|██████████| 4358/4358 [00:00<00:00, 12064.79 examples/s]
+Grouping texts in chunks of 1024:   0%|          | 0/36718 [00:00<?, ? examples/s]Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-bf6e87a06c53ef12.arrow
+04/22/2024 11:06:40 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-bf6e87a06c53ef12.arrow
+Grouping texts in chunks of 1024:   5%|▌         | 2000/36718 [00:00<00:02, 12699.93 examples/s]Grouping texts in chunks of 1024:  11%|█         | 4000/36718 [00:00<00:02, 13443.45 examples/s]Grouping texts in chunks of 1024:  16%|█▋        | 6000/36718 [00:00<00:02, 14502.28 examples/s]Grouping texts in chunks of 1024:  22%|██▏       | 8000/36718 [00:00<00:02, 13695.61 examples/s]Grouping texts in chunks of 1024:  27%|██▋       | 10000/36718 [00:00<00:01, 13806.23 examples/s]Grouping texts in chunks of 1024:  33%|███▎      | 12000/36718 [00:00<00:01, 13765.09 examples/s]Grouping texts in chunks of 1024:  38%|███▊      | 14000/36718 [00:01<00:01, 13835.35 examples/s]Grouping texts in chunks of 1024:  44%|████▎     | 16000/36718 [00:01<00:01, 13656.71 examples/s]Grouping texts in chunks of 1024:  49%|████▉     | 18000/36718 [00:01<00:01, 13671.92 examples/s]Grouping texts in chunks of 1024:  54%|█████▍    | 20000/36718 [00:01<00:01, 13906.20 examples/s]Grouping texts in chunks of 1024:  60%|█████▉    | 22000/36718 [00:01<00:01, 13620.20 examples/s]Grouping texts in chunks of 1024:  65%|██████▌   | 24000/36718 [00:01<00:00, 14127.66 examples/s]Grouping texts in chunks of 1024:  71%|███████   | 26000/36718 [00:01<00:00, 14291.56 examples/s]Grouping texts in chunks of 1024:  76%|███████▋  | 28000/36718 [00:02<00:00, 13690.89 examples/s]Grouping texts in chunks of 1024:  82%|████████▏ | 30000/36718 [00:02<00:00, 13957.28 examples/s]Grouping texts in chunks of 1024:  87%|████████▋ | 32000/36718 [00:02<00:00, 13444.89 examples/s]Grouping texts in chunks of 1024:  93%|█████████▎| 34000/36718 [00:02<00:00, 13229.35 examples/s]Grouping texts in chunks of 1024:  98%|█████████▊| 36000/36718 [00:02<00:00, 13280.17 examples/s]Grouping texts in chunks of 1024: 100%|██████████| 36718/36718 [00:02<00:00, 13327.70 examples/s]
+Grouping texts in chunks of 1024:   0%|          | 0/3760 [00:00<?, ? examples/s]Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-0ae596c8b8560d71.arrow
+04/22/2024 11:06:43 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-0ae596c8b8560d71.arrow
+Grouping texts in chunks of 1024:  53%|█████▎    | 2000/3760 [00:00<00:00, 13313.64 examples/s]Grouping texts in chunks of 1024: 100%|██████████| 3760/3760 [00:00<00:00, 13176.38 examples/s]Grouping texts in chunks of 1024: 100%|██████████| 3760/3760 [00:00<00:00, 12590.11 examples/s]
+Downloading builder script:   0%|          | 0.00/4.20k [00:00<?, ?B/s]Downloading builder script: 100%|██████████| 4.20k/4.20k [00:00<00:00, 17.8MB/s]
+04/22/2024 11:06:44 - WARNING - accelerate.utils.other - Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO|trainer.py:2048] 2024-04-22 11:07:23,499 >> ***** Running training *****
+[INFO|trainer.py:2049] 2024-04-22 11:07:23,500 >>   Num examples = 2,318
+[INFO|trainer.py:2050] 2024-04-22 11:07:23,500 >>   Num Epochs = 3
+[INFO|trainer.py:2051] 2024-04-22 11:07:23,500 >>   Instantaneous batch size per device = 8
+[INFO|trainer.py:2053] 2024-04-22 11:07:23,500 >>   Training with DataParallel so batch size has been adjusted to: 24
+[INFO|trainer.py:2054] 2024-04-22 11:07:23,500 >>   Total train batch size (w. parallel, distributed & accumulation) = 24
+[INFO|trainer.py:2055] 2024-04-22 11:07:23,500 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:2056] 2024-04-22 11:07:23,500 >>   Total optimization steps = 291
+[INFO|trainer.py:2057] 2024-04-22 11:07:23,501 >>   Number of trainable parameters = 124,439,808
