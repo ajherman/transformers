@@ -1,6 +1,6 @@
-04/22/2024 16:18:30 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 4, distributed training: False, 16-bits training: False
-04/22/2024 16:18:30 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
-_n_gpu=4,
+04/22/2024 17:08:35 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 2, distributed training: False, 16-bits training: False
+04/22/2024 17:08:35 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=2,
 accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'gradient_accumulation_kwargs': None},
 adafactor=False,
 adam_beta1=0.9,
@@ -67,7 +67,7 @@ local_rank=0,
 log_level=passive,
 log_level_replica=warning,
 log_on_each_node=True,
-logging_dir=/tmp/test-clm/runs/Apr22_16-18-30_cn431,
+logging_dir=/tmp/test-clm/runs/Apr22_17-08-35_cn657,
 logging_first_step=False,
 logging_nan_inf_filter=True,
 logging_steps=500,
@@ -124,15 +124,15 @@ warmup_steps=0,
 weight_decay=0.0,
 )
 Overwrite dataset info from restored data version if exists.
-04/22/2024 16:18:34 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
+04/22/2024 17:08:39 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
 Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-04/22/2024 16:18:34 - INFO - datasets.info - Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+04/22/2024 17:08:39 - INFO - datasets.info - Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
 Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-04/22/2024 16:18:34 - INFO - datasets.builder - Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+04/22/2024 17:08:39 - INFO - datasets.builder - Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
 Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-04/22/2024 16:18:34 - INFO - datasets.info - Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-[INFO|configuration_utils.py:726] 2024-04-22 16:18:35,320 >> loading configuration file config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/config.json
-[INFO|configuration_utils.py:789] 2024-04-22 16:18:35,321 >> Model config GPT2Config {
+04/22/2024 17:08:39 - INFO - datasets.info - Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+[INFO|configuration_utils.py:726] 2024-04-22 17:08:39,955 >> loading configuration file config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/config.json
+[INFO|configuration_utils.py:789] 2024-04-22 17:08:39,956 >> Model config GPT2Config {
   "_name_or_path": "openai-community/gpt2",
   "activation_function": "gelu_new",
   "architectures": [
@@ -171,8 +171,8 @@ Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikite
   "vocab_size": 50257
 }
 
-[INFO|configuration_utils.py:726] 2024-04-22 16:18:35,528 >> loading configuration file config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/config.json
-[INFO|configuration_utils.py:789] 2024-04-22 16:18:35,529 >> Model config GPT2Config {
+[INFO|configuration_utils.py:726] 2024-04-22 17:08:40,044 >> loading configuration file config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/config.json
+[INFO|configuration_utils.py:789] 2024-04-22 17:08:40,045 >> Model config GPT2Config {
   "_name_or_path": "openai-community/gpt2",
   "activation_function": "gelu_new",
   "architectures": [
@@ -211,14 +211,14 @@ Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikite
   "vocab_size": 50257
 }
 
-[INFO|tokenization_utils_base.py:2088] 2024-04-22 16:18:35,598 >> loading file vocab.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/vocab.json
-[INFO|tokenization_utils_base.py:2088] 2024-04-22 16:18:35,598 >> loading file merges.txt from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/merges.txt
-[INFO|tokenization_utils_base.py:2088] 2024-04-22 16:18:35,598 >> loading file tokenizer.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/tokenizer.json
-[INFO|tokenization_utils_base.py:2088] 2024-04-22 16:18:35,598 >> loading file added_tokens.json from cache at None
-[INFO|tokenization_utils_base.py:2088] 2024-04-22 16:18:35,598 >> loading file special_tokens_map.json from cache at None
-[INFO|tokenization_utils_base.py:2088] 2024-04-22 16:18:35,598 >> loading file tokenizer_config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/tokenizer_config.json
-[INFO|configuration_utils.py:726] 2024-04-22 16:18:35,600 >> loading configuration file config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/config.json
-[INFO|configuration_utils.py:789] 2024-04-22 16:18:35,601 >> Model config GPT2Config {
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 17:08:40,094 >> loading file vocab.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/vocab.json
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 17:08:40,094 >> loading file merges.txt from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/merges.txt
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 17:08:40,094 >> loading file tokenizer.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/tokenizer.json
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 17:08:40,094 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 17:08:40,094 >> loading file special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:2088] 2024-04-22 17:08:40,094 >> loading file tokenizer_config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/tokenizer_config.json
+[INFO|configuration_utils.py:726] 2024-04-22 17:08:40,095 >> loading configuration file config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/config.json
+[INFO|configuration_utils.py:789] 2024-04-22 17:08:40,095 >> Model config GPT2Config {
   "_name_or_path": "openai-community/gpt2",
   "activation_function": "gelu_new",
   "architectures": [
@@ -257,122 +257,80 @@ Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikite
   "vocab_size": 50257
 }
 
-[INFO|modeling_utils.py:3430] 2024-04-22 16:18:35,808 >> loading weights file model.safetensors from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/model.safetensors
-[INFO|configuration_utils.py:936] 2024-04-22 16:18:36,149 >> Generate config GenerationConfig {
+[INFO|modeling_utils.py:3430] 2024-04-22 17:08:40,236 >> loading weights file model.safetensors from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/model.safetensors
+[INFO|configuration_utils.py:936] 2024-04-22 17:08:40,475 >> Generate config GenerationConfig {
   "bos_token_id": 50256,
   "eos_token_id": 50256
 }
 
-[INFO|modeling_utils.py:4171] 2024-04-22 16:18:40,439 >> All model checkpoint weights were used when initializing GPT2LMHeadModel.
+[INFO|modeling_utils.py:4171] 2024-04-22 17:08:41,539 >> All model checkpoint weights were used when initializing GPT2LMHeadModel.
 
-[INFO|modeling_utils.py:4179] 2024-04-22 16:18:40,439 >> All the weights of GPT2LMHeadModel were initialized from the model checkpoint at openai-community/gpt2.
+[INFO|modeling_utils.py:4179] 2024-04-22 17:08:41,539 >> All the weights of GPT2LMHeadModel were initialized from the model checkpoint at openai-community/gpt2.
 If your task is similar to the task the model of the checkpoint was trained on, you can already use GPT2LMHeadModel for predictions without further training.
-[INFO|configuration_utils.py:891] 2024-04-22 16:18:40,535 >> loading configuration file generation_config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/generation_config.json
-[INFO|configuration_utils.py:936] 2024-04-22 16:18:40,536 >> Generate config GenerationConfig {
+[INFO|configuration_utils.py:891] 2024-04-22 17:08:41,617 >> loading configuration file generation_config.json from cache at /vast/home/ajherman/.cache/huggingface/hub/models--openai-community--gpt2/snapshots/607a30d783dfa663caf39e06633721c8d4cfcd7e/generation_config.json
+[INFO|configuration_utils.py:936] 2024-04-22 17:08:41,617 >> Generate config GenerationConfig {
   "bos_token_id": 50256,
   "eos_token_id": 50256
 }
 
+04/22/2024 17:08:41 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-4517d87e967053b9.arrow
 Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-4517d87e967053b9.arrow
-04/22/2024 16:18:40 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-4517d87e967053b9.arrow
-04/22/2024 16:18:40 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-2b0ce76b353680ac.arrow
+04/22/2024 17:08:41 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-2b0ce76b353680ac.arrow
 Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-2b0ce76b353680ac.arrow
-04/22/2024 16:18:40 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-c823f451667c90cc.arrow
+04/22/2024 17:08:41 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-c823f451667c90cc.arrow
 Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-c823f451667c90cc.arrow
-04/22/2024 16:18:40 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-185d2b98e772e344.arrow
+04/22/2024 17:08:41 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-185d2b98e772e344.arrow
 Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-185d2b98e772e344.arrow
-04/22/2024 16:18:41 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-a0c999206167f42f.arrow
+04/22/2024 17:08:42 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-a0c999206167f42f.arrow
 Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-a0c999206167f42f.arrow
-04/22/2024 16:18:41 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-60e0588c269ab420.arrow
+04/22/2024 17:08:42 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-60e0588c269ab420.arrow
 Loading cached processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-60e0588c269ab420.arrow
-04/22/2024 16:18:42 - WARNING - accelerate.utils.other - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-[INFO|trainer.py:2048] 2024-04-22 16:18:43,113 >> ***** Running training *****
-[INFO|trainer.py:2049] 2024-04-22 16:18:43,113 >>   Num examples = 2,318
-[INFO|trainer.py:2050] 2024-04-22 16:18:43,113 >>   Num Epochs = 3
-[INFO|trainer.py:2051] 2024-04-22 16:18:43,113 >>   Instantaneous batch size per device = 8
-[INFO|trainer.py:2053] 2024-04-22 16:18:43,113 >>   Training with DataParallel so batch size has been adjusted to: 32
-[INFO|trainer.py:2054] 2024-04-22 16:18:43,114 >>   Total train batch size (w. parallel, distributed & accumulation) = 32
-[INFO|trainer.py:2055] 2024-04-22 16:18:43,114 >>   Gradient Accumulation steps = 1
-[INFO|trainer.py:2056] 2024-04-22 16:18:43,114 >>   Total optimization steps = 219
-[INFO|trainer.py:2057] 2024-04-22 16:18:43,114 >>   Number of trainable parameters = 124,439,808
-  0%|          | 0/219 [00:00<?, ?it/s]Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/examples/pytorch/language-modeling/run_clm.py", line 670, in <module>
-    main()
-  File "/vast/home/ajherman/transformers/examples/pytorch/language-modeling/run_clm.py", line 618, in main
-    train_result = trainer.train(resume_from_checkpoint=checkpoint)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 1859, in train
-    return inner_training_loop(
-           ^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 2203, in _inner_training_loop
-    tr_loss_step = self.training_step(model, inputs)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 3138, in training_step
-    loss = self.compute_loss(model, inputs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 3161, in compute_loss
-    outputs = model(**inputs)
-              ^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 185, in forward
-    outputs = self.parallel_apply(replicas, inputs, module_kwargs)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 200, in parallel_apply
-    return parallel_apply(replicas, inputs, kwargs, self.device_ids[:len(replicas)])
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/parallel_apply.py", line 108, in parallel_apply
-    output.reraise()
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/_utils.py", line 722, in reraise
-    raise exception
-torch.cuda.OutOfMemoryError: Caught OutOfMemoryError in replica 0 on device 0.
-Original Traceback (most recent call last):
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/parallel_apply.py", line 83, in _worker
-    output = module(*input, **kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/models/gpt2/modeling_gpt2.py", line 1305, in forward
-    transformer_outputs = self.transformer(
-                          ^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/models/gpt2/modeling_gpt2.py", line 1119, in forward
-    outputs = block(
-              ^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/models/gpt2/modeling_gpt2.py", line 617, in forward
-    attn_outputs = self.attn(
-                   ^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
-    return self._call_impl(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
-    return forward_call(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/models/gpt2/modeling_gpt2.py", line 347, in forward
-    attn_output, attn_weights = self._attn(query, key, value, attention_mask, head_mask)
-                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/models/gpt2/modeling_gpt2.py", line 202, in _attn
-    attn_weights = attn_weights / torch.full(
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 384.00 MiB. GPU 0 has a total capacity of 10.90 GiB of which 91.12 MiB is free. Including non-PyTorch memory, this process has 10.81 GiB memory in use. Of the allocated memory 10.55 GiB is allocated by PyTorch, and 71.80 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+04/22/2024 17:08:42 - WARNING - accelerate.utils.other - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO|trainer.py:2048] 2024-04-22 17:08:43,293 >> ***** Running training *****
+[INFO|trainer.py:2049] 2024-04-22 17:08:43,293 >>   Num examples = 2,318
+[INFO|trainer.py:2050] 2024-04-22 17:08:43,293 >>   Num Epochs = 3
+[INFO|trainer.py:2051] 2024-04-22 17:08:43,293 >>   Instantaneous batch size per device = 8
+[INFO|trainer.py:2053] 2024-04-22 17:08:43,293 >>   Training with DataParallel so batch size has been adjusted to: 16
+[INFO|trainer.py:2054] 2024-04-22 17:08:43,293 >>   Total train batch size (w. parallel, distributed & accumulation) = 16
+[INFO|trainer.py:2055] 2024-04-22 17:08:43,293 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:2056] 2024-04-22 17:08:43,293 >>   Total optimization steps = 435
+[INFO|trainer.py:2057] 2024-04-22 17:08:43,294 >>   Number of trainable parameters = 124,439,808
+  0%|          | 0/435 [00:00<?, ?it/s]/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  0%|          | 1/435 [00:02<20:34,  2.84s/it]  0%|          | 2/435 [00:04<13:47,  1.91s/it]  1%|          | 3/435 [00:05<11:39,  1.62s/it]  1%|          | 4/435 [00:06<10:39,  1.48s/it]  1%|          | 5/435 [00:07<10:06,  1.41s/it]  1%|▏         | 6/435 [00:09<09:45,  1.36s/it]  2%|▏         | 7/435 [00:10<09:31,  1.34s/it]  2%|▏         | 8/435 [00:11<09:22,  1.32s/it]  2%|▏         | 9/435 [00:13<09:15,  1.30s/it]  2%|▏         | 10/435 [00:14<09:10,  1.30s/it]  3%|▎         | 11/435 [00:15<09:07,  1.29s/it]  3%|▎         | 12/435 [00:16<09:03,  1.29s/it]  3%|▎         | 13/435 [00:18<09:01,  1.28s/it]  3%|▎         | 14/435 [00:19<08:59,  1.28s/it]  3%|▎         | 15/435 [00:20<08:57,  1.28s/it]  4%|▎         | 16/435 [00:21<08:55,  1.28s/it]  4%|▍         | 17/435 [00:23<08:53,  1.28s/it]  4%|▍         | 18/435 [00:24<08:52,  1.28s/it]  4%|▍         | 19/435 [00:25<08:51,  1.28s/it]  5%|▍         | 20/435 [00:27<08:49,  1.28s/it]  5%|▍         | 21/435 [00:28<08:48,  1.28s/it]  5%|▌         | 22/435 [00:29<08:47,  1.28s/it]  5%|▌         | 23/435 [00:30<08:46,  1.28s/it]  6%|▌         | 24/435 [00:32<08:44,  1.28s/it]  6%|▌         | 25/435 [00:33<08:43,  1.28s/it]  6%|▌         | 26/435 [00:34<08:42,  1.28s/it]  6%|▌         | 27/435 [00:36<08:41,  1.28s/it]  6%|▋         | 28/435 [00:37<08:40,  1.28s/it]  7%|▋         | 29/435 [00:38<08:38,  1.28s/it]  7%|▋         | 30/435 [00:39<08:37,  1.28s/it]  7%|▋         | 31/435 [00:41<08:36,  1.28s/it]  7%|▋         | 32/435 [00:42<08:34,  1.28s/it]  8%|▊         | 33/435 [00:43<08:33,  1.28s/it]  8%|▊         | 34/435 [00:44<08:31,  1.28s/it]  8%|▊         | 35/435 [00:46<08:30,  1.28s/it]  8%|▊         | 36/435 [00:47<08:29,  1.28s/it]  9%|▊         | 37/435 [00:48<08:27,  1.28s/it]  9%|▊         | 38/435 [00:50<08:26,  1.28s/it]  9%|▉         | 39/435 [00:51<08:25,  1.28s/it]  9%|▉         | 40/435 [00:52<08:24,  1.28s/it]  9%|▉         | 41/435 [00:53<08:22,  1.28s/it] 10%|▉         | 42/435 [00:55<08:21,  1.28s/it] 10%|▉         | 43/435 [00:56<08:20,  1.28s/it] 10%|█         | 44/435 [00:57<08:19,  1.28s/it] 10%|█         | 45/435 [00:58<08:18,  1.28s/it] 11%|█         | 46/435 [01:00<08:16,  1.28s/it] 11%|█         | 47/435 [01:01<08:15,  1.28s/it] 11%|█         | 48/435 [01:02<08:14,  1.28s/it] 11%|█▏        | 49/435 [01:04<08:13,  1.28s/it] 11%|█▏        | 50/435 [01:05<08:11,  1.28s/it] 12%|█▏        | 51/435 [01:06<08:10,  1.28s/it] 12%|█▏        | 52/435 [01:07<08:09,  1.28s/it] 12%|█▏        | 53/435 [01:09<08:08,  1.28s/it] 12%|█▏        | 54/435 [01:10<08:06,  1.28s/it] 13%|█▎        | 55/435 [01:11<08:05,  1.28s/it] 13%|█▎        | 56/435 [01:13<08:04,  1.28s/it] 13%|█▎        | 57/435 [01:14<08:03,  1.28s/it] 13%|█▎        | 58/435 [01:15<08:02,  1.28s/it] 14%|█▎        | 59/435 [01:16<08:01,  1.28s/it] 14%|█▍        | 60/435 [01:18<07:59,  1.28s/it] 14%|█▍        | 61/435 [01:19<07:58,  1.28s/it] 14%|█▍        | 62/435 [01:20<07:57,  1.28s/it] 14%|█▍        | 63/435 [01:22<07:55,  1.28s/it] 15%|█▍        | 64/435 [01:23<07:54,  1.28s/it] 15%|█▍        | 65/435 [01:24<07:53,  1.28s/it] 15%|█▌        | 66/435 [01:25<07:51,  1.28s/it] 15%|█▌        | 67/435 [01:27<07:50,  1.28s/it] 16%|█▌        | 68/435 [01:28<07:49,  1.28s/it] 16%|█▌        | 69/435 [01:29<07:48,  1.28s/it] 16%|█▌        | 70/435 [01:30<07:46,  1.28s/it] 16%|█▋        | 71/435 [01:32<07:45,  1.28s/it] 17%|█▋        | 72/435 [01:33<07:44,  1.28s/it] 17%|█▋        | 73/435 [01:34<07:43,  1.28s/it] 17%|█▋        | 74/435 [01:36<07:42,  1.28s/it] 17%|█▋        | 75/435 [01:37<07:40,  1.28s/it] 17%|█▋        | 76/435 [01:38<07:39,  1.28s/it] 18%|█▊        | 77/435 [01:39<07:38,  1.28s/it] 18%|█▊        | 78/435 [01:41<07:36,  1.28s/it] 18%|█▊        | 79/435 [01:42<07:35,  1.28s/it] 18%|█▊        | 80/435 [01:43<07:34,  1.28s/it] 19%|█▊        | 81/435 [01:45<07:33,  1.28s/it] 19%|█▉        | 82/435 [01:46<07:31,  1.28s/it] 19%|█▉        | 83/435 [01:47<07:30,  1.28s/it] 19%|█▉        | 84/435 [01:48<07:28,  1.28s/it] 20%|█▉        | 85/435 [01:50<07:27,  1.28s/it] 20%|█▉        | 86/435 [01:51<07:26,  1.28s/it] 20%|██        | 87/435 [01:52<07:25,  1.28s/it] 20%|██        | 88/435 [01:53<07:23,  1.28s/it] 20%|██        | 89/435 [01:55<07:22,  1.28s/it] 21%|██        | 90/435 [01:56<07:21,  1.28s/it] 21%|██        | 91/435 [01:57<07:20,  1.28s/it] 21%|██        | 92/435 [01:59<07:18,  1.28s/it] 21%|██▏       | 93/435 [02:00<07:17,  1.28s/it] 22%|██▏       | 94/435 [02:01<07:16,  1.28s/it] 22%|██▏       | 95/435 [02:02<07:15,  1.28s/it] 22%|██▏       | 96/435 [02:04<07:14,  1.28s/it] 22%|██▏       | 97/435 [02:05<07:12,  1.28s/it] 23%|██▎       | 98/435 [02:06<07:11,  1.28s/it] 23%|██▎       | 99/435 [02:08<07:10,  1.28s/it] 23%|██▎       | 100/435 [02:09<07:08,  1.28s/it] 23%|██▎       | 101/435 [02:10<07:07,  1.28s/it] 23%|██▎       | 102/435 [02:11<07:06,  1.28s/it] 24%|██▎       | 103/435 [02:13<07:05,  1.28s/it] 24%|██▍       | 104/435 [02:14<07:04,  1.28s/it] 24%|██▍       | 105/435 [02:15<07:02,  1.28s/it] 24%|██▍       | 106/435 [02:17<07:01,  1.28s/it] 25%|██▍       | 107/435 [02:18<07:00,  1.28s/it] 25%|██▍       | 108/435 [02:19<06:58,  1.28s/it] 25%|██▌       | 109/435 [02:20<06:57,  1.28s/it] 25%|██▌       | 110/435 [02:22<06:56,  1.28s/it] 26%|██▌       | 111/435 [02:23<06:55,  1.28s/it] 26%|██▌       | 112/435 [02:24<06:53,  1.28s/it] 26%|██▌       | 113/435 [02:26<06:52,  1.28s/it] 26%|██▌       | 114/435 [02:27<06:51,  1.28s/it] 26%|██▋       | 115/435 [02:28<06:50,  1.28s/it] 27%|██▋       | 116/435 [02:29<06:49,  1.28s/it] 27%|██▋       | 117/435 [02:31<06:48,  1.28s/it] 27%|██▋       | 118/435 [02:32<06:46,  1.28s/it] 27%|██▋       | 119/435 [02:33<06:45,  1.28s/it] 28%|██▊       | 120/435 [02:34<06:44,  1.28s/it] 28%|██▊       | 121/435 [02:36<06:43,  1.28s/it] 28%|██▊       | 122/435 [02:37<06:41,  1.28s/it] 28%|██▊       | 123/435 [02:38<06:40,  1.28s/it] 29%|██▊       | 124/435 [02:40<06:39,  1.28s/it] 29%|██▊       | 125/435 [02:41<06:37,  1.28s/it] 29%|██▉       | 126/435 [02:42<06:36,  1.28s/it] 29%|██▉       | 127/435 [02:43<06:35,  1.28s/it] 29%|██▉       | 128/435 [02:45<06:33,  1.28s/it] 30%|██▉       | 129/435 [02:46<06:32,  1.28s/it] 30%|██▉       | 130/435 [02:47<06:31,  1.28s/it] 30%|███       | 131/435 [02:49<06:30,  1.28s/it] 30%|███       | 132/435 [02:50<06:29,  1.28s/it] 31%|███       | 133/435 [02:51<06:27,  1.28s/it] 31%|███       | 134/435 [02:52<06:26,  1.28s/it] 31%|███       | 135/435 [02:54<06:25,  1.28s/it] 31%|███▏      | 136/435 [02:55<06:23,  1.28s/it] 31%|███▏      | 137/435 [02:56<06:22,  1.28s/it] 32%|███▏      | 138/435 [02:58<06:21,  1.28s/it] 32%|███▏      | 139/435 [02:59<06:20,  1.28s/it] 32%|███▏      | 140/435 [03:00<06:18,  1.28s/it] 32%|███▏      | 141/435 [03:01<06:17,  1.28s/it] 33%|███▎      | 142/435 [03:03<06:16,  1.28s/it] 33%|███▎      | 143/435 [03:04<06:15,  1.28s/it] 33%|███▎      | 144/435 [03:05<06:13,  1.28s/it] 33%|███▎      | 145/435 [03:06<05:58,  1.24s/it] 34%|███▎      | 146/435 [03:08<06:01,  1.25s/it] 34%|███▍      | 147/435 [03:09<06:03,  1.26s/it] 34%|███▍      | 148/435 [03:10<06:04,  1.27s/it] 34%|███▍      | 149/435 [03:12<06:04,  1.27s/it] 34%|███▍      | 150/435 [03:13<06:03,  1.28s/it] 35%|███▍      | 151/435 [03:14<06:03,  1.28s/it] 35%|███▍      | 152/435 [03:15<06:02,  1.28s/it] 35%|███▌      | 153/435 [03:17<06:01,  1.28s/it] 35%|███▌      | 154/435 [03:18<06:00,  1.28s/it] 36%|███▌      | 155/435 [03:19<05:59,  1.28s/it] 36%|███▌      | 156/435 [03:21<05:58,  1.28s/it] 36%|███▌      | 157/435 [03:22<05:56,  1.28s/it] 36%|███▋      | 158/435 [03:23<05:55,  1.28s/it] 37%|███▋      | 159/435 [03:24<05:54,  1.28s/it] 37%|███▋      | 160/435 [03:26<05:53,  1.28s/it] 37%|███▋      | 161/435 [03:27<05:52,  1.28s/it] 37%|███▋      | 162/435 [03:28<05:50,  1.28s/it] 37%|███▋      | 163/435 [03:30<05:49,  1.29s/it] 38%|███▊      | 164/435 [03:31<05:48,  1.29s/it] 38%|███▊      | 165/435 [03:32<05:54,  1.31s/it] 38%|███▊      | 166/435 [03:34<05:50,  1.30s/it] 38%|███▊      | 167/435 [03:35<05:48,  1.30s/it] 39%|███▊      | 168/435 [03:36<05:45,  1.30s/it] 39%|███▉      | 169/435 [03:37<05:43,  1.29s/it] 39%|███▉      | 170/435 [03:39<05:42,  1.29s/it] 39%|███▉      | 171/435 [03:40<05:40,  1.29s/it] 40%|███▉      | 172/435 [03:41<05:38,  1.29s/it] 40%|███▉      | 173/435 [03:43<05:37,  1.29s/it] 40%|████      | 174/435 [03:44<05:35,  1.29s/it] 40%|████      | 175/435 [03:45<05:34,  1.29s/it] 40%|████      | 176/435 [03:46<05:33,  1.29s/it] 41%|████      | 177/435 [03:48<05:32,  1.29s/it] 41%|████      | 178/435 [03:49<05:30,  1.29s/it] 41%|████      | 179/435 [03:50<05:29,  1.29s/it] 41%|████▏     | 180/435 [03:52<05:28,  1.29s/it] 42%|████▏     | 181/435 [03:53<05:26,  1.29s/it] 42%|████▏     | 182/435 [03:54<05:25,  1.29s/it] 42%|████▏     | 183/435 [03:55<05:24,  1.29s/it] 42%|████▏     | 184/435 [03:57<05:23,  1.29s/it] 43%|████▎     | 185/435 [03:58<05:21,  1.29s/it] 43%|████▎     | 186/435 [03:59<05:20,  1.29s/it] 43%|████▎     | 187/435 [04:01<05:19,  1.29s/it] 43%|████▎     | 188/435 [04:02<05:17,  1.29s/it] 43%|████▎     | 189/435 [04:03<05:16,  1.29s/it] 44%|████▎     | 190/435 [04:04<05:15,  1.29s/it] 44%|████▍     | 191/435 [04:06<05:14,  1.29s/it] 44%|████▍     | 192/435 [04:07<05:12,  1.29s/it] 44%|████▍     | 193/435 [04:08<05:11,  1.29s/it] 45%|████▍     | 194/435 [04:10<05:10,  1.29s/it] 45%|████▍     | 195/435 [04:11<05:09,  1.29s/it] 45%|████▌     | 196/435 [04:12<05:07,  1.29s/it] 45%|████▌     | 197/435 [04:13<05:06,  1.29s/it] 46%|████▌     | 198/435 [04:15<05:05,  1.29s/it] 46%|████▌     | 199/435 [04:16<05:03,  1.29s/it] 46%|████▌     | 200/435 [04:17<05:02,  1.29s/it] 46%|████▌     | 201/435 [04:19<05:01,  1.29s/it] 46%|████▋     | 202/435 [04:20<04:59,  1.29s/it] 47%|████▋     | 203/435 [04:21<04:58,  1.29s/it] 47%|████▋     | 204/435 [04:22<04:57,  1.29s/it] 47%|████▋     | 205/435 [04:24<04:56,  1.29s/it] 47%|████▋     | 206/435 [04:25<04:55,  1.29s/it] 48%|████▊     | 207/435 [04:26<04:53,  1.29s/it] 48%|████▊     | 208/435 [04:28<04:52,  1.29s/it] 48%|████▊     | 209/435 [04:29<04:51,  1.29s/it] 48%|████▊     | 210/435 [04:30<04:49,  1.29s/it] 49%|████▊     | 211/435 [04:31<04:48,  1.29s/it] 49%|████▊     | 212/435 [04:33<04:47,  1.29s/it] 49%|████▉     | 213/435 [04:34<04:45,  1.29s/it] 49%|████▉     | 214/435 [04:35<04:44,  1.29s/it] 49%|████▉     | 215/435 [04:37<04:43,  1.29s/it] 50%|████▉     | 216/435 [04:38<04:42,  1.29s/it] 50%|████▉     | 217/435 [04:39<04:41,  1.29s/it] 50%|█████     | 218/435 [04:40<04:39,  1.29s/it] 50%|█████     | 219/435 [04:42<04:38,  1.29s/it] 51%|█████     | 220/435 [04:43<04:37,  1.29s/it] 51%|█████     | 221/435 [04:44<04:35,  1.29s/it] 51%|█████     | 222/435 [04:46<04:34,  1.29s/it] 51%|█████▏    | 223/435 [04:47<04:33,  1.29s/it] 51%|█████▏    | 224/435 [04:48<04:31,  1.29s/it] 52%|█████▏    | 225/435 [04:49<04:30,  1.29s/it] 52%|█████▏    | 226/435 [04:51<04:29,  1.29s/it] 52%|█████▏    | 227/435 [04:52<04:28,  1.29s/it] 52%|█████▏    | 228/435 [04:53<04:26,  1.29s/it] 53%|█████▎    | 229/435 [04:55<04:25,  1.29s/it] 53%|█████▎    | 230/435 [04:56<04:24,  1.29s/it] 53%|█████▎    | 231/435 [04:57<04:22,  1.29s/it] 53%|█████▎    | 232/435 [04:59<04:21,  1.29s/it] 54%|█████▎    | 233/435 [05:00<04:20,  1.29s/it] 54%|█████▍    | 234/435 [05:01<04:19,  1.29s/it] 54%|█████▍    | 235/435 [05:02<04:17,  1.29s/it] 54%|█████▍    | 236/435 [05:04<04:16,  1.29s/it] 54%|█████▍    | 237/435 [05:05<04:15,  1.29s/it] 55%|█████▍    | 238/435 [05:06<04:13,  1.29s/it] 55%|█████▍    | 239/435 [05:08<04:12,  1.29s/it] 55%|█████▌    | 240/435 [05:09<04:11,  1.29s/it] 55%|█████▌    | 241/435 [05:10<04:09,  1.29s/it] 56%|█████▌    | 242/435 [05:11<04:08,  1.29s/it] 56%|█████▌    | 243/435 [05:13<04:07,  1.29s/it] 56%|█████▌    | 244/435 [05:14<04:06,  1.29s/it] 56%|█████▋    | 245/435 [05:15<04:04,  1.29s/it] 57%|█████▋    | 246/435 [05:17<04:03,  1.29s/it] 57%|█████▋    | 247/435 [05:18<04:02,  1.29s/it] 57%|█████▋    | 248/435 [05:19<04:00,  1.29s/it] 57%|█████▋    | 249/435 [05:20<03:59,  1.29s/it] 57%|█████▋    | 250/435 [05:22<03:58,  1.29s/it] 58%|█████▊    | 251/435 [05:23<03:56,  1.29s/it] 58%|█████▊    | 252/435 [05:24<03:55,  1.29s/it] 58%|█████▊    | 253/435 [05:26<03:54,  1.29s/it] 58%|█████▊    | 254/435 [05:27<03:53,  1.29s/it] 59%|█████▊    | 255/435 [05:28<03:52,  1.29s/it] 59%|█████▉    | 256/435 [05:29<03:50,  1.29s/it] 59%|█████▉    | 257/435 [05:31<03:49,  1.29s/it] 59%|█████▉    | 258/435 [05:32<03:47,  1.29s/it] 60%|█████▉    | 259/435 [05:33<03:46,  1.29s/it] 60%|█████▉    | 260/435 [05:35<03:45,  1.29s/it] 60%|██████    | 261/435 [05:36<03:44,  1.29s/it] 60%|██████    | 262/435 [05:37<03:43,  1.29s/it] 60%|██████    | 263/435 [05:38<03:41,  1.29s/it] 61%|██████    | 264/435 [05:40<03:40,  1.29s/it] 61%|██████    | 265/435 [05:41<03:38,  1.29s/it] 61%|██████    | 266/435 [05:42<03:37,  1.29s/it] 61%|██████▏   | 267/435 [05:44<03:36,  1.29s/it] 62%|██████▏   | 268/435 [05:45<03:35,  1.29s/it] 62%|██████▏   | 269/435 [05:46<03:33,  1.29s/it] 62%|██████▏   | 270/435 [05:47<03:32,  1.29s/it] 62%|██████▏   | 271/435 [05:49<03:31,  1.29s/it] 63%|██████▎   | 272/435 [05:50<03:30,  1.29s/it] 63%|██████▎   | 273/435 [05:51<03:28,  1.29s/it] 63%|██████▎   | 274/435 [05:53<03:27,  1.29s/it] 63%|██████▎   | 275/435 [05:54<03:26,  1.29s/it] 63%|██████▎   | 276/435 [05:55<03:24,  1.29s/it] 64%|██████▎   | 277/435 [05:56<03:23,  1.29s/it] 64%|██████▍   | 278/435 [05:58<03:22,  1.29s/it] 64%|██████▍   | 279/435 [05:59<03:21,  1.29s/it] 64%|██████▍   | 280/435 [06:00<03:19,  1.29s/it] 65%|██████▍   | 281/435 [06:02<03:18,  1.29s/it] 65%|██████▍   | 282/435 [06:03<03:17,  1.29s/it] 65%|██████▌   | 283/435 [06:04<03:15,  1.29s/it] 65%|██████▌   | 284/435 [06:06<03:14,  1.29s/it] 66%|██████▌   | 285/435 [06:07<03:13,  1.29s/it] 66%|██████▌   | 286/435 [06:08<03:12,  1.29s/it] 66%|██████▌   | 287/435 [06:09<03:10,  1.29s/it] 66%|██████▌   | 288/435 [06:11<03:09,  1.29s/it] 66%|██████▋   | 289/435 [06:12<03:08,  1.29s/it] 67%|██████▋   | 290/435 [06:13<02:59,  1.24s/it] 67%|██████▋   | 291/435 [06:14<03:00,  1.25s/it] 67%|██████▋   | 292/435 [06:16<03:00,  1.26s/it] 67%|██████▋   | 293/435 [06:17<03:00,  1.27s/it] 68%|██████▊   | 294/435 [06:18<02:59,  1.28s/it] 68%|██████▊   | 295/435 [06:20<02:59,  1.28s/it] 68%|██████▊   | 296/435 [06:21<02:58,  1.28s/it] 68%|██████▊   | 297/435 [06:22<02:57,  1.28s/it] 69%|██████▊   | 298/435 [06:23<02:56,  1.29s/it] 69%|██████▊   | 299/435 [06:25<02:54,  1.29s/it] 69%|██████▉   | 300/435 [06:26<02:53,  1.29s/it] 69%|██████▉   | 301/435 [06:27<02:52,  1.29s/it] 69%|██████▉   | 302/435 [06:29<02:51,  1.29s/it] 70%|██████▉   | 303/435 [06:30<02:50,  1.29s/it] 70%|██████▉   | 304/435 [06:31<02:48,  1.29s/it] 70%|███████   | 305/435 [06:32<02:47,  1.29s/it] 70%|███████   | 306/435 [06:34<02:46,  1.29s/it] 71%|███████   | 307/435 [06:35<02:44,  1.29s/it] 71%|███████   | 308/435 [06:36<02:43,  1.29s/it] 71%|███████   | 309/435 [06:38<02:42,  1.29s/it] 71%|███████▏  | 310/435 [06:39<02:40,  1.29s/it] 71%|███████▏  | 311/435 [06:40<02:39,  1.29s/it] 72%|███████▏  | 312/435 [06:41<02:38,  1.29s/it] 72%|███████▏  | 313/435 [06:43<02:37,  1.29s/it] 72%|███████▏  | 314/435 [06:44<02:35,  1.29s/it] 72%|███████▏  | 315/435 [06:45<02:34,  1.29s/it] 73%|███████▎  | 316/435 [06:47<02:33,  1.29s/it] 73%|███████▎  | 317/435 [06:48<02:32,  1.29s/it] 73%|███████▎  | 318/435 [06:49<02:30,  1.29s/it] 73%|███████▎  | 319/435 [06:50<02:29,  1.29s/it] 74%|███████▎  | 320/435 [06:52<02:28,  1.29s/it] 74%|███████▍  | 321/435 [06:53<02:27,  1.29s/it] 74%|███████▍  | 322/435 [06:54<02:25,  1.29s/it] 74%|███████▍  | 323/435 [06:56<02:24,  1.29s/it] 74%|███████▍  | 324/435 [06:57<02:23,  1.29s/it] 75%|███████▍  | 325/435 [06:58<02:21,  1.29s/it] 75%|███████▍  | 326/435 [06:59<02:20,  1.29s/it] 75%|███████▌  | 327/435 [07:01<02:19,  1.29s/it] 75%|███████▌  | 328/435 [07:02<02:18,  1.29s/it] 76%|███████▌  | 329/435 [07:03<02:16,  1.29s/it] 76%|███████▌  | 330/435 [07:05<02:15,  1.29s/it] 76%|███████▌  | 331/435 [07:06<02:14,  1.29s/it] 76%|███████▋  | 332/435 [07:07<02:12,  1.29s/it] 77%|███████▋  | 333/435 [07:09<02:11,  1.29s/it] 77%|███████▋  | 334/435 [07:10<02:10,  1.29s/it] 77%|███████▋  | 335/435 [07:11<02:09,  1.29s/it] 77%|███████▋  | 336/435 [07:12<02:07,  1.29s/it] 77%|███████▋  | 337/435 [07:14<02:06,  1.29s/it] 78%|███████▊  | 338/435 [07:15<02:05,  1.29s/it] 78%|███████▊  | 339/435 [07:16<02:03,  1.29s/it] 78%|███████▊  | 340/435 [07:18<02:02,  1.29s/it] 78%|███████▊  | 341/435 [07:19<02:01,  1.29s/it] 79%|███████▊  | 342/435 [07:20<02:00,  1.29s/it] 79%|███████▉  | 343/435 [07:21<01:58,  1.29s/it] 79%|███████▉  | 344/435 [07:23<01:57,  1.29s/it] 79%|███████▉  | 345/435 [07:24<01:56,  1.29s/it] 80%|███████▉  | 346/435 [07:25<01:54,  1.29s/it] 80%|███████▉  | 347/435 [07:27<01:53,  1.29s/it] 80%|████████  | 348/435 [07:28<01:52,  1.29s/it] 80%|████████  | 349/435 [07:29<01:50,  1.29s/it] 80%|████████  | 350/435 [07:30<01:49,  1.29s/it] 81%|████████  | 351/435 [07:32<01:48,  1.29s/it] 81%|████████  | 352/435 [07:33<01:47,  1.29s/it] 81%|████████  | 353/435 [07:34<01:45,  1.29s/it] 81%|████████▏ | 354/435 [07:36<01:44,  1.29s/it] 82%|████████▏ | 355/435 [07:37<01:43,  1.29s/it] 82%|████████▏ | 356/435 [07:38<01:41,  1.29s/it] 82%|████████▏ | 357/435 [07:39<01:40,  1.29s/it] 82%|████████▏ | 358/435 [07:41<01:39,  1.29s/it] 83%|████████▎ | 359/435 [07:42<01:38,  1.29s/it] 83%|████████▎ | 360/435 [07:43<01:36,  1.29s/it] 83%|████████▎ | 361/435 [07:45<01:35,  1.29s/it] 83%|████████▎ | 362/435 [07:46<01:34,  1.29s/it] 83%|████████▎ | 363/435 [07:47<01:32,  1.29s/it] 84%|████████▎ | 364/435 [07:49<01:33,  1.32s/it] 84%|████████▍ | 365/435 [07:50<01:31,  1.31s/it] 84%|████████▍ | 366/435 [07:51<01:29,  1.30s/it] 84%|████████▍ | 367/435 [07:52<01:28,  1.30s/it] 85%|████████▍ | 368/435 [07:54<01:26,  1.30s/it] 85%|████████▍ | 369/435 [07:55<01:25,  1.29s/it] 85%|████████▌ | 370/435 [07:56<01:24,  1.29s/it] 85%|████████▌ | 371/435 [07:58<01:22,  1.29s/it] 86%|████████▌ | 372/435 [07:59<01:21,  1.29s/it] 86%|████████▌ | 373/435 [08:00<01:20,  1.29s/it] 86%|████████▌ | 374/435 [08:02<01:18,  1.29s/it] 86%|████████▌ | 375/435 [08:03<01:17,  1.29s/it] 86%|████████▋ | 376/435 [08:04<01:16,  1.29s/it] 87%|████████▋ | 377/435 [08:05<01:14,  1.29s/it] 87%|████████▋ | 378/435 [08:07<01:13,  1.29s/it] 87%|████████▋ | 379/435 [08:08<01:12,  1.29s/it] 87%|████████▋ | 380/435 [08:09<01:10,  1.29s/it] 88%|████████▊ | 381/435 [08:11<01:09,  1.29s/it] 88%|████████▊ | 382/435 [08:12<01:08,  1.29s/it] 88%|████████▊ | 383/435 [08:13<01:07,  1.29s/it] 88%|████████▊ | 384/435 [08:14<01:05,  1.29s/it] 89%|████████▊ | 385/435 [08:16<01:04,  1.29s/it] 89%|████████▊ | 386/435 [08:17<01:03,  1.29s/it] 89%|████████▉ | 387/435 [08:18<01:01,  1.29s/it] 89%|████████▉ | 388/435 [08:20<01:00,  1.29s/it] 89%|████████▉ | 389/435 [08:21<00:59,  1.29s/it] 90%|████████▉ | 390/435 [08:22<00:58,  1.29s/it] 90%|████████▉ | 391/435 [08:23<00:56,  1.29s/it] 90%|█████████ | 392/435 [08:25<00:55,  1.29s/it] 90%|█████████ | 393/435 [08:26<00:54,  1.29s/it] 91%|█████████ | 394/435 [08:27<00:52,  1.29s/it] 91%|█████████ | 395/435 [08:29<00:51,  1.29s/it] 91%|█████████ | 396/435 [08:30<00:50,  1.29s/it] 91%|█████████▏| 397/435 [08:31<00:49,  1.29s/it] 91%|█████████▏| 398/435 [08:32<00:47,  1.29s/it] 92%|█████████▏| 399/435 [08:34<00:46,  1.29s/it] 92%|█████████▏| 400/435 [08:35<00:45,  1.29s/it] 92%|█████████▏| 401/435 [08:36<00:43,  1.29s/it] 92%|█████████▏| 402/435 [08:38<00:42,  1.29s/it] 93%|█████████▎| 403/435 [08:39<00:41,  1.29s/it] 93%|█████████▎| 404/435 [08:40<00:39,  1.29s/it] 93%|█████████▎| 405/435 [08:41<00:38,  1.29s/it] 93%|█████████▎| 406/435 [08:43<00:37,  1.29s/it] 94%|█████████▎| 407/435 [08:44<00:36,  1.29s/it] 94%|█████████▍| 408/435 [08:45<00:34,  1.29s/it] 94%|█████████▍| 409/435 [08:47<00:33,  1.29s/it] 94%|█████████▍| 410/435 [08:48<00:32,  1.29s/it] 94%|█████████▍| 411/435 [08:49<00:30,  1.29s/it] 95%|█████████▍| 412/435 [08:51<00:29,  1.29s/it] 95%|█████████▍| 413/435 [08:52<00:28,  1.29s/it] 95%|█████████▌| 414/435 [08:53<00:27,  1.29s/it] 95%|█████████▌| 415/435 [08:54<00:25,  1.29s/it] 96%|█████████▌| 416/435 [08:56<00:24,  1.29s/it] 96%|█████████▌| 417/435 [08:57<00:23,  1.29s/it] 96%|█████████▌| 418/435 [08:58<00:21,  1.29s/it] 96%|█████████▋| 419/435 [09:00<00:20,  1.29s/it] 97%|█████████▋| 420/435 [09:01<00:19,  1.29s/it] 97%|█████████▋| 421/435 [09:02<00:18,  1.29s/it] 97%|█████████▋| 422/435 [09:03<00:16,  1.29s/it] 97%|█████████▋| 423/435 [09:05<00:15,  1.29s/it] 97%|█████████▋| 424/435 [09:06<00:14,  1.29s/it] 98%|█████████▊| 425/435 [09:07<00:12,  1.29s/it] 98%|█████████▊| 426/435 [09:09<00:11,  1.29s/it] 98%|█████████▊| 427/435 [09:10<00:10,  1.29s/it] 98%|█████████▊| 428/435 [09:11<00:09,  1.29s/it] 99%|█████████▊| 429/435 [09:12<00:07,  1.29s/it] 99%|█████████▉| 430/435 [09:14<00:06,  1.29s/it] 99%|█████████▉| 431/435 [09:15<00:05,  1.29s/it] 99%|█████████▉| 432/435 [09:16<00:03,  1.29s/it]100%|█████████▉| 433/435 [09:18<00:02,  1.29s/it]100%|█████████▉| 434/435 [09:19<00:01,  1.29s/it]100%|██████████| 435/435 [09:20<00:00,  1.24s/it][INFO|trainer.py:2316] 2024-04-22 17:18:03,821 >> 
 
-  0%|          | 0/219 [00:02<?, ?it/s]
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                                 100%|██████████| 435/435 [09:20<00:00,  1.24s/it]100%|██████████| 435/435 [09:20<00:00,  1.29s/it]
+[INFO|trainer.py:3305] 2024-04-22 17:18:03,839 >> Saving model checkpoint to /tmp/test-clm
+[INFO|configuration_utils.py:471] 2024-04-22 17:18:03,849 >> Configuration saved in /tmp/test-clm/config.json
+[INFO|configuration_utils.py:705] 2024-04-22 17:18:03,849 >> Configuration saved in /tmp/test-clm/generation_config.json
+[INFO|modeling_utils.py:2591] 2024-04-22 17:18:04,302 >> Model weights saved in /tmp/test-clm/model.safetensors
+[INFO|tokenization_utils_base.py:2489] 2024-04-22 17:18:04,303 >> tokenizer config file saved in /tmp/test-clm/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2498] 2024-04-22 17:18:04,303 >> Special tokens file saved in /tmp/test-clm/special_tokens_map.json
+{'train_runtime': 560.5437, 'train_samples_per_second': 12.406, 'train_steps_per_second': 0.776, 'train_loss': 3.1668760102370688, 'epoch': 3.0}
+***** train metrics *****
+  epoch                    =        3.0
+  total_flos               =  3384472GF
+  train_loss               =     3.1669
+  train_runtime            = 0:09:20.54
+  train_samples            =       2318
+  train_samples_per_second =     12.406
+  train_steps_per_second   =      0.776
+04/22/2024 17:18:04 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:3614] 2024-04-22 17:18:04,339 >> ***** Running Evaluation *****
+[INFO|trainer.py:3616] 2024-04-22 17:18:04,339 >>   Num examples = 240
+[INFO|trainer.py:3619] 2024-04-22 17:18:04,339 >>   Batch size = 16
+/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  0%|          | 0/15 [00:00<?, ?it/s] 13%|█▎        | 2/15 [00:00<00:04,  3.15it/s] 20%|██        | 3/15 [00:01<00:05,  2.22it/s] 27%|██▋       | 4/15 [00:01<00:05,  1.93it/s] 33%|███▎      | 5/15 [00:02<00:05,  1.79it/s] 40%|████      | 6/15 [00:03<00:05,  1.71it/s] 47%|████▋     | 7/15 [00:03<00:04,  1.66it/s] 53%|█████▎    | 8/15 [00:04<00:04,  1.63it/s] 60%|██████    | 9/15 [00:05<00:03,  1.61it/s] 67%|██████▋   | 10/15 [00:05<00:03,  1.60it/s] 73%|███████▎  | 11/15 [00:06<00:02,  1.59it/s] 80%|████████  | 12/15 [00:06<00:01,  1.59it/s] 87%|████████▋ | 13/15 [00:07<00:01,  1.58it/s] 93%|█████████▎| 14/15 [00:08<00:00,  1.58it/s]100%|██████████| 15/15 [00:08<00:00,  1.59it/s]100%|██████████| 15/15 [00:09<00:00,  1.58it/s]
+***** eval metrics *****
+  epoch                   =        3.0
+  eval_accuracy           =     0.4242
+  eval_loss               =     3.0596
+  eval_runtime            = 0:00:10.20
+  eval_samples            =        240
+  eval_samples_per_second =     23.529
+  eval_steps_per_second   =      1.471
+  perplexity              =    21.3201
