@@ -2,6 +2,8 @@
 #SBATCH --job-name=main
 #SBATCH --time 10:00:00
 #SBATCH -N 6
+#SBATCH --gres=gpu:a100:2            # Request 2 A100 GPUs
+#SBATCH --mem=32G  
 #SBATCH -p shared-gpu
 #module load miniconda3
 #source activate /vast/home/ajherman/miniconda3/envs/pytorch
