@@ -9,7 +9,10 @@
 #source activate /vast/home/ajherman/miniconda3/envs/pytorch
 
 srun -o result.out --ntasks=1 -N 1 python run_clm.py \
-    --model_name_or_path openai-community/gpt2 \
+    --model_type openai-community/gpt2 \
+    --tokenizer_name openai-community/gpt2 \ 
+    --config_overrides="n_embd=1024,n_head=16,n_layer=48,n_positions=102" \
+    # --model_name_or_path openai-community/gpt2 \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
     --per_device_train_batch_size 8 \
