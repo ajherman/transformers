@@ -1,2 +1,0 @@
-srun: warning: can't run 1 processes on 6 nodes, setting nnodes to 1
-srun: error: cn431: task 0: Exited with exit code 1

@@ -1,0 +1,5 @@
+success
+/vast/home/ajherman/miniconda3/envs/transformer/bin/python
+/vast/home/ajherman/miniconda3/envs/transformer/bin/python
+/vast/home/ajherman/miniconda3/envs/transformer/bin/python
+/projects/opt/rhel8/aarch64/miniconda3/py311_23.11.0/bin/python

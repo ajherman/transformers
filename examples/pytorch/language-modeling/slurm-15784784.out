@@ -1,9 +1,0 @@
-
-Inactive Modules:
-  1) miniconda3
-
-
-Activating Modules:
-  1) miniconda3/py311_23.11.0
-
-srun: error: cn430: task 0: Exited with exit code 1

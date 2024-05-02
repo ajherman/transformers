@@ -1,0 +1,3 @@
+/usr/projects/darwin/trenza/spack/bin/spack: line 18: /projects/opt/centos8/x86_64/miniconda3/py311_23.11.0/bin/python3: cannot execute binary file: Exec format error
+/usr/projects/darwin/trenza/spack/bin/spack: line 18: /projects/opt/centos8/x86_64/miniconda3/py311_23.11.0/bin/python3: Success
+srun: error: cn876: task 0: Exited with exit code 1

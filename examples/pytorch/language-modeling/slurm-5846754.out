@@ -1,2 +1,0 @@
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-slurmstepd-gpu01: error: *** JOB 5846754 ON gpu01 CANCELLED AT 2024-04-22T11:12:18 ***
