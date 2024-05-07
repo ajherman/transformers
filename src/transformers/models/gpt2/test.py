@@ -28,7 +28,7 @@ for attr_name, attr_value in vars(config).items():
 if hasattr(config, 'hidden_size'):
     print("hidden_size:", getattr(config, 'hidden_size'))
 else:
-    print("hidden_size is not an attribute of GPT2Config."
+    print("hidden_size is not an attribute of GPT2Config.")
 
 # Create model from the loaded configuration
 model = GPT2Model(config)
