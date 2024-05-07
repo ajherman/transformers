@@ -595,7 +595,7 @@ class GPT2Block(nn.Module):
         self.attn = attention_class(config=config, layer_idx=layer_idx)
         self.ln_2 = nn.LayerNorm(hidden_size, eps=config.layer_norm_epsilon)
 
-        if config.add_cross_attention:
+        if config.add_cross_attention: # Not used for encoder-only / decoder-only?
             self.crossattention = attention_class(config=config, is_cross_attention=True, layer_idx=layer_idx)
             self.ln_cross_attn = nn.LayerNorm(hidden_size, eps=config.layer_norm_epsilon)
 
@@ -611,6 +611,7 @@ class GPT2Block(nn.Module):
         encoder_attention_mask: Optional[torch.FloatTensor] = None,
         use_cache: Optional[bool] = False,
         output_attentions: Optional[bool] = False,
+        parallel_attention: Optional[bool] = False, # Put MHA and MLP in parallel rather than series
     ) -> Union[Tuple[torch.Tensor], Optional[Tuple[torch.Tensor, Tuple[torch.FloatTensor, ...]]]]:
         residual = hidden_states
         hidden_states = self.ln_1(hidden_states)
@@ -624,36 +625,42 @@ class GPT2Block(nn.Module):
         )
         attn_output = attn_outputs[0]  # output_attn: a, present, (attentions)
         outputs = attn_outputs[1:]
-        # residual connection
-        hidden_states = attn_output + residual
 
-        if encoder_hidden_states is not None:
-            # add one self-attention block for cross-attention
-            if not hasattr(self, "crossattention"):
-                raise ValueError(
-                    f"If `encoder_hidden_states` are passed, {self} has to be instantiated with "
-                    "cross-attention layers by setting `config.add_cross_attention=True`"
-                )
-            residual = hidden_states
-            hidden_states = self.ln_cross_attn(hidden_states)
-            cross_attn_outputs = self.crossattention(
-                hidden_states,
-                attention_mask=attention_mask,
-                head_mask=head_mask,
-                encoder_hidden_states=encoder_hidden_states,
-                encoder_attention_mask=encoder_attention_mask,
-                output_attentions=output_attentions,
-            )
-            attn_output = cross_attn_outputs[0]
+        if parallel_attention: # From Wang and Komatsuzaki (2021)
+            output_mlp = self.mlp(hidden_states)
+            hidden_states = attn_output + output_mlp + residual
+
+        else:
             # residual connection
-            hidden_states = residual + attn_output
-            outputs = outputs + cross_attn_outputs[2:]  # add cross attentions if we output attention weights
+            hidden_states = attn_output + residual
 
-        residual = hidden_states
-        hidden_states = self.ln_2(hidden_states)
-        feed_forward_hidden_states = self.mlp(hidden_states)
-        # residual connection
-        hidden_states = residual + feed_forward_hidden_states
+            if encoder_hidden_states is not None: # None for encoder-only / decoder-only
+                # add one self-attention block for cross-attention
+                if not hasattr(self, "crossattention"):
+                    raise ValueError(
+                        f"If `encoder_hidden_states` are passed, {self} has to be instantiated with "
+                        "cross-attention layers by setting `config.add_cross_attention=True`"
+                    )
+                residual = hidden_states
+                hidden_states = self.ln_cross_attn(hidden_states)
+                cross_attn_outputs = self.crossattention(
+                    hidden_states,
+                    attention_mask=attention_mask,
+                    head_mask=head_mask,
+                    encoder_hidden_states=encoder_hidden_states,
+                    encoder_attention_mask=encoder_attention_mask,
+                    output_attentions=output_attentions,
+                )
+                attn_output = cross_attn_outputs[0]
+                # residual connection
+                hidden_states = residual + attn_output
+                outputs = outputs + cross_attn_outputs[2:]  # add cross attentions if we output attention weights
+
+            residual = hidden_states
+            hidden_states = self.ln_2(hidden_states)
+            feed_forward_hidden_states = self.mlp(hidden_states)
+            # residual connection
+            hidden_states = residual + feed_forward_hidden_states
 
         if use_cache:
             outputs = (hidden_states,) + outputs
