@@ -1,7 +1,7 @@
 import sys
 
 # Path to the 'src' directory of your local transformers repository
-path_to_transformers = '/home/ari/transformers/src'
+path_to_transformers = '../transformers/src'
 
 # Prepend this path to sys.path
 if path_to_transformers not in sys.path:
