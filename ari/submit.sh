@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#SBATCH --job-name=main
+#SBATCH --time 10:00:00
+#SBATCH -N 1           
+#SBATCH --mem=40G  
+#SBATCH -p shared-gpu-ampere
+#SBATCH -C gpu1_memory:40GB
+module load miniconda3
+source activate /vast/home/ajherman/miniconda3/envs/transformer
+
+srun -o result.out --ntasks=1 -N 1 python test.py 
+
