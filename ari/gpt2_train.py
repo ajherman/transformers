@@ -15,6 +15,7 @@ from datasets import load_dataset
 # Load pre-trained model and tokenizer
 model_name = 'gpt2'
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+tokenizer.pad_token = tokenizer.eos_token # Add pad token
 model = GPT2LMHeadModel.from_pretrained(model_name)
 
 # Load the dataset

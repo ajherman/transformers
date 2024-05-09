@@ -35,6 +35,15 @@ import evaluate
 import torch
 from datasets import load_dataset
 
+use_local_transformers = True
+if use_local_transformers:
+    # Path to the 'src' directory of your local transformers repository
+    path_to_transformers = '../transformers/src'
+
+    # Prepend this path to sys.path
+    if path_to_transformers not in sys.path:
+        sys.path.insert(0, path_to_transformers)
+
 import transformers
 from transformers import (
     CONFIG_MAPPING,
