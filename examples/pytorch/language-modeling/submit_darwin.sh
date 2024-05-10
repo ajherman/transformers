@@ -13,6 +13,7 @@ source activate /vast/home/ajherman/miniconda3/envs/transformer
 srun -o result.out --ntasks=1 -N 1 python run_clm.py \
     --model_type gpt2 \
     --tokenizer_name openai-community/gpt2 \
+    --config_overrides "n_layer=10,n_head=6" \
     --dataset_name wikitext \
     --dataset_config_name wikitext-2-raw-v1 \
     --per_device_train_batch_size 8 \
@@ -20,3 +21,5 @@ srun -o result.out --ntasks=1 -N 1 python run_clm.py \
     --do_train \
     --do_eval \
     --output_dir result_dir
+
+# --model_type gpt2 --tokenizer_name openai-community/gpt2 --dataset_name wikitext --dataset_config_name wikitext-2-raw-v1 --per_device_train_batch_size 8 --per_device_eval_batch_size 8 --do_train --do_eval --output_dir result_dir

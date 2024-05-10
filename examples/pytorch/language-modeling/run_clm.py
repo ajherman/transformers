@@ -64,8 +64,8 @@ from transformers.utils import check_min_version, send_example_telemetry
 from transformers.utils.versions import require_version
 
 
-# Will error if the minimal version of Transformers is not installed. Remove at your own risks.
-check_min_version("4.41.0.dev0")
+# # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
+# check_min_version("4.41.0.dev0")
 
 require_version("datasets>=2.14.0", "To fix: pip install -r examples/pytorch/language-modeling/requirements.txt")
 
@@ -422,6 +422,8 @@ def main():
             logger.info(f"Overriding config: {model_args.config_overrides}")
             config.update_from_string(model_args.config_overrides)
             logger.info(f"New config: {config}")
+
+    print("config:", config)
 
     tokenizer_kwargs = {
         "cache_dir": model_args.cache_dir,
