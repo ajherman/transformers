@@ -39,7 +39,7 @@ training_args = TrainingArguments(
     output_dir="./gpt2-wikitext", # output directory
     overwrite_output_dir=True, # overwrite the content of the output directory
     num_train_epochs=20, # number of training epochs
-    per_device_train_batch_size=32, # batch size for training
+    per_device_train_batch_size=8, # batch size for training
     save_steps=10_000, # number of updates steps before checkpoint saves
     save_total_limit=2, # limit the total amount of checkpoints and deletes the older checkpoints
 )
