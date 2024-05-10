@@ -1,0 +1,61 @@
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Map:   3%|▎         | 1000/36718 [00:00<00:17, 2046.94 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:18, 1859.83 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:14, 2271.84 examples/s]Map:  11%|█         | 4000/36718 [00:01<00:13, 2510.55 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:11, 2796.98 examples/s]Map:  16%|█▋        | 6000/36718 [00:02<00:10, 3013.24 examples/s]Map:  19%|█▉        | 7000/36718 [00:02<00:10, 2914.00 examples/s]Map:  22%|██▏       | 8000/36718 [00:02<00:09, 2954.57 examples/s]Map:  25%|██▍       | 9000/36718 [00:03<00:09, 3069.39 examples/s]Map:  27%|██▋       | 10000/36718 [00:03<00:08, 3154.26 examples/s]Map:  30%|██▉       | 11000/36718 [00:03<00:08, 3157.38 examples/s]Map:  33%|███▎      | 12000/36718 [00:04<00:07, 3233.67 examples/s]Map:  35%|███▌      | 13000/36718 [00:04<00:07, 3247.91 examples/s]Map:  38%|███▊      | 14000/36718 [00:04<00:06, 3374.64 examples/s]Map:  41%|████      | 15000/36718 [00:05<00:06, 3436.89 examples/s]Map:  44%|████▎     | 16000/36718 [00:05<00:06, 3325.04 examples/s]Map:  46%|████▋     | 17000/36718 [00:05<00:05, 3374.51 examples/s]Map:  49%|████▉     | 18000/36718 [00:05<00:05, 3434.99 examples/s]Map:  52%|█████▏    | 19000/36718 [00:06<00:04, 3564.86 examples/s]Map:  54%|█████▍    | 20000/36718 [00:06<00:04, 3574.20 examples/s]Map:  57%|█████▋    | 21000/36718 [00:06<00:04, 3471.95 examples/s]Map:  60%|█████▉    | 22000/36718 [00:07<00:04, 3455.08 examples/s]Map:  63%|██████▎   | 23000/36718 [00:07<00:03, 3519.83 examples/s]Map:  65%|██████▌   | 24000/36718 [00:07<00:03, 3687.79 examples/s]Map:  68%|██████▊   | 25000/36718 [00:07<00:03, 3794.13 examples/s]Map:  71%|███████   | 26000/36718 [00:08<00:02, 3721.11 examples/s]Map:  74%|███████▎  | 27000/36718 [00:08<00:02, 3579.84 examples/s]Map:  76%|███████▋  | 28000/36718 [00:08<00:02, 3488.83 examples/s]Map:  79%|███████▉  | 29000/36718 [00:08<00:02, 3633.35 examples/s]Map:  82%|████████▏ | 30000/36718 [00:09<00:01, 3628.40 examples/s]Map:  84%|████████▍ | 31000/36718 [00:09<00:01, 3452.91 examples/s]Map:  87%|████████▋ | 32000/36718 [00:09<00:01, 3429.20 examples/s]Map:  90%|████████▉ | 33000/36718 [00:10<00:01, 3390.36 examples/s]Map:  93%|█████████▎| 34000/36718 [00:10<00:00, 3383.91 examples/s]Map:  95%|█████████▌| 35000/36718 [00:10<00:00, 3501.63 examples/s]Map:  98%|█████████▊| 36000/36718 [00:11<00:00, 3432.67 examples/s]Map: 100%|██████████| 36718/36718 [00:11<00:00, 3460.98 examples/s]Map: 100%|██████████| 36718/36718 [00:11<00:00, 3245.82 examples/s]
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+  0%|          | 0/11480 [00:00<?, ?it/s]/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+Traceback (most recent call last):
+  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 56, in <module>
+    trainer.train()
+  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 1859, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 2203, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 3138, in training_step
+    loss = self.compute_loss(model, inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 3161, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 186, in forward
+    return self.gather(outputs, self.output_device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/data_parallel.py", line 203, in gather
+    return gather(outputs, output_device, dim=self.dim)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/scatter_gather.py", line 104, in gather
+    res = gather_map(outputs)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/scatter_gather.py", line 95, in gather_map
+    return type(out)((k, gather_map([d[k] for d in outputs]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 9, in __init__
+  File "/vast/home/ajherman/transformers/src/transformers/utils/generic.py", line 389, in __post_init__
+    for idx, element in enumerate(iterator):
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/scatter_gather.py", line 95, in <genexpr>
+    return type(out)((k, gather_map([d[k] for d in outputs]))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/scatter_gather.py", line 89, in gather_map
+    return Gather.apply(target_device, dim, *outputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/autograd/function.py", line 553, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/_functions.py", line 75, in forward
+    return comm.gather(inputs, ctx.dim, ctx.target_device)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/comm.py", line 231, in gather
+    return torch._C._gather(tensors, dim, destination)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.02 GiB. GPU 0 has a total capacity of 39.38 GiB of which 4.57 GiB is free. Including non-PyTorch memory, this process has 34.80 GiB memory in use. Of the allocated memory 33.77 GiB is allocated by PyTorch, and 399.51 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+  0%|          | 0/11480 [00:02<?, ?it/s]
