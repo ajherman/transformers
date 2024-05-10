@@ -8,7 +8,7 @@ path_to_transformers = '../transformers/src'
 if path_to_transformers not in sys.path:
     sys.path.insert(0, path_to_transformers)
 
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling
+from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, AutoModelForCausalLM
 from transformers import Trainer, TrainingArguments
 from datasets import load_dataset
 
@@ -16,8 +16,11 @@ from datasets import load_dataset
 model_name = 'gpt2'
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token # Add pad token
-model = GPT2LMHeadModel.from_pretrained(model_name)
-
+# model = GPT2LMHeadModel.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)
+config = model.config
+print(config)
+assert(0)
 # Load the dataset
 dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
 # dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train').map(tokenizer, batched=True)
