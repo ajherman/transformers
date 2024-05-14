@@ -20,7 +20,7 @@ tokenizer.pad_token = tokenizer.eos_token # Add pad token
 model = AutoModelForCausalLM.from_pretrained(model_name)
 config = model.config
 print(config)
-assert(0)
+
 # Load the dataset
 dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
 # dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train').map(tokenizer, batched=True)
