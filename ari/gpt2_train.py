@@ -13,6 +13,7 @@ parser.add_argument('--save_steps', type=int, default=10_000, help='Number of up
 parser.add_argument('--save_total_limit', type=int, default=2, help='Limit the total amount of checkpoints and deletes the older checkpoints')
 parser.add_argument('--use_local_transformers', action='store_true', help='Use local transformers repository')
 parser.add_argument('--config_file', type=str, default='config.json', help='Config file')
+parser.add_argument('--checkpoint_dir', type=str, default=None, help='Checkpoint directory')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -37,7 +38,6 @@ model_name = 'gpt2'
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token # Add pad token
 # model = GPT2LMHeadModel.from_pretrained(model_name)
-# model = AutoModelForCausalLM.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_config(config)
 
 print("Config:\n", model.config)
@@ -67,6 +67,8 @@ training_args = TrainingArguments(
     per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
     save_steps=args.save_steps, # number of updates steps before checkpoint saves
     save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
+    # warmup_steps=500,                # number of warmup steps for learning rate scheduler
+    # weight_decay=0.01, 
 )
 
 def compute_metrics(eval_pred):
@@ -89,10 +91,13 @@ trainer = Trainer(
     data_collator=data_collator,
     train_dataset=train_dataset,
     eval_dataset=eval_dataset,
+    compute_metrics=compute_metrics,
+    # resume_from_checkpoint=True
+    # resume_from_checkpoint=args.checkpoint_dir
 )
 
 # Train model
-trainer.train()
+trainer.train(resume_from_checkpoint=False) # More precise version would be to pass args.checkpoint_dir explicitly
 
 # Save model
 model.save_pretrained(args.output_dir)
