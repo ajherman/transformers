@@ -2,6 +2,7 @@
 import torch
 import sys
 import argparse
+import csv
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='GPT-2 Training')
@@ -11,6 +12,7 @@ parser.add_argument('--per_device_train_batch_size', type=int, default=8, help='
 parser.add_argument('--save_steps', type=int, default=10_000, help='Number of updates steps before checkpoint saves')
 parser.add_argument('--save_total_limit', type=int, default=2, help='Limit the total amount of checkpoints and deletes the older checkpoints')
 parser.add_argument('--use_local_transformers', action='store_true', help='Use local transformers repository')
+parser.add_argument('--config_file', type=str, default='config.json', help='Config file')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -23,19 +25,22 @@ if use_local_transformers:
     if path_to_transformers not in sys.path:
         sys.path.insert(0, path_to_transformers)
 
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, AutoModelForCausalLM
+from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, AutoModelForCausalLM, GPT2Config
 from transformers import Trainer, TrainingArguments
 from datasets import load_dataset
+
+# Read in config file
+config = GPT2Config.from_json_file(args.config_file)
 
 # Load pre-trained model and tokenizer
 model_name = 'gpt2'
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token # Add pad token
 # model = GPT2LMHeadModel.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name)
-config = model.config
+# model = AutoModelForCausalLM.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_config(config)
 
-print("Config:\n", config)
+print("Config:\n", model.config)
 
 # Load the dataset
 train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
@@ -48,7 +53,6 @@ def encode(examples):
 
 train_dataset = train_dataset.map(encode, batched=True)
 eval_dataset = eval_dataset.map(encode, batched=True)
-
 
 # Define data collator
 data_collator = DataCollatorForLanguageModeling(
@@ -64,6 +68,19 @@ training_args = TrainingArguments(
     save_steps=args.save_steps, # number of updates steps before checkpoint saves
     save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
 )
+
+def compute_metrics(eval_pred):
+    predictions, labels = eval_pred
+    perplexity = torch_exp(torch.tensor(trainer.eval_loss))
+    metrics = {'perplexity': perplexity.item()}
+    # write_metrics_to_csv(metrics, 'metrics.csv')
+
+    with open('metrics.csv', 'a', newline='') as file:
+        writer = csv.writer(file)
+        for key, value in metrics.items():
+            writer.writerow([training_args.global_step, key, value])
+
+    return metrics
 
 # Define trainer
 trainer = Trainer(
