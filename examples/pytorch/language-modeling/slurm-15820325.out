@@ -1,0 +1,2 @@
+srun: error: cn146: task 0: Exited with exit code 2
+/tmp/slurmd/job15820325/slurm_script: line 17: --dataset_name: command not found
