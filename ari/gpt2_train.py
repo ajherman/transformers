@@ -68,7 +68,7 @@ training_args = TrainingArguments(
     save_steps=args.save_steps, # number of updates steps before checkpoint saves
     save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
     evaluation_strategy="steps", # evaluation strategy to adopt during training
-    evaluation_steps=1000, # number of steps before evaluation
+    eval_steps=1000, # number of steps before evaluation
     # warmup_steps=500,                # number of warmup steps for learning rate scheduler
     # weight_decay=0.01, 
 )
@@ -86,7 +86,7 @@ training_args = TrainingArguments(
 
 #     return metrics
 
-def compute_metrics(eval_pred: EvalPrediction):
+def compute_metrics(eval_pred):
     predictions, labels = eval_pred
     loss = torch.nn.functional.cross_entropy(predictions, labels)
     perplexity = torch.exp(loss)
