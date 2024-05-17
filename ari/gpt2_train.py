@@ -67,20 +67,36 @@ training_args = TrainingArguments(
     per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
     save_steps=args.save_steps, # number of updates steps before checkpoint saves
     save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
+    evaluation_strategy="steps", # evaluation strategy to adopt during training
+    evaluation_steps=1000, # number of steps before evaluation
     # warmup_steps=500,                # number of warmup steps for learning rate scheduler
     # weight_decay=0.01, 
 )
 
-def compute_metrics(eval_pred):
-    predictions, labels = eval_pred
-    perplexity = torch_exp(torch.tensor(trainer.eval_loss))
-    metrics = {'perplexity': perplexity.item()}
-    # write_metrics_to_csv(metrics, 'metrics.csv')
+# def compute_metrics(eval_pred):
+#     predictions, labels = eval_pred
+#     perplexity = torch_exp(torch.tensor(trainer.eval_loss))
+#     metrics = {'perplexity': perplexity.item()}
+#     # write_metrics_to_csv(metrics, 'metrics.csv')
 
-    with open('metrics.csv', 'a', newline='') as file:
-        writer = csv.writer(file)
-        for key, value in metrics.items():
-            writer.writerow([training_args.global_step, key, value])
+#     with open('metrics.csv', 'a', newline='') as file:
+#         writer = csv.writer(file)
+#         for key, value in metrics.items():
+#             writer.writerow([training_args.global_step, key, value])
+
+#     return metrics
+
+def compute_metrics(eval_pred: EvalPrediction):
+    predictions, labels = eval_pred
+    loss = torch.nn.functional.cross_entropy(predictions, labels)
+    perplexity = torch.exp(loss)
+    metrics = {'perplexity': perplexity.item()}
+
+    # Save metrics to a text file
+    with open('metrics.txt', 'a') as file:
+        file.write(f'Global step: {trainer.state.global_step}, Perplexity: {perplexity.item()}\n')
+
+    print("Perplexity:", perplexity.item())
 
     return metrics
 
