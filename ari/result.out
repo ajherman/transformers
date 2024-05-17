@@ -2,9 +2,6 @@
   from pandas.core import (
 /vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
   warnings.warn(
-/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
-  warnings.warn(
-Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -19,12 +16,12 @@ Config:
   "initializer_range": 0.02,
   "layer_norm_epsilon": 1e-05,
   "model_type": "gpt2",
-  "n_ctx": 1024,
-  "n_embd": 6,
+  "n_ctx": 256,
+  "n_embd": 8,
   "n_head": 2,
   "n_inner": null,
   "n_layer": 1,
-  "n_positions": 1024,
+  "n_positions": 256,
   "reorder_and_upcast_attn": false,
   "resid_pdrop": 0.1,
   "scale_attn_by_inverse_layer_idx": false,
@@ -45,40 +42,29 @@ Config:
   "vocab_size": 50257
 }
 
-  0%|          | 0/45900 [00:00<?, ?it/s]  0%|          | 1/45900 [00:00<3:52:45,  3.29it/s]  0%|          | 5/45900 [00:00<53:34, 14.28it/s]    0%|          | 8/45900 [00:00<40:23, 18.94it/s]  0%|          | 14/45900 [00:00<25:23, 30.13it/s]  0%|          | 19/45900 [00:00<21:22, 35.78it/s]  0%|          | 24/45900 [00:00<19:48, 38.59it/s]  0%|          | 29/45900 [00:00<18:23, 41.59it/s]  0%|          | 35/45900 [00:01<16:56, 45.12it/s]  0%|          | 41/45900 [00:01<16:00, 47.75it/s]  0%|          | 46/45900 [00:01<16:07, 47.39it/s]  0%|          | 51/45900 [00:01<16:08, 47.33it/s]  0%|          | 56/45900 [00:01<17:42, 43.15it/s]  0%|          | 61/45900 [00:01<17:01, 44.89it/s]  0%|          | 66/45900 [00:01<17:15, 44.27it/s]  0%|          | 71/45900 [00:01<17:16, 44.20it/s]  0%|          | 76/45900 [00:01<17:18, 44.11it/s]  0%|          | 81/45900 [00:02<17:49, 42.84it/s]  0%|          | 86/45900 [00:02<17:34, 43.44it/s]  0%|          | 92/45900 [00:02<16:03, 47.55it/s]  0%|          | 97/45900 [00:02<16:06, 47.38it/s]  0%|          | 103/45900 [00:02<15:30, 49.22it/s]  0%|          | 108/45900 [00:02<16:53, 45.17it/s]  0%|          | 114/45900 [00:02<16:02, 47.59it/s]  0%|          | 119/45900 [00:02<15:55, 47.92it/s]  0%|          | 124/45900 [00:02<16:22, 46.60it/s]  0%|          | 129/45900 [00:03<16:33, 46.08it/s]  0%|          | 135/45900 [00:03<15:48, 48.27it/s]  0%|          | 140/45900 [00:03<15:47, 48.32it/s]  0%|          | 145/45900 [00:03<16:01, 47.59it/s]  0%|          | 150/45900 [00:03<17:12, 44.29it/s]  0%|          | 155/45900 [00:03<17:16, 44.12it/s]  0%|          | 160/45900 [00:03<17:00, 44.82it/s]  0%|          | 165/45900 [00:03<16:29, 46.21it/s]  0%|          | 170/45900 [00:03<16:17, 46.77it/s]  0%|          | 176/45900 [00:04<15:43, 48.49it/s]  0%|          | 181/45900 [00:04<15:57, 47.73it/s]  0%|          | 187/45900 [00:04<15:45, 48.36it/s]  0%|          | 192/45900 [00:04<15:44, 48.42it/s]  0%|          | 197/45900 [00:04<16:28, 46.26it/s]  0%|          | 202/45900 [00:04<16:26, 46.31it/s]  0%|          | 207/45900 [00:04<16:10, 47.07it/s]  0%|          | 212/45900 [00:04<16:25, 46.37it/s]  0%|          | 217/45900 [00:04<16:53, 45.09it/s]  0%|          | 223/45900 [00:05<16:27, 46.26it/s]  0%|          | 228/45900 [00:05<16:31, 46.09it/s]  1%|          | 233/45900 [00:05<16:52, 45.11it/s]  1%|          | 239/45900 [00:05<15:54, 47.86it/s]  1%|          | 244/45900 [00:05<16:23, 46.43it/s]  1%|          | 249/45900 [00:05<17:15, 44.07it/s]  1%|          | 254/45900 [00:05<17:29, 43.49it/s]  1%|          | 259/45900 [00:05<16:52, 45.08it/s]  1%|          | 265/45900 [00:06<16:38, 45.72it/s]  1%|          | 270/45900 [00:06<17:22, 43.79it/s]  1%|          | 275/45900 [00:06<16:54, 44.97it/s]  1%|          | 280/45900 [00:06<17:11, 44.21it/s]  1%|          | 286/45900 [00:06<16:24, 46.32it/s]  1%|          | 291/45900 [00:06<16:32, 45.94it/s]  1%|          | 297/45900 [00:06<16:05, 47.25it/s]  1%|          | 302/45900 [00:06<17:19, 43.87it/s]  1%|          | 307/45900 [00:06<17:23, 43.70it/s]  1%|          | 312/45900 [00:07<17:30, 43.38it/s]  1%|          | 317/45900 [00:07<17:27, 43.52it/s]  1%|          | 322/45900 [00:07<17:57, 42.31it/s]  1%|          | 327/45900 [00:07<17:24, 43.63it/s]  1%|          | 333/45900 [00:07<16:32, 45.93it/s]  1%|          | 338/45900 [00:07<16:35, 45.76it/s]  1%|          | 343/45900 [00:07<16:46, 45.26it/s]  1%|          | 348/45900 [00:07<16:19, 46.52it/s]  1%|          | 353/45900 [00:07<16:02, 47.33it/s]  1%|          | 358/45900 [00:08<16:46, 45.27it/s]  1%|          | 364/45900 [00:08<16:34, 45.80it/s]  1%|          | 369/45900 [00:08<16:44, 45.32it/s]  1%|          | 374/45900 [00:08<16:38, 45.58it/s]  1%|          | 379/45900 [00:08<17:27, 43.44it/s]  1%|          | 385/45900 [00:08<16:13, 46.77it/s]  1%|          | 390/45900 [00:08<16:26, 46.12it/s]  1%|          | 395/45900 [00:08<17:34, 43.17it/s]  1%|          | 400/45900 [00:09<16:52, 44.92it/s]  1%|          | 405/45900 [00:09<16:39, 45.50it/s]  1%|          | 410/45900 [00:09<17:20, 43.73it/s]  1%|          | 415/45900 [00:09<16:56, 44.75it/s]  1%|          | 420/45900 [00:09<16:37, 45.60it/s]  1%|          | 425/45900 [00:09<16:14, 46.67it/s]  1%|          | 431/45900 [00:09<15:17, 49.54it/s]  1%|          | 437/45900 [00:09<15:03, 50.33it/s]  1%|          | 443/45900 [00:09<15:47, 47.97it/s]  1%|          | 448/45900 [00:10<16:33, 45.75it/s]  1%|          | 453/45900 [00:10<16:13, 46.69it/s]  1%|          | 458/45900 [00:10<15:55, 47.54it/s]  1%|          | 463/45900 [00:10<15:52, 47.71it/s]  1%|          | 469/45900 [00:10<15:01, 50.37it/s]  1%|          | 475/45900 [00:10<15:56, 47.50it/s]  1%|          | 480/45900 [00:10<15:53, 47.63it/s]  1%|          | 486/45900 [00:10<15:22, 49.22it/s]  1%|          | 491/45900 [00:10<16:54, 44.76it/s]  1%|          | 496/45900 [00:11<17:02, 44.39it/s]                                                     1%|          | 500/45900 [00:11<17:02, 44.39it/s]  1%|          | 501/45900 [00:11<17:17, 43.76it/s]  1%|          | 506/45900 [00:11<17:25, 43.41it/s]  1%|          | 511/45900 [00:11<16:51, 44.87it/s]  1%|          | 516/45900 [00:11<16:37, 45.51it/s]  1%|          | 522/45900 [00:11<15:53, 47.57it/s]  1%|          | 528/45900 [00:11<15:44, 48.04it/s]  1%|          | 533/45900 [00:11<16:06, 46.92it/s]  1%|          | 538/45900 [00:12<16:27, 45.92it/s]  1%|          | 543/45900 [00:12<17:55, 42.16it/s]  1%|          | 548/45900 [00:12<17:48, 42.44it/s]  1%|          | 553/45900 [00:12<17:25, 43.39it/s]  1%|          | 558/45900 [00:12<17:14, 43.84it/s]  1%|          | 563/45900 [00:12<17:31, 43.13it/s]  1%|          | 568/45900 [00:12<17:28, 43.24it/s]  1%|          | 573/45900 [00:12<17:08, 44.08it/s]  1%|▏         | 578/45900 [00:12<17:09, 44.01it/s]  1%|▏         | 584/45900 [00:13<17:12, 43.90it/s]  1%|▏         | 589/45900 [00:13<18:00, 41.93it/s]  1%|▏         | 595/45900 [00:13<16:36, 45.46it/s]  1%|▏         | 600/45900 [00:13<17:34, 42.96it/s]  1%|▏         | 605/45900 [00:13<17:26, 43.27it/s]  1%|▏         | 610/45900 [00:13<17:04, 44.23it/s]  1%|▏         | 615/45900 [00:13<17:23, 43.39it/s]  1%|▏         | 620/45900 [00:13<18:19, 41.17it/s]  1%|▏         | 626/45900 [00:14<17:11, 43.87it/s]  1%|▏         | 631/45900 [00:14<17:16, 43.66it/s]  1%|▏         | 636/45900 [00:14<17:13, 43.80it/s]  1%|▏         | 641/45900 [00:14<16:49, 44.86it/s]  1%|▏         | 646/45900 [00:14<17:49, 42.32it/s]  1%|▏         | 651/45900 [00:14<17:24, 43.31it/s]  1%|▏         | 656/45900 [00:14<17:02, 44.23it/s]  1%|▏         | 661/45900 [00:14<17:11, 43.84it/s]  1%|▏         | 666/45900 [00:14<17:16, 43.64it/s]  1%|▏         | 671/45900 [00:15<17:25, 43.25it/s]  1%|▏         | 676/45900 [00:15<17:43, 42.54it/s]  1%|▏         | 681/45900 [00:15<19:21, 38.94it/s]  1%|▏         | 685/45900 [00:15<19:29, 38.65it/s]  2%|▏         | 689/45900 [00:15<19:19, 38.98it/s]  2%|▏         | 694/45900 [00:15<18:38, 40.42it/s]  2%|▏         | 699/45900 [00:15<19:14, 39.14it/s]  2%|▏         | 704/45900 [00:15<18:27, 40.80it/s]  2%|▏         | 709/45900 [00:16<19:02, 39.55it/s]  2%|▏         | 714/45900 [00:16<18:08, 41.50it/s]  2%|▏         | 719/45900 [00:16<17:19, 43.46it/s]  2%|▏         | 725/45900 [00:16<16:13, 46.42it/s]  2%|▏         | 730/45900 [00:16<17:12, 43.74it/s]  2%|▏         | 736/45900 [00:16<15:57, 47.18it/s]  2%|▏         | 741/45900 [00:16<16:11, 46.46it/s]  2%|▏         | 746/45900 [00:16<16:32, 45.49it/s]  2%|▏         | 752/45900 [00:16<15:50, 47.48it/s]  2%|▏         | 757/45900 [00:17<15:44, 47.79it/s]  2%|▏         | 762/45900 [00:17<15:40, 47.98it/s]  2%|▏         | 767/45900 [00:17<15:45, 47.71it/s]  2%|▏         | 772/45900 [00:17<15:46, 47.65it/s]  2%|▏         | 778/45900 [00:17<15:39, 48.04it/s]  2%|▏         | 783/45900 [00:17<15:44, 47.76it/s]  2%|▏         | 788/45900 [00:17<16:37, 45.22it/s]  2%|▏         | 793/45900 [00:17<16:45, 44.88it/s]  2%|▏         | 798/45900 [00:17<16:57, 44.33it/s]  2%|▏         | 804/45900 [00:18<16:20, 45.97it/s]  2%|▏         | 809/45900 [00:18<16:57, 44.31it/s]  2%|▏         | 814/45900 [00:18<17:20, 43.33it/s]  2%|▏         | 820/45900 [00:18<16:36, 45.25it/s]  2%|▏         | 826/45900 [00:18<16:03, 46.80it/s]  2%|▏         | 831/45900 [00:18<16:12, 46.36it/s]  2%|▏         | 836/45900 [00:18<16:05, 46.68it/s]  2%|▏         | 842/45900 [00:18<15:06, 49.72it/s]  2%|▏         | 847/45900 [00:19<15:27, 48.56it/s]  2%|▏         | 852/45900 [00:19<15:21, 48.86it/s]  2%|▏         | 857/45900 [00:19<15:38, 47.98it/s]  2%|▏         | 863/45900 [00:19<14:52, 50.48it/s]  2%|▏         | 869/45900 [00:19<15:43, 47.74it/s]  2%|▏         | 874/45900 [00:19<16:42, 44.91it/s]  2%|▏         | 879/45900 [00:19<16:23, 45.78it/s]  2%|▏         | 884/45900 [00:19<16:27, 45.61it/s]  2%|▏         | 889/45900 [00:19<16:40, 44.99it/s]  2%|▏         | 894/45900 [00:20<16:18, 45.98it/s]  2%|▏         | 899/45900 [00:20<16:44, 44.82it/s]  2%|▏         | 904/45900 [00:20<17:12, 43.60it/s]  2%|▏         | 909/45900 [00:20<16:57, 44.23it/s]  2%|▏         | 914/45900 [00:20<16:53, 44.38it/s]  2%|▏         | 920/45900 [00:20<16:08, 46.45it/s]  2%|▏         | 925/45900 [00:20<17:00, 44.07it/s]  2%|▏         | 931/45900 [00:20<16:04, 46.62it/s]  2%|▏         | 936/45900 [00:20<16:37, 45.09it/s]  2%|▏         | 942/45900 [00:21<16:03, 46.65it/s]  2%|▏         | 947/45900 [00:21<15:58, 46.92it/s]  2%|▏         | 952/45900 [00:21<16:06, 46.48it/s]  2%|▏         | 957/45900 [00:21<15:47, 47.43it/s]  2%|▏         | 962/45900 [00:21<15:51, 47.25it/s]  2%|▏         | 967/45900 [00:21<15:40, 47.76it/s]  2%|▏         | 973/45900 [00:21<15:13, 49.18it/s]  2%|▏         | 978/45900 [00:21<16:05, 46.54it/s]  2%|▏         | 983/45900 [00:21<16:27, 45.51it/s]  2%|▏         | 988/45900 [00:22<16:45, 44.67it/s]  2%|▏         | {'loss': 10.747, 'grad_norm': 0.5115334987640381, 'learning_rate': 4.945533769063181e-05, 'epoch': 0.11}
-{'loss': 10.5523, 'grad_norm': 0.33891013264656067, 'learning_rate': 4.891067538126362e-05, 'epoch': 0.22}
-994/45900 [00:22<15:40, 47.76it/s]  2%|▏         | 1000/45900 [00:22<15:31, 48.23it/s]                                                      2%|▏         | 1000/45900 [00:22<15:31, 48.23it/s]
-  0%|          | 0/470 [00:00<?, ?it/s][A
-  2%|▏         | 8/470 [00:00<00:18, 24.64it/s][A
-  2%|▏         | 11/470 [00:00<00:37, 12.31it/s][A
-  3%|▎         | 13/470 [00:01<01:02,  7.30it/s][A
-  3%|▎         | 14/470 [00:01<01:11,  6.40it/s][ATraceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 116, in <module>
-    trainer.train(resume_from_checkpoint=False) # More precise version would be to pass args.checkpoint_dir explicitly
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 1859, in train
-    return inner_training_loop(
-           ^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 2278, in _inner_training_loop
-    self._maybe_log_save_evaluate(tr_loss, grad_norm, model, trial, epoch, ignore_keys_for_eval)
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 2662, in _maybe_log_save_evaluate
-    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 3467, in evaluate
-    output = eval_loop(
-             ^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 3670, in evaluation_loop
-    all_preds.add(logits)
-  File "/vast/home/ajherman/transformers/src/transformers/trainer_pt_utils.py", line 326, in add
-    self.tensors = nested_concat(self.tensors, tensors, padding_index=self.padding_index)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer_pt_utils.py", line 140, in nested_concat
-    return torch_pad_and_concatenate(tensors, new_tensors, padding_index=padding_index)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer_pt_utils.py", line 105, in torch_pad_and_concatenate
-    result = tensor1.new_full(new_shape, padding_index)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 7.14 GiB. GPU 0 has a total capacity of 15.89 GiB of which 1.99 GiB is free. Including non-PyTorch memory, this process has 13.90 GiB memory in use. Of the allocated memory 7.09 GiB is allocated by PyTorch, and 6.52 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-  2%|▏         | 1000/45900 [00:24<18:13, 41.07it/s]
-
-                                                [A
+Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Map:   0%|          | 0/36718 [00:00<?, ? examples/s]
+Traceback (most recent call last):
+  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 60, in <module>
+    train_dataset = train_dataset.map(encode, batched=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 602, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 567, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3156, in map
+    for rank, done, content in Dataset._map_single(**dataset_kwargs):
+  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3547, in _map_single
+    batch = apply_function_on_filtered_inputs(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3416, in apply_function_on_filtered_inputs
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 53, in encode
+    tokens = tokenizer.tokenize(example['text'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/tokenization_utils.py", line 585, in tokenize
+    if token in no_split_token:
+       ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unhashable type: 'list'

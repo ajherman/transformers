@@ -14,7 +14,7 @@ parser.add_argument('--save_total_limit', type=int, default=2, help='Limit the t
 parser.add_argument('--use_local_transformers', action='store_true', help='Use local transformers repository')
 parser.add_argument('--config_file', type=str, default='config.json', help='Config file')
 parser.add_argument('--checkpoint_dir', type=str, default=None, help='Checkpoint directory')
-parser.add_argument('--context_length', type=int, default=256, help='Context length)
+parser.add_argument('--context_length', type=int, default=256, help='Context length')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
