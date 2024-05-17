@@ -14,6 +14,7 @@ parser.add_argument('--save_total_limit', type=int, default=2, help='Limit the t
 parser.add_argument('--use_local_transformers', action='store_true', help='Use local transformers repository')
 parser.add_argument('--config_file', type=str, default='config.json', help='Config file')
 parser.add_argument('--checkpoint_dir', type=str, default=None, help='Checkpoint directory')
+parser.add_argument('--context_length', type=int, default=256, help='Context length)
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -48,8 +49,13 @@ eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
 # dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train').map(tokenizer, batched=True)
 
 # Tokenize the dataset
-def encode(examples):
-    return tokenizer(examples['text'])
+def encode(example,max_len=args.context_length):
+    tokens = tokenizer.tokenize(example['text'])
+    tokens = tokens[:max_len]  # Truncate to 100 tokens
+    example['text'] = tokenizer.convert_tokens_to_string(tokens)
+    return example
+
+    # return tokenizer(examples['text']) # Previous version
 
 train_dataset = train_dataset.map(encode, batched=True)
 eval_dataset = eval_dataset.map(encode, batched=True)
