@@ -48,6 +48,10 @@ model = AutoModelForCausalLM.from_config(config)
 
 print("Config:\n", model.config)
 
+# Print number of model parameters
+num_params = sum(p.numel() for p in model.parameters())
+print("Number of model parameters:", num_params)
+
 # Load the dataset
 logging.getLogger("datasets").setLevel(logging.DEBUG)
 
