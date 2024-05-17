@@ -2,6 +2,16 @@
   from pandas.core import (
 /vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
   warnings.warn(
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -16,12 +26,12 @@ Config:
   "initializer_range": 0.02,
   "layer_norm_epsilon": 1e-05,
   "model_type": "gpt2",
-  "n_ctx": 256,
+  "n_ctx": 10,
   "n_embd": 8,
   "n_head": 2,
   "n_inner": null,
   "n_layer": 1,
-  "n_positions": 256,
+  "n_positions": 10,
   "reorder_and_upcast_attn": false,
   "resid_pdrop": 0.1,
   "scale_attn_by_inverse_layer_idx": false,
@@ -42,29 +52,97 @@ Config:
   "vocab_size": 50257
 }
 
-Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Map:   0%|          | 0/36718 [00:00<?, ? examples/s]
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 60, in <module>
-    train_dataset = train_dataset.map(encode, batched=True)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 602, in wrapper
-    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
-                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 567, in wrapper
-    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
-                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3156, in map
-    for rank, done, content in Dataset._map_single(**dataset_kwargs):
-  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3547, in _map_single
-    batch = apply_function_on_filtered_inputs(
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/miniconda3/envs/transformer/lib/python3.11/site-packages/datasets/arrow_dataset.py", line 3416, in apply_function_on_filtered_inputs
-    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 53, in encode
-    tokens = tokenizer.tokenize(example['text'])
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/tokenization_utils.py", line 585, in tokenize
-    if token in no_split_token:
-       ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: unhashable type: 'list'
+Finished loading datasets
+Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-a495662bef96c90a.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:19, 1838.69 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:21, 1626.16 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:17, 1923.67 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:15, 2095.96 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:13, 2309.19 examples/s]Map:  16%|█▋        | 6000/36718 [00:02<00:12, 2470.58 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:12, 2379.52 examples/s]Map:  22%|██▏       | 8000/36718 [00:03<00:11, 2415.98 examples/s]Map:  25%|██▍       | 9000/36718 [00:03<00:11, 2519.01 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:10, 2559.18 examples/s]Map:  30%|██▉       | 11000/36718 [00:04<00:09, 2597.93 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:09, 2660.65 examples/s]Map:  35%|███▌      | 13000/36718 [00:05<00:08, 2649.33 examples/s]Map:  38%|███▊      | 14000/36718 [00:05<00:08, 2754.62 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:07, 2803.17 examples/s]Map:  44%|████▎     | 16000/36718 [00:06<00:07, 2722.16 examples/s]Map:  46%|████▋     | 17000/36718 [00:06<00:07, 2749.73 examples/s]Map:  49%|████▉     | 18000/36718 [00:07<00:06, 2807.75 examples/s]Map:  52%|█████▏    | 19000/36718 [00:07<00:06, 2909.03 examples/s]Map:  54%|█████▍    | 20000/36718 [00:07<00:05, 2914.47 examples/s]Map:  57%|█████▋    | 21000/36718 [00:08<00:05, 2855.61 examples/s]Map:  60%|█████▉    | 22000/36718 [00:08<00:05, 2834.34 examples/s]Map:  63%|██████▎   | 23000/36718 [00:08<00:04, 2883.56 examples/s]Map:  65%|██████▌   | 24000/36718 [00:09<00:04, 3017.18 examples/s]Map:  68%|██████▊   | 25000/36718 [00:09<00:03, 3095.90 examples/s]Map:  71%|███████   | 26000/36718 [00:09<00:03, 3032.61 examples/s]Map:  74%|███████▎  | 27000/36718 [00:10<00:03, 2927.20 examples/s]Map:  76%|███████▋  | 28000/36718 [00:10<00:03, 2853.41 examples/s]Map:  79%|███████▉  | 29000/36718 [00:10<00:02, 2964.46 examples/s]Map:  82%|████████▏ | 30000/36718 [00:11<00:02, 2959.78 examples/s]Map:  84%|████████▍ | 31000/36718 [00:11<00:02, 2811.81 examples/s]Map:  87%|████████▋ | 32000/36718 [00:11<00:01, 2796.33 examples/s]Map:  90%|████████▉ | 33000/36718 [00:12<00:01, 2751.92 examples/s]Map:  93%|█████████▎| 34000/36718 [00:12<00:00, 2750.87 examples/s]Map:  95%|█████████▌| 35000/36718 [00:13<00:00, 2849.06 examples/s]Map:  98%|█████████▊| 36000/36718 [00:13<00:00, 2794.28 examples/s]Map: 100%|██████████| 36718/36718 [00:13<00:00, 2824.14 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmp1n045hgg.
+Finished processing shard number None of 1.
+Map: 100%|██████████| 36718/36718 [00:13<00:00, 2633.69 examples/s]
+Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-a039921007912292.arrow
+Map:  27%|██▋       | 1000/3760 [00:00<00:01, 2071.71 examples/s]Map:  53%|█████▎    | 2000/3760 [00:00<00:00, 2031.03 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 2113.05 examples/s]Map: 100%|██████████| 3760/3760 [00:01<00:00, 2193.89 examples/s]Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmplrrlix55.
+Finished processing shard number None of 1.
+Map: 100%|██████████| 3760/3760 [00:01<00:00, 2097.31 examples/s]
+/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Got here!
+And got here!
+  0%|          | 0/11480 [00:00<?, ?it/s]/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+  0%|          | 1/11480 [00:01<4:49:36,  1.51s/it]  0%|          | 6/11480 [00:01<39:12,  4.88it/s]    0%|          | 11/11480 [00:01<19:39,  9.72it/s]  0%|          | 16/11480 [00:01<12:43, 15.01it/s]  0%|          | 21/11480 [00:01<09:17, 20.54it/s]  0%|          | 26/11480 [00:02<07:23, 25.84it/s]  0%|          | 31/11480 [00:02<06:11, 30.79it/s]  0%|          | 36/11480 [00:02<05:27, 34.94it/s]  0%|          | 41/11480 [00:02<04:57, 38.47it/s]  0%|          | 46/11480 [00:02<04:37, 41.24it/s]  0%|          | 51/11480 [00:02<04:23, 43.45it/s]  0%|          | 56/11480 [00:02<04:14, 44.94it/s]  1%|          | 61/11480 [00:02<04:07, 46.14it/s]  1%|          | 66/11480 [00:02<04:03, 46.94it/s]  1%|          | 71/11480 [00:02<04:00, 47.48it/s]  1%|          | 76/11480 [00:03<03:58, 47.86it/s]  1%|          | 81/11480 [00:03<03:56, 48.22it/s]  1%|          | 86/11480 [00:03<03:55, 48.40it/s]  1%|          | 91/11480 [00:03<03:54, 48.48it/s]  1%|          | 96/11480 [00:03<03:55, 48.41it/s]  1%|          | 101/11480 [00:03<03:54, 48.59it/s]  1%|          | 106/11480 [00:03<03:53, 48.70it/s]  1%|          | 111/11480 [00:03<03:52, 48.86it/s]  1%|          | 116/11480 [00:03<03:52, 48.79it/s]  1%|          | 121/11480 [00:03<03:52, 48.85it/s]  1%|          | 126/11480 [00:04<03:52, 48.89it/s]  1%|          | 131/11480 [00:04<03:52, 48.79it/s]  1%|          | 136/11480 [00:04<03:52, 48.85it/s]  1%|          | 141/11480 [00:04<03:51, 49.07it/s]  1%|▏         | 146/11480 [00:04<03:50, 49.16it/s]  1%|▏         | 151/11480 [00:04<03:50, 49.09it/s]  1%|▏         | 156/11480 [00:04<03:53, 48.40it/s]  1%|▏         | 161/11480 [00:04<03:52, 48.64it/s]  1%|▏         | 166/11480 [00:04<03:52, 48.76it/s]  1%|▏         | 171/11480 [00:05<03:52, 48.69it/s]  2%|▏         | 176/11480 [00:05<03:51, 48.88it/s]  2%|▏         | 181/11480 [00:05<03:51, 48.80it/s]  2%|▏         | 186/11480 [00:05<03:50, 49.08it/s]  2%|▏         | 191/11480 [00:05<03:49, 49.15it/s]  2%|▏         | 196/11480 [00:05<03:49, 49.20it/s]  2%|▏         | 201/11480 [00:05<03:49, 49.18it/s]  2%|▏         | 206/11480 [00:05<03:49, 49.06it/s]  2%|▏         | 211/11480 [00:05<03:50, 48.88it/s]  2%|▏         | 216/11480 [00:05<03:50, 48.94it/s]  2%|▏         | 221/11480 [00:06<03:49, 48.99it/s]  2%|▏         | 226/11480 [00:06<03:49, 48.97it/s]  2%|▏         | 231/11480 [00:06<03:49, 48.98it/s]  2%|▏         | 236/11480 [00:06<03:48, 49.11it/s]  2%|▏         | 241/11480 [00:06<03:49, 48.92it/s]  2%|▏         | 246/11480 [00:06<03:48, 49.17it/s]  2%|▏         | 251/11480 [00:06<03:48, 49.12it/s]  2%|▏         | 256/11480 [00:06<03:47, 49.27it/s]  2%|▏         | 261/11480 [00:06<03:48, 49.03it/s]  2%|▏         | 266/11480 [00:06<03:48, 49.00it/s]  2%|▏         | 271/11480 [00:07<03:49, 48.87it/s]  2%|▏         | 276/11480 [00:07<03:48, 48.98it/s]  2%|▏         | 281/11480 [00:07<03:49, 48.81it/s]  2%|▏         | 286/11480 [00:07<03:48, 49.01it/s]  3%|▎         | 291/11480 [00:07<03:49, 48.76it/s]  3%|▎         | 296/11480 [00:07<03:48, 48.89it/s]  3%|▎         | 301/11480 [00:07<03:48, 48.90it/s]  3%|▎         | 306/11480 [00:07<03:49, 48.62it/s]  3%|▎         | 311/11480 [00:07<03:49, 48.65it/s]  3%|▎         | 316/11480 [00:07<03:49, 48.69it/s]  3%|▎         | 321/11480 [00:08<03:49, 48.54it/s]  3%|▎         | 326/11480 [00:08<03:48, 48.79it/s]  3%|▎         | 331/11480 [00:08<03:47, 48.99it/s]  3%|▎         | 336/11480 [00:08<03:47, 49.04it/s]  3%|▎         | 341/11480 [00:08<03:47, 48.93it/s]  3%|▎         | 346/11480 [00:08<03:46, 49.07it/s]  3%|▎         | 351/11480 [00:08<03:46, 49.04it/s]  3%|▎         | 356/11480 [00:08<03:46, 49.06it/s]  3%|▎         | 361/11480 [00:08<03:47, 48.96it/s]  3%|▎         | 366/11480 [00:08<03:47, 48.96it/s]  3%|▎         | 371/11480 [00:09<03:47, 48.83it/s]  3%|▎         | 376/11480 [00:09<03:47, 48.89it/s]  3%|▎         | 381/11480 [00:09<03:46, 48.95it/s]  3%|▎         | 386/11480 [00:09<03:46, 48.94it/s]  3%|▎         | 391/11480 [00:09<03:46, 48.91it/s]  3%|▎         | 396/11480 [00:09<03:47, 48.81it/s]  3%|▎         | 401/11480 [00:09<03:46, 48.83it/s]  4%|▎         | 406/11480 [00:09<03:46, 48.93it/s]  4%|▎         | 411/11480 [00:09<03:45, 48.99it/s]  4%|▎         | 416/11480 [00:10<03:45, 49.05it/s]  4%|▎         | 421/11480 [00:10<03:45, 49.02it/s]  4%|▎         | 426/11480 [00:10<03:46, 48.90it/s]  4%|▍         | 431/11480 [00:10<03:45, 49.06it/s]  4%|▍         | 436/11480 [00:10<03:45, 48.98it/s]  4%|▍         | 441/11480 [00:10<03:46, 48.84it/s]  4%|▍         | 446/11480 [00:10<03:45, 48.93it/s]  4%|▍         | 451/11480 [00:10<03:45, 48.84it/s]  4%|▍         | 456/11480 [00:10<03:45, 48.93it/s]  4%|▍         | 461/11480 [00:10<03:44, 48.99it/s]  4%|▍         | 466/11480 [00:11<03:45, 48.93it/s]  4%|▍         | 471/11480 [00:11<03:44, 49.02it/s]  4%|▍         | 476/11480 [00:11<03:44, 49.01it/s]  4%|▍         | 481/11480 [00:11<03:43, 49.10it/s]  4%|▍         | 486/11480 [00:11<03:44, 49.06it/s]  4%|▍         | 491/11480 [00:11<03:43, 49.14it/s]  4%|▍         | 496/11480 [00:11<03:43, 49.09it/s]                                                     4%|▍         | 500/11480 [00:11<03:43, 49.09it/s]  4%|▍         | 501/11480 [00:11<03:44, 48.98it/s]  4%|▍         | 506/11480 [00:11<03:43, 49.00it/s]  4%|▍         | 511/11480 [00:11<03:43, 49.03it/s]  4%|▍         | 516/11480 [00:12<03:43, 49.17it/s]  5%|▍         | 521/11480 [00:12<03:42, 49.18it/s]  5%|▍         | 526/11480 [00:12<03:42, 49.24it/s]  5%|▍         | 531/11480 [00:12<03:42, 49.16it/s]  5%|▍         | 536/11480 [00:12<03:42, 49.10it/s]  5%|▍         | 541/11480 [00:12<03:42, 49.17it/s]  5%|▍         | 546/11480 [00:12<03:41, 49.36it/s]  5%|▍         | 551/11480 [00:12<03:41, 49.40it/s]  5%|▍         | 556/11480 [00:12<03:41, 49.26it/s]  5%|▍         | 561/11480 [00:12<03:40, 49.45it/s]  5%|▍         | 566/11480 [00:13<03:40, 49.44it/s]  5%|▍         | 571/11480 [00:13<03:40, 49.36it/s]  5%|▌         | 576/11480 [00:13<03:42, 49.11it/s]  5%|▌         | 581/11480 [00:13<03:41, 49.15it/s]  5%|▌         | 586/11480 [00:13<03:41, 49.12it/s]  5%|▌         | 591/11480 [00:13<03:41, 49.06it/s]  5%|▌         | 596/11480 [00:13<03:41, 49.05it/s]  5%|▌         | 601/11480 [00:13<03:41, 49.02it/s]  5%|▌         | 606/11480 [00:13<03:42, 48.89it/s]  5%|▌         | 611/11480 [00:13<03:41, 48.99it/s]  5%|▌         | 616/11480 [00:14<03:41, 49.09it/s]  5%|▌         | 621/11480 [00:14<03:41, 49.11it/s]  5%|▌         | 626/11480 [00:14<03:41, 49.10it/s]  5%|▌         | 631/11480 [00:14<03:40, 49.14it/s]  6%|▌         | 636/11480 [00:14<03:40, 49.14it/s]  6%|▌         | 641/11480 [00:14<03:40, 49.07it/s]  6%|▌         | 646/11480 [00:14<03:40, 49.13it/s]  6%|▌         | 651/11480 [00:14<03:40, 49.16it/s]  6%|▌         | 656/11480 [00:14<03:45, 47.98it/s]  6%|▌         | 661/11480 [00:15<03:43, 48.46it/s]  6%|▌         | 666/11480 [00:15<03:45, 47.96it/s]  6%|▌         | 671/11480 [00:15<03:43, 48.47it/s]  6%|▌         | 676/11480 [00:15<03:41, 48.70it/s]  6%|▌         | 681/11480 [00:15<03:40, 48.91it/s]  6%|▌         | 686/11480 [00:15<03:40, 48.91it/s]  6%|▌         | 691/11480 [00:15<03:40, 48.96it/s]  6%|▌         | 696/11480 [00:15<03:39, 49.02it/s]  6%|▌         | 701/11480 [00:15<03:39, 49.07it/s]  6%|▌         | 706/11480 [00:15<03:39, 48.99it/s]  6%|▌         | 711/11480 [00:16<03:39, 49.06it/s]  6%|▌         | 716/11480 [00:16<03:39, 49.08it/s]  6%|▋         | 721/11480 [00:16<03:39, 49.01it/s]  6%|▋         | 726/11480 [00:16<03:39, 49.01it/s]  6%|▋         | 731/11480 [00:16<03:39, 49.06it/s]  6%|▋         | 736/11480 [00:16<03:38, 49.25it/s]  6%|▋         | 741/11480 [00:16<03:38, 49.14it/s]  6%|▋         | 746/11480 [00:16<03:38, 49.11it/s]  7%|▋         | 751/11480 [00:16<03:38, 49.06it/s]  7%|▋         | 756/11480 [00:16<03:38, 49.04it/s]  7%|▋         | 761/11480 [00:17<03:37, 49.19it/s]  7%|▋         | 766/11480 [00:17<03:37, 49.22it/s]  7%|▋         | 771/11480 [00:17<03:37, 49.31it/s]  7%|▋         | 776/11480 [00:17<03:36, 49.51it/s]  7%|▋         | 781/11480 [00:17<03:36, 49.53it/s]  7%|▋         | 786/11480 [00:17<03:36, 49.43it/s]  7%|▋         | 791/11480 [00:17<03:36, 49.41it/s]  7%|▋         | 796/11480 [00:17<03:36, 49.24it/s]  7%|▋         | 801/11480 [00:17<03:37, 49.08it/s]  7%|▋         | 806/11480 [00:17<03:37, 49.19it/s]  7%|▋         | 811/11480 [00:18<03:37, 49.12it/s]  7%|▋         | 816/11480 [00:18<03:37, 49.04it/s]  7%|▋         | 821/11480 [00:18<03:38, 48.72it/s]  7%|▋         | 826/11480 [00:18<03:40, 48.38it/s]  7%|▋         | 831/11480 [00:18<03:39, 48.41it/s]  7%|▋         | 836/11480 [00:18<03:41, 48.12it/s]  7%|▋         | 841/11480 [00:18<03:42, 47.81it/s]  7%|▋         | 846/11480 [00:18<03:42, 47.83it/s]  7%|▋         | 851/11480 [00:18<03:42, 47.81it/s]  7%|▋         | 856/11480 [00:19<03:42, 47.73it/s]  8%|▊         | 861/11480 [00:19<03:42, 47.63it/s]  8%|▊         | 866/11480 [00:19<03:42, 47.64it/s]  8%|▊         | 871/11480 [00:19<03:42, 47.67it/s]  8%|▊         | 876/11480 [00:19<03:42, 47.60it/s]  8%|▊         | 881/11480 [00:19<03:42, 47.63it/s]  8%|▊         | 886/11480 [00:19<03:40, 47.96it/s]  8%|▊         | 891/11480 [00:19<03:38, 48.36it/s]  8%|▊         | 896/11480 [00:19<03:38, 48.53it/s]  8%|▊         | 901/11480 [00:19<03:37, 48.73it/s]  8%|▊         | 906/11480 [00:20<03:36, 48.85it/s]  8%|▊         | 911/11480 [00:20<03:35, 49.02it/s]  8%|▊         | 916/11480 [00:20<03:35, 49.00it/s]  8%|▊         | 921/11480 [00:20<03:35, 49.03it/s]  8%|▊         | 926/11480 [00:20<03:35, 49.04it/s]  8%|▊         | 931/11480 [00:20<03:34, 49.19it/s]  8%|▊         | 936/11480 [00:20<03:34, 49.07it/s]  8%|▊         | 941/11480 [00:20<03:36, 48.65it/s]  {'loss': 10.7017, 'grad_norm': 0.6637471914291382, 'learning_rate': 4.782229965156795e-05, 'epoch': 0.44}
+{'loss': 10.4277, 'grad_norm': 0.40717700123786926, 'learning_rate': 4.564459930313589e-05, 'epoch': 0.87}
+8%|▊         | 946/11480 [00:20<03:38, 48.29it/s]  8%|▊         | 951/11480 [00:20<03:38, 48.10it/s]  8%|▊         | 956/11480 [00:21<03:39, 47.94it/s]  8%|▊         | 961/11480 [00:21<03:40, 47.77it/s]  8%|▊         | 966/11480 [00:21<03:38, 48.09it/s]  8%|▊         | 971/11480 [00:21<03:36, 48.44it/s]  9%|▊         | 976/11480 [00:21<03:35, 48.64it/s]  9%|▊         | 981/11480 [00:21<03:35, 48.71it/s]  9%|▊         | 986/11480 [00:21<03:34, 48.94it/s]  9%|▊         | 991/11480 [00:21<03:34, 48.93it/s]  9%|▊         | 996/11480 [00:21<03:33, 49.03it/s]                                                     9%|▊         | 1000/11480 [00:21<03:33, 49.03it/s]
+  0%|          | 0/118 [00:00<?, ?it/s][A
+  6%|▌         | 7/118 [00:00<00:01, 59.37it/s][A
+ 11%|█         | 13/118 [00:00<00:02, 50.56it/s][A
+ 16%|█▌        | 19/118 [00:00<00:02, 34.27it/s][A
+ 19%|█▉        | 23/118 [00:00<00:03, 28.98it/s][A
+ 23%|██▎       | 27/118 [00:00<00:03, 23.75it/s][A
+ 25%|██▌       | 30/118 [00:01<00:04, 20.90it/s][A
+ 28%|██▊       | 33/118 [00:01<00:03, 21.85it/s][A
+ 31%|███       | 36/118 [00:01<00:04, 17.65it/s][A
+ 32%|███▏      | 38/118 [00:01<00:05, 15.34it/s][A
+ 34%|███▍      | 40/118 [00:01<00:05, 13.84it/s][A
+ 36%|███▌      | 42/118 [00:02<00:06, 12.39it/s][A
+ 37%|███▋      | 44/118 [00:02<00:06, 11.62it/s][A
+ 39%|███▉      | 46/118 [00:02<00:06, 10.96it/s][A
+ 41%|████      | 48/118 [00:02<00:06, 10.38it/s][A
+ 42%|████▏     | 50/118 [00:02<00:06,  9.88it/s][A
+ 44%|████▍     | 52/118 [00:03<00:06,  9.49it/s][A
+ 46%|████▌     | 54/118 [00:03<00:07,  9.07it/s][A
+ 47%|████▋     | 55/118 [00:03<00:07,  8.85it/s][A
+ 47%|████▋     | 56/118 [00:03<00:07,  8.65it/s][A
+ 48%|████▊     | 57/118 [00:03<00:07,  8.41it/s][A
+ 49%|████▉     | 58/118 [00:03<00:07,  8.18it/s][A
+ 50%|█████     | 59/118 [00:04<00:07,  7.97it/s][A
+ 51%|█████     | 60/118 [00:04<00:07,  7.78it/s][A
+ 52%|█████▏    | 61/118 [00:04<00:07,  7.60it/s][A
+ 53%|█████▎    | 62/118 [00:04<00:07,  7.46it/s][A
+ 53%|█████▎    | 63/118 [00:04<00:07,  7.31it/s][A
+ 54%|█████▍    | 64/118 [00:04<00:07,  7.18it/s][A
+ 55%|█████▌    | 65/118 [00:04<00:07,  7.05it/s][A
+ 56%|█████▌    | 66/118 [00:05<00:07,  6.94it/s][A
+ 57%|█████▋    | 67/118 [00:05<00:07,  6.84it/s][A
+ 58%|█████▊    | 68/118 [00:05<00:07,  6.75it/s][A
+ 58%|█████▊    | 69/118 [00:05<00:07,  6.65it/s][A
+ 59%|█████▉    | 70/118 [00:05<00:07,  6.57it/s][A
+ 60%|██████    | 71/118 [00:05<00:07,  6.49it/s][A
+ 61%|██████    | 72/118 [00:06<00:07,  6.40it/s][A
+ 62%|██████▏   | 73/118 [00:06<00:07,  6.31it/s][A
+ 63%|██████▎   | 74/118 [00:06<00:07,  6.24it/s][A
+ 64%|██████▎   | 75/118 [00:06<00:06,  6.17it/s][A
+ 64%|██████▍   | 76/118 [00:06<00:06,  6.09it/s][A
+ 65%|██████▌   | 77/118 [00:06<00:06,  6.00it/s][A
+ 66%|██████▌   | 78/118 [00:07<00:06,  5.93it/s][A
+ 67%|██████▋   | 79/118 [00:07<00:06,  5.85it/s][A
+ 68%|██████▊   | 80/118 [00:07<00:06,  5.79it/s][ATraceback (most recent call last):
+  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 143, in <module>
+    trainer.train(resume_from_checkpoint=False) # More precise version would be to pass args.checkpoint_dir explicitly
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 1859, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 2278, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, grad_norm, model, trial, epoch, ignore_keys_for_eval)
+  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 2662, in _maybe_log_save_evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 3467, in evaluate
+    output = eval_loop(
+             ^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 3670, in evaluation_loop
+    all_preds.add(logits)
+  File "/vast/home/ajherman/transformers/src/transformers/trainer_pt_utils.py", line 326, in add
+    self.tensors = nested_concat(self.tensors, tensors, padding_index=self.padding_index)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/trainer_pt_utils.py", line 140, in nested_concat
+    return torch_pad_and_concatenate(tensors, new_tensors, padding_index=padding_index)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/trainer_pt_utils.py", line 99, in torch_pad_and_concatenate
+    return torch.cat((tensor1, tensor2), dim=0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.85 GiB. GPU 0 has a total capacity of 10.90 GiB of which 4.79 GiB is free. Including non-PyTorch memory, this process has 6.11 GiB memory in use. Of the allocated memory 4.87 GiB is allocated by PyTorch, and 1.03 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+  9%|▊         | 1000/11480 [00:29<05:12, 33.52it/s]
+
+                                                [A

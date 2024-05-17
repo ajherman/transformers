@@ -1,0 +1,1 @@
+Global step: 1000, Perplexity: 30277.7578125
