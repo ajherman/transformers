@@ -1,4 +1,3 @@
-
 import torch
 import sys
 import argparse
@@ -7,13 +6,12 @@ import os
 
 os.environ["HF_DATASETS_OFFLINE"] = "0"
 
-
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='GPT-2 Training')
 parser.add_argument('--output_dir', type=str, default='./gpt2-wikitext', help='Output directory')
 parser.add_argument('--num_train_epochs', type=int, default=20, help='Number of training epochs')
 parser.add_argument('--per_device_train_batch_size', type=int, default=8, help='Batch size for training')
-parser.add_argument('--save_steps', type=int, default=10_000, help='Number of updates steps before checkpoint saves')
+parser.add_argument('--save_steps', type=int, default=10000, help='Number of updates steps before checkpoint saves')
 parser.add_argument('--save_total_limit', type=int, default=2, help='Limit the total amount of checkpoints and deletes the older checkpoints')
 parser.add_argument('--use_local_transformers', action='store_true', help='Use local transformers repository')
 parser.add_argument('--config_file', type=str, default='config.json', help='Config file')
@@ -121,7 +119,7 @@ def compute_metrics(eval_pred):
    
     #loss = torch.tensor(trainer.eval_loss)
     perplexity = torch.exp(loss)
-    metrics = {'perplexity': perplexity.item()}
+    metrics = {'perplexity': perplexity.item(), 'loss': loss.item()}
 
     # Save metrics to a text file
     with open('metrics.txt', 'a') as file:
@@ -130,7 +128,7 @@ def compute_metrics(eval_pred):
     print("Perplexity:", perplexity.item())
 
     return metrics
-print("Got here!")
+
 # Define trainer
 trainer = Trainer(
     model=model,
@@ -142,7 +140,6 @@ trainer = Trainer(
     # resume_from_checkpoint=True
     # resume_from_checkpoint=args.checkpoint_dir
 )
-print("And got here!")
 # Train model
 trainer.train(resume_from_checkpoint=False) # More precise version would be to pass args.checkpoint_dir explicitly
 
