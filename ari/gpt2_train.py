@@ -119,7 +119,7 @@ def compute_metrics(eval_pred):
    
     #loss = torch.tensor(trainer.eval_loss)
     perplexity = torch.exp(loss)
-    metrics = {'perplexity': perplexity.item(), 'loss': loss.item()}
+    metrics = {'perplexity': perplexity.item(), 'comp_loss': loss.item(), 'ppl':np.exp(loss.item())}
 
     # Save metrics to a text file
     with open('metrics.txt', 'a') as file:

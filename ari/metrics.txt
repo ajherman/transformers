@@ -46,3 +46,4 @@ Global step: 43000, Perplexity: 1354.1766357421875
 Global step: 44000, Perplexity: 1350.891357421875
 Global step: 45000, Perplexity: 1347.4791259765625
 Global step: 45900, Perplexity: 1346.7198486328125
+Global step: 1000, Perplexity: 38969.0234375
