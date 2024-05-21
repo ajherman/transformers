@@ -71,4 +71,64 @@ data_collator = DataCollatorForLanguageModeling(
 )
 
 # Define training arguments
-training_args
+training_args = TrainingArguments(
+    output_dir=args.output_dir,  # output directory
+    overwrite_output_dir=True,  # overwrite the content of the output directory
+    num_train_epochs=args.num_train_epochs,  # number of training epochs
+    per_device_train_batch_size=args.per_device_train_batch_size,  # batch size for training
+    save_steps=args.save_steps,  # number of updates steps before checkpoint saves
+    save_total_limit=args.save_total_limit,  # limit the total amount of checkpoints and deletes the older checkpoints
+    evaluation_strategy="steps",  # evaluation strategy to adopt during training
+    eval_steps=1000,  # number of steps before evaluation
+)
+
+# Define compute_metrics function
+def compute_metrics(eval_pred):
+    predictions, labels = eval_pred
+    
+    # Ensure predictions and labels are tensors
+    predictions = torch.tensor(predictions)
+    labels = torch.tensor(labels)
+    
+    # Reshape predictions and labels to be compatible with CrossEntropyLoss
+    predictions = predictions.view(-1, predictions.shape[-1])
+    labels = labels.view(-1)
+    
+    # Define the loss function with ignore_index set to the padding token ID
+    loss_fct = torch.nn.CrossEntropyLoss(ignore_index=tokenizer.pad_token_id)
+    
+    # Compute the loss
+    loss = loss_fct(predictions, labels)
+    
+    # Compute perplexity
+    perplexity = torch.exp(loss)
+    
+    # Print for debugging
+    print(f"Computed in metrics - Loss: {loss.item()}, Perplexity: {perplexity.item()}")
+    
+    return {'eval_loss': loss.item(), 'perplexity': perplexity.item()}
+
+# Define trainer
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    data_collator=data_collator,
+    train_dataset=train_dataset,
+    eval_dataset=eval_dataset,
+    compute_metrics=compute_metrics,
+)
+
+# Train model
+trainer.train(resume_from_checkpoint=False)
+
+# Save model
+model.save_pretrained(args.output_dir)
+
+# Evaluate model
+eval_results = trainer.evaluate()
+print("Evaluation results:\n", eval_results)
+
+# Manually compute perplexity using eval_loss
+final_eval_loss = eval_results['eval_loss']
+final_perplexity = torch.exp(torch.tensor(final_eval_loss))
+print("Final Perplexity (Manual Calculation):", final_perplexity.item())
