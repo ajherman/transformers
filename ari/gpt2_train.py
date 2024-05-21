@@ -112,14 +112,30 @@ training_args = TrainingArguments(
 
 def compute_metrics(eval_pred):
     predictions, labels = eval_pred
-    predictions, labels = torch.from_numpy(predictions), torch.from_numpy(labels)
-    predictions = predictions.view(-1,predictions.shape[-1])
-    labels = labels.view(-1)
-    loss = torch.nn.functional.cross_entropy(predictions, labels)
+    # predictions, labels = torch.from_numpy(predictions), torch.from_numpy(labels)
+    # predictions = predictions.view(-1,predictions.shape[-1])
+    # labels = labels.view(-1)
+    # loss = torch.nn.functional.cross_entropy(predictions, labels)
    
+
+    # Ensure predictions and labels are tensors
+    predictions = torch.tensor(predictions)
+    labels = torch.tensor(labels)
+    
+    # Reshape predictions and labels to be compatible with CrossEntropyLoss
+    predictions = predictions.view(-1, predictions.shape[-1])
+    labels = labels.view(-1)
+    
+    # Define the loss function
+    loss_fct = torch.nn.CrossEntropyLoss(ignore_index=tokenizer.pad_token_id)
+    
+    # Compute the loss
+    loss = loss_fct(predictions, labels)
+
+
     #loss = torch.tensor(trainer.eval_loss)
     perplexity = torch.exp(loss)
-    metrics = {'perplexity': perplexity.item(), 'comp_loss': loss.item(), 'ppl':np.exp(loss.item())}
+    metrics = {'perplexity': perplexity.item(), 'comp_loss': loss.item()}
 
     # Save metrics to a text file
     with open('metrics.txt', 'a') as file:
