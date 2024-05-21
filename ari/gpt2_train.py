@@ -80,7 +80,7 @@ eval_dataset = eval_dataset.map(encode, batched=True)
 
 # Define data collator
 data_collator = DataCollatorForLanguageModeling(
-    tokenizer=tokenizer, mlm=False,
+    tokenizer=tokenizer, mlm=False, pad_to_multiple_of=None
 )
 
 # Define training arguments
