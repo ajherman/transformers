@@ -60,7 +60,7 @@ print("Finished loading datasets")
 
 # Tokenize the dataset
 def encode(examples):
-    return tokenizer(examples['text'], truncation=True, max_length=args.context_length, padding='max_length')
+    return tokenizer(examples['text'], truncation=True, max_length=model.config.n_ctx, padding='max_length')
 
 train_dataset = train_dataset.map(encode, batched=True)
 eval_dataset = eval_dataset.map(encode, batched=True)
