@@ -40,8 +40,6 @@ Config:
 
 Number of model parameters: 201320
 Finished loading datasets
-{'loss': 10.7836, 'grad_norm': 0.5726443529129028, 'learning_rate': 4.945533769063181e-05, 'epoch': 0.11}
-{'loss': 10.6487, 'grad_norm': 0.42036861181259155, 'learning_rate': 4.891067538126362e-05, 'epoch': 0.22}
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -84,12 +82,6 @@ Config:
 
 Number of model parameters: 201320
 Finished loading datasets
-{'loss': 10.7777, 'grad_norm': 0.5071247816085815, 'learning_rate': 4.945533769063181e-05, 'epoch': 0.11}
-{'loss': 10.6458, 'grad_norm': 0.3916386067867279, 'learning_rate': 4.891067538126362e-05, 'epoch': 0.22}
-Perplexity: 38969.0234375
-{'eval_loss': 10.576093673706055, 'eval_perplexity': 38969.0234375, 'eval_comp_loss': 10.57052230834961, 'eval_ppl': 38969.0234375, 'eval_runtime': 296.5684, 'eval_samples_per_second': 12.678, 'eval_steps_per_second': 1.585, 'epoch': 0.22}
-{'loss': 10.5046, 'grad_norm': 0.4958500862121582, 'learning_rate': 4.8366013071895424e-05, 'epoch': 0.33}
-{'loss': 10.3694, 'grad_norm': 0.7112877368927002, 'learning_rate': 4.7821350762527234e-05, 'epoch': 0.44}
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -132,5 +124,89 @@ Config:
 
 Number of model parameters: 201320
 Finished loading datasets
-{'loss': 10.7826, 'grad_norm': 0.6414318084716797, 'learning_rate': 4.945533769063181e-05, 'epoch': 0.11}
-{'loss': 10.6705, 'grad_norm': 0.3804095685482025, 'learning_rate': 4.891067538126362e-05, 'epoch': 0.22}
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 201320
+Finished loading datasets
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 201320
+Finished loading datasets
+{'loss': 10.7846, 'grad_norm': 0.5467935800552368, 'learning_rate': 4.945533769063181e-05, 'epoch': 0.11}
+{'loss': 10.652, 'grad_norm': 0.4329299330711365, 'learning_rate': 4.891067538126362e-05, 'epoch': 0.22}
