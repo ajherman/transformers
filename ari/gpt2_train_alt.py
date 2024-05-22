@@ -106,7 +106,7 @@ def compute_metrics(eval_pred):
     # Print for debugging
     print(f"Computed in metrics - Loss: {loss.item()}, Perplexity: {perplexity.item()}")
     
-    return {'eval_loss': loss.item(), 'perplexity': perplexity.item()}
+    return {'comp_loss': loss.item(), 'perplexity': perplexity.item()}
 
 # Define trainer
 trainer = Trainer(
