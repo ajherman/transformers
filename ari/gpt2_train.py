@@ -1,4 +1,9 @@
 import torch
+
+# Ensure CUDA is available
+if not torch.cuda.is_available():
+    raise EnvironmentError("CUDA is not available. Mixed precision training requires CUDA-enabled GPUs.")
+
 import sys
 import argparse
 import csv
