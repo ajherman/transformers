@@ -128,8 +128,10 @@ class CustomCallback(TrainerCallback):
     def on_evaluate(self, args, state, control, **kwargs):
         # Access the model
         print("I am printing, yay!")
-
-
+        results = self.trainer.evaluate()
+        loss = results['eval_loss']
+        print("Loss:", loss)
+        print("Perplexity:", torch.exp(torch.tensor(loss)).item())
         return control
 
 # Define trainer
