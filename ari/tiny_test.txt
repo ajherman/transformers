@@ -410,3 +410,97 @@ Computed in metrics - Loss: 7.496628284454346, Perplexity: 1801.95654296875
 {'eval_loss': 7.4000468254089355, 'eval_comp_loss': 7.496628284454346, 'eval_perplexity': 1801.95654296875, 'eval_runtime': 296.8461, 'eval_samples_per_second': 12.666, 'eval_steps_per_second': 1.583, 'epoch': 4.58}
 {'loss': 7.0826, 'grad_norm': 1.7775555849075317, 'learning_rate': 2.657952069716776e-05, 'epoch': 4.68}
 {'loss': 7.0617, 'grad_norm': 1.229617953300476, 'learning_rate': 2.6034858387799566e-05, 'epoch': 4.79}
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 201320
+Finished loading datasets
+{'loss': 10.7937, 'grad_norm': 0.6616675853729248, 'learning_rate': 4.945533769063181e-05, 'epoch': 0.11}
+{'loss': 10.6824, 'grad_norm': 0.47087183594703674, 'learning_rate': 4.891067538126362e-05, 'epoch': 0.22}
+Computed in metrics - Loss: 10.615920066833496, Perplexity: 40778.8984375
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 201320
+Finished loading datasets
+Eval loss is: None
+Custom Log: loss: 10.7839 | grad_norm: 0.5858 | learning_rate: 0.0000 | epoch: 0.1089
+{'loss': 10.7839, 'grad_norm': 0.5857952833175659, 'learning_rate': 4.945533769063181e-05, 'epoch': 0.11}
+Eval loss is: None
+Custom Log: loss: 10.6477 | grad_norm: 0.4532 | learning_rate: 0.0000 | epoch: 0.2179
+{'loss': 10.6477, 'grad_norm': 0.453185111284256, 'learning_rate': 4.891067538126362e-05, 'epoch': 0.22}
+Computed in metrics - Loss: 10.56808853149414, Perplexity: 38874.296875
