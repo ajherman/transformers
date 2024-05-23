@@ -3,11 +3,14 @@
 #SBATCH --time 10:00:00
 #SBATCH -N 1           
 #SBATCH -p shared-gpu
+#SBATCH --gres=gpu:8
+#SBATCH --mem=40G
+#SBATCH --cpus-per-task=2
 module load miniconda3
 source activate /vast/home/ajherman/miniconda3/envs/transformer
 #pip install datasets
 #export PATH="/vast/home/ajherman/miniconda3/envs/transformer/bin:$PATH"
 
-# srun -o tiny_test.out --ntasks=1 -N 1 python gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 10 --config_file tiny.json --per_device_train_batch_size 16 &
+# srun -o tiny_test.out --ntasks=1 -N 1 python gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 10 --config_file tiny.json --per_device_train_batch_size 16 --mixed_precision &
 
-srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 8 gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 10 --config_file tiny.json --per_device_train_batch_size 16 &
+srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 8 gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 10 --config_file tiny.json --per_device_train_batch_size 16 --mixed_precision &
