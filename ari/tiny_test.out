@@ -1,17 +1,285 @@
+[2024-05-23 10:59:49,677] torch.distributed.run: [WARNING] 
+[2024-05-23 10:59:49,677] torch.distributed.run: [WARNING] *****************************************
+[2024-05-23 10:59:49,677] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-05-23 10:59:49,677] torch.distributed.run: [WARNING] *****************************************
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
 /vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
   from pandas.core import (
 /vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
   warnings.warn(
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Config:
+ Config:
+Config:
+Config:
+   GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 201320
+GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+
+GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters:Number of model parameters:  201320201320
+
+Number of model parameters: 201320
+Config:
+ Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 201320
+Number of model parameters: 201320
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -53,26 +321,317 @@ Config:
 }
 
 Number of model parameters: 201320
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 201320
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Finished loading datasets
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Finished loading datasets
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
 Finished loading datasets
 Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-0c5b9a10494a1e24.arrow
-Map:   3%|▎         | 1000/36718 [00:00<00:18, 1948.37 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:20, 1671.46 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:16, 2029.57 examples/s]Map:  11%|█         | 4000/36718 [00:01<00:14, 2246.94 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:12, 2502.09 examples/s]Map:  16%|█▋        | 6000/36718 [00:02<00:11, 2693.91 examples/s]Map:  19%|█▉        | 7000/36718 [00:02<00:11, 2604.96 examples/s]Map:  22%|██▏       | 8000/36718 [00:03<00:10, 2656.92 examples/s]Map:  25%|██▍       | 9000/36718 [00:03<00:10, 2747.19 examples/s]Map:  27%|██▋       | 10000/36718 [00:03<00:09, 2816.91 examples/s]Map:  30%|██▉       | 11000/36718 [00:04<00:08, 2862.30 examples/s]Map:  33%|███▎      | 12000/36718 [00:04<00:08, 2933.43 examples/s]Map:  35%|███▌      | 13000/36718 [00:04<00:08, 2916.88 examples/s]Map:  38%|███▊      | 14000/36718 [00:05<00:07, 3034.76 examples/s]Map:  41%|████      | 15000/36718 [00:05<00:07, 3086.47 examples/s]Map:  44%|████▎     | 16000/36718 [00:05<00:06, 2997.82 examples/s]Map:  46%|████▋     | 17000/36718 [00:06<00:06, 3008.27 examples/s]Map:  49%|████▉     | 18000/36718 [00:06<00:06, 3072.65 examples/s]Map:  52%|█████▏    | 19000/36718 [00:06<00:05, 3187.69 examples/s]Map:  54%|█████▍    | 20000/36718 [00:07<00:05, 3188.69 examples/s]Map:  57%|█████▋    | 21000/36718 [00:07<00:05, 3130.26 examples/s]Map:  60%|█████▉    | 22000/36718 [00:07<00:04, 3111.64 examples/s]Map:  63%|██████▎   | 23000/36718 [00:08<00:04, 3171.14 examples/s]Map:  65%|██████▌   | 24000/36718 [00:08<00:03, 3319.39 examples/s]Map:  68%|██████▊   | 25000/36718 [00:08<00:03, 3405.19 examples/s]Map:  71%|███████   | 26000/36718 [00:09<00:03, 3308.91 examples/s]Map:  74%|███████▎  | 27000/36718 [00:09<00:03, 3201.19 examples/s]Map:  76%|███████▋  | 28000/36718 [00:09<00:02, 3127.17 examples/s]Map:  79%|███████▉  | 29000/36718 [00:09<00:02, 3248.94 examples/s]Map:  82%|████████▏ | 30000/36718 [00:10<00:02, 3249.81 examples/s]Map:  84%|████████▍ | 31000/36718 [00:10<00:01, 3088.02 examples/s]Map:  87%|████████▋ | 32000/36718 [00:10<00:01, 3078.01 examples/s]Map:  90%|████████▉ | 33000/36718 [00:11<00:01, 3056.75 examples/s]Map:  93%|█████████▎| 34000/36718 [00:11<00:00, 3057.00 examples/s]Map:  95%|█████████▌| 35000/36718 [00:11<00:00, 3162.77 examples/s]Map:  98%|█████████▊| 36000/36718 [00:12<00:00, 3067.28 examples/s]Map: 100%|██████████| 36718/36718 [00:12<00:00, 3095.77 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpaiw0x_01.
+Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-a29dfc00e8606e92.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:21, 1625.82 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-e8c1670952d73eca.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:21, 1647.88 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-d5b9c7ff1777004b.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:21, 1644.38 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:23, 1460.46 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:24, 1432.83 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:23, 1461.17 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1728.47 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1702.82 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1712.28 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1876.56 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1853.15 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1864.17 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2068.67 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2045.15 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2054.94 examples/s]Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Finished loading datasets
+Map:  16%|█▋        | 6000/36718 [00:03<00:13, 2205.57 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2176.42 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2193.29 examples/s]Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2112.09 examples/s]Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2090.25 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2105.68 examples/s]Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2142.34 examples/s]Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2124.72 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2136.69 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2228.30 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-8876ea348a9d4919.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:22, 1592.56 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2213.33 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2223.77 examples/s]Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2273.53 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2265.13 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2278.37 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2288.09 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:24, 1430.30 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2289.14 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2304.07 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2342.76 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1698.36 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2338.44 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2355.68 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2339.70 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1848.20 examples/s]Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Finished loading datasets
+Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2333.20 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2349.20 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2433.44 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2037.31 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2423.79 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2434.90 examples/s]Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Finished loading datasets
+Map:  41%|████      | 15000/36718 [00:06<00:08, 2477.42 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2171.30 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2450.55 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2472.29 examples/s]Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2406.17 examples/s]Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Finished loading datasets
+Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2373.48 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2388.98 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2070.69 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2435.51 examples/s]Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-86a37f823210af21.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:21, 1625.21 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2401.76 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2402.34 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2105.67 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2477.91 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2447.99 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2453.60 examples/s]Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Finished loading datasets
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-f46616c991bfdf87.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:21, 1639.89 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2191.60 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2565.43 examples/s]Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Map:   5%|▌         | 2000/36718 [00:01<00:24, 1439.42 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2534.46 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2535.64 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2568.32 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2246.98 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1706.65 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-f16cd94efaa82540.arrow
+Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2541.76 examples/s]Map:   3%|▎         | 1000/36718 [00:00<00:21, 1643.83 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2538.92 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:24, 1442.94 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2520.38 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2264.60 examples/s]Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2492.56 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2488.28 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1853.53 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1695.28 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2493.76 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2316.87 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:23, 1458.07 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2469.78 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2044.89 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2474.36 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-4b5716ebd263566b.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:22, 1596.49 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2518.09 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1845.90 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2306.55 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1711.91 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2515.15 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2518.38 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2187.57 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2640.13 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2400.45 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2031.54 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2633.65 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2633.04 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2712.73 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1861.21 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2104.19 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2445.93 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:26, 1292.15 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2165.60 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2702.61 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2692.27 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2663.73 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2050.90 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2135.68 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2362.52 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:21, 1591.17 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2652.33 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2645.59 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2094.37 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2574.99 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2193.31 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2223.89 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2390.43 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2561.51 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2561.22 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:18, 1770.65 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2128.30 examples/s]Map:  76%|███████▋  | 28000/36718 [00:11<00:03, 2509.84 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2116.55 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2278.33 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2438.03 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2484.45 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2500.17 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:16, 1971.72 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2213.25 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:02, 2607.20 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2150.30 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:07, 2528.34 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2311.05 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:03, 2568.78 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:02, 2596.95 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2126.83 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2606.19 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2266.51 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2235.01 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2532.81 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2360.52 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2566.94 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2567.97 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2297.11 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2482.47 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2049.69 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2286.44 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2486.43 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2355.87 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2447.46 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2448.28 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2345.93 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2472.42 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2090.42 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2443.27 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2319.16 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2473.57 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2439.86 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2444.46 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2344.41 examples/s]Map:  90%|████████▉ | 33000/36718 [00:13<00:01, 2441.48 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2183.77 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2515.94 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2483.49 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2366.39 examples/s]Map:  90%|████████▉ | 33000/36718 [00:14<00:01, 2419.52 examples/s]Map:  90%|████████▉ | 33000/36718 [00:14<00:01, 2426.88 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2407.58 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2425.89 examples/s]Map:  27%|██▋       | 10000/36718 [00:05<00:11, 2237.93 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2608.02 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2362.64 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2404.48 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2418.12 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2421.24 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2449.73 examples/s]Map:  95%|█████████▌| 35000/36718 [00:14<00:00, 2511.73 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2677.09 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2259.51 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2451.86 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2435.44 examples/s]Map:  95%|█████████▌| 35000/36718 [00:14<00:00, 2501.79 examples/s]Map:  95%|█████████▌| 35000/36718 [00:14<00:00, 2506.15 examples/s]Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2469.02 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2366.77 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2630.72 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2311.00 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2488.23 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2480.16 examples/s]Map: 100%|██████████| 36718/36718 [00:15<00:00, 2496.34 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmp54ji2ey5.
+Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2454.21 examples/s]Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2462.05 examples/s]Finished processing shard number None of 1.
+Map: 100%|██████████| 36718/36718 [00:15<00:00, 2364.10 examples/s]
+Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2396.88 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2543.54 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2561.85 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2312.71 examples/s]Map: 100%|██████████| 36718/36718 [00:15<00:00, 2471.32 examples/s]Map: 100%|██████████| 36718/36718 [00:15<00:00, 2482.12 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmp5imlaibr.
+Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmp20ch6yr5.
+Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2410.18 examples/s]Finished processing shard number None of 1.
+Map: 100%|██████████| 36718/36718 [00:15<00:00, 2342.91 examples/s]
 Finished processing shard number None of 1.
-Map: 100%|██████████| 36718/36718 [00:12<00:00, 2921.15 examples/s]
+Map: 100%|██████████| 36718/36718 [00:15<00:00, 2351.92 examples/s]
+Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2442.30 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2478.53 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2561.95 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2398.40 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2437.88 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2532.06 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:03, 2572.65 examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  41%|████      | 15000/36718 [00:07<00:08, 2440.88 examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2493.66 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2478.88 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2536.40 examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
 Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-41ff53c7cddf6b0f.arrow
-Map:  27%|██▋       | 1000/3760 [00:00<00:01, 2289.73 examples/s]Map:  53%|█████▎    | 2000/3760 [00:00<00:00, 2251.63 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 2340.65 examples/s]Map: 100%|██████████| 3760/3760 [00:01<00:00, 2431.59 examples/s]Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmptrvif6zo.
+Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2571.32 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2567.14 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2467.63 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2349.25 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-b3d194427aba4491.arrow
+Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1837.93 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2484.95 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2452.60 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2572.06 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2516.83 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-f9537cf4bf19a612.arrow
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-5dca162387a8ca2e.arrow
+Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1848.13 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1841.02 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2383.20 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2473.14 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1810.52 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2637.99 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2445.49 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2496.68 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2431.31 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1801.94 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1793.47 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2519.00 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2710.25 examples/s]Map:  90%|████████▉ | 33000/36718 [00:14<00:01, 2408.65 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1879.47 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:07, 2522.46 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2485.16 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2637.19 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2663.31 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1856.69 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1860.76 examples/s]Map: 100%|██████████| 3760/3760 [00:01<00:00, 1951.44 examples/s]Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmp20nnwivn.
 Finished processing shard number None of 1.
-Map: 100%|██████████| 3760/3760 [00:01<00:00, 2348.39 examples/s]
+Map: 100%|██████████| 3760/3760 [00:01<00:00, 1887.39 examples/s]
 /vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
   warnings.warn(
-/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py:628: UserWarning: Can't initialize NVML
-  warnings.warn("Can't initialize NVML")
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 89, in <module>
+Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2536.18 examples/s]Map:  54%|█████▍    | 20000/36718 [00:09<00:06, 2527.44 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2400.98 examples/s]Traceback (most recent call last):
+  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 94, in <module>
     training_args = TrainingArguments(
                     ^^^^^^^^^^^^^^^^^^
   File "<string>", line 126, in __init__
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1628, in __post_init__
-    raise ValueError(
-ValueError: FP16 Mixed precision training with AMP or APEX (`--fp16`) and FP16 half precision evaluation (`--fp16_full_eval`) can only be used on CUDA or MLU devices or NPU devices or certain XPU devices (with IPEX).
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1621, in __post_init__
+    and (self.device.type != "cuda")
+         ^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2121, in device
+    return self._setup_devices
+           ^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/utils/generic.py", line 59, in __get__
+    cached = self.fget(obj)
+             ^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2053, in _setup_devices
+    self.distributed_state = PartialState(
+                             ^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 281, in __init__
+    self.set_device()
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 793, in set_device
+    torch.cuda.set_device(self.device)
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py", line 408, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2706.30 examples/s]Map: 100%|██████████| 3760/3760 [00:01<00:00, 1926.32 examples/s]Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpkv2n221b.
+Map: 100%|██████████| 3760/3760 [00:01<00:00, 1922.57 examples/s]Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmp75nuipxs.
+Finished processing shard number None of 1.
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1871.70 examples/s]
+/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2569.86 examples/s]Finished processing shard number None of 1.
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1868.84 examples/s]
+/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2640.77 examples/s]Traceback (most recent call last):
+  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 94, in <module>
+    training_args = TrainingArguments(
+                    ^^^^^^^^^^^^^^^^^^
+  File "<string>", line 126, in __init__
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1621, in __post_init__
+    and (self.device.type != "cuda")
+         ^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2121, in device
+    return self._setup_devices
+           ^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/utils/generic.py", line 59, in __get__
+    cached = self.fget(obj)
+             ^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2053, in _setup_devices
+    self.distributed_state = PartialState(
+                             ^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 281, in __init__
+    self.set_device()
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 793, in set_device
+    torch.cuda.set_device(self.device)
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py", line 408, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Traceback (most recent call last):
+  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 94, in <module>
+    training_args = TrainingArguments(
+                    ^^^^^^^^^^^^^^^^^^
+  File "<string>", line 126, in __init__
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1621, in __post_init__
+    and (self.device.type != "cuda")
+         ^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2121, in device
+    return self._setup_devices
+           ^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/utils/generic.py", line 59, in __get__
+    cached = self.fget(obj)
+             ^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2053, in _setup_devices
+    self.distributed_state = PartialState(
+                             ^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 281, in __init__
+    self.set_device()
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 793, in set_device
+    torch.cuda.set_device(self.device)
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py", line 408, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: CUDA error: invalid device ordinal
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Map:  95%|█████████▌| 35000/36718 [00:14<00:00, 2472.02 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2474.24 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2645.80 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2695.73 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2489.30 examples/s]Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2410.37 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:06, 2444.34 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2535.47 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:02, 2577.27 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2632.17 examples/s]Map: 100%|██████████| 36718/36718 [00:15<00:00, 2429.93 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpdh79w6hb.
+Finished processing shard number None of 1.
+Map: 100%|██████████| 36718/36718 [00:15<00:00, 2327.12 examples/s]
+Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2461.07 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2470.59 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2581.03 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2547.95 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2586.02 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:03, 2564.97 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2467.34 examples/s]Map:  76%|███████▋  | 28000/36718 [00:11<00:03, 2494.68 examples/s]Map:  68%|██████▊   | 25000/36718 [00:11<00:04, 2661.59 examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2555.95 examples/s][2024-05-23 11:00:24,692] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 362760 closing signal SIGTERM
+[2024-05-23 11:00:24,692] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 362761 closing signal SIGTERM
+[2024-05-23 11:00:24,692] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 362762 closing signal SIGTERM
+[2024-05-23 11:00:24,692] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 362767 closing signal SIGTERM
+[2024-05-23 11:00:24,692] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 362768 closing signal SIGTERM
+[2024-05-23 11:00:24,806] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 3 (pid: 362763) of binary: /vast/home/ajherman/miniconda3/envs/transformer/bin/python
+Traceback (most recent call last):
+  File "/vast/home/ajherman/miniconda3/envs/transformer/bin/torchrun", line 33, in <module>
+    sys.exit(load_entry_point('torch==2.0.1', 'console_scripts', 'torchrun')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/run.py", line 812, in main
+    run(args)
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/run.py", line 803, in run
+    elastic_launch(
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 135, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+gpt2_train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-05-23_11:00:24
+  host      : cn145
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 362765)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-05-23_11:00:24
+  host      : cn145
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 362766)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-05-23_11:00:24
+  host      : cn145
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 362763)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

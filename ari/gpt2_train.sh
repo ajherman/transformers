@@ -10,4 +10,4 @@ source activate /vast/home/ajherman/miniconda3/envs/transformer
 #pip install datasets
 #export PATH="/vast/home/ajherman/miniconda3/envs/transformer/bin:$PATH"
 
-srun -o result.out --ntasks=1 -N 1 python gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 100 --per_device_train_batch_size 8 &
+srun -o result.out --ntasks=1 -N 1 python gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 100 --per_device_train_batch_size 16 &
