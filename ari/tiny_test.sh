@@ -13,4 +13,10 @@ source activate /vast/home/ajherman/miniconda3/envs/transformer
 
 # srun -o tiny_test.out --ntasks=1 -N 1 python gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 10 --config_file tiny.json --per_device_train_batch_size 16 --mixed_precision &
 
+# Enable Python fault handler
+export PYTHONFAULTHANDLER=1
+
+# Enable synchronous CUDA error checking
+export CUDA_LAUNCH_BLOCKING=1
+
 srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 8 gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 10 --config_file tiny.json --per_device_train_batch_size 16 --mixed_precision &

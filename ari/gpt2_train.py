@@ -1,4 +1,6 @@
 import torch
+import torch.distributed as dist
+import traceback
 
 # Ensure CUDA is available
 if not torch.cuda.is_available():
@@ -193,7 +195,13 @@ trainer = Trainer(
 trainer.add_callback(CustomCallback(trainer))
 
 # Train model
-trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
+
+try:
+    trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
+except Exception as e:
+    # Print the full traceback
+    print("Exception occurred:", e)
+    traceback.print_exc()
 
 # Save model
 model.save_pretrained(args.output_dir)
