@@ -30,7 +30,7 @@ if use_local_transformers:
         sys.path.insert(0, path_to_transformers)
 
 from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, AutoModelForCausalLM, GPT2Config
-from transformers import Trainer, TrainingArguments
+from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerControl
 from datasets import load_dataset
 import logging
 
@@ -108,6 +108,23 @@ def compute_metrics(eval_pred):
     
     return {'comp_loss': loss.item(), 'perplexity': perplexity.item(), 'comp_loss2': trainer.compute_loss(model, eval_pred).item()}
 
+class CustomLoggingCallback(TrainerCallback):
+    def on_log(self, args, state, control: TrainerControl, logs=None, **kwargs):
+        if logs is not None:
+            # Access eval_loss from the logs
+            eval_loss = logs.get('eval_loss')
+            print("Eval loss is:", eval_loss)
+            # Custom formatting for the logs
+            formatted_logs = " | ".join([f"{k}: {v:.4f}" for k, v in logs.items() if isinstance(v, (int, float))])
+            print(f"Custom Log: {formatted_logs}")
+            
+            # Example: Take action based on eval_loss
+            if eval_loss is not None and eval_loss < 0.1:
+                print("Eval loss is below 0.1, taking action...")
+                control.should_training_stop = True
+
+        return control
+
 # Define trainer
 trainer = Trainer(
     model=model,
@@ -116,6 +133,8 @@ trainer = Trainer(
     train_dataset=train_dataset,
     eval_dataset=eval_dataset,
     compute_metrics=compute_metrics,
+    callbacks=[CustomLoggingCallback]  # Add your custom callback here
+
 )
 
 # Train model
