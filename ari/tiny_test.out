@@ -1,0 +1,78 @@
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
+Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 10,
+  "n_embd": 4,
+  "n_head": 2,
+  "n_inner": null,
+  "n_layer": 1,
+  "n_positions": 10,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.0.dev0",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 201320
+Finished loading datasets
+Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-0c5b9a10494a1e24.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:18, 1948.37 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:20, 1671.46 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:16, 2029.57 examples/s]Map:  11%|█         | 4000/36718 [00:01<00:14, 2246.94 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:12, 2502.09 examples/s]Map:  16%|█▋        | 6000/36718 [00:02<00:11, 2693.91 examples/s]Map:  19%|█▉        | 7000/36718 [00:02<00:11, 2604.96 examples/s]Map:  22%|██▏       | 8000/36718 [00:03<00:10, 2656.92 examples/s]Map:  25%|██▍       | 9000/36718 [00:03<00:10, 2747.19 examples/s]Map:  27%|██▋       | 10000/36718 [00:03<00:09, 2816.91 examples/s]Map:  30%|██▉       | 11000/36718 [00:04<00:08, 2862.30 examples/s]Map:  33%|███▎      | 12000/36718 [00:04<00:08, 2933.43 examples/s]Map:  35%|███▌      | 13000/36718 [00:04<00:08, 2916.88 examples/s]Map:  38%|███▊      | 14000/36718 [00:05<00:07, 3034.76 examples/s]Map:  41%|████      | 15000/36718 [00:05<00:07, 3086.47 examples/s]Map:  44%|████▎     | 16000/36718 [00:05<00:06, 2997.82 examples/s]Map:  46%|████▋     | 17000/36718 [00:06<00:06, 3008.27 examples/s]Map:  49%|████▉     | 18000/36718 [00:06<00:06, 3072.65 examples/s]Map:  52%|█████▏    | 19000/36718 [00:06<00:05, 3187.69 examples/s]Map:  54%|█████▍    | 20000/36718 [00:07<00:05, 3188.69 examples/s]Map:  57%|█████▋    | 21000/36718 [00:07<00:05, 3130.26 examples/s]Map:  60%|█████▉    | 22000/36718 [00:07<00:04, 3111.64 examples/s]Map:  63%|██████▎   | 23000/36718 [00:08<00:04, 3171.14 examples/s]Map:  65%|██████▌   | 24000/36718 [00:08<00:03, 3319.39 examples/s]Map:  68%|██████▊   | 25000/36718 [00:08<00:03, 3405.19 examples/s]Map:  71%|███████   | 26000/36718 [00:09<00:03, 3308.91 examples/s]Map:  74%|███████▎  | 27000/36718 [00:09<00:03, 3201.19 examples/s]Map:  76%|███████▋  | 28000/36718 [00:09<00:02, 3127.17 examples/s]Map:  79%|███████▉  | 29000/36718 [00:09<00:02, 3248.94 examples/s]Map:  82%|████████▏ | 30000/36718 [00:10<00:02, 3249.81 examples/s]Map:  84%|████████▍ | 31000/36718 [00:10<00:01, 3088.02 examples/s]Map:  87%|████████▋ | 32000/36718 [00:10<00:01, 3078.01 examples/s]Map:  90%|████████▉ | 33000/36718 [00:11<00:01, 3056.75 examples/s]Map:  93%|█████████▎| 34000/36718 [00:11<00:00, 3057.00 examples/s]Map:  95%|█████████▌| 35000/36718 [00:11<00:00, 3162.77 examples/s]Map:  98%|█████████▊| 36000/36718 [00:12<00:00, 3067.28 examples/s]Map: 100%|██████████| 36718/36718 [00:12<00:00, 3095.77 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpaiw0x_01.
+Finished processing shard number None of 1.
+Map: 100%|██████████| 36718/36718 [00:12<00:00, 2921.15 examples/s]
+Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-41ff53c7cddf6b0f.arrow
+Map:  27%|██▋       | 1000/3760 [00:00<00:01, 2289.73 examples/s]Map:  53%|█████▎    | 2000/3760 [00:00<00:00, 2251.63 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 2340.65 examples/s]Map: 100%|██████████| 3760/3760 [00:01<00:00, 2431.59 examples/s]Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmptrvif6zo.
+Finished processing shard number None of 1.
+Map: 100%|██████████| 3760/3760 [00:01<00:00, 2348.39 examples/s]
+/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py:628: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Traceback (most recent call last):
+  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 89, in <module>
+    training_args = TrainingArguments(
+                    ^^^^^^^^^^^^^^^^^^
+  File "<string>", line 126, in __init__
+  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1628, in __post_init__
+    raise ValueError(
+ValueError: FP16 Mixed precision training with AMP or APEX (`--fp16`) and FP16 half precision evaluation (`--fp16_full_eval`) can only be used on CUDA or MLU devices or NPU devices or certain XPU devices (with IPEX).
