@@ -44,160 +44,163 @@ from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerCon
 from datasets import load_dataset
 import logging
 
-# Read in config file
-config = GPT2Config.from_json_file(args.config_file)
-
-# Load pre-trained model and tokenizer
-model_name = 'gpt2'
-tokenizer = GPT2Tokenizer.from_pretrained(model_name)
-tokenizer.pad_token = tokenizer.eos_token # Add pad token
-# model = GPT2LMHeadModel.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_config(config)
-
-print("Config:\n", model.config)
-
-# Print number of model parameters
-num_params = sum(p.numel() for p in model.parameters())
-print("Number of model parameters:", num_params)
-
-# Load the dataset
-logging.getLogger("datasets").setLevel(logging.DEBUG)
-
-train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
-eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
-# dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train').map(tokenizer, batched=True)
-print("Finished loading datasets")
-#assert(0)
-# Tokenize the dataset
-def encode(examples):
-    # tokens = tokenizer(example['text'])
-    # tokens = tokens[:max_len]  # Truncate to 100 tokens
-    # example['text'] = tokenizer.convert_tokens_to_string(tokens)
-    
-    # # Tokenize each string in the 'text' field
-    # tokenized_texts = [tokenizer.tokenize(text)[:max_len] for text in example['text']]
-    # # Convert the tokens back to strings
-    # example['text'] = [tokenizer.convert_tokens_to_string(tokens) for tokens in tokenized_texts]
-    # return example
-
-    tokenized_texts = tokenizer(examples['text'], truncation=True, max_length=model.config.n_ctx, padding='max_length')
-    return tokenized_texts
-
-    # return tokenizer(examples['text']) # Previous version
-
-train_dataset = train_dataset.map(encode, batched=True)
-eval_dataset = eval_dataset.map(encode, batched=True)
-
-# Define data collator
-data_collator = DataCollatorForLanguageModeling(
-    tokenizer=tokenizer, mlm=False, pad_to_multiple_of=None
-)
-
-# Define training arguments
-training_args = TrainingArguments(
-    output_dir=args.output_dir, # output directory
-    overwrite_output_dir=True, # overwrite the content of the output directory
-    num_train_epochs=args.num_train_epochs, # number of training epochs
-    per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
-    save_steps=args.save_steps, # number of updates steps before checkpoint saves
-    save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
-    evaluation_strategy="epoch", # evaluation strategy to adopt during training
-    fp16=args.mixed_precision, # Mix percision
-    # eval_steps=1000, # number of steps before evaluation
-    # warmup_steps=500,                # number of warmup steps for learning rate scheduler
-    # weight_decay=0.01, 
-)
-
-# def compute_metrics(eval_pred):
-#     predictions, labels = eval_pred
-#     perplexity = torch_exp(torch.tensor(trainer.eval_loss))
-#     metrics = {'perplexity': perplexity.item()}
-#     # write_metrics_to_csv(metrics, 'metrics.csv')
-
-#     with open('metrics.csv', 'a', newline='') as file:
-#         writer = csv.writer(file)
-#         for key, value in metrics.items():
-#             writer.writerow([training_args.global_step, key, value])
-
-#     return metrics
-
-# def compute_metrics(eval_pred):
-#     predictions, labels = eval_pred
-#     # predictions, labels = torch.from_numpy(predictions), torch.from_numpy(labels)
-#     # predictions = predictions.view(-1,predictions.shape[-1])
-#     # labels = labels.view(-1)
-#     # loss = torch.nn.functional.cross_entropy(predictions, labels)
-   
-
-#     # Ensure predictions and labels are tensors
-#     predictions = torch.tensor(predictions)
-#     labels = torch.tensor(labels)
-    
-#     # Reshape predictions and labels to be compatible with CrossEntropyLoss
-#     predictions = predictions.view(-1, predictions.shape[-1])
-#     labels = labels.view(-1)
-    
-#     # Define the loss function
-#     loss_fct = torch.nn.CrossEntropyLoss(ignore_index=tokenizer.pad_token_id)
-    
-#     # Compute the loss
-#     loss = loss_fct(predictions, labels)
-
-
-#     #loss = torch.tensor(trainer.eval_loss)
-#     perplexity = torch.exp(loss)
-#     metrics = {'perplexity': perplexity.item(), 'comp_loss': loss.item()}
-
-#     # Save metrics to a text file
-#     with open('metrics.txt', 'a') as file:
-#         file.write(f'Global step: {trainer.state.global_step}, Perplexity: {perplexity.item()}\n')
-
-#     print("Perplexity:", perplexity.item())
-
-#     return metrics
-
-# Use this to periodically trigger events during training
-class CustomCallback(TrainerCallback):
-    def __init__(self, trainer):
-        self.trainer = trainer
-
-    def on_epoch_end(self, args, state, control, **kwargs):
-        # Perform custom evaluation at the end of each epoch
-        if args.evaluation_strategy == "epoch":
-            self.custom_evaluation()
-
-    def custom_evaluation(self):
-        # Access the model
-        print("\nEvaluation at the end of epoch:\n")
-        results = self.trainer.evaluate()
-        loss = results['eval_loss']
-        perplexity = np.exp(loss)
-        print("Loss:", loss)
-        print("Perplexity:", perplexity)
-        
-        with open('metrics.csv', 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow([results['epoch'], loss, perplexity])
-
-
-# Define trainer
-trainer = Trainer(
-    model=model,
-    args=training_args,
-    data_collator=data_collator,
-    train_dataset=train_dataset,
-    eval_dataset=eval_dataset,
-    # compute_metrics=compute_metrics,
-    # resume_from_checkpoint=True
-    # resume_from_checkpoint=args.checkpoint_dir
-)
-
-trainer.add_callback(CustomCallback(trainer))
-
-# Train model
-
 try:
+    dist.init_process_group(backend='nccl')
+
+
+    # Read in config file
+    config = GPT2Config.from_json_file(args.config_file)
+
+    # Load pre-trained model and tokenizer
+    model_name = 'gpt2'
+    tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+    tokenizer.pad_token = tokenizer.eos_token # Add pad token
+    # model = GPT2LMHeadModel.from_pretrained(model_name)
+    model = AutoModelForCausalLM.from_config(config)
+
+    print("Config:\n", model.config)
+
+    # Print number of model parameters
+    num_params = sum(p.numel() for p in model.parameters())
+    print("Number of model parameters:", num_params)
+
+    # Load the dataset
+    logging.getLogger("datasets").setLevel(logging.DEBUG)
+
+    train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
+    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
+    # dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train').map(tokenizer, batched=True)
+    print("Finished loading datasets")
+    #assert(0)
+    # Tokenize the dataset
+    def encode(examples):
+        # tokens = tokenizer(example['text'])
+        # tokens = tokens[:max_len]  # Truncate to 100 tokens
+        # example['text'] = tokenizer.convert_tokens_to_string(tokens)
+        
+        # # Tokenize each string in the 'text' field
+        # tokenized_texts = [tokenizer.tokenize(text)[:max_len] for text in example['text']]
+        # # Convert the tokens back to strings
+        # example['text'] = [tokenizer.convert_tokens_to_string(tokens) for tokens in tokenized_texts]
+        # return example
+
+        tokenized_texts = tokenizer(examples['text'], truncation=True, max_length=model.config.n_ctx, padding='max_length')
+        return tokenized_texts
+
+        # return tokenizer(examples['text']) # Previous version
+
+    train_dataset = train_dataset.map(encode, batched=True)
+    eval_dataset = eval_dataset.map(encode, batched=True)
+
+    # Define data collator
+    data_collator = DataCollatorForLanguageModeling(
+        tokenizer=tokenizer, mlm=False, pad_to_multiple_of=None
+    )
+
+    # Define training arguments
+    training_args = TrainingArguments(
+        output_dir=args.output_dir, # output directory
+        overwrite_output_dir=True, # overwrite the content of the output directory
+        num_train_epochs=args.num_train_epochs, # number of training epochs
+        per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
+        save_steps=args.save_steps, # number of updates steps before checkpoint saves
+        save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
+        evaluation_strategy="epoch", # evaluation strategy to adopt during training
+        fp16=args.mixed_precision, # Mix percision
+        # eval_steps=1000, # number of steps before evaluation
+        # warmup_steps=500,                # number of warmup steps for learning rate scheduler
+        # weight_decay=0.01, 
+    )
+
+    # def compute_metrics(eval_pred):
+    #     predictions, labels = eval_pred
+    #     perplexity = torch_exp(torch.tensor(trainer.eval_loss))
+    #     metrics = {'perplexity': perplexity.item()}
+    #     # write_metrics_to_csv(metrics, 'metrics.csv')
+
+    #     with open('metrics.csv', 'a', newline='') as file:
+    #         writer = csv.writer(file)
+    #         for key, value in metrics.items():
+    #             writer.writerow([training_args.global_step, key, value])
+
+    #     return metrics
+
+    # def compute_metrics(eval_pred):
+    #     predictions, labels = eval_pred
+    #     # predictions, labels = torch.from_numpy(predictions), torch.from_numpy(labels)
+    #     # predictions = predictions.view(-1,predictions.shape[-1])
+    #     # labels = labels.view(-1)
+    #     # loss = torch.nn.functional.cross_entropy(predictions, labels)
+    
+
+    #     # Ensure predictions and labels are tensors
+    #     predictions = torch.tensor(predictions)
+    #     labels = torch.tensor(labels)
+        
+    #     # Reshape predictions and labels to be compatible with CrossEntropyLoss
+    #     predictions = predictions.view(-1, predictions.shape[-1])
+    #     labels = labels.view(-1)
+        
+    #     # Define the loss function
+    #     loss_fct = torch.nn.CrossEntropyLoss(ignore_index=tokenizer.pad_token_id)
+        
+    #     # Compute the loss
+    #     loss = loss_fct(predictions, labels)
+
+
+    #     #loss = torch.tensor(trainer.eval_loss)
+    #     perplexity = torch.exp(loss)
+    #     metrics = {'perplexity': perplexity.item(), 'comp_loss': loss.item()}
+
+    #     # Save metrics to a text file
+    #     with open('metrics.txt', 'a') as file:
+    #         file.write(f'Global step: {trainer.state.global_step}, Perplexity: {perplexity.item()}\n')
+
+    #     print("Perplexity:", perplexity.item())
+
+    #     return metrics
+
+    # Use this to periodically trigger events during training
+    class CustomCallback(TrainerCallback):
+        def __init__(self, trainer):
+            self.trainer = trainer
+
+        def on_epoch_end(self, args, state, control, **kwargs):
+            # Perform custom evaluation at the end of each epoch
+            if args.evaluation_strategy == "epoch":
+                self.custom_evaluation()
+
+        def custom_evaluation(self):
+            # Access the model
+            print("\nEvaluation at the end of epoch:\n")
+            results = self.trainer.evaluate()
+            loss = results['eval_loss']
+            perplexity = np.exp(loss)
+            print("Loss:", loss)
+            print("Perplexity:", perplexity)
+            
+            with open('metrics.csv', 'a', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow([results['epoch'], loss, perplexity])
+
+
+    # Define trainer
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        data_collator=data_collator,
+        train_dataset=train_dataset,
+        eval_dataset=eval_dataset,
+        # compute_metrics=compute_metrics,
+        # resume_from_checkpoint=True
+        # resume_from_checkpoint=args.checkpoint_dir
+    )
+
+    trainer.add_callback(CustomCallback(trainer))
+
+    # Train model
     trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
+
 except Exception as e:
     # Print the full traceback
     print("Exception occurred:", e)
