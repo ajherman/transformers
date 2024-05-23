@@ -93,8 +93,8 @@ training_args = TrainingArguments(
     per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
     save_steps=args.save_steps, # number of updates steps before checkpoint saves
     save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
-    evaluation_strategy="steps", # evaluation strategy to adopt during training
-    eval_steps=1000, # number of steps before evaluation
+    evaluation_strategy="epoch", # evaluation strategy to adopt during training
+    # eval_steps=1000, # number of steps before evaluation
     # warmup_steps=500,                # number of warmup steps for learning rate scheduler
     # weight_decay=0.01, 
 )
