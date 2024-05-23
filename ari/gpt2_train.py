@@ -168,7 +168,7 @@ class CustomCallback(TrainerCallback):
         
         with open('metrics.csv', 'a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([results.epoch, loss, perplexity])
+            writer.writerow([results['epoch'], loss, perplexity])
 
 
 # Define trainer
