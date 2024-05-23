@@ -24,6 +24,7 @@ parser.add_argument('--config_file', type=str, default='config.json', help='Conf
 parser.add_argument('--checkpoint_dir', type=str, default=None, help='Checkpoint directory')
 parser.add_argument('--context_length', type=int, default=256, help='Context length')
 parser.add_argument('--load_from_checkpoint', action='store_true', help='Load from checkpoint')
+parser.add_argument('--mixed_precision', action='store_true', help='Use mixed precision')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -99,7 +100,7 @@ training_args = TrainingArguments(
     save_steps=args.save_steps, # number of updates steps before checkpoint saves
     save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
     evaluation_strategy="epoch", # evaluation strategy to adopt during training
-    fp16=True, # Mix percision
+    fp16=args.mixed_precision, # Mix percision
     # eval_steps=1000, # number of steps before evaluation
     # warmup_steps=500,                # number of warmup steps for learning rate scheduler
     # weight_decay=0.01, 
