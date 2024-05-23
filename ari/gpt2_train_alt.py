@@ -139,7 +139,7 @@ trainer = Trainer(
     data_collator=data_collator,
     train_dataset=train_dataset,
     eval_dataset=eval_dataset,
-    compute_metrics=compute_metrics,
+    # compute_metrics=compute_metrics,
     # callbacks=[CustomLoggingCallback]  # Add your custom callback here
 
 )
