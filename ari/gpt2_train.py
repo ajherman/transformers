@@ -201,21 +201,19 @@ try:
     # Train model
     trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
 
+    # Save model
+    model.save_pretrained(args.output_dir)
+
+    # Evaluate model
+    eval_results = trainer.evaluate()
+    print("Evaluation results:\n", eval_results)
+
+    # Perplexity
+    perplexity = torch.exp(torch.tensor(eval_results['eval_loss']))
+    print("Perplexity:", perplexity)
+
+
 except Exception as e:
     # Print the full traceback
     print("Exception occurred:", e)
     traceback.print_exc()
-
-# Save model
-model.save_pretrained(args.output_dir)
-
-# Evaluate model
-eval_results = trainer.evaluate()
-print("Evaluation results:\n", eval_results)
-
-# Perplexity
-perplexity = torch.exp(torch.tensor(eval_results['eval_loss']))
-print("Perplexity:", perplexity)
-
-
-
