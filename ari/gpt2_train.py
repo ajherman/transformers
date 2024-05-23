@@ -3,6 +3,7 @@ import sys
 import argparse
 import csv
 import os 
+import numpy as np
 
 os.environ["HF_DATASETS_OFFLINE"] = "0"
 
@@ -17,6 +18,7 @@ parser.add_argument('--use_local_transformers', action='store_true', help='Use l
 parser.add_argument('--config_file', type=str, default='config.json', help='Config file')
 parser.add_argument('--checkpoint_dir', type=str, default=None, help='Checkpoint directory')
 parser.add_argument('--context_length', type=int, default=256, help='Context length')
+parser.add_argument('--load_from_checkpoint', action='store_true', help='Load from checkpoint')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -30,7 +32,7 @@ if use_local_transformers:
         sys.path.insert(0, path_to_transformers)
 
 from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, AutoModelForCausalLM, GPT2Config
-from transformers import Trainer, TrainingArguments
+from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerControl
 from datasets import load_dataset
 import logging
 
@@ -110,40 +112,63 @@ training_args = TrainingArguments(
 
 #     return metrics
 
-def compute_metrics(eval_pred):
-    predictions, labels = eval_pred
-    # predictions, labels = torch.from_numpy(predictions), torch.from_numpy(labels)
-    # predictions = predictions.view(-1,predictions.shape[-1])
-    # labels = labels.view(-1)
-    # loss = torch.nn.functional.cross_entropy(predictions, labels)
+# def compute_metrics(eval_pred):
+#     predictions, labels = eval_pred
+#     # predictions, labels = torch.from_numpy(predictions), torch.from_numpy(labels)
+#     # predictions = predictions.view(-1,predictions.shape[-1])
+#     # labels = labels.view(-1)
+#     # loss = torch.nn.functional.cross_entropy(predictions, labels)
    
 
-    # Ensure predictions and labels are tensors
-    predictions = torch.tensor(predictions)
-    labels = torch.tensor(labels)
+#     # Ensure predictions and labels are tensors
+#     predictions = torch.tensor(predictions)
+#     labels = torch.tensor(labels)
     
-    # Reshape predictions and labels to be compatible with CrossEntropyLoss
-    predictions = predictions.view(-1, predictions.shape[-1])
-    labels = labels.view(-1)
+#     # Reshape predictions and labels to be compatible with CrossEntropyLoss
+#     predictions = predictions.view(-1, predictions.shape[-1])
+#     labels = labels.view(-1)
     
-    # Define the loss function
-    loss_fct = torch.nn.CrossEntropyLoss(ignore_index=tokenizer.pad_token_id)
+#     # Define the loss function
+#     loss_fct = torch.nn.CrossEntropyLoss(ignore_index=tokenizer.pad_token_id)
     
-    # Compute the loss
-    loss = loss_fct(predictions, labels)
+#     # Compute the loss
+#     loss = loss_fct(predictions, labels)
 
 
-    #loss = torch.tensor(trainer.eval_loss)
-    perplexity = torch.exp(loss)
-    metrics = {'perplexity': perplexity.item(), 'comp_loss': loss.item()}
+#     #loss = torch.tensor(trainer.eval_loss)
+#     perplexity = torch.exp(loss)
+#     metrics = {'perplexity': perplexity.item(), 'comp_loss': loss.item()}
 
-    # Save metrics to a text file
-    with open('metrics.txt', 'a') as file:
-        file.write(f'Global step: {trainer.state.global_step}, Perplexity: {perplexity.item()}\n')
+#     # Save metrics to a text file
+#     with open('metrics.txt', 'a') as file:
+#         file.write(f'Global step: {trainer.state.global_step}, Perplexity: {perplexity.item()}\n')
 
-    print("Perplexity:", perplexity.item())
+#     print("Perplexity:", perplexity.item())
 
-    return metrics
+#     return metrics
+
+class CustomCallback(TrainerCallback):
+    def __init__(self, trainer):
+        self.trainer = trainer
+
+    def on_epoch_end(self, args, state, control, **kwargs):
+        # Perform custom evaluation at the end of each epoch
+        if args.evaluation_strategy == "epoch":
+            self.custom_evaluation()
+
+    def custom_evaluation(self):
+        # Access the model
+        print("\nEvaluation at the end of epoch:\n")
+        results = self.trainer.evaluate()
+        loss = results['eval_loss']
+        perplexity = np.exp(loss)
+        print("Loss:", loss)
+        print("Perplexity:", perplexity)
+        
+        with open('metrics.csv', 'a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([args.epoch, loss, perplexity])
+
 
 # Define trainer
 trainer = Trainer(
@@ -152,12 +177,15 @@ trainer = Trainer(
     data_collator=data_collator,
     train_dataset=train_dataset,
     eval_dataset=eval_dataset,
-    compute_metrics=compute_metrics,
+    # compute_metrics=compute_metrics,
     # resume_from_checkpoint=True
     # resume_from_checkpoint=args.checkpoint_dir
 )
+
+trainer.add_callback(CustomCallback(trainer))
+
 # Train model
-trainer.train(resume_from_checkpoint=False) # More precise version would be to pass args.checkpoint_dir explicitly
+trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
 
 # Save model
 model.save_pretrained(args.output_dir)
