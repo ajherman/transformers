@@ -147,6 +147,7 @@ training_args = TrainingArguments(
 
 #     return metrics
 
+# Use this to periodically trigger events during training
 class CustomCallback(TrainerCallback):
     def __init__(self, trainer):
         self.trainer = trainer
@@ -167,7 +168,7 @@ class CustomCallback(TrainerCallback):
         
         with open('metrics.csv', 'a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([args.epoch, loss, perplexity])
+            writer.writerow([results.epoch, loss, perplexity])
 
 
 # Define trainer
