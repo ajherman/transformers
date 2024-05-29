@@ -3,9 +3,10 @@
 #SBATCH --time 10:00:00
 #SBATCH -N 1           
 #SBATCH -p shared-gpu
-#SBATCH --gres=gpu:8
-#SBATCH --mem=40G
-#SBATCH --cpus-per-task=2
+#SBATCH -C gpu_count:2
+#SBATCH --mem=0
+#SBATCH --exclusive
+#SBATCH --cpus-per-task=16
 module load miniconda3
 
 # Enable Python fault handler
@@ -21,4 +22,6 @@ source activate /vast/home/ajherman/miniconda3/envs/transformer
 
 # srun -o tiny_test.out --ntasks=1 -N 1 python gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 10 --config_file tiny.json --per_device_train_batch_size 16 --mixed_precision &
 
-srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 8 gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 10 --config_file tiny.json --per_device_train_batch_size 16 --mixed_precision &
+nvidia-smi
+
+srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 2 gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 100 --config_file config.json --per_device_train_batch_size 12 --mixed_precision &

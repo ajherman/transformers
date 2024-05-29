@@ -11,6 +11,7 @@ import argparse
 import csv
 import os 
 import numpy as np
+import time
 
 os.environ["HF_DATASETS_OFFLINE"] = "0"
 
@@ -43,6 +44,8 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollat
 from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerControl
 from datasets import load_dataset
 import logging
+
+tic = time.time()
 
 try:
     dist.init_process_group(backend='nccl')
@@ -107,6 +110,8 @@ try:
         save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
         evaluation_strategy="epoch", # evaluation strategy to adopt during training
         fp16=args.mixed_precision, # Mix percision
+        ddp_find_unused_parameters=False,
+        dataloader_num_workers=4
         # eval_steps=1000, # number of steps before evaluation
         # warmup_steps=500,                # number of warmup steps for learning rate scheduler
         # weight_decay=0.01, 
@@ -212,7 +217,8 @@ try:
     perplexity = torch.exp(torch.tensor(eval_results['eval_loss']))
     print("Perplexity:", perplexity)
 
-
+    toc = time.time()
+    print("Duration: ",(toc-tic)/60,"m")
 except Exception as e:
     # Print the full traceback
     print("Exception occurred:", e)

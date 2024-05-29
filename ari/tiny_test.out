@@ -1,19 +1,7 @@
-[2024-05-23 13:13:01,362] torch.distributed.run: [WARNING] 
-[2024-05-23 13:13:01,362] torch.distributed.run: [WARNING] *****************************************
-[2024-05-23 13:13:01,362] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-[2024-05-23 13:13:01,362] torch.distributed.run: [WARNING] *****************************************
-/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
-  from pandas.core import (
-/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
-  from pandas.core import (
-/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
-  from pandas.core import (
-/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
-  from pandas.core import (
-/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
-  from pandas.core import (
-/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
-  from pandas.core import (
+[2024-05-24 17:45:28,721] torch.distributed.run: [WARNING] 
+[2024-05-24 17:45:28,721] torch.distributed.run: [WARNING] *****************************************
+[2024-05-24 17:45:28,721] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-05-24 17:45:28,721] torch.distributed.run: [WARNING] *****************************************
 /vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
   from pandas.core import (
 /vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
@@ -22,223 +10,6 @@
   warnings.warn(
 /vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
   warnings.warn(
-/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-Config:
- Config:
- Config:
- GPT2Config {
-  "_name_or_path": "gpt2",
-  "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
-  "attn_pdrop": 0.1,
-  "bos_token_id": 50256,
-  "embd_pdrop": 0.1,
-  "eos_token_id": 50256,
-  "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
-  "model_type": "gpt2",
-  "n_ctx": 10,
-  "n_embd": 4,
-  "n_head": 2,
-  "n_inner": null,
-  "n_layer": 1,
-  "n_positions": 10,
-  "reorder_and_upcast_attn": false,
-  "resid_pdrop": 0.1,
-  "scale_attn_by_inverse_layer_idx": false,
-  "scale_attn_weights": true,
-  "summary_activation": null,
-  "summary_first_dropout": 0.1,
-  "summary_proj_to_labels": true,
-  "summary_type": "cls_index",
-  "summary_use_proj": true,
-  "task_specific_params": {
-    "text-generation": {
-      "do_sample": true,
-      "max_length": 50
-    }
-  },
-  "transformers_version": "4.41.0.dev0",
-  "use_cache": true,
-  "vocab_size": 50257
-}
-
-GPT2Config {
-  "_name_or_path": "gpt2",
-  "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
-  "attn_pdrop": 0.1,
-  "bos_token_id": 50256,
-  "embd_pdrop": 0.1,
-  "eos_token_id": 50256,
-  "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
-  "model_type": "gpt2",
-  "n_ctx": 10,
-  "n_embd": 4,
-  "n_head": 2,
-  "n_inner": null,
-  "n_layer": 1,
-  "n_positions": 10,
-  "reorder_and_upcast_attn": false,
-  "resid_pdrop": 0.1,
-  "scale_attn_by_inverse_layer_idx": false,
-  "scale_attn_weights": true,
-  "summary_activation": null,
-  "summary_first_dropout": 0.1,
-  "summary_proj_to_labels": true,
-  "summary_type": "cls_index",
-  "summary_use_proj": true,
-  "task_specific_params": {
-    "text-generation": {
-      "do_sample": true,
-      "max_length": 50
-    }
-  },
-  "transformers_version": "4.41.0.dev0",
-  "use_cache": true,
-  "vocab_size": 50257
-}
-
-Config:
- Number of model parameters: 201320
-Number of model parameters: 201320
-GPT2Config {
-  "_name_or_path": "gpt2",
-  "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
-  "attn_pdrop": 0.1,
-  "bos_token_id": 50256,
-  "embd_pdrop": 0.1,
-  "eos_token_id": 50256,
-  "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
-  "model_type": "gpt2",
-  "n_ctx": 10,
-  "n_embd": 4,
-  "n_head": 2,
-  "n_inner": null,
-  "n_layer": 1,
-  "n_positions": 10,
-  "reorder_and_upcast_attn": false,
-  "resid_pdrop": 0.1,
-  "scale_attn_by_inverse_layer_idx": false,
-  "scale_attn_weights": true,
-  "summary_activation": null,
-  "summary_first_dropout": 0.1,
-  "summary_proj_to_labels": true,
-  "summary_type": "cls_index",
-  "summary_use_proj": true,
-  "task_specific_params": {
-    "text-generation": {
-      "do_sample": true,
-      "max_length": 50
-    }
-  },
-  "transformers_version": "4.41.0.dev0",
-  "use_cache": true,
-  "vocab_size": 50257
-}
-
-Config:
- Number of model parameters: 201320
-GPT2Config {
-  "_name_or_path": "gpt2",
-  "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
-  "attn_pdrop": 0.1,
-  "bos_token_id": 50256,
-  "embd_pdrop": 0.1,
-  "eos_token_id": 50256,
-  "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
-  "model_type": "gpt2",
-  "n_ctx": 10,
-  "n_embd": 4,
-  "n_head": 2,
-  "n_inner": null,
-  "n_layer": 1,
-  "n_positions": 10,
-  "reorder_and_upcast_attn": false,
-  "resid_pdrop": 0.1,
-  "scale_attn_by_inverse_layer_idx": false,
-  "scale_attn_weights": true,
-  "summary_activation": null,
-  "summary_first_dropout": 0.1,
-  "summary_proj_to_labels": true,
-  "summary_type": "cls_index",
-  "summary_use_proj": true,
-  "task_specific_params": {
-    "text-generation": {
-      "do_sample": true,
-      "max_length": 50
-    }
-  },
-  "transformers_version": "4.41.0.dev0",
-  "use_cache": true,
-  "vocab_size": 50257
-}
-
-GPT2Config {
-  "_name_or_path": "gpt2",
-  "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
-  "attn_pdrop": 0.1,
-  "bos_token_id": 50256,
-  "embd_pdrop": 0.1,
-  "eos_token_id": 50256,
-  "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
-  "model_type": "gpt2",
-  "n_ctx": 10,
-  "n_embd": 4,
-  "n_head": 2,
-  "n_inner": null,
-  "n_layer": 1,
-  "n_positions": 10,
-  "reorder_and_upcast_attn": false,
-  "resid_pdrop": 0.1,
-  "scale_attn_by_inverse_layer_idx": false,
-  "scale_attn_weights": true,
-  "summary_activation": null,
-  "summary_first_dropout": 0.1,
-  "summary_proj_to_labels": true,
-  "summary_type": "cls_index",
-  "summary_use_proj": true,
-  "task_specific_params": {
-    "text-generation": {
-      "do_sample": true,
-      "max_length": 50
-    }
-  },
-  "transformers_version": "4.41.0.dev0",
-  "use_cache": true,
-  "vocab_size": 50257
-}
-
-Number of model parameters: 201320
-Number of model parameters: 201320
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -253,12 +24,12 @@ Config:
   "initializer_range": 0.02,
   "layer_norm_epsilon": 1e-05,
   "model_type": "gpt2",
-  "n_ctx": 10,
-  "n_embd": 4,
-  "n_head": 2,
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
   "n_inner": null,
-  "n_layer": 1,
-  "n_positions": 10,
+  "n_layer": 12,
+  "n_positions": 1024,
   "reorder_and_upcast_attn": false,
   "resid_pdrop": 0.1,
   "scale_attn_by_inverse_layer_idx": false,
@@ -279,7 +50,7 @@ Config:
   "vocab_size": 50257
 }
 
-Number of model parameters: 201320
+Number of model parameters: 124439808
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -294,12 +65,12 @@ Config:
   "initializer_range": 0.02,
   "layer_norm_epsilon": 1e-05,
   "model_type": "gpt2",
-  "n_ctx": 10,
-  "n_embd": 4,
-  "n_head": 2,
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
   "n_inner": null,
-  "n_layer": 1,
-  "n_positions": 10,
+  "n_layer": 12,
+  "n_positions": 1024,
   "reorder_and_upcast_attn": false,
   "resid_pdrop": 0.1,
   "scale_attn_by_inverse_layer_idx": false,
@@ -320,80 +91,9 @@ Config:
   "vocab_size": 50257
 }
 
-Number of model parameters: 201320
-Config:
- GPT2Config {
-  "_name_or_path": "gpt2",
-  "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
-  "attn_pdrop": 0.1,
-  "bos_token_id": 50256,
-  "embd_pdrop": 0.1,
-  "eos_token_id": 50256,
-  "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
-  "model_type": "gpt2",
-  "n_ctx": 10,
-  "n_embd": 4,
-  "n_head": 2,
-  "n_inner": null,
-  "n_layer": 1,
-  "n_positions": 10,
-  "reorder_and_upcast_attn": false,
-  "resid_pdrop": 0.1,
-  "scale_attn_by_inverse_layer_idx": false,
-  "scale_attn_weights": true,
-  "summary_activation": null,
-  "summary_first_dropout": 0.1,
-  "summary_proj_to_labels": true,
-  "summary_type": "cls_index",
-  "summary_use_proj": true,
-  "task_specific_params": {
-    "text-generation": {
-      "do_sample": true,
-      "max_length": 50
-    }
-  },
-  "transformers_version": "4.41.0.dev0",
-  "use_cache": true,
-  "vocab_size": 50257
-}
-
-Number of model parameters: 201320
+Number of model parameters: 124439808
 Overwrite dataset info from restored data version if exists.
 Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
 Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
 Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
 Constructing Dataset for split train, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
@@ -410,323 +110,71 @@ Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggi
 Finished loading datasets
 Overwrite dataset info from restored data version if exists.
 Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Finished loading datasets
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Finished loading datasets
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Finished loading datasets
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Finished loading datasets
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Finished loading datasets
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
-Finished loading datasets
 Found cached dataset wikitext (/vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3)
 Loading Dataset info from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
 Constructing Dataset for split validation, from /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3
 Finished loading datasets
 Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
 Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-c3889beba65c70f2.arrow
-Map:   3%|▎         | 1000/36718 [00:00<00:21, 1635.49 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-b4c12c2f3179d8f1.arrow
-Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-34ae4d4ad25bb879.arrow
-Map:   3%|▎         | 1000/36718 [00:00<00:21, 1645.71 examples/s]Map:   3%|▎         | 1000/36718 [00:00<00:22, 1605.47 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-2b9613a601b6ac1d.arrow
-Map:   3%|▎         | 1000/36718 [00:00<00:21, 1651.24 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-1189e49eed046d32.arrow
-Map:   3%|▎         | 1000/36718 [00:00<00:21, 1654.14 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-dab9481344d234ce.arrow
-Map:   3%|▎         | 1000/36718 [00:00<00:22, 1596.75 examples/s]Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:   0%|          | 0/36718 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:   5%|▌         | 2000/36718 [00:01<00:24, 1442.35 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:24, 1427.89 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:24, 1420.44 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:23, 1449.86 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:23, 1455.32 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:24, 1421.60 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1693.89 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1692.68 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1693.12 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1700.66 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1709.12 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:19, 1689.01 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1845.24 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1849.60 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-73cb42e1911e56ec.arrow
-Map:  11%|█         | 4000/36718 [00:02<00:17, 1848.24 examples/s]Map:   3%|▎         | 1000/36718 [00:01<00:42, 839.54 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-b304ea9f0c742251.arrow
-Map:  11%|█         | 4000/36718 [00:02<00:17, 1851.82 examples/s]Map:   3%|▎         | 1000/36718 [00:01<00:43, 828.77 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1861.61 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:17, 1839.08 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2035.44 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2037.54 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2030.04 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2040.02 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2050.97 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2023.19 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2173.48 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2183.12 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2170.66 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2185.15 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2187.13 examples/s]Map:  16%|█▋        | 6000/36718 [00:03<00:14, 2148.96 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2091.02 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2106.55 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2091.09 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2107.92 examples/s]Map:   5%|▌         | 2000/36718 [00:02<00:44, 777.37 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2106.35 examples/s]Map:   5%|▌         | 2000/36718 [00:02<00:45, 770.11 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2057.83 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2122.02 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2137.15 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2142.44 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2111.27 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2141.80 examples/s]Map:  22%|██▏       | 8000/36718 [00:04<00:13, 2094.63 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2206.64 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2219.64 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2225.46 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2200.58 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2225.65 examples/s]Map:   8%|▊         | 3000/36718 [00:03<00:37, 906.24 examples/s]Map:   8%|▊         | 3000/36718 [00:03<00:37, 899.65 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:12, 2181.13 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2261.77 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2260.89 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2278.27 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2256.87 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2281.05 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:11, 2234.99 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2288.90 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2293.74 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2310.19 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2295.92 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2305.63 examples/s]Map:  11%|█         | 4000/36718 [00:04<00:33, 966.89 examples/s]Map:  11%|█         | 4000/36718 [00:04<00:33, 967.00 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2265.91 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2339.95 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2345.65 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2357.34 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2328.09 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2356.39 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:10, 2310.83 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2331.46 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2345.29 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2356.69 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2331.65 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2346.62 examples/s]Map:  14%|█▎        | 5000/36718 [00:05<00:29, 1060.33 examples/s]Map:  14%|█▎        | 5000/36718 [00:05<00:29, 1059.94 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2296.09 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2422.28 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2429.98 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2444.97 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2425.07 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2436.25 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:09, 2386.75 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2458.91 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2467.22 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2477.15 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2469.46 examples/s]Map:  41%|████      | 15000/36718 [00:06<00:08, 2476.92 examples/s]Map:  16%|█▋        | 6000/36718 [00:05<00:27, 1127.24 examples/s]Map:  16%|█▋        | 6000/36718 [00:05<00:27, 1126.33 examples/s]Map:  41%|████      | 15000/36718 [00:07<00:08, 2428.99 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2372.08 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2394.37 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2390.34 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2382.99 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2385.46 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:08, 2361.89 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2426.49 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2398.79 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2419.22 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2414.53 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2416.90 examples/s]Map:  19%|█▉        | 7000/36718 [00:06<00:27, 1080.34 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2391.57 examples/s]Map:  19%|█▉        | 7000/36718 [00:06<00:27, 1071.00 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2447.72 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2465.62 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2448.27 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2461.94 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2465.02 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:07, 2433.32 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2557.89 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2538.36 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2533.72 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2552.25 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:06, 2555.70 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:07, 2520.67 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2561.09 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2545.41 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2542.53 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2559.21 examples/s]Map:  22%|██▏       | 8000/36718 [00:07<00:26, 1096.22 examples/s]Map:  54%|█████▍    | 20000/36718 [00:08<00:06, 2560.94 examples/s]Map:  22%|██▏       | 8000/36718 [00:07<00:26, 1086.73 examples/s]Map:  54%|█████▍    | 20000/36718 [00:09<00:06, 2521.86 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2509.85 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2494.21 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2491.60 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2507.07 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2509.80 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2468.04 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2495.40 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2475.97 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2479.88 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2489.82 examples/s]Map:  25%|██▍       | 9000/36718 [00:08<00:24, 1131.87 examples/s]Map:  25%|██▍       | 9000/36718 [00:08<00:24, 1130.31 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2493.13 examples/s]Map:  60%|█████▉    | 22000/36718 [00:09<00:05, 2455.29 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2538.64 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2517.06 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2524.16 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2515.78 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2536.40 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:05, 2499.21 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2656.24 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2634.56 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2641.94 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2636.80 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2652.87 examples/s]Map:  27%|██▋       | 10000/36718 [00:09<00:23, 1159.50 examples/s]Map:  27%|██▋       | 10000/36718 [00:09<00:23, 1156.84 examples/s]Map:  65%|██████▌   | 24000/36718 [00:10<00:04, 2609.04 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2723.67 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2704.24 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2709.65 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2712.11 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2722.23 examples/s]Map:  68%|██████▊   | 25000/36718 [00:10<00:04, 2677.23 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2669.04 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2651.80 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2657.97 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2661.83 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2669.17 examples/s]Map:  30%|██▉       | 11000/36718 [00:10<00:21, 1174.18 examples/s]Map:  30%|██▉       | 11000/36718 [00:10<00:21, 1170.62 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2598.71 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2571.92 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2562.33 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2563.31 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2568.49 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2574.71 examples/s]Map:  74%|███████▎  | 27000/36718 [00:11<00:03, 2508.04 examples/s]Map:  76%|███████▋  | 28000/36718 [00:11<00:03, 2504.75 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2494.64 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2498.42 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2505.36 examples/s]Map:  76%|███████▋  | 28000/36718 [00:11<00:03, 2489.91 examples/s]Map:  33%|███▎      | 12000/36718 [00:11<00:20, 1198.60 examples/s]Map:  33%|███▎      | 12000/36718 [00:11<00:20, 1194.89 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:02, 2594.07 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:02, 2593.45 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:02, 2605.64 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:02, 2576.03 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2444.59 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:02, 2588.92 examples/s]Map:  79%|███████▉  | 29000/36718 [00:12<00:03, 2545.60 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2572.90 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2588.47 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2604.81 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2565.17 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2589.00 examples/s]Map:  35%|███▌      | 13000/36718 [00:11<00:19, 1194.51 examples/s]Map:  35%|███▌      | 13000/36718 [00:11<00:19, 1189.31 examples/s]Map:  82%|████████▏ | 30000/36718 [00:12<00:02, 2545.16 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2455.90 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2466.47 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2455.72 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2446.75 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2468.72 examples/s]Map:  84%|████████▍ | 31000/36718 [00:13<00:02, 2427.34 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2447.92 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2451.92 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2445.99 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2438.01 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2457.58 examples/s]Map:  38%|███▊      | 14000/36718 [00:12<00:18, 1240.73 examples/s]Map:  38%|███▊      | 14000/36718 [00:12<00:18, 1234.89 examples/s]Map:  87%|████████▋ | 32000/36718 [00:13<00:01, 2415.39 examples/s]Map:  90%|████████▉ | 33000/36718 [00:14<00:01, 2430.90 examples/s]Map:  90%|████████▉ | 33000/36718 [00:14<00:01, 2431.01 examples/s]Map:  90%|████████▉ | 33000/36718 [00:14<00:01, 2429.89 examples/s]Map:  90%|████████▉ | 33000/36718 [00:14<00:01, 2423.42 examples/s]Map:  90%|████████▉ | 33000/36718 [00:14<00:01, 2437.95 examples/s]Map:  90%|████████▉ | 33000/36718 [00:14<00:01, 2396.82 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2430.97 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2430.26 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2433.70 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2419.82 examples/s]Map:  41%|████      | 15000/36718 [00:13<00:17, 1262.51 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2434.57 examples/s]Map:  41%|████      | 15000/36718 [00:13<00:17, 1256.45 examples/s]Map:  95%|█████████▌| 35000/36718 [00:14<00:00, 2513.99 examples/s]Map:  95%|█████████▌| 35000/36718 [00:14<00:00, 2511.79 examples/s]Map:  95%|█████████▌| 35000/36718 [00:14<00:00, 2516.19 examples/s]Map:  95%|█████████▌| 35000/36718 [00:14<00:00, 2503.84 examples/s]Map:  93%|█████████▎| 34000/36718 [00:14<00:01, 2392.57 examples/s]Map:  95%|█████████▌| 35000/36718 [00:14<00:00, 2518.17 examples/s]Map:  95%|█████████▌| 35000/36718 [00:15<00:00, 2474.53 examples/s]Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2463.44 examples/s]Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2460.86 examples/s]Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2468.94 examples/s]Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2457.23 examples/s]Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2470.57 examples/s]Map:  44%|████▎     | 16000/36718 [00:14<00:16, 1223.00 examples/s]Map:  44%|████▎     | 16000/36718 [00:14<00:17, 1216.02 examples/s]Map: 100%|██████████| 36718/36718 [00:15<00:00, 2479.57 examples/s]Map: 100%|██████████| 36718/36718 [00:15<00:00, 2478.02 examples/s]Map: 100%|██████████| 36718/36718 [00:15<00:00, 2489.63 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmp2z4ok9pi.
-Map: 100%|██████████| 36718/36718 [00:15<00:00, 2479.65 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmp_lkzuak8.
-Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpifio9aik.
-Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmp6dji9z86.
-Map: 100%|██████████| 36718/36718 [00:15<00:00, 2491.47 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpf5n97l8r.
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-5331441f23968fcf.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:20, 1739.39 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-f95f988e999d4639.arrow
+Map:   3%|▎         | 1000/36718 [00:00<00:20, 1728.22 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:19, 1774.36 examples/s]Map:   5%|▌         | 2000/36718 [00:01<00:19, 1768.89 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:17, 1909.25 examples/s]Map:   8%|▊         | 3000/36718 [00:01<00:17, 1903.76 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:16, 1976.46 examples/s]Map:  11%|█         | 4000/36718 [00:02<00:16, 1966.97 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2072.46 examples/s]Map:  14%|█▎        | 5000/36718 [00:02<00:15, 2064.08 examples/s]Map:  16%|█▋        | 6000/36718 [00:02<00:14, 2142.97 examples/s]Map:  16%|█▋        | 6000/36718 [00:02<00:14, 2135.58 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2082.61 examples/s]Map:  19%|█▉        | 7000/36718 [00:03<00:14, 2066.16 examples/s]Map:  22%|██▏       | 8000/36718 [00:03<00:13, 2084.24 examples/s]Map:  22%|██▏       | 8000/36718 [00:03<00:13, 2070.83 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:13, 2128.98 examples/s]Map:  25%|██▍       | 9000/36718 [00:04<00:13, 2110.56 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:12, 2157.78 examples/s]Map:  27%|██▋       | 10000/36718 [00:04<00:12, 2137.53 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:11, 2163.90 examples/s]Map:  30%|██▉       | 11000/36718 [00:05<00:12, 2142.27 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:11, 2186.48 examples/s]Map:  33%|███▎      | 12000/36718 [00:05<00:11, 2166.17 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2186.52 examples/s]Map:  35%|███▌      | 13000/36718 [00:06<00:10, 2161.44 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:10, 2233.98 examples/s]Map:  38%|███▊      | 14000/36718 [00:06<00:10, 2214.66 examples/s]Map:  41%|████      | 15000/36718 [00:07<00:09, 2249.57 examples/s]Map:  41%|████      | 15000/36718 [00:07<00:09, 2233.60 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:09, 2210.00 examples/s]Map:  44%|████▎     | 16000/36718 [00:07<00:09, 2193.64 examples/s]Map:  46%|████▋     | 17000/36718 [00:07<00:08, 2220.16 examples/s]Map:  46%|████▋     | 17000/36718 [00:08<00:08, 2216.29 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:08, 2243.77 examples/s]Map:  49%|████▉     | 18000/36718 [00:08<00:08, 2243.56 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:07, 2286.60 examples/s]Map:  52%|█████▏    | 19000/36718 [00:08<00:07, 2284.93 examples/s]Map:  54%|█████▍    | 20000/36718 [00:09<00:07, 2284.14 examples/s]Map:  54%|█████▍    | 20000/36718 [00:09<00:07, 2287.97 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2257.35 examples/s]Map:  57%|█████▋    | 21000/36718 [00:09<00:06, 2262.02 examples/s]Map:  60%|█████▉    | 22000/36718 [00:10<00:06, 2251.39 examples/s]Map:  60%|█████▉    | 22000/36718 [00:10<00:06, 2252.28 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:06, 2277.01 examples/s]Map:  63%|██████▎   | 23000/36718 [00:10<00:06, 2268.75 examples/s]Map:  65%|██████▌   | 24000/36718 [00:11<00:05, 2332.09 examples/s]Map:  65%|██████▌   | 24000/36718 [00:11<00:05, 2321.25 examples/s]Map:  68%|██████▊   | 25000/36718 [00:11<00:04, 2365.06 examples/s]Map:  68%|██████▊   | 25000/36718 [00:11<00:04, 2350.45 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2337.44 examples/s]Map:  71%|███████   | 26000/36718 [00:11<00:04, 2323.92 examples/s]Map:  74%|███████▎  | 27000/36718 [00:12<00:04, 2288.58 examples/s]Map:  74%|███████▎  | 27000/36718 [00:12<00:04, 2277.00 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2250.45 examples/s]Map:  76%|███████▋  | 28000/36718 [00:12<00:03, 2229.37 examples/s]Map:  79%|███████▉  | 29000/36718 [00:13<00:03, 2299.27 examples/s]Map:  79%|███████▉  | 29000/36718 [00:13<00:03, 2284.86 examples/s]Map:  82%|████████▏ | 30000/36718 [00:13<00:02, 2301.55 examples/s]Map:  82%|████████▏ | 30000/36718 [00:13<00:02, 2289.06 examples/s]Map:  84%|████████▍ | 31000/36718 [00:14<00:02, 2245.70 examples/s]Map:  84%|████████▍ | 31000/36718 [00:14<00:02, 2232.67 examples/s]Map:  87%|████████▋ | 32000/36718 [00:14<00:02, 2239.49 examples/s]Map:  87%|████████▋ | 32000/36718 [00:14<00:02, 2230.61 examples/s]Map:  90%|████████▉ | 33000/36718 [00:15<00:01, 2224.96 examples/s]Map:  90%|████████▉ | 33000/36718 [00:15<00:01, 2214.23 examples/s]Map:  93%|█████████▎| 34000/36718 [00:15<00:01, 2224.14 examples/s]Map:  93%|█████████▎| 34000/36718 [00:15<00:01, 2209.65 examples/s]Map:  95%|█████████▌| 35000/36718 [00:15<00:00, 2264.11 examples/s]Map:  95%|█████████▌| 35000/36718 [00:15<00:00, 2254.43 examples/s]Map:  98%|█████████▊| 36000/36718 [00:16<00:00, 2239.78 examples/s]Map: 100%|██████████| 36718/36718 [00:16<00:00, 2244.27 examples/s]Map:  98%|█████████▊| 36000/36718 [00:16<00:00, 2225.56 examples/s]Done writing 36718 examples in 199351621 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpxdbgnkx4.
 Finished processing shard number None of 1.
-Map: 100%|██████████| 36718/36718 [00:15<00:00, 2350.34 examples/s]
+Map: 100%|██████████| 36718/36718 [00:16<00:00, 2185.25 examples/s]
+Map: 100%|██████████| 36718/36718 [00:16<00:00, 2218.46 examples/s]Done writing 36718 examples in 199351621 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpg2q43e_h.
 Finished processing shard number None of 1.
-Map: 100%|██████████| 36718/36718 [00:15<00:00, 2345.02 examples/s]
-Finished processing shard number None of 1.
-Map: 100%|██████████| 36718/36718 [00:15<00:00, 2342.61 examples/s]
-Finished processing shard number None of 1.
-Map: 100%|██████████| 36718/36718 [00:15<00:00, 2338.77 examples/s]
-Map:  98%|█████████▊| 36000/36718 [00:15<00:00, 2424.52 examples/s]Finished processing shard number None of 1.
-Map: 100%|██████████| 36718/36718 [00:15<00:00, 2356.19 examples/s]
-Map:  46%|████▋     | 17000/36718 [00:14<00:14, 1395.10 examples/s]Map:  46%|████▋     | 17000/36718 [00:14<00:14, 1402.06 examples/s]Map: 100%|██████████| 36718/36718 [00:15<00:00, 2442.63 examples/s]Done writing 36718 examples in 13191361 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpl263bc9s.
-Finished processing shard number None of 1.
-Map: 100%|██████████| 36718/36718 [00:15<00:00, 2317.06 examples/s]
-Map:  49%|████▉     | 18000/36718 [00:15<00:11, 1618.60 examples/s]Map:  49%|████▉     | 18000/36718 [00:15<00:11, 1619.25 examples/s]Map:  52%|█████▏    | 19000/36718 [00:15<00:09, 1851.81 examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Map: 100%|██████████| 36718/36718 [00:16<00:00, 2160.70 examples/s]
 Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
+Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-b424057a18db0138.arrow
 Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:  52%|█████▏    | 19000/36718 [00:15<00:09, 1846.92 examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Set __getitem__(key) output type to arrow for no columns  (when key is int or slice) and don't output other (un-formatted) columns.
-Map:  54%|█████▍    | 20000/36718 [00:15<00:08, 2022.24 examples/s]Map:  54%|█████▍    | 20000/36718 [00:15<00:08, 2013.74 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-b803de4d47ee990e.arrow
-Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1808.22 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-e327344faf1f5837.arrow
-Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-c3b6164c6378e921.arrow
-Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-4c72aaaff53637b0.arrow
-Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-9fb9874cee2bc49b.arrow
-Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1789.53 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1816.45 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1802.92 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1825.73 examples/s]Map:  57%|█████▋    | 21000/36718 [00:16<00:07, 2123.56 examples/s]Map:  57%|█████▋    | 21000/36718 [00:16<00:07, 2112.82 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-658d18a3f5d16a5f.arrow
-Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1822.87 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1763.31 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1793.67 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1780.84 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1783.70 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1790.67 examples/s]Map:  60%|█████▉    | 22000/36718 [00:16<00:06, 2213.75 examples/s]Map:  60%|█████▉    | 22000/36718 [00:16<00:06, 2201.00 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1781.79 examples/s]Map:  63%|██████▎   | 23000/36718 [00:17<00:05, 2329.13 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1841.97 examples/s]Map:  63%|██████▎   | 23000/36718 [00:17<00:05, 2313.29 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1856.88 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1864.54 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1859.91 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1861.40 examples/s]Map:  65%|██████▌   | 24000/36718 [00:17<00:05, 2490.07 examples/s]Map:  65%|██████▌   | 24000/36718 [00:17<00:05, 2474.31 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1919.95 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1846.31 examples/s]Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpo9wimoiq.
+Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1883.75 examples/s]Caching processed dataset at /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/cache-f352eb8121bb74da.arrow
+Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1884.54 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1860.89 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1853.54 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1902.18 examples/s]Map: 100%|██████████| 3760/3760 [00:01<00:00, 1931.40 examples/s]Done writing 3760 examples in 20440568 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpirkmz0z_.
 Finished processing shard number None of 1.
-Map: 100%|██████████| 3760/3760 [00:02<00:00, 1858.06 examples/s]
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1862.81 examples/s]
 /vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
   warnings.warn(
-Map: 100%|██████████| 3760/3760 [00:01<00:00, 1938.26 examples/s]Map: 100%|██████████| 3760/3760 [00:01<00:00, 1929.49 examples/s]Map: 100%|██████████| 3760/3760 [00:01<00:00, 1930.12 examples/s]Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpoo4hrfpq.
-Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpjvp4y9us.
-Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmppla27eom.
-Map: 100%|██████████| 3760/3760 [00:01<00:00, 1926.92 examples/s]Finished processing shard number None of 1.
-Map: 100%|██████████| 3760/3760 [00:02<00:00, 1872.64 examples/s]
-Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpszdfw5b6.
+Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1898.07 examples/s]Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Map: 100%|██████████| 3760/3760 [00:01<00:00, 1916.49 examples/s]Done writing 3760 examples in 20440568 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpxrxdu7w8.
 Finished processing shard number None of 1.
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1865.75 examples/s]
 /vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
   warnings.warn(
-Map: 100%|██████████| 3760/3760 [00:02<00:00, 1864.33 examples/s]
-/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
-  warnings.warn(
-Finished processing shard number None of 1.
-Map: 100%|██████████| 3760/3760 [00:02<00:00, 1868.57 examples/s]
-/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
-  warnings.warn(
-Finished processing shard number None of 1.
-Map: 100%|██████████| 3760/3760 [00:02<00:00, 1870.94 examples/s]
-/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
-  warnings.warn(
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 95, in <module>
-    training_args = TrainingArguments(
-                    ^^^^^^^^^^^^^^^^^^
-  File "<string>", line 126, in __init__
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1621, in __post_init__
-    and (self.device.type != "cuda")
-         ^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2121, in device
-    return self._setup_devices
-           ^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/utils/generic.py", line 59, in __get__
-    cached = self.fget(obj)
-             ^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2053, in _setup_devices
-    self.distributed_state = PartialState(
-                             ^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 281, in __init__
-    self.set_device()
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 793, in set_device
-    torch.cuda.set_device(self.device)
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py", line 408, in set_device
-    torch._C._cuda_setDevice(device)
-RuntimeError: CUDA error: invalid device ordinal
-CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
-For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
-Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
-
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 95, in <module>
-    training_args = TrainingArguments(
-                    ^^^^^^^^^^^^^^^^^^
-  File "<string>", line 126, in __init__
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1621, in __post_init__
-    and (self.device.type != "cuda")
-         ^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2121, in device
-    return self._setup_devices
-           ^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/utils/generic.py", line 59, in __get__
-    cached = self.fget(obj)
-             ^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2053, in _setup_devices
-    self.distributed_state = PartialState(
-                             ^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 281, in __init__
-    self.set_device()
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 793, in set_device
-    torch.cuda.set_device(self.device)
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py", line 408, in set_device
-    torch._C._cuda_setDevice(device)
-RuntimeError: CUDA error: invalid device ordinal
-CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
-For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
-Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
-
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 95, in <module>
-    training_args = TrainingArguments(
-                    ^^^^^^^^^^^^^^^^^^
-  File "<string>", line 126, in __init__
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1621, in __post_init__
-    and (self.device.type != "cuda")
-         ^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2121, in device
-    return self._setup_devices
-           ^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/utils/generic.py", line 59, in __get__
-    cached = self.fget(obj)
-             ^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2053, in _setup_devices
-    self.distributed_state = PartialState(
-                             ^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 281, in __init__
-    self.set_device()
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 793, in set_device
-    torch.cuda.set_device(self.device)
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py", line 408, in set_device
-    torch._C._cuda_setDevice(device)
-RuntimeError: CUDA error: invalid device ordinal
-CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
-For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
-Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
-
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 95, in <module>
-    training_args = TrainingArguments(
-                    ^^^^^^^^^^^^^^^^^^
-  File "<string>", line 126, in __init__
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1621, in __post_init__
-    and (self.device.type != "cuda")
-         ^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2121, in device
-    return self._setup_devices
-           ^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/utils/generic.py", line 59, in __get__
-    cached = self.fget(obj)
-             ^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2053, in _setup_devices
-    self.distributed_state = PartialState(
-                             ^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 281, in __init__
-    self.set_device()
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 793, in set_device
-    torch.cuda.set_device(self.device)
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py", line 408, in set_device
-    torch._C._cuda_setDevice(device)
-RuntimeError: CUDA error: invalid device ordinal
-CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
-For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
-Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
-
-Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-Map:  68%|██████▊   | 25000/36718 [00:17<00:04, 2584.18 examples/s]Map:  68%|██████▊   | 25000/36718 [00:17<00:04, 2569.82 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1904.95 examples/s]Done writing 3760 examples in 1377368 bytes /vast/home/ajherman/.cache/huggingface/datasets/wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3/tmpm0ymq7pv.
-Finished processing shard number None of 1.
-Map: 100%|██████████| 3760/3760 [00:02<00:00, 1854.28 examples/s]
-/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
-  warnings.warn(
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 95, in <module>
-    training_args = TrainingArguments(
-                    ^^^^^^^^^^^^^^^^^^
-  File "<string>", line 126, in __init__
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 1621, in __post_init__
-    and (self.device.type != "cuda")
-         ^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2121, in device
-    return self._setup_devices
-           ^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/utils/generic.py", line 59, in __get__
-    cached = self.fget(obj)
-             ^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/training_args.py", line 2053, in _setup_devices
-    self.distributed_state = PartialState(
-                             ^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 281, in __init__
-    self.set_device()
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/accelerate/state.py", line 793, in set_device
-    torch.cuda.set_device(self.device)
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/cuda/__init__.py", line 408, in set_device
-    torch._C._cuda_setDevice(device)
-RuntimeError: CUDA error: invalid device ordinal
-CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
-For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
-Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
-
-Map:  71%|███████   | 26000/36718 [00:18<00:04, 2553.73 examples/s]Map:  71%|███████   | 26000/36718 [00:18<00:04, 2536.34 examples/s]Map:  74%|███████▎  | 27000/36718 [00:18<00:03, 2487.41 examples/s]Map:  74%|███████▎  | 27000/36718 [00:18<00:03, 2465.47 examples/s]Map:  76%|███████▋  | 28000/36718 [00:19<00:03, 2452.51 examples/s]Map:  76%|███████▋  | 28000/36718 [00:19<00:03, 2431.42 examples/s]Map:  79%|███████▉  | 29000/36718 [00:19<00:03, 2570.01 examples/s]Map:  79%|███████▉  | 29000/36718 [00:19<00:03, 2548.99 examples/s]Map:  82%|████████▏ | 30000/36718 [00:19<00:02, 2584.55 examples/s]Map:  82%|████████▏ | 30000/36718 [00:19<00:02, 2554.79 examples/s]Map:  84%|████████▍ | 31000/36718 [00:20<00:02, 2472.06 examples/s]Map:  84%|████████▍ | 31000/36718 [00:20<00:02, 2446.22 examples/s][2024-05-23 13:13:36,378] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 369367 closing signal SIGTERM
-[2024-05-23 13:13:36,378] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 369369 closing signal SIGTERM
-[2024-05-23 13:13:36,378] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 369371 closing signal SIGTERM
-[2024-05-23 13:13:36,492] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 1 (pid: 369368) of binary: /vast/home/ajherman/miniconda3/envs/transformer/bin/python
-Traceback (most recent call last):
-  File "/vast/home/ajherman/miniconda3/envs/transformer/bin/torchrun", line 33, in <module>
-    sys.exit(load_entry_point('torch==2.0.1', 'console_scripts', 'torchrun')())
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
-    return f(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/run.py", line 812, in main
-    run(args)
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/run.py", line 803, in run
-    elastic_launch(
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 135, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-gpt2_train.py FAILED
-------------------------------------------------------------
-Failures:
-[1]:
-  time      : 2024-05-23_13:13:36
-  host      : cn145
-  rank      : 3 (local_rank: 3)
-  exitcode  : 1 (pid: 369370)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-[2]:
-  time      : 2024-05-23_13:13:36
-  host      : cn145
-  rank      : 5 (local_rank: 5)
-  exitcode  : 1 (pid: 369372)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-[3]:
-  time      : 2024-05-23_13:13:36
-  host      : cn145
-  rank      : 6 (local_rank: 6)
-  exitcode  : 1 (pid: 369373)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-[4]:
-  time      : 2024-05-23_13:13:36
-  host      : cn145
-  rank      : 7 (local_rank: 7)
-  exitcode  : 1 (pid: 369374)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2024-05-23_13:13:36
-  host      : cn145
-  rank      : 1 (local_rank: 1)
-  exitcode  : 1 (pid: 369368)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
+cn650:3127415:3127415 [0] NCCL INFO Bootstrap : Using ib0:192.168.81.128<0>
+cn650:3127415:3127415 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn650:3127415:3127415 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.19.3+cuda12.3
+cn650:3127415:3127478 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:192.168.81.128<0>
+cn650:3127415:3127478 [0] NCCL INFO Using non-device net plugin version 0
+cn650:3127415:3127478 [0] NCCL INFO Using network IB
+cn650:3127416:3127416 [1] NCCL INFO cudaDriverVersion 12040
+cn650:3127416:3127416 [1] NCCL INFO Bootstrap : Using ib0:192.168.81.128<0>
+cn650:3127416:3127416 [1] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn650:3127416:3127486 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:192.168.81.128<0>
+cn650:3127416:3127486 [1] NCCL INFO Using non-device net plugin version 0
+cn650:3127416:3127486 [1] NCCL INFO Using network IB
+cn650:3127416:3127486 [1] NCCL INFO comm 0xb42dd00 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId d8000 commId 0x53f484eb6ec03647 - Init START
+cn650:3127415:3127478 [0] NCCL INFO comm 0xb52c480 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 86000 commId 0x53f484eb6ec03647 - Init START
+cn650:3127416:3127486 [1] NCCL INFO Setting affinity for GPU 1 to ffff,f00000ff,fff00000
+cn650:3127415:3127478 [0] NCCL INFO Setting affinity for GPU 0 to ffff,f00000ff,fff00000
+cn650:3127416:3127486 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0
+cn650:3127415:3127478 [0] NCCL INFO Channel 00/02 :    0   1
+cn650:3127416:3127486 [1] NCCL INFO P2P Chunksize set to 131072
+cn650:3127415:3127478 [0] NCCL INFO Channel 01/02 :    0   1
+cn650:3127415:3127478 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+cn650:3127415:3127478 [0] NCCL INFO P2P Chunksize set to 131072
+cn650:3127416:3127486 [1] NCCL INFO Channel 00 : 1[1] -> 0[0] via SHM/direct/direct
+cn650:3127416:3127486 [1] NCCL INFO Channel 01 : 1[1] -> 0[0] via SHM/direct/direct
+cn650:3127415:3127478 [0] NCCL INFO Channel 00 : 0[0] -> 1[1] via SHM/direct/direct
+cn650:3127415:3127478 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/direct/direct
+cn650:3127416:3127486 [1] NCCL INFO Connected all rings
+cn650:3127416:3127486 [1] NCCL INFO Connected all trees
+cn650:3127416:3127486 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cn650:3127416:3127486 [1] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn650:3127415:3127478 [0] NCCL INFO Connected all rings
+cn650:3127415:3127478 [0] NCCL INFO Connected all trees
+cn650:3127415:3127478 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cn650:3127415:3127478 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn650:3127415:3127478 [0] NCCL INFO comm 0xb52c480 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 86000 commId 0x53f484eb6ec03647 - Init COMPLETE
+cn650:3127416:3127486 [1] NCCL INFO comm 0xb42dd00 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId d8000 commId 0x53f484eb6ec03647 - Init COMPLETE
+  0%|          | 0/153000 [00:00<?, ?it/s]  0%|          | 1/153000 [00:01<60:07:13,  1.41s/it]  0%|          | 2/153000 [00:02<46:51:30,  1.10s/it]  0%|          | 3/153000 [00:03<42:32:14,  1.00s/it]  0%|          | 4/153000 [00:04<40:25:48,  1.05it/s]  0%|          | 5/153000 [00:04<39:14:48,  1.08it/s]  0%|          | 6/153000 [00:05<38:31:04,  1.10it/s]  0%|          | 7/153000 [00:06<38:03:10,  1.12it/s]  0%|          | 8/153000 [00:07<37:45:44,  1.13it/s]  0%|          | 9/153000 [00:08<37:34:33,  1.13it/s]  0%|          | 10/153000 [00:09<37:27:11,  1.13it/s]  0%|          | 11/153000 [00:10<37:21:06,  1.14it/s]  0%|          | 12/153000 [00:11<37:15:37,  1.14it/s]  0%|          | 13/153000 [00:11<37:12:02,  1.14it/s]  0%|          | 14/153000 [00:12<37:10:21,  1.14it/s]  0%|          | 15/153000 [00:13<37:08:11,  1.14it/s]  0%|          | 16/153000 [00:14<37:07:05,  1.14it/s]  0%|          | 17/153000 [00:15<37:06:17,  1.15it/s]  0%|          | 18/153000 [00:16<37:05:53,  1.15it/s]  0%|          | 19/153000 [00:17<37:06:02,  1.15it/s]  0%|          | 20/153000 [00:18<37:05:19,  1.15it/s]  0%|          | 21/153000 [00:18<37:05:05,  1.15it/s]  0%|          | 22/153000 [00:19<37:04:42,  1.15it/s]  0%|          | 23/153000 [00:20<37:04:33,  1.15it/s]  0%|          | 24/153000 [00:21<37:05:42,  1.15it/s]  0%|          | 25/153000 [00:22<37:05:39,  1.15it/s]  0%|          | 26/153000 [00:23<37:06:04,  1.15it/s]  0%|          | 27/153000 [00:24<37:05:30,  1.15it/s]  0%|          | 28/153000 [00:25<37:04:32,  1.15it/s]  0%|          | 29/153000 [00:25<37:06:11,  1.15it/s]  0%|          | 30/153000 [00:26<37:05:26,  1.15it/s]  0%|          | 31/153000 [00:27<37:04:54,  1.15it/s]  0%|          | 32/153000 [00:28<37:04:37,  1.15it/s]  0%|          | 33/153000 [00:29<37:04:15,  1.15it/s]  0%|          | 34/153000 [00:30<37:03:47,  1.15it/s]  0%|          | 35/153000 [00:31<37:04:48,  1.15it/s]  0%|          | 36/153000 [00:31<37:04:36,  1.15it/s]  0%|          | 37/153000 [00:32<37:04:22,  1.15it/s]  0%|          | 38/153000 [00:33<37:04:48,  1.15it/s]  0%|          | 39/153000 [00:34<37:05:56,  1.15it/s]  0%|          | 40/153000 [00:35<37:05:35,  1.15it/s]  0%|          | 41/153000 [00:36<37:05:21,  1.15it/s]  0%|          | 42/153000 [00:37<37:06:35,  1.14it/s]  0%|          | 43/153000 [00:38<37:06:09,  1.15it/s]  0%|          | 44/153000 [00:38<37:05:33,  1.15it/s]  0%|          | 45/153000 [00:39<37:05:52,  1.15it/s]  0%|          | 46/153000 [00:40<37:06:23,  1.15it/s]  0%|          | 47/153000 [00:41<37:05:58,  1.15it/s]  0%|          | 48/153000 [00:42<37:06:31,  1.14it/s]  0%|          | 49/153000 [00:43<37:07:14,  1.14it/s]  0%|          | 50/153000 [00:44<37:07:31,  1.14it/s]  0%|          | 51/153000 [00:45<37:07:45,  1.14it/s]  0%|          | 52/153000 [00:45<37:07:01,  1.14it/s]  0%|          | 53/153000 [00:46<37:06:07,  1.15it/s]  0%|          | 54/153000 [00:47<37:07:04,  1.14it/s]  0%|          | 55/153000 [00:48<37:06:05,  1.15it/s]  0%|          | 56/153000 [00:49<37:05:31,  1.15it/s]  0%|          | 57/153000 [00:50<37:05:37,  1.15it/s]  0%|          | 58/153000 [00:51<37:05:17,  1.15it/s]  0%|          | 59/153000 [00:52<37:05:16,  1.15it/s]  0%|          | 60/153000 [00:52<37:04:45,  1.15it/s]  0%|          | 61/153000 [00:53<37:05:03,  1.15it/s]  0%|          | 62/153000 [00:54<37:05:29,  1.15it/s]  0%|          | 63/153000 [00:55<37:05:11,  1.15it/s]  0%|          | 64/153000 [00:56<37:06:44,  1.14it/s]  0%|          | 65/153000 [00:57<37:05:46,  1.15it/s]  0%|          | 66/153000 [00:58<37:06:28,  1.14it/s]  0%|          | 67/153000 [00:59<37:06:04,  1.15it/s]  0%|          | 68/153000 [00:59<37:05:31,  1.15it/s]  0%|          | 69/153000 [01:00<37:04:59,  1.15it/s]  0%|          | 70/153000 [01:01<37:04:25,  1.15it/s]  0%|          | 71/153000 [01:02<37:05:00,  1.15it/s]  0%|          | 72/153000 [01:03<37:05:02,  1.15it/s]  0%|          | 73/153000 [01:04<37:04:33,  1.15it/s]  0%|          | 74/153000 [01:05<37:04:11,  1.15it/s]  0%|          | 75/153000 [01:06<37:04:39,  1.15it/s]  0%|          | 76/153000 [01:06<37:07:11,  1.14it/s]  0%|          | 77/153000 [01:07<37:06:33,  1.14it/s]  0%|          | 78/153000 [01:08<37:05:26,  1.15it/s]  0%|          | 79/153000 [01:09<37:04:42,  1.15it/s]  0%|          | 80/153000 [01:10<37:04:13,  1.15it/s]  0%|          | 81/153000 [01:11<37:03:48,  1.15it/s]  0%|          | 82/153000 [01:12<37:04:31,  1.15it/s]  0%|          | 83/153000 [01:13<37:05:10,  1.15it/s]  0%|          | 84/153000 [01:13<37:04:23,  1.15it/s]  0%|          | 85/153000 [01:14<37:03:52,  1.15it/s]  0%|          | 86/153000 [01:15<37:03:23,  1.15it/s]  0%|          | 87/153000 [01:16<37:03:05,  1.15it/s]  0%|          | 88/153000 [01:17<37:02:46,  1.15it/s]  0%|          | 89/153000 [01:18<37:02:58,  1.15it/s]  0%|          | 90/153000 [01:19<37:03:25,  1.15it/s]  0%|          | 91/153000 [01:20<37:03:13,  1.15it/s]  0%|          | 92/153000 [01:20<37:03:20,  1.15it/s]  0%|          | 93/153000 [01:21<37:04:28,  1.15it/s]  0%|          | 94/153000 [01:22<37:04:57,  1.15it/s]  0%|          | 95/153000 [01:23<37:04:26,  1.15it/s]  0%|          | 96/153000 [01:24<37:03:51,  1.15it/s]  0%|          | 97/153000 [01:25<37:04:36,  1.15it/s]  0%|          | 98/153000 [01:26<37:06:08,  1.14it/s]  0%|          | 99/153000 [01:26<37:05:24,  1.15it/s]  0%|          | 100/153000 [01:27<37:04:28,  1.15it/s]  0%|          | 101/153000 [01:28<37:04:05,  1.15it/s]  0%|          | 102/153000 [01:29<37:04:45,  1.15it/s]  0%|          | 103/153000 [01:30<37:05:26,  1.15it/s]  0%|          | 104/153000 [01:31<37:04:36,  1.15it/s]  0%|          | 105/153000 [01:32<37:03:52,  1.15it/s]  0%|          | 106/153000 [01:33<37:03:19,  1.15it/s]  0%|          | 107/153000 [01:33<37:02:39,  1.15it/s]  0%|          | 108/153000 [01:34<37:02:10,  1.15it/s]  0%|          | 109/153000 [01:35<37:03:38,  1.15it/s]  0%|          | 110/153000 [01:36<37:03:26,  1.15it/s]  0%|          | 111/153000 [01:37<37:02:57,  1.15it/s]  0%|          | 112/153000 [01:38<37:02:52,  1.15it/s]  0%|          | 113/153000 [01:39<37:02:43,  1.15it/s]  0%|          | 114/153000 [01:40<37:04:21,  1.15it/s]  0%|          | 115/153000 [01:40<37:03:51,  1.15it/s]  0%|          | 116/153000 [01:41<37:03:40,  1.15it/s]  0%|          | 117/153000 [01:42<37:03:31,  1.15it/s]  0%|          | 118/153000 [01:43<37:03:45,  1.15it/s]  0%|          | 119/153000 [01:44<37:03:05,  1.15it/s]  0%|          | 120/153000 [01:45<37:02:32,  1.15it/s]  0%|          | 121/153000 [01:46<37:02:28,  1.15it/s]  0%|          | 122/153000 [01:47<37:04:03,  1.15it/s]  0%|          | 123/153000 [01:47<37:04:17,  1.15it/s]  0%|          | 124/153000 [01:48<37:04:07,  1.15it/s]  0%|          | 125/153000 [01:49<37:04:33,  1.15it/s]  0%|          | 126/153000 [01:50<37:03:39,  1.15it/s]  0%|          | 127/153000 [01:51<37:02:54,  1.15it/s]  0%|          | 128/153000 [01:52<37:03:45,  1.15it/s]  0%|          | 129/153000 [01:53<37:04:26,  1.15it/s]  0%|          | 130/153000 [01:54<37:03:50,  1.15it/s]  0%|          | 131/153000 [01:54<37:03:38,  1.15it/s]  0%|          | 132/153000 [01:55<37:03:07,  1.15it/s]  0%|          | 133/153000 [01:56<37:02:52,  1.15it/s]  0%|          | 134/153000 [01:57<37:02:37,  1.15it/s]  0%|          | 135/153000 [01:58<37:02:44,  1.15it/s]  0%|          | 136/153000 [01:59<37:02:42,  1.15it/s]  0%|          | 137/153000 [02:00<37:02:26,  1.15it/s]  0%|          | 138/153000 [02:01<37:02:12,  1.15it/s]  0%|          | 139/153000 [02:01<37:02:07,  1.15it/s]  0%|          | 140/153000 [02:02<37:01:59,  1.15it/s]  0%|          | 141/153000 [02:03<37:01:57,  1.15it/s]  0%|          | 142/153000 [02:04<37:01:59,  1.15it/s]  0%|          | 143/153000 [02:05<37:02:11,  1.15it/s]  0%|          | 144/153000 [02:06<37:02:35,  1.15it/s]  0%|          | 145/153000 [02:07<37:02:30,  1.15it/s]  0%|          | 146/153000 [02:07<37:02:18,  1.15it/s]  0%|          | 147/153000 [02:08<37:02:17,  1.15it/s]  0%|          | 148/153000 [02:09<37:01:51,  1.15it/s]  0%|          | 149/153000 [02:10<37:01:53,  1.15it/s]  0%|          | 150/153000 [02:11<37:02:26,  1.15it/s]  0%|          | 151/153000 [02:12<37:03:09,  1.15it/s]  0%|          | 152/153000 [02:13<37:02:52,  1.15it/s]  0%|          | 153/153000 [02:14<37:02:34,  1.15it/s]  0%|          | 154/153000 [02:14<37:02:41,  1.15it/s]  0%|          | 155/153000 [02:15<37:02:32,  1.15it/s]  0%|          | 156/153000 [02:16<37:02:26,  1.15it/s]  0%|          | 157/153000 [02:17<37:02:16,  1.15it/s]  0%|          | 158/153000 [02:18<37:02:01,  1.15it/s]  0%|          | 159/153000 [02:19<37:03:26,  1.15it/s]  0%|          | 160/153000 [02:20<37:03:39,  1.15it/s]  0%|          | 161/153000 [02:21<37:03:15,  1.15it/s]  0%|          | 162/153000 [02:21<37:02:48,  1.15it/s]  0%|          | 163/153000 [02:22<37:02:30,  1.15it/s]  0%|          | 164/153000 [02:23<37:02:12,  1.15it/s]  0%|          | 165/153000 [02:24<37:03:44,  1.15it/s]  0%|          | 166/153000 [02:25<37:04:29,  1.15it/s]  0%|          | 167/153000 [02:26<37:03:33,  1.15it/s]  0%|          | 168/153000 [02:27<37:04:29,  1.15it/s]  0%|          | 169/153000 [02:28<37:04:03,  1.15it/s]  0%|          | 170/153000 [02:28<37:03:15,  1.15it/s]  0%|          | 171/153000 [02:29<37:02:48,  1.15it/s]  0%|          | 172/153000 [02:30<37:02:44,  1.15it/s]  0%|          | 173/153000 [02:31<37:02:43,  1.15it/s]  0%|          | 174/153000 [02:32<37:02:52,  1.15it/s]  0%|          | 175/153000 [02:33<37:02:32,  1.15it/s]  0%|          | 176/153000 [02:34<37:02:31,  1.15it/s]  0%|          | 177/153000 [02:35<37:02:54,  1.15it/s]  0%|          | 178/153000 [02:35<37:02:54,  1.15it/s]  0%|          | 179/153000 [02:36<37:03:11,  1.15it/s]  0%|          | 180/153000 [02:37<37:02:57,  1.15it/s]  0%|          | 181/153000 [02:38<37:02:43,  1.15it/s]  0%|          | 182/153000 [02:39<37:02:29,  1.15it/s]  0%|          | 183/153000 [02:40<37:02:14,  1.15it/s]  0%|          | 184/153000 [02:41<37:02:03,  1.15it/s]  0%|          | 185/153000 [02:42<37:02:10,  1.15it/s]  0%|          | 186/153000 [02:42<37:03:01,  1.15it/s]  0%|          | 187/153000 [02:43<37:02:43,  1.15it/s]  0%|          | 188/153000 [02:44<37:02:26,  1.15it/s]  0%|          | 189/153000 [02:45<37:02:27,  1.15it/s]  0%|          | 190/153000 [02:46<37:02:13,  1.15it/s]  0%|          | 191/153000 [02:47<37:02:07,  1.15it/s]  0%|          | 192/153000 [02:48<37:02:08,  1.15it/s]  0%|          | 193/153000 [02:49<37:01:53,  1.15it/s]  0%|          | 194/153000 [02:49<37:02:39,  1.15it/s]  0%|          | 195/153000 [02:50<37:05:36,  1.14it/s]  0%|          | 196/153000 [02:51<37:04:59,  1.14it/s]  0%|          | 197/153000 [02:52<37:04:15,  1.14it/s]  0%|          | 198/153000 [02:53<37:03:40,  1.15it/s]  0%|          | 199/153000 [02:54<37:03:02,  1.15it/s]  0%|          | 200/153000 [02:55<37:02:42,  1.15it/s]  0%|          | 201/153000 [02:55<37:02:22,  1.15it/s]  0%|          | 202/153000 [02:56<37:01:55,  1.15it/s]  0%|          | 203/153000 [02:57<37:03:02,  1.15it/s]  0%|          | 204/153000 [02:58<37:03:26,  1.15it/s]  0%|          | 205/153000 [02:59<37:02:35,  1.15it/s]  0%|          | 206/153000 [03:00<37:02:15,  1.15it/s]  0%|          | 207/153000 [03:01<37:03:24,  1.15it/s]  0%|          | 208/153000 [03:02<37:02:53,  1.15it/s]  0%|          | 209/153000 [03:02<37:02:24,  1.15it/s]  0%|          | 210/153000 [03:03<37:01:42,  1.15it/s]  0%|          | 211/153000 [03:04<37:01:12,  1.15it/s]  0%|          | 212/153000 [03:05<37:00:55,  1.15it/s]  0%|          | 213/153000 [03:06<37:00:57,  1.15it/s]  0%|          | 214/153000 [03:07<37:00:28,  1.15it/s]  0%|          | 215/153000 [03:08<37:01:37,  1.15it/s]  0%|          | 216/153000 [03:09<37:01:26,  1.15it/s]  0%|          | 217/153000 [03:09<37:01:23,  1.15it/s]  0%|          | 218/153000 [03:10<37:00:55,  1.15it/s]  0%|          | 219/153000 [03:11<37:01:20,  1.15it/s]  0%|          | 220/153000 [03:12<37:01:00,  1.15it/s]  0%|          | 221/153000 [03:13<37:01:02,  1.15it/s]  0%|          | 222/153000 [03:14<37:01:01,  1.15it/s]  0%|          | 223/153000 [03:15<37:00:44,  1.15it/s]  0%|          | 224/153000 [03:16<37:01:24,  1.15it/s]  0%|          | 225/153000 [03:16<37:00:57,  1.15it/s]  0%|          | 226/153000 [03:17<37:01:50,  1.15it/s]  0%|          | 227/153000 [03:18<37:01:30,  1.15it/s]  0%|          | 228/153000 [03:19<37:00:51,  1.15it/s]  0%|          | 229/153000 [03:20<37:00:30,  1.15it/s]  0%|          | 230/153000 [03:21<37:00:27,  1.15it/s]  0%|          | 231/153000 [03:22<37:01:00,  1.15it/s]  0%|          | 232/153000 [03:23<37:00:41,  1.15it/s]  0%|          | 233/153000 [03:23<37:01:05,  1.15it/s]  0%|          | 234/153000 [03:24<37:01:08,  1.15it/s]  0%|          | 235/153000 [03:25<37:00:49,  1.15it/s]  0%|          | 236/153000 [03:26<37:00:31,  1.15it/s]  0%|          | 237/153000 [03:27<37:00:32,  1.15it/s]  0%|          | 238/153000 [03:28<37:01:16,  1.15it/s]  0%|          | 239/153000 [03:29<37:01:31,  1.15it/s]  0%|          | 240/153000 [03:30<37:01:19,  1.15it/s]  0%|          | 241/153000 [03:30<37:01:10,  1.15it/s]  0%|          | 242/153000 [03:31<37:00:59,  1.15it/s]  0%|          | 243/153000 [03:32<37:02:34,  1.15it/s]  0%|          | 244/153000 [03:33<37:02:16,  1.15it/s]  0%|          | 245/153000 [03:34<37:02:09,  1.15it/s]  0%|          | 246/153000 [03:35<37:01:29,  1.15it/s]  0%|          | 247/153000 [03:36<37:01:04,  1.15it/s]  0%|          | 248/153000 [03:37<37:00:40,  1.15it/s]  0%|          | 249/153000 [03:37<37:00:34,  1.15it/s]  0%|          | 250/153000 [03:38<37:00:26,  1.15it/s]  0%|          | 251/153000 [03:39<37:00:23,  1.15it/s]  0%|          | 252/153000 [03:40<37:00:16,  1.15it/s]  0%|          | 253/153000 [03:41<37:00:20,  1.15it/s]  0%|          | 254/153000 [03:42<37:00:11,  1.15it/s]  0%|          | 255/153000 [03:43<37:00:18,  1.15it/s]  0%|          | 256/153000 [03:43<37:00:15,  1.15it/s]  0%|          | 257/153000 [03:44<37:00:22,  1.15it/s]  0%|          | 258/153000 [03:45<37:00:24,  1.15it/s]  0%|          | 259/153000 [03:46<37:00:39,  1.15it/s]  0%|          | 260/153000 [03:47<37:00:23,  1.15it/s]  0%|          | 261/153000 [03:48<37:00:31,  1.15it/s]  0%|          | 262/153000 [03:49<37:00:25,  1.15it/s]  0%|          | 263/153000 [03:50<37:00:20,  1.15it/s]  0%|          | 264/153000 [03:50<37:00:18,  1.15it/s]  0%|          | 265/153000 [03:51<37:00:32,  1.15it/s]  0%|          | 266/153000 [03:52<37:00:35,  1.15it/s]  0%|          | 267/153000 [03:53<37:00:21,  1.15it/s]  0%|          | 268/153000 [03:54<37:00:24,  1.15it/s]  0%|          | 269/153000 [03:55<37:00:31,  1.15it/s]  0%|          | 270/153000 [03:56<37:00:26,  1.15it/s]  0%|          | 271/153000 [03:57<37:00:24,  1.15it/s]  0%|          | 272/153000 [03:57<37:00:10,  1.15it/s]  0%|          | 273/153000 [03:58<37:01:20,  1.15it/s]  0%|          | 274/153000 [03:59<37:02:56,  1.15it/s]  0%|          | 275/153000 [04:00<37:02:59,  1.15it/s]  0%|          | 276/153000 [04:01<37:02:10,  1.15it/s]  0%|          | 277/153000 [04:02<37:01:46,  1.15it/s]  0%|          | 278/153000 [04:03<37:01:05,  1.15it/s]  0%|          | 279/153000 [04:04<37:00:44,  1.15it/s]  0%|          | 280/153000 [04:04<37:00:22,  1.15it/s]  0%|          | 281/153000 [04:05<37:00:22,  1.15it/s]  0%|          | 282/153000 [04:06<37:00:31,  1.15it/s]  0%|          | 283/153000 [04:07<37:00:35,  1.15it/s]  0%|          | 284/153000 [04:08<37:00:01,  1.15it/s]  0%|          | 285/153000 [04:09<37:00:17,  1.15it/s]  0%|          | 286/153000 [04:10<37:00:18,  1.15it/s]  0%|          | 287/153000 [04:11<37:01:29,  1.15it/s]  0%|          | 288/153000 [04:11<37:01:15,  1.15it/s]  0%|          | 289/153000 [04:12<37:01:24,  1.15it/s]  0%|          | 290/153000 [04:13<37:00:55,  1.15it/s]  0%|          | 291/153000 [04:14<37:00:31,  1.15it/s]  0%|          | 292/153000 [04:15<37:00:05,  1.15it/s]  0%|          | 293/153000 [04:16<37:00:17,  1.15it/s]  0%|          | 294/153000 [04:17<37:00:04,  1.15it/s]  0%|          | 295/153000 [04:18<37:00:06,  1.15it/s]  0%|          | 296/153000 [04:18<36:59:45,  1.15it/s]  0%|          | 297/153000 [04:19<36:59:47,  1.15it/s]  0%|          | 298/153000 [04:20<36:59:43,  1.15it/s]  0%|          | 299/153000 [04:21<36:59:50,  1.15it/s]  0%|          | 300/153000 [04:22<37:00:05,  1.15it/s]  0%|          | 301/153000 [04:23<36:59:59,  1.15it/s]  0%|          | 302/153000 [04:24<36:59:59,  1.15it/s]  0%|          | 303/153000 [04:24<36:59:52,  1.15it/s]  0%|          | 304/153000 [04:25<36:59:33,  1.15it/s]  0%|          | 305/153000 [04:26<37:01:14,  1.15it/s]  0%|          | 306/153000 [04:27<37:01:03,  1.15it/s]  0%|          | 307/153000 [04:28<37:00:33,  1.15it/s]  0%|          | 308/153000 [04:29<37:00:07,  1.15it/s]  0%|          | 309/153000 [04:30<37:00:04,  1.15it/s]  0%|          | 310/153000 [04:31<36:59:55,  1.15it/s]  0%|          | 311/153000 [04:31<36:59:51,  1.15it/s]  0%|          | 312/153000 [04:32<37:02:52,  1.14it/s]  0%|          | 313/153000 [04:33<37:05:10,  1.14it/s]  0%|          | 314/153000 [04:34<37:06:26,  1.14it/s]  0%|          | 315/153000 [04:35<37:07:18,  1.14it/s]  0%|          | 316/153000 [04:36<37:07:41,  1.14it/s]  0%|          | 317/153000 [04:37<37:08:29,  1.14it/s]  0%|          | 318/153000 [04:38<37:09:16,  1.14it/s]  0%|          | 319/153000 [04:38<37:09:38,  1.14it/s]  0%|          | 320/153000 [04:39<37:10:51,  1.14it/s]  0%|          | 321/153000 [04:40<37:10:37,  1.14it/s]  0%|          | 322/153000 [04:41<37:10:10,  1.14it/s]  0%|          | 323/153000 [04:42<37:10:16,  1.14it/s]  0%|          | 324/153000 [04:43<37:11:07,  1.14it/s]  0%|          | 325/153000 [04:44<37:11:11,  1.14it/s]  0%|          | 326/153000 [04:45<37:11:01,  1.14it/s]  0%|          | 327/153000 [04:45<37:10:45,  1.14it/s]  0%|          | 328/153000 [04:46<37:10:31,  1.14it/s]  0%|          | 329/153000 [04:47<37:10:32,  1.14it/s]  0%|          | 330/153000 [04:48<37:10:12,  1.14it/s]  0%|          | 331/153000 [04:49<37:10:06,  1.14it/s]  0%|          | 332/153000 [04:50<37:10:09,  1.14it/s]  0%|          | 333/153000 [04:51<37:10:05,  1.14it/s]  0%|          | 334/153000 [04:52<37:09:47,  1.14it/s]  0%|          | 335/153000 [04:52<37:09:33,  1.14it/s]  0%|          | 336/153000 [04:53<37:11:19,  1.14it/s]  0%|          | 337/153000 [04:54<37:11:06,  1.14it/s]  0%|          | 338/153000 [04:55<37:10:31,  1.14it/s]  0%|          | 339/153000 [04:56<37:10:25,  1.14it/s]  0%|          | 340/153000 [04:57<37:09:53,  1.14it/s]  0%|          | 341/153000 [04:58<37:10:14,  1.14it/s]  0%|          | 342/153000 [04:59<37:10:02,  1.14it/s]  0%|          | 343/153000 [05:00<37:09:57,  1.14it/s]  0%|          | 344/153000 [05:00<37:10:03,  1.14it/s]  0%|          | 345/153000 [05:01<37:09:52,  1.14it/s]  0%|          | 346/153000 [05:02<37:10:48,  1.14it/s]  0%|          | 347/153000 [05:03<37:11:41,  1.14it/s]  0%|          | 348/153000 [05:04<37:11:38,  1.14it/s]  0%|          | 349/153000 [05:05<37:11:57,  1.14it/s]  0%|          | 350/153000 [05:06<37:11:35,  1.14it/s]  0%|          | 351/153000 [05:07<37:11:00,  1.14it/s]  0%|          | 352/153000 [05:07<37:10:20,  1.14it/s]  0%|          | 353/153000 [05:08<37:10:05,  1.14it/s]  0%|          | 354/153000 [05:09<37:09:43,  1.14it/s]  0%|          | 355/153000 [05:10<37:10:02,  1.14it/s]  0%|          | 356/153000 [05:11<37:09:48,  1.14it/s]  0%|          | 357/153000 [05:12<37:09:42,  1.14it/s]  0%|          | 358/153000 [05:13<37:09:35,  1.14it/s]  0%|          | 359/153000 [05:14<37:09:24,  1.14it/s]  0%|          | 360/153000 [05:14<37:09:40,  1.14it/s]  0%|          | 361/153000 [05:15<37:09:22,  1.14it/s]  0%|          | 362/153000 [05:16<37:09:46,  1.14it/s]  0%|          | 363/153000 [05:17<37:09:33,  1.14it/s]  0%|          | 364/153000 [05:18<37:09:36,  1.14it/s]  0%|          | 365/153000 [05:19<37:09:24,  1.14it/s]  0%|          | 366/153000 [05:20<37:09:17,  1.14it/s]  0%|          | 367/153000 [05:21<37:09:41,  1.14it/s]  0%|          | 368/153000 [05:21<37:09:40,  1.14it/s]  0%|          | 369/153000 [05:22<37:09:46,  1.14it/s]  0%|          | 370/153000 [05:23<37:09:22,  1.14it/s]  0%|          | 371/153000 [05:24<37:09:55,  1.14it/s]  0%|          | 372/153000 [05:25<37:09:26,  1.14it/s]  0%|          | 373/153000 [05:26<37:09:35,  1.14it/s]  0%|          | 374/153000 [05:27<37:09:33,  1.14it/s]  0%|          | 375/153000 [05:28<37:09:21,  1.14it/s]  0%|          | 376/153000 [05:28<37:09:06,  1.14it/s]  0%|          | 377/153000 [05:29<37:09:02,  1.14it/s]  0%|          | 378/153000 [05:30<37:09:02,  1.14it/s]  0%|          | 379/153000 [05:31<37:09:06,  1.14it/s]  0%|          | 380/153000 [05:32<37:09:22,  1.14it/s]  0%|          | 381/153000 [05:33<37:11:29,  1.14it/s]  0%|          | 382/153000 [05:34<37:11:08,  1.14it/s]  0%|          | 383/153000 [05:35<37:10:43,  1.14it/s]  0%|          | 384/153000 [05:35<37:10:05,  1.14it/s]  0%|          | 385/153000 [05:36<37:10:02,  1.14it/s]  0%|          | 386/153000 [05:37<37:09:55,  1.14it/s]  0%|          | 387/153000 [05:38<37:09:50,  1.14it/s]  0%|          | 388/153000 [05:39<37:09:34,  1.14it/s]  0%|          | 389/153000 [05:40<37:09:25,  1.14it/s]  0%|          | 390/153000 [05:41<37:09:12,  1.14it/s]  0%|          | 391/153000 [05:42<37:08:59,  1.14it/s]  0%|          | 392/153000 [05:42<37:09:00,  1.14it/s]  0%|          | 393/153000 [05:43<37:09:18,  1.14it/s]  0%|          | 394/153000 [05:44<37:10:19,  1.14it/s]  0%|          | 395/153000 [05:45<37:10:08,  1.14it/s]  0%|          | 396/153000 [05:46<37:09:31,  1.14it/s]  0%|          | 397/153000 [05:47<37:09:19,  1.14it/s]  0%|          | 398/153000 [05:48<37:09:06,  1.14it/s]  0%|          | 399/153000 [05:49<37:09:05,  1.14it/s]  0%|          | 400/153000 [05:49<37:08:46,  1.14it/s]  0%|          | 401/153000 [05:50<37:09:14,  1.14it/s]  0%|          | 402/153000 [05:51<37:09:16,  1.14it/s]  0%|          | 403/153000 [05:52<37:09:09,  1.14it/s]  0%|          | 404/153000 [05:53<37:09:03,  1.14it/s]  0%|          | 405/153000 [05:54<37:09:18,  1.14it/s]  0%|          | 406/153000 [05:55<37:09:06,  1.14it/s]  0%|          | 407/153000 [05:56<37:08:46,  1.14it/s]  0%|          | 408/153000 [05:56<37:08:41,  1.14it/s]  0%|          | 409/153000 [05:57<37:08:36,  1.14it/s]  0%|          | 410/153000 [05:58<37:08:37,  1.14it/s]  0%|          | 411/153000 [05:59<37:08:36,  1.14it/s]  0%|          | 412/153000 [06:00<37:08:25,  1.14it/s]  0%|          | 413/153000 [06:01<37:08:38,  1.14it/s]  0%|          | 414/153000 [06:02<37:08:46,  1.14it/s]  0%|          | 415/153000 [06:03<37:08:54,  1.14it/s]  0%|          | 416/153000 [06:03<37:08:40,  1.14it/s]  0%|          | 417/153000 [06:04<37:08:46,  1.14it/s]  0%|          | 418/153000 [06:05<37:08:28,  1.14it/s]  0%|          | 419/153000 [06:06<37:08:58,  1.14it/s]  0%|          | 420/153000 [06:07<37:08:56,  1.14it/s]  0%|          | 421/153000 [06:08<37:08:48,  1.14it/s]  0%|          | 422/153000 [06:09<37:08:39,  1.14it/s]  0%|          | 423/153000 [06:10<37:08:39,  1.14it/s]  0%|          | 424/153000 [06:11<37:08:53,  1.14it/s]  0%|          | 425/153000 [06:11<37:08:57,  1.14it/s]  0%|          | 426/153000 [06:12<37:08:55,  1.14it/s]  0%|          | 427/153000 [06:13<37:08:42,  1.14it/s]  0%|          | 428/153000 [06:14<37:08:51,  1.14it/s]  0%|          | 429/153000 [06:15<37:08:51,  1.14it/s]  0%|          | 430/153000 [06:16<37:08:30,  1.14it/s]  0%|          | 431/153000 [06:17<37:08:36,  1.14it/s]  0%|          | 432/153000 [06:18<37:08:23,  1.14it/s]  0%|          | 433/153000 [06:18<37:08:46,  1.14it/s]  0%|          | 434/153000 [06:19<37:08:38,  1.14it/s]  0%|          | 435/153000 [06:20<37:08:13,  1.14it/s]  0%|          | 436/153000 [06:21<37:08:12,  1.14it/s]  0%|          | 437/153000 [06:22<37:09:16,  1.14it/s]  0%|          | 438/153000 [06:23<37:08:58,  1.14it/s]  0%|          | 439/153000 [06:24<37:08:46,  1.14it/s]  0%|          | 440/153000 [06:25<37:08:34,  1.14it/s]  0%|          | 441/153000 [06:25<37:08:50,  1.14it/s]  0%|          | 442/153000 [06:26<37:08:31,  1.14it/s]  0%|          | 443/153000 [06:27<37:08:26,  1.14it/s]  0%|          | 444/153000 [06:28<37:08:26,  1.14it/s]  0%|          | 445/153000 [06:29<37:08:31,  1.14it/s]  0%|          | 446/153000 [06:30<37:08:19,  1.14it/s]  0%|          | 447/153000 [06:31<37:08:10,  1.14it/s]  0%|          | 448/153000 [06:32<37:07:55,  1.14it/s]  0%|          | 449/153000 [06:32<37:08:21,  1.14it/s]  0%|          | 450/153000 [06:33<37:08:05,  1.14it/s]  0%|          | 451/153000 [06:34<37:08:19,  1.14it/s]  0%|          | 452/153000 [06:35<37:08:47,  1.14it/s]  0%|          | 453/153000 [06:36<37:09:03,  1.14it/s]  0%|          | 454/153000 [06:37<37:08:45,  1.14it/s]  0%|          | 455/153000 [06:38<37:08:39,  1.14it/s]  0%|          | 456/153000 [06:39<37:08:07,  1.14it/s]  0%|          | 457/153000 [06:39<37:08:19,  1.14it/s]  0%|          | 458/153000 [06:40<37:08:06,  1.14it/s]  0%|          | 459/153000 [06:41<37:07:57,  1.14it/s]  0%|          | 460/153000 [06:42<37:07:48,  1.14it/s]  0%|          | 461/153000 [06:43<37:07:55,  1.14it/s]  0%|          | 462/153000 [06:44<37:07:43,  1.14it/s]  0%|          | 463/153000 [06:45<37:07:51,  1.14it/s]  0%|          | 464/153000 [06:46<37:07:41,  1.14it/s]  0%|          | 465/153000 [06:46<37:08:06,  1.14it/s]  0%|          | 466/153000 [06:47<37:07:52,  1.14it/s]  0%|          | 467/153000 [06:48<37:07:42,  1.14it/s]  0%|          | 468/153000 [06:49<37:07:57,  1.14it/s]  0%|          | 469/153000 [06:50<37:08:20,  1.14it/s]  0%|          | 470/153000 [06:51<37:08:05,  1.14it/s]  0%|          | 471/153000 [06:52<37:07:58,  1.14it/s]  0%|          | 472/153000 [06:53<37:08:15,  1.14it/s]  0%|          | 473/153000 [06:53<37:08:18,  1.14it/s]  0%|          | 474/153000 [06:54<37:08:05,  1.14it/s]  0%|          | 475/153000 [06:55<37:09:05,  1.14it/s]  0%|          | 476/153000 [06:56<37:08:52,  1.14it/s]  0%|          | 477/153000 [06:57<37:08:49,  1.14it/s]  0%|          | 478/153000 [06:58<37:08:45,  1.14it/s]  0%|          | 479/153000 [06:59<37:09:14,  1.14it/s]  0%|          | 480/153000 [07:00<37:08:49,  1.14it/s]  0%|          | 481/153000 [07:00<37:08:37,  1.14it/s]  0%|          | 482/153000 [07:01<37:08:04,  1.14it/s]  0%|          | 483/153000 [07:02<37:07:55,  1.14it/s]  0%|          | 484/153000 [07:03<37:07:47,  1.14it/s]  0%|          | 485/153000 [07:04<37:07:48,  1.14it/s]  0%|          | 486/153000 [07:05<37:07:44,  1.14it/s]  0%|          | 487/153000 [07:06<37:07:43,  1.14it/s]  0%|          | 488/153000 [07:07<37:08:01,  1.14it/s]  0%|          | 489/153000 [07:07<37:08:22,  1.14it/s]  0%|          | 490/153000 [07:08<37:08:02,  1.14it/s]  0%|          | 491/153000 [07:09<37:08:01,  1.14it/s]  0%|          | 492/153000 [07:10<37:07:50,  1.14it/s]  0%|          | 493/153000 [07:11<37:07:58,  1.14it/s]  0%|          | 494/153000 [07:12<37:08:08,  1.14it/s]  0%|          | 495/153000 [07:13<37:08:07,  1.{'loss': 7.0204, 'grad_norm': 2.15921688079834, 'learning_rate': 4.983660130718955e-05, 'epoch': 0.33}
+14it/s]  0%|          | 496/153000 [07:14<37:07:42,  1.14it/s]  0%|          | 497/153000 [07:14<37:07:41,  1.14it/s]  0%|          | 498/153000 [07:15<37:07:53,  1.14it/s]  0%|          | 499/153000 [07:16<37:07:41,  1.14it/s]  0%|          | 500/153000 [07:17<37:07:36,  1.14it/s]                                                         0%|          | 500/153000 [07:17<37:07:36,  1.14it/s]  0%|          | 501/153000 [07:18<37:14:55,  1.14it/s]  0%|          | 502/153000 [07:19<37:12:51,  1.14it/s]  0%|          | 503/153000 [07:20<37:11:39,  1.14it/s]  0%|          | 504/153000 [07:21<37:10:03,  1.14it/s]  0%|          | 505/153000 [07:22<37:09:08,  1.14it/s]  0%|          | 506/153000 [07:22<37:08:35,  1.14it/s]  0%|          | 507/153000 [07:23<37:08:08,  1.14it/s]  0%|          | 508/153000 [07:24<37:07:37,  1.14it/s]  0%|          | 509/153000 [07:25<37:07:13,  1.14it/s]  0%|          | 510/153000 [07:26<37:07:52,  1.14it/s]  0%|          | 511/153000 [07:27<37:07:15,  1.14it/s]  0%|          | 512/153000 [07:28<37:07:01,  1.14it/s]  0%|          | 513/153000 [07:29<37:07:04,  1.14it/s]  0%|          | 514/153000 [07:29<37:06:49,  1.14it/s]  0%|          | 515/153000 [07:30<37:06:42,  1.14it/s]  0%|          | 516/153000 [07:31<37:06:33,  1.14it/s]  0%|          | 517/153000 [07:32<37:06:26,  1.14it/s]  0%|          | 518/153000 [07:33<37:06:06,  1.14it/s]  0%|          | 519/153000 [07:34<37:06:04,  1.14it/s]  0%|          | 520/153000 [07:35<37:06:01,  1.14it/s]  0%|          | 521/153000 [07:36<37:06:02,  1.14it/s]  0%|          | 522/153000 [07:36<37:05:54,  1.14it/s]  0%|          | 523/153000 [07:37<37:06:02,  1.14it/s]  0%|          | 524/153000 [07:38<37:06:04,  1.14it/s]  0%|          | 525/153000 [07:39<37:05:57,  1.14it/s]  0%|          | 526/153000 [07:40<37:06:05,  1.14it/s]  0%|          | 527/153000 [07:41<37:06:09,  1.14it/s]  0%|          | 528/153000 [07:42<37:06:12,  1.14it/s]  0%|          | 529/153000 [07:43<37:07:19,  1.14it/s]  0%|          | 530/153000 [07:43<37:07:13,  1.14it/s]  0%|          | 531/153000 [07:44<37:06:49,  1.14it/s]  0%|          | 532/153000 [07:45<37:08:41,  1.14it/s]  0%|          | 533/153000 [07:46<37:08:47,  1.14it/s]  0%|          | 534/153000 [07:47<37:07:54,  1.14it/s]  0%|          | 535/153000 [07:48<37:07:14,  1.14it/s]  0%|          | 536/153000 [07:49<37:07:00,  1.14it/s]  0%|          | 537/153000 [07:50<37:06:47,  1.14it/s]  0%|          | 538/153000 [07:50<37:06:35,  1.14it/s]  0%|          | 539/153000 [07:51<37:06:11,  1.14it/s]  0%|          | 540/153000 [07:52<37:05:49,  1.14it/s]  0%|          | 541/153000 [07:53<37:05:43,  1.14it/s]  0%|          | 542/153000 [07:54<37:06:48,  1.14it/s]  0%|          | 543/153000 [07:55<37:06:23,  1.14it/s]  0%|          | 544/153000 [07:56<37:06:16,  1.14it/s]  0%|          | 545/153000 [07:57<37:06:11,  1.14it/s]  0%|          | 546/153000 [07:57<37:05:57,  1.14it/s]  0%|          | 547/153000 [07:58<37:05:57,  1.14it/s]  0%|          | 548/153000 [07:59<37:05:42,  1.14it/s]  0%|          | 549/153000 [08:00<37:05:49,  1.14it/s]  0%|          | 550/153000 [08:01<37:05:40,  1.14it/s]  0%|          | 551/153000 [08:02<37:07:20,  1.14it/s]  0%|          | 552/153000 [08:03<37:07:03,  1.14it/s]  0%|          | 553/153000 [08:04<37:06:47,  1.14it/s]  0%|          | 554/153000 [08:04<37:06:39,  1.14it/s]  0%|          | 555/153000 [08:05<37:06:28,  1.14it/s]  0%|          | 556/153000 [08:06<37:06:15,  1.14it/s]  0%|          | 557/153000 [08:07<37:06:05,  1.14it/s]  0%|          | 558/153000 [08:08<37:05:49,  1.14it/s]  0%|          | 559/153000 [08:09<37:05:43,  1.14it/s]  0%|          | 560/153000 [08:10<37:05:30,  1.14it/s]  0%|          | 561/153000 [08:11<37:05:38,  1.14it/s]  0%|          | 562/153000 [08:11<37:05:37,  1.14it/s]  0%|          | 563/153000 [08:12<37:05:21,  1.14it/s]  0%|          | 564/153000 [08:13<37:05:08,  1.14it/s]  0%|          | 565/153000 [08:14<37:05:22,  1.14it/s]  0%|          | 566/153000 [08:15<37:05:19,  1.14it/s]  0%|          | 567/153000 [08:16<37:05:10,  1.14it/s]  0%|          | 568/153000 [08:17<37:05:40,  1.14it/s]  0%|          | 569/153000 [08:18<37:05:33,  1.14it/s]  0%|          | 570/153000 [08:18<37:05:36,  1.14it/s]  0%|          | 571/153000 [08:19<37:05:26,  1.14it/s]  0%|          | 572/153000 [08:20<37:05:17,  1.14it/s]  0%|          | 573/153000 [08:21<37:05:24,  1.14it/s]  0%|          | 574/153000 [08:22<37:05:33,  1.14it/s]  0%|          | 575/153000 [08:23<37:05:23,  1.14it/s]  0%|          | 576/153000 [08:24<37:05:12,  1.14it/s]  0%|          | 577/153000 [08:25<37:05:14,  1.14it/s]  0%|          | 578/153000 [08:25<37:05:32,  1.14it/s]  0%|          | 579/153000 [08:26<37:05:26,  1.14it/s]  0%|          | 580/153000 [08:27<37:05:10,  1.14it/s]  0%|          | 581/153000 [08:28<37:05:17,  1.14it/s]  0%|          | 582/153000 [08:29<37:05:15,  1.14it/s]  0%|          | 583/153000 [08:30<37:05:20,  1.14it/s]  0%|          | 584/153000 [08:31<37:05:03,  1.14it/s]  0%|          | 585/153000 [08:32<37:05:10,  1.14it/s]  0%|          | 586/153000 [08:32<37:05:02,  1.14it/s]  0%|          | 587/153000 [08:33<37:05:07,  1.14it/s]  0%|          | 588/153000 [08:34<37:04:54,  1.14it/s]  0%|          | 589/153000 [08:35<37:05:58,  1.14it/s]  0%|          | 590/153000 [08:36<37:05:38,  1.14it/s]  0%|          | 591/153000 [08:37<37:05:17,  1.14it/s]  0%|          | 592/153000 [08:38<37:05:12,  1.14it/s]  0%|          | 593/153000 [08:39<37:05:10,  1.14it/s]  0%|          | 594/153000 [08:39<37:06:29,  1.14it/s]  0%|          | 595/153000 [08:40<37:06:19,  1.14it/s]  0%|          | 596/153000 [08:41<37:05:53,  1.14it/s]  0%|          | 597/153000 [08:42<37:05:42,  1.14it/s]  0%|          | 598/153000 [08:43<37:05:40,  1.14it/s]  0%|          | 599/153000 [08:44<37:05:22,  1.14it/s]  0%|          | 600/153000 [08:45<37:05:10,  1.14it/s]  0%|          | 601/153000 [08:46<37:05:16,  1.14it/s]  0%|          | 602/153000 [08:47<37:05:05,  1.14it/s]  0%|          | 603/153000 [08:47<37:04:42,  1.14it/s]  0%|          | 604/153000 [08:48<37:04:20,  1.14it/s]  0%|          | 605/153000 [08:49<37:04:18,  1.14it/s]  0%|          | 606/153000 [08:50<37:04:37,  1.14it/s]  0%|          | 607/153000 [08:51<37:04:49,  1.14it/s]  0%|          | 608/153000 [08:52<37:06:35,  1.14it/s]  0%|          | 609/153000 [08:53<37:06:47,  1.14it/s]  0%|          | 610/153000 [08:54<37:06:07,  1.14it/s]  0%|          | 611/153000 [08:54<37:05:54,  1.14it/s]  0%|          | 612/153000 [08:55<37:05:28,  1.14it/s]  0%|          | 613/153000 [08:56<37:05:26,  1.14it/s]  0%|          | 614/153000 [08:57<37:05:14,  1.14it/s]  0%|          | 615/153000 [08:58<37:05:09,  1.14it/s]  0%|          | 616/153000 [08:59<37:04:42,  1.14it/s]  0%|          | 617/153000 [09:00<37:04:33,  1.14it/s]  0%|          | 618/153000 [09:01<37:04:16,  1.14it/s]  0%|          | 619/153000 [09:01<37:04:13,  1.14it/s]  0%|          | 620/153000 [09:02<37:04:06,  1.14it/s]  0%|          | 621/153000 [09:03<37:04:12,  1.14it/s]  0%|          | 622/153000 [09:04<37:03:57,  1.14it/s]  0%|          | 623/153000 [09:05<37:04:05,  1.14it/s]  0%|          | 624/153000 [09:06<37:03:53,  1.14it/s]  0%|          | 625/153000 [09:07<37:04:09,  1.14it/s]  0%|          | 626/153000 [09:08<37:05:28,  1.14it/s]  0%|          | 627/153000 [09:08<37:05:21,  1.14it/s]  0%|          | 628/153000 [09:09<37:04:39,  1.14it/s]  0%|          | 629/153000 [09:10<37:04:25,  1.14it/s]  0%|          | 630/153000 [09:11<37:04:23,  1.14it/s]  0%|          | 631/153000 [09:12<37:04:14,  1.14it/s]  0%|          | 632/153000 [09:13<37:04:50,  1.14it/s]  0%|          | 633/153000 [09:14<37:05:16,  1.14it/s]  0%|          | 634/153000 [09:15<37:05:00,  1.14it/s]  0%|          | 635/153000 [09:15<37:04:41,  1.14it/s]  0%|          | 636/153000 [09:16<37:04:24,  1.14it/s]  0%|          | 637/153000 [09:17<37:04:11,  1.14it/s]  0%|          | 638/153000 [09:18<37:04:24,  1.14it/s]  0%|          | 639/153000 [09:19<37:04:40,  1.14it/s]  0%|          | 640/153000 [09:20<37:04:26,  1.14it/s]  0%|          | 641/153000 [09:21<37:04:23,  1.14it/s]  0%|          | 642/153000 [09:22<37:04:43,  1.14it/s]  0%|          | 643/153000 [09:22<37:04:38,  1.14it/s]  0%|          | 644/153000 [09:23<37:04:14,  1.14it/s]  0%|          | 645/153000 [09:24<37:04:19,  1.14it/s]  0%|          | 646/153000 [09:25<37:04:39,  1.14it/s]  0%|          | 647/153000 [09:26<37:04:50,  1.14it/s]  0%|          | 648/153000 [09:27<37:04:32,  1.14it/s]  0%|          | 649/153000 [09:28<37:04:21,  1.14it/s]  0%|          | 650/153000 [09:29<37:04:05,  1.14it/s]  0%|          | 651/153000 [09:29<37:04:00,  1.14it/s]  0%|          | 652/153000 [09:30<37:03:50,  1.14it/s]  0%|          | 653/153000 [09:31<37:03:57,  1.14it/s]  0%|          | 654/153000 [09:32<37:03:56,  1.14it/s]  0%|          | 655/153000 [09:33<37:04:02,  1.14it/s]  0%|          | 656/153000 [09:34<37:03:54,  1.14it/s]  0%|          | 657/153000 [09:35<37:04:01,  1.14it/s]  0%|          | 658/153000 [09:36<37:05:10,  1.14it/s]  0%|          | 659/153000 [09:36<37:04:53,  1.14it/s]  0%|          | 660/153000 [09:37<37:05:01,  1.14it/s]  0%|          | 661/153000 [09:38<37:04:41,  1.14it/s]  0%|          | 662/153000 [09:39<37:04:27,  1.14it/s]  0%|          | 663/153000 [09:40<37:04:00,  1.14it/s]  0%|          | 664/153000 [09:41<37:03:51,  1.14it/s]  0%|          | 665/153000 [09:42<37:05:11,  1.14it/s]  0%|          | 666/153000 [09:43<37:04:49,  1.14it/s]  0%|          | 667/153000 [09:43<37:04:36,  1.14it/s]  0%|          | 668/153000 [09:44<37:04:16,  1.14it/s]  0%|          | 669/153000 [09:45<37:04:18,  1.14it/s]  0%|          | 670/153000 [09:46<37:04:04,  1.14it/s]  0%|          | 671/153000 [09:47<37:04:08,  1.14it/s]  0%|          | 672/153000 [09:48<37:03:53,  1.14it/s]  0%|          | 673/153000 [09:49<37:03:53,  1.14it/s]  0%|          | 674/153000 [09:50<37:03:46,  1.14it/s]  0%|          | 675/153000 [09:50<37:03:58,  1.14it/s]  0%|          | 676/153000 [09:51<37:03:49,  1.14it/s]  0%|          | 677/153000 [09:52<37:03:56,  1.14it/s]  0%|          | 678/153000 [09:53<37:03:54,  1.14it/s]  0%|          | 679/153000 [09:54<37:04:01,  1.14it/s]  0%|          | 680/153000 [09:55<37:03:49,  1.14it/s]  0%|          | 681/153000 [09:56<37:03:38,  1.14it/s]  0%|          | 682/153000 [09:57<37:03:34,  1.14it/s]  0%|          | 683/153000 [09:57<37:03:37,  1.14it/s]  0%|          | 684/153000 [09:58<37:05:45,  1.14it/s]  0%|          | 685/153000 [09:59<37:05:23,  1.14it/s]  0%|          | 686/153000 [10:00<37:05:09,  1.14it/s]  0%|          | 687/153000 [10:01<37:04:43,  1.14it/s]  0%|          | 688/153000 [10:02<37:04:14,  1.14it/s]  0%|          | 689/153000 [10:03<37:03:48,  1.14it/s]  0%|          | 690/153000 [10:04<37:03:26,  1.14it/s]  0%|          | 691/153000 [10:04<37:03:34,  1.14it/s]  0%|          | 692/153000 [10:05<37:03:29,  1.14it/s]  0%|          | 693/153000 [10:06<37:03:53,  1.14it/s]  0%|          | 694/153000 [10:07<37:03:52,  1.14it/s]  0%|          | 695/153000 [10:08<37:03:38,  1.14it/s]  0%|          | 696/153000 [10:09<37:03:21,  1.14it/s]  0%|          | 697/153000 [10:10<37:03:28,  1.14it/s]  0%|          | 698/153000 [10:11<37:03:19,  1.14it/s]  0%|          | 699/153000 [10:11<37:03:13,  1.14it/s]  0%|          | 700/153000 [10:12<37:03:14,  1.14it/s]  0%|          | 701/153000 [10:13<37:03:19,  1.14it/s]  0%|          | 702/153000 [10:14<37:03:20,  1.14it/s]  0%|          | 703/153000 [10:15<37:03:56,  1.14it/s]  0%|          | 704/153000 [10:16<37:03:47,  1.14it/s]  0%|          | 705/153000 [10:17<37:03:34,  1.14it/s]  0%|          | 706/153000 [10:18<37:03:35,  1.14it/s]  0%|          | 707/153000 [10:18<37:03:39,  1.14it/s]  0%|          | 708/153000 [10:19<37:03:36,  1.14it/s]  0%|          | 709/153000 [10:20<37:03:25,  1.14it/s]  0%|          | 710/153000 [10:21<37:03:23,  1.14it/s]  0%|          | 711/153000 [10:22<37:03:16,  1.14it/s]  0%|          | 712/153000 [10:23<37:03:03,  1.14it/s]  0%|          | 713/153000 [10:24<37:02:55,  1.14it/s]  0%|          | 714/153000 [10:25<37:03:12,  1.14it/s]  0%|          | 715/153000 [10:25<37:03:15,  1.14it/s]  0%|          | 716/153000 [10:26<37:03:11,  1.14it/s]  0%|          | 717/153000 [10:27<37:03:06,  1.14it/s]  0%|          | 718/153000 [10:28<37:02:55,  1.14it/s]  0%|          | 719/153000 [10:29<37:02:48,  1.14it/s]  0%|          | 720/153000 [10:30<37:02:57,  1.14it/s]  0%|          | 721/153000 [10:31<37:03:02,  1.14it/s]  0%|          | 722/153000 [10:32<37:03:23,  1.14it/s]  0%|          | 723/153000 [10:33<37:03:32,  1.14it/s]  0%|          | 724/153000 [10:33<37:03:15,  1.14it/s]  0%|          | 725/153000 [10:34<37:03:19,  1.14it/s]  0%|          | 726/153000 [10:35<37:03:22,  1.14it/s]  0%|          | 727/153000 [10:36<37:03:33,  1.14it/s]  0%|          | 728/153000 [10:37<37:03:27,  1.14it/s]  0%|          | 729/153000 [10:38<37:03:25,  1.14it/s]  0%|          | 730/153000 [10:39<37:03:06,  1.14it/s]  0%|          | 731/153000 [10:40<37:03:03,  1.14it/s]  0%|          | 732/153000 [10:40<37:02:45,  1.14it/s]  0%|          | 733/153000 [10:41<37:02:47,  1.14it/s]  0%|          | 734/153000 [10:42<37:02:51,  1.14it/s]  0%|          | 735/153000 [10:43<37:02:55,  1.14it/s]  0%|          | 736/153000 [10:44<37:02:55,  1.14it/s]  0%|          | 737/153000 [10:45<37:02:58,  1.14it/s]  0%|          | 738/153000 [10:46<37:02:52,  1.14it/s]  0%|          | 739/153000 [10:47<37:03:02,  1.14it/s]  0%|          | 740/153000 [10:47<37:02:46,  1.14it/s]  0%|          | 741/153000 [10:48<37:03:37,  1.14it/s]  0%|          | 742/153000 [10:49<37:03:18,  1.14it/s]  0%|          | 743/153000 [10:50<37:03:24,  1.14it/s]  0%|          | 744/153000 [10:51<37:02:49,  1.14it/s]  0%|          | 745/153000 [10:52<37:02:45,  1.14it/s]  0%|          | 746/153000 [10:53<37:02:33,  1.14it/s]  0%|          | 747/153000 [10:54<37:02:43,  1.14it/s]  0%|          | 748/153000 [10:54<37:02:43,  1.14it/s]  0%|          | 749/153000 [10:55<37:02:31,  1.14it/s]  0%|          | 750/153000 [10:56<37:02:34,  1.14it/s]  0%|          | 751/153000 [10:57<37:02:44,  1.14it/s]  0%|          | 752/153000 [10:58<37:02:28,  1.14it/s]  0%|          | 753/153000 [10:59<37:02:32,  1.14it/s]  0%|          | 754/153000 [11:00<37:02:19,  1.14it/s]  0%|          | 755/153000 [11:01<37:02:20,  1.14it/s]  0%|          | 756/153000 [11:01<37:02:13,  1.14it/s]  0%|          | 757/153000 [11:02<37:02:49,  1.14it/s]  0%|          | 758/153000 [11:03<37:02:40,  1.14it/s]  0%|          | 759/153000 [11:04<37:04:27,  1.14it/s]  0%|          | 760/153000 [11:05<37:04:27,  1.14it/s]  0%|          | 761/153000 [11:06<37:04:13,  1.14it/s]  0%|          | 762/153000 [11:07<37:03:33,  1.14it/s]  0%|          | 763/153000 [11:08<37:03:10,  1.14it/s]  0%|          | 764/153000 [11:08<37:03:07,  1.14it/s]  0%|          | 765/153000 [11:09<37:03:08,  1.14it/s]  1%|          | 766/153000 [11:10<37:02:53,  1.14it/s]  1%|          | 767/153000 [11:11<37:02:32,  1.14it/s]  1%|          | 768/153000 [11:12<37:02:27,  1.14it/s]  1%|          | 769/153000 [11:13<37:02:31,  1.14it/s]  1%|          | 770/153000 [11:14<37:02:39,  1.14it/s]  1%|          | 771/153000 [11:15<37:03:05,  1.14it/s]  1%|          | 772/153000 [11:15<37:02:39,  1.14it/s]  1%|          | 773/153000 [11:16<37:02:18,  1.14it/s]  1%|          | 774/153000 [11:17<37:02:03,  1.14it/s]  1%|          | 775/153000 [11:18<37:02:18,  1.14it/s]  1%|          | 776/153000 [11:19<37:02:05,  1.14it/s]  1%|          | 777/153000 [11:20<37:02:05,  1.14it/s]  1%|          | 778/153000 [11:21<37:02:35,  1.14it/s]  1%|          | 779/153000 [11:22<37:02:45,  1.14it/s]  1%|          | 780/153000 [11:22<37:02:45,  1.14it/s]  1%|          | 781/153000 [11:23<37:02:39,  1.14it/s]  1%|          | 782/153000 [11:24<37:02:36,  1.14it/s]  1%|          | 783/153000 [11:25<37:02:22,  1.14it/s]  1%|          | 784/153000 [11:26<37:02:01,  1.14it/s]  1%|          | 785/153000 [11:27<37:02:20,  1.14it/s]  1%|          | 786/153000 [11:28<37:02:17,  1.14it/s]  1%|          | 787/153000 [11:29<37:02:10,  1.14it/s]  1%|          | 788/153000 [11:29<37:02:13,  1.14it/s]  1%|          | 789/153000 [11:30<37:02:20,  1.14it/s]  1%|          | 790/153000 [11:31<37:02:28,  1.14it/s]  1%|          | 791/153000 [11:32<37:02:28,  1.14it/s]  1%|          | 792/153000 [11:33<37:02:19,  1.14it/s]  1%|          | 793/153000 [11:34<37:02:19,  1.14it/s]  1%|          | 794/153000 [11:35<37:02:19,  1.14it/s]  1%|          | 795/153000 [11:36<37:01:54,  1.14it/s]  1%|          | 796/153000 [11:36<37:01:40,  1.14it/s]  1%|          | 797/153000 [11:37<37:02:05,  1.14it/s]  1%|          | 798/153000 [11:38<37:02:20,  1.14it/s]  1%|          | 799/153000 [11:39<37:02:30,  1.14it/s]  1%|          | 800/153000 [11:40<37:02:07,  1.14it/s]  1%|          | 801/153000 [11:41<37:02:10,  1.14it/s]  1%|          | 802/153000 [11:42<37:01:57,  1.14it/s]  1%|          | 803/153000 [11:43<37:02:08,  1.14it/s]  1%|          | 804/153000 [11:43<37:0
