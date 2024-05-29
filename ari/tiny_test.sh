@@ -20,8 +20,8 @@ source activate /vast/home/ajherman/miniconda3/envs/transformer
 #pip install datasets
 #export PATH="/vast/home/ajherman/miniconda3/envs/transformer/bin:$PATH"
 
-# srun -o tiny_test.out --ntasks=1 -N 1 python gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 10 --config_file tiny.json --per_device_train_batch_size 16 --mixed_precision &
+srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 2 gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 100 --config_file tiny.json --per_device_train_batch_size 16 --mixed_precision &
 
-nvidia-smi
+#nvidia-smi
 
-srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 2 gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 100 --config_file config.json --per_device_train_batch_size 12 --mixed_precision &
+#srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 2 gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 100 --config_file config.json --per_device_train_batch_size 12 --mixed_precision &

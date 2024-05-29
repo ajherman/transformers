@@ -175,7 +175,8 @@ try:
             if args.evaluation_strategy == "epoch":
                 self.custom_evaluation()
 
-        def on_log(self, args, state control, **kwargs):
+        def on_log(self, args, state, control, **kwargs):
+            global tic
             toc = time.time()
             print("Duration: ",(toc-tic)/60,"m")
             tic = toc
