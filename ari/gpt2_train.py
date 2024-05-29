@@ -107,6 +107,7 @@ try:
         num_train_epochs=args.num_train_epochs, # number of training epochs
         per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
         save_steps=args.save_steps, # number of updates steps before checkpoint saves
+        logging_steps= 2500, # Number of steps between logs
         save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
         evaluation_strategy="epoch", # evaluation strategy to adopt during training
         fp16=args.mixed_precision, # Mix percision
