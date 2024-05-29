@@ -28,6 +28,7 @@ parser.add_argument('--checkpoint_dir', type=str, default=None, help='Checkpoint
 parser.add_argument('--context_length', type=int, default=256, help='Context length')
 parser.add_argument('--load_from_checkpoint', action='store_true', help='Load from checkpoint')
 parser.add_argument('--mixed_precision', action='store_true', help='Use mixed precision')
+parser.add_argument('--seed', type=int, default=42, help='Random seed')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -107,6 +108,8 @@ try:
         num_train_epochs=args.num_train_epochs, # number of training epochs
         per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
         save_steps=args.save_steps, # number of updates steps before checkpoint saves
+        logging_steps= 2500, # Number of steps between logs
+        seed=args.seed, # Random seed
         save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
         evaluation_strategy="epoch", # evaluation strategy to adopt during training
         fp16=args.mixed_precision, # Mix percision
