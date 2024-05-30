@@ -116,7 +116,8 @@ try:
         ddp_find_unused_parameters=False,
         dataloader_num_workers=4,
         # eval_steps=1000, # number of steps before evaluation
-        warmup_steps=500,                # number of warmup steps for learning rate scheduler
+        warmup_steps=500, # number of warmup steps for learning rate scheduler
+        gradient_accumulation_steps=16,
         # weight_decay=0.01, 
     )
 
