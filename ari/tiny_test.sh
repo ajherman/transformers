@@ -2,7 +2,7 @@
 #SBATCH --job-name=main
 #SBATCH --time 10:00:00
 #SBATCH -N 1           
-#SBATCH -p shared-gpu-ampere
+#SBATCH -p shared-gpu
 #SBATCH -C gpu_count:2
 #SBATCH --mem=0
 #SBATCH --exclusive
