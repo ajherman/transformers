@@ -29,6 +29,7 @@ parser.add_argument('--context_length', type=int, default=256, help='Context len
 parser.add_argument('--load_from_checkpoint', action='store_true', help='Load from checkpoint')
 parser.add_argument('--mixed_precision', action='store_true', help='Use mixed precision')
 parser.add_argument('--seed', type=int, default=42, help='Random seed')
+parser.add_argument('--gradient_accumulation_steps', type=int, default=16, help='Number of gradient accumulation steps')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -117,7 +118,7 @@ try:
         dataloader_num_workers=4,
         # eval_steps=1000, # number of steps before evaluation
         warmup_steps=500, # number of warmup steps for learning rate scheduler
-        gradient_accumulation_steps=16,
+        gradient_accumulation_steps=args.gradient_accumulation_steps,
         # weight_decay=0.01, 
     )
 
