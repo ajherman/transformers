@@ -30,6 +30,7 @@ parser.add_argument('--load_from_checkpoint', action='store_true', help='Load fr
 parser.add_argument('--mixed_precision', action='store_true', help='Use mixed precision')
 parser.add_argument('--seed', type=int, default=42, help='Random seed')
 parser.add_argument('--gradient_accumulation_steps', type=int, default=16, help='Number of gradient accumulation steps')
+parser.add_argument('--logging_steps', type=int, default=2500, help='Number of steps between logs')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -109,7 +110,7 @@ try:
         num_train_epochs=args.num_train_epochs, # number of training epochs
         per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
         save_steps=args.save_steps, # number of updates steps before checkpoint saves
-        logging_steps= 2500, # Number of steps between logs
+        logging_steps= args.logging_steps, # Number of steps between logs
         seed=args.seed, # Random seed
         save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
         evaluation_strategy="epoch", # evaluation strategy to adopt during training
