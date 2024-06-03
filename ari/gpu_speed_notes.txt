@@ -1,0 +1,22 @@
+Using 2 gpus on shared-gpu partition (cntx=1024):
+Per device batch size=16, speed=32.87s/it, effective=2.05
+Per device batch size=12, speed=25.16s/it, effective=2.09
+Per device batch size=8, speed=17.17s/it, effective=2.14
+Per device batch size=4, speed=9.55s/it, effective=2.38
+
+Using 4 gpus on shared-gpu partition (cntx=1024):
+Per device batch _size=16, 26.42s/it, effective=1.65
+Per device batch size=12, speed=20.42s/it, effective=1.7
+Per device batch size=8, speed=14.25s/it, effective=1.78
+Per device batch size=4, speed=7.81s/it, effective=1.95
+
+For 512 effective batch size:
+
+PDBS=4, speed=7.81
+PDBS=16, speed=6.56
+
+For 512 effective batch size:
+
+PDBS=4, speed=
+PDBS=16, speed=
+
