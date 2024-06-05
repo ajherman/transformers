@@ -10,13 +10,17 @@ Per device batch size=12, speed=20.42s/it, effective=1.7
 Per device batch size=8, speed=14.25s/it, effective=1.78
 Per device batch size=4, speed=7.81s/it, effective=1.95
 
-For 512 effective batch size:
+For 512 effective batch size (4 gpus):
 
-PDBS=4, speed=7.81
-PDBS=16, speed=6.56
+PDBS=4, speed=8.51
+PDBS=16, speed=6.73
 
-For 512 effective batch size:
+For 512 effective batch size (2 gpus):
 
-PDBS=4, speed=
-PDBS=16, speed=
+PDBS=4, speed=18.81
+PDBS=16, speed=15.52
+
+GPU resources:
+
+cn4030
 
