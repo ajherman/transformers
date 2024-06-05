@@ -73,11 +73,17 @@ try:
     # Load the dataset
     logging.getLogger("datasets").setLevel(logging.DEBUG)
 
-    train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
-    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
-    # dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train').map(tokenizer, batched=True)
+
+    dataset_name = "EleutherAI/the_pile"
+    # train_dataset = load_dataset(dataset_name, subsets = ['hacker_news', 'enron_emails'])
+    train_dataset = load_dataset(dataset_name, split='train')
+    eval_dataset = load_dataset(dataset_name, subsets = ['reddit'])
+
+    # train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
+    # eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
+
     print("Finished loading datasets")
-    #assert(0)
+
     # Tokenize the dataset
     def encode(examples):
         # tokens = tokenizer(example['text'])
