@@ -23,7 +23,7 @@ parser.add_argument('--per_device_train_batch_size', type=int, default=8, help='
 parser.add_argument('--save_steps', type=int, default=10000, help='Number of updates steps before checkpoint saves')
 parser.add_argument('--save_total_limit', type=int, default=2, help='Limit the total amount of checkpoints and deletes the older checkpoints')
 parser.add_argument('--use_local_transformers', action='store_true', help='Use local transformers repository')
-parser.add_argument('--config_file', type=str, default='config.json', help='Config file')
+parser.add_argument('--config_file', type=str, default=None, help='Config file')
 parser.add_argument('--checkpoint_dir', type=str, default=None, help='Checkpoint directory')
 parser.add_argument('--context_length', type=int, default=256, help='Context length')
 parser.add_argument('--load_from_checkpoint', action='store_true', help='Load from checkpoint')
@@ -55,7 +55,10 @@ try:
 
 
     # Read in config file
-    config = GPT2Config.from_json_file(args.config_file)
+    if args.config_file is not None:
+        config = GPT2Config.from_json_file(args.config_file)
+    else:
+        config = GPT2Config()
 
     # Load pre-trained model and tokenizer
     model_name = 'gpt2'
