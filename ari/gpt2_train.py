@@ -77,10 +77,10 @@ try:
     logging.getLogger("datasets").setLevel(logging.DEBUG)
 
 
-    dataset_name = "EleutherAI/the_pile"
+    dataset_name = "monology/pile-uncopyrighted"
     # train_dataset = load_dataset(dataset_name, subsets = ['hacker_news', 'enron_emails'])
-    train_dataset = load_dataset(dataset_name, split='train')
-    eval_dataset = load_dataset(dataset_name, subsets = ['reddit'])
+    train_dataset = load_dataset(dataset_name, split='train', streaming=True)
+    eval_dataset = load_dataset(dataset_name, split='train', streaming=True)
 
     # train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
     # eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
