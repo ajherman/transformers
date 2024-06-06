@@ -80,10 +80,13 @@ try:
     dataset_name = "monology/pile-uncopyrighted"
     # train_dataset = load_dataset(dataset_name, subsets = ['hacker_news', 'enron_emails'])
     train_dataset = load_dataset(dataset_name, split='train', streaming=True)
-    eval_dataset = load_dataset(dataset_name, split='train', streaming=True)
+    eval_dataset = load_dataset(dataset_name, split='validation', streaming=True)
 
-    # train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
-    # eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
+    # train_dataset = train_dataset.shuffle(seed=42, buffer_size=10_000)
+    # eval_dataset = eval_dataset.shuffle(seed=42, buffer_size=10_000)
+
+    # train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train', shuffle_files=True)
+    # eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation', shuffle_files=True)
 
     print("Finished loading datasets")
 
