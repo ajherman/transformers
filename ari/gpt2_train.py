@@ -126,6 +126,7 @@ try:
         # eval_steps=1000, # number of steps before evaluation
         warmup_steps=500, # number of warmup steps for learning rate scheduler
         gradient_accumulation_steps=args.gradient_accumulation_steps,
+        max_steps=5000,
         # weight_decay=0.01, 
     )
 
