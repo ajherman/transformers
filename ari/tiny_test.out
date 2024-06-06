@@ -1,15 +1,11 @@
-[2024-06-05 13:55:23,647] torch.distributed.run: [WARNING] 
-[2024-06-05 13:55:23,647] torch.distributed.run: [WARNING] *****************************************
-[2024-06-05 13:55:23,647] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-[2024-06-05 13:55:23,647] torch.distributed.run: [WARNING] *****************************************
+[2024-06-06 09:29:02,880] torch.distributed.run: [WARNING] 
+[2024-06-06 09:29:02,880] torch.distributed.run: [WARNING] *****************************************
+[2024-06-06 09:29:02,880] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-06-06 09:29:02,880] torch.distributed.run: [WARNING] *****************************************
 /vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
   from pandas.core import (
 /vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
   from pandas.core import (
-/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
-/vast/home/ajherman/.local/lib/python3.11/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
-  warnings.warn(
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -45,12 +41,15 @@ Config:
       "max_length": 50
     }
   },
-  "transformers_version": "4.41.0.dev0",
+  "transformers_version": "4.41.2",
   "use_cache": true,
   "vocab_size": 50257
 }
 
 Number of model parameters: 124439808
+Dataset info for monology/pile-uncopyrighted is not completely ready yet.
+No config specified, defaulting to the single config: pile-uncopyrighted/default
+Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -86,44 +85,80 @@ Config:
       "max_length": 50
     }
   },
-  "transformers_version": "4.41.0.dev0",
+  "transformers_version": "4.41.2",
   "use_cache": true,
   "vocab_size": 50257
 }
 
 Number of model parameters: 124439808
-Dataset info for monology/pile-uncopyrighted is not completely ready yet.
-Dataset info for monology/pile-uncopyrighted is not completely ready yet.
-No config specified, defaulting to the single config: pile-uncopyrighted/default
-Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
-No config specified, defaulting to the single config: pile-uncopyrighted/default
-Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
-Dataset info for monology/pile-uncopyrighted is not completely ready yet.
 Dataset info for monology/pile-uncopyrighted is not completely ready yet.
 No config specified, defaulting to the single config: pile-uncopyrighted/default
 Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
 Finished loading datasets
-/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+Dataset info for monology/pile-uncopyrighted is not completely ready yet.
+No config specified, defaulting to the single config: pile-uncopyrighted/default
+Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
+Dataset info for monology/pile-uncopyrighted is not completely ready yet.
+No config specified, defaulting to the single config: pile-uncopyrighted/default
+Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
+Finished loading datasets
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
   warnings.warn(
 Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-No config specified, defaulting to the single config: pile-uncopyrighted/default
-Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
-Finished loading datasets
-/vast/home/ajherman/transformers/src/transformers/training_args.py:1454: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
-  warnings.warn(
-Exception occurred: The train_dataset does not implement __len__, max_steps has to be specified. The number of steps needs to be known in advance for the learning rate scheduler.
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 211, in <module>
-    trainer = Trainer(
-              ^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 580, in __init__
-    raise ValueError(
-ValueError: The train_dataset does not implement __len__, max_steps has to be specified. The number of steps needs to be known in advance for the learning rate scheduler.
-Exception occurred: The train_dataset does not implement __len__, max_steps has to be specified. The number of steps needs to be known in advance for the learning rate scheduler.
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 211, in <module>
-    trainer = Trainer(
-              ^^^^^^^^
-  File "/vast/home/ajherman/transformers/src/transformers/trainer.py", line 580, in __init__
-    raise ValueError(
-ValueError: The train_dataset does not implement __len__, max_steps has to be specified. The number of steps needs to be known in advance for the learning rate scheduler.
+max_steps is given, it will override any value given in num_train_epochs
+cn650:2439785:2439785 [0] NCCL INFO Bootstrap : Using ib0:192.168.81.128<0>
+cn650:2439785:2439785 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn650:2439785:2439785 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.19.3+cuda12.3
+cn650:2439786:2439786 [1] NCCL INFO cudaDriverVersion 12040
+cn650:2439786:2439786 [1] NCCL INFO Bootstrap : Using ib0:192.168.81.128<0>
+cn650:2439786:2439786 [1] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn650:2439785:2439864 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:192.168.81.128<0>
+cn650:2439786:2439865 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [RO]; OOB ib0:192.168.81.128<0>
+cn650:2439785:2439864 [0] NCCL INFO Using non-device net plugin version 0
+cn650:2439785:2439864 [0] NCCL INFO Using network IB
+cn650:2439786:2439865 [1] NCCL INFO Using non-device net plugin version 0
+cn650:2439786:2439865 [1] NCCL INFO Using network IB
+cn650:2439786:2439865 [1] NCCL INFO comm 0xaed1f40 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId d8000 commId 0x4b91e2433aebb2c1 - Init START
+cn650:2439785:2439864 [0] NCCL INFO comm 0xb14adc0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 86000 commId 0x4b91e2433aebb2c1 - Init START
+cn650:2439785:2439864 [0] NCCL INFO Setting affinity for GPU 0 to ffff,f00000ff,fff00000
+cn650:2439786:2439865 [1] NCCL INFO Setting affinity for GPU 1 to ffff,f00000ff,fff00000
+cn650:2439785:2439864 [0] NCCL INFO Channel 00/02 :    0   1
+cn650:2439785:2439864 [0] NCCL INFO Channel 01/02 :    0   1
+cn650:2439786:2439865 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0
+cn650:2439786:2439865 [1] NCCL INFO P2P Chunksize set to 131072
+cn650:2439785:2439864 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+cn650:2439785:2439864 [0] NCCL INFO P2P Chunksize set to 131072
+cn650:2439786:2439865 [1] NCCL INFO Channel 00 : 1[1] -> 0[0] via SHM/direct/direct
+cn650:2439785:2439864 [0] NCCL INFO Channel 00 : 0[0] -> 1[1] via SHM/direct/direct
+cn650:2439786:2439865 [1] NCCL INFO Channel 01 : 1[1] -> 0[0] via SHM/direct/direct
+cn650:2439785:2439864 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/direct/direct
+cn650:2439786:2439865 [1] NCCL INFO Connected all rings
+cn650:2439786:2439865 [1] NCCL INFO Connected all trees
+cn650:2439785:2439864 [0] NCCL INFO Connected all rings
+cn650:2439785:2439864 [0] NCCL INFO Connected all trees
+cn650:2439786:2439865 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cn650:2439786:2439865 [1] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn650:2439785:2439864 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cn650:2439785:2439864 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn650:2439785:2439864 [0] NCCL INFO comm 0xb14adc0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 86000 commId 0x4b91e2433aebb2c1 - Init COMPLETE
+cn650:2439786:2439865 [1] NCCL INFO comm 0xaed1f40 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId d8000 commId 0x4b91e2433aebb2c1 - Init COMPLETE
+  0%|          | 0/5000 [00:00<?, ?it/s]dataloader worker#0, ': Starting to iterate over 8/30 shards.
+dataloader worker#1, ': Starting to iterate over 8/30 shards.
+dataloader worker#2, ': Starting to iterate over 7/30 shards.
+dataloader worker#0, ': Starting to iterate over 8/30 shards.
+dataloader worker#3, ': Starting to iterate over 7/30 shards.
+dataloader worker#1, ': Starting to iterate over 8/30 shards.
+dataloader worker#2, ': Starting to iterate over 7/30 shards.
+dataloader worker#3, ': Starting to iterate over 7/30 shards.
+Batch of 10532913 bytes couldn't be parsed with block_size=327680. Retrying with block_size=655360.
+Batch of 10532913 bytes couldn't be parsed with block_size=327680. Retrying with block_size=655360.
+  0%|          | 1/5000 [00:25<35:34:48, 25.62s/it]  0%|          | 2/5000 [00:44<30:04:59, 21.67s/it]  0%|          | 3/5000 [01:03<28:18:45, 20.40s/it]  0%|          | 4/5000 [01:22<27:29:57, 19.82s/it]  0%|          | 5/5000 [01:41<27:00:07, 19.46s/it]  0%|          | 6/5000 [02:00<26:42:10, 19.25s/it]  0%|          | 7/5000 [02:18<26:30:52, 19.12s/it]  0%|          | 8/5000 [02:38<26:48:27, 19.33s/it]  0%|          | 9/5000 [02:57<26:37:36, 19.21s/it]  0%|          | 10/5000 [03:16<26:31:08, 19.13s/it]  0%|          | 11/5000 [03:35<26:26:09, 19.08s/it]  0%|          | 12/5000 [03:54<26:18:48, 18.99s/it]  0%|          | 13/5000 [04:13<26:17:09, 18.98s/it]  0%|          | 14/5000 [04:32<26:16:24, 18.97s/it]  0%|          | 15/5000 [04:51<26:13:16, 18.94s/it]  0%|          | 16/5000 [05:10<26:16:48, 18.98s/it]  0%|          | 17/5000 [05:29<26:15:47, 18.97s/it]  0%|          | 18/5000 [05:47<26:12:40, 18.94s/it]  0%|          | 19/5000 [06:06<26:10:25, 18.92s/it]  0%|          | 20/5000 [06:25<26:08:50, 18.90s/it]  0%|          | 21/5000 [06:44<26:14:42, 18.98s/it]  0%|          | 22/5000 [07:03<26:14:48, 18.98s/it]  0%|          | 23/5000 [07:22<26:10:43, 18.94s/it]  0%|          | 24/5000 [07:41<26:19:55, 19.05s/it]  0%|          | 25/5000 [08:00<26:13:39, 18.98s/it]  1%|          | 26/5000 [08:19<26:12:15, 18.97s/it]  1%|          | 27/5000 [08:38<26:11:21, 18.96s/it]  1%|          | 28/5000 [08:57<26:07:00, 18.91s/it]  1%|          | 29/5000 [09:16<26:07:26, 18.92s/it]  1%|          | 30/5000 [09:35<26:03:55, 18.88s/it]  1%|          | 31/5000 [09:53<26:01:40, 18.86s/it]  1%|          | 32/5000 [10:12<26:04:17, 18.89s/it]  1%|          | 33/5000 [10:31<26:01:27, 18.86s/it]  1%|          | 34/5000 [10:50<25:59:31, 18.84s/it]  1%|          | 35/5000 [11:09<26:01:33, 18.87s/it]  1%|          | 36/5000 [11:28<25:59:10, 18.85s/it]  1%|          | 37/5000 [11:47<25:57:41, 18.83s/it]  1%|          | 38/5000 [12:06<26:00:26, 18.87s/it]Batch of 10486863 bytes couldn't be parsed with block_size=327680. Retrying with block_size=655360.
+Batch of 10491147 bytes couldn't be parsed with block_size=327680. Retrying with block_size=655360.
+Batch of 10491147 bytes couldn't be parsed with block_size=655360. Retrying with block_size=1310720.
+  1%|          | 39/5000 [12:25<26:23:13, 19.15s/it]  1%|          | 40/5000 [12:44<26:23:07, 19.15s/it]  1%|          | 41/5000 [13:03<26:13:59, 19.04s/it]  1%|          | 42/5000 [13:22<26:10:49, 19.01s/it]  1%|          | 43/5000 [13:41<26:08:38, 18.99s/it]  1%|          | 44/5000 [14:00<26:07:21, 18.98s/it]  1%|          | 45/5000 [14:19<26:02:30, 18.92s/it]  1%|          | 46/5000 [14:38<25:59:18, 18.89s/it]  1%|          | 47/5000 [14:57<26:08:22, 19.00s/it]  1%|          | 48/5000 [15:16<26:03:01, 18.94s/it]  1%|          | 49/5000 [15:35<25:59:06, 18.89s/it]  1%|          | 50/5000 [15:53<25:56:27, 18.87s/it]  1%|          | 51/5000 [16:12<25:54:54, 18.85s/it]  1%|          | 52/5000 [16:31<25:52:52, 18.83s/it]  1%|          | 53/5000 [16:50<25:51:53, 18.82s/it]  1%|          | 54/5000 [17:09<25:50:50, 18.81s/it]Batch of 10494629 bytes couldn't be parsed with block_size=327680. Retrying with block_size=655360.
+Batch of 10494629 bytes couldn't be parsed with block_size=655360. Retrying with block_size=1310720.
+  1%|          | 55/5000 [17:29<26:21:21, 19.19s/it]  1%|          | 56/5000 [17:47<26:11:14, 19.07s/it]  1%|          | 57/5000 [18:06<26:07:43, 19.03s/it]  1%|          | 58/5000 [18:25<26:01:57, 18.96s/it]  1%|          | 59/5000 [18:44<25:57:25, 18.91s/it]  1%|          | 60/5000 [19:03<25:54:08, 18.88s/it]  1%|          | 61/5000 [19:22<25:52:18, 18.86s/it]  1%|          | 62/5000 [19:40<25:50:38, 18.84s/it]  1%|▏         | 63/5000 [20:00<26:00:56, 18.97s/it]  1%|▏         | 64/5000 [20:18<25:56:36, 18.92s/it]  1%|▏         | 65/5000 [20:37<25:53:20, 18.89s/it]  1%|▏         | 66/5000 [20:56<25:50:29, 18.85s/it]  1%|▏         | 67/5000 [21:15<25:48:56, 18.84s/it]  1%|▏         | 68/5000 [21:34<25:47:28, 18.83s/it]  1%|▏         | 69/5000 [21:52<25:47:03, 18.82s/it]  1%|▏         | 70/5000 [22:11<25:47:12, 18.83s/it]  1%|▏         | 71/5000 [22:30<25:52:58, 18.90s/it]  1%|▏         | 72/5000 [22:49<25:50:12, 18.87s/it]  1%|▏         | 73/5000 [23:08<25:47:48, 18.85s/it]  1%|▏         | 74/5000 [23:27<25:46:44, 18.84s/it]  2%|▏         | 75/5000 [23:46<25:45:33, 18.83s/it]  2%|▏         | 76/5000 [24:04<25:44:40, 18.82s/it]  2%|▏         | 77/5000 [24:23<25:43:50, 18.82s/it]  2%|▏         | 78/5000 [24:42<25:43:16, 18.81s/it]  2%|▏         | 79/5000 [25:02<26:17:16, 19.23s/it]  2%|▏         | 80/5000 [25:21<26:07:16, 19.11s/it]  2%|▏         | 81/5000 [25:40<25:59:38, 19.02s/it]  2%|▏         | 82/5000 [25:59<25:54:37, 18.97s/it]  2%|▏         | 83/5000 [26:17<25:50:25, 18.92s/it]  2%|▏         | 84/5000 [26:36<25:47:23, 18.89s/it]  2%|▏         | 85/5000 [26:55<25:44:55, 18.86s/it]  2%|▏         | 86/5000 [27:15<25:58:37, 19.03s/it]  2%|▏         | 87/5000 [27:33<25:52:44, 18.96s/it]  2%|▏         | 88/5000 [27:52<25:48:34, 18.92s/it]  2%|▏         | 89/5000 [28:11<25:45:53, 18.89s/it]  2%|▏         | 90/5000 [28:30<25:43:41, 18.86s/it]  2%|▏         | 91/5000 [28:49<25:42:23, 18.85s/it]  2%|▏         | 92/5000 [29:07<25:40:44, 18.84s/it]  2%|▏         | 93/5000 [29:26<25:40:25, 18.84s/it]  2%|▏         | 94/5000 [29:45<25:46:54, 18.92s/it]  2%|▏         | 95/5000 [30:04<25:43:53, 18.89s/it]  2%|▏         | 96/5000 [30:23<25:41:21, 18.86s/it]  2%|▏         | 97/5000 [30:42<25:40:05, 18.85s/it]  2%|▏         | 98/5000 [31:01<25:39:10, 18.84s/it]  2%|▏         | 99/5000 [31:19<25:37:58, 18.83s/it]  2%|▏         | 100/5000 [31:38<25:36:54, 18.82s/it]  2%|▏         | 101/5000 [32:00<26:44:57, 19.66s/it]  2%|▏         | 102/5000 [32:19<26:41:37, 19.62s/it]  2%|▏         | 103/5000 [32:38<26:21:11, 19.37s/it]  2%|▏         | 104/5000 [32:57<26:07:25, 19.21s/it]  2%|▏         | 105/5000 [33:16<25:57:09, 19.09s/it]  2%|▏         | 106/5000 [33:35<25:49:33, 19.00s/it]  2%|▏         | 107/5000 [33:53<25:44:18, 18.94s/it]  2%|▏         | 108/5000 [34:12<25:40:48, 18.90s/it]  2%|▏         | 109/5000 [34:31<25:38:10, 18.87s/it]  2%|▏         | 110/5000 [34:50<25:42:22, 18.92s/it]  2%|▏         | 111/5000 [35:09<25:39:23, 18.89s/it]  2%|▏         | 112/5000 [35:28<25:36:44, 18.86s/it]  2%|▏         | 113/5000 [35:46<25:34:23, 18.84s/it]  2%|▏         | 114/5000 [36:05<25:32:58, 18.82s/it]  2%|▏         | 115/5000 [36:24<25:32:06, 18.82s/it]  2%|▏         | 116/5000 [36:43<25:31:19, 18.81s/it]  2%|▏         | 117/5000 [37:02<25:30:39, 18.81s/it]  2%|▏         | 118/5000 [37:20<25:30:39, 18.81s/it]  2%|▏         | 119/5000 [37:39<25:30:14, 18.81s/it]  2%|▏         | 120/5000 [37:58<25:30:10, 18.81s/it]  2%|▏         | 121/5000 [38:17<25:29:32, 18.81s/it]  2%|▏         | 122/5000 [38:36<25:29:28, 18.81s/it]  2%|▏         | 123/5000 [38:54<25:28:40, 18.81s/it]  2%|▏         | 124/5000 [39:13<25:28:12, 18.80s/it]  2%|▎         | 125/5000 [39:33<25:41:18, 18.97s/it]  3%|▎         | 126/5000 [39:51<25:36:34, 18.92s/it]  3%|▎         | 127/5000 [40:10<25:33:20, 18.88s/it]  3%|▎         | 128/5000 [40:29<25:30:55, 18.85s/it]  3%|▎         | 129/5000 [40:48<25:29:58, 18.85s/it]  3%|▎         | 130/5000 [41:07<25:28:33, 18.83s/it]  3%|▎         | 131/5000 [41:25<25:27:31, 18.82s/it]  3%|▎         | 132/5000 [41:44<25:26:19, 18.81s/it]  3%|▎         | 133/5000 [42:04<25:46:33, 19.07s/it]  3%|▎         | 134/5000 [42:23<25:39:18, 18.98s/it]  3%|▎         | 135/5000 [42:41<25:34:57, 18.93s/it]  3%|▎         | 136/5000 [43:00<25:31:25, 18.89s/it]  3%|▎         | 137/5000 [43:19<25:28:26, 18.86s/it]  3%|▎         | 138/5000 [43:38<25:26:43, 18.84s/it]  3%|▎         | 139/5000 [43:57<25:25:20, 18.83s/it]  3%|▎         | 140/5000 [44:15<25:24:24, 18.82s/it]  3%|▎         | 141/5000 [44:36<25:55:29, 19.21s/it]  3%|▎         | 142/5000 [44:54<25:45:32, 19.09s/it]  3%|▎         | 143/5000 [45:13<25:38:24, 19.00s/it]  3%|▎         | 144/5000 [45:32<25:33:12, 18.94s/it]  3%|▎         | 145/5000 [45:51<25:29:52, 18.91s/it]  3%|▎         | 146/5000 [46:10<25:26:46, 18.87s/it]  3%|▎         | 147/5000 
