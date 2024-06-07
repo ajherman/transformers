@@ -80,7 +80,7 @@ try:
     dataset_name = "monology/pile-uncopyrighted"
     # train_dataset = load_dataset(dataset_name, subsets = ['hacker_news', 'enron_emails'])
     train_dataset = load_dataset(dataset_name, split='train', streaming=True)
-    eval_dataset = load_dataset(dataset_name, split='validation', streaming=True)
+    eval_dataset = load_dataset(dataset_name, split='train', streaming=True)
 
     # train_dataset = train_dataset.shuffle(seed=42, buffer_size=10_000)
     # eval_dataset = eval_dataset.shuffle(seed=42, buffer_size=10_000)
