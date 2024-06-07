@@ -80,13 +80,13 @@ try:
     dataset_name = "monology/pile-uncopyrighted"
     # train_dataset = load_dataset(dataset_name, subsets = ['hacker_news', 'enron_emails'])
     train_dataset = load_dataset(dataset_name, split='train', streaming=True)
-    eval_dataset = load_dataset(dataset_name, split='train', streaming=True)
+    # eval_dataset = load_dataset(dataset_name, split='train', streaming=True)
 
     # train_dataset = train_dataset.shuffle(seed=42, buffer_size=10_000)
     # eval_dataset = eval_dataset.shuffle(seed=42, buffer_size=10_000)
 
     # train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train', shuffle_files=True)
-    # eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation', shuffle_files=True)
+    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation', shuffle_files=True)
 
     print("Finished loading datasets")
 
@@ -136,54 +136,6 @@ try:
         # weight_decay=0.01, 
     )
 
-    # def compute_metrics(eval_pred):
-    #     predictions, labels = eval_pred
-    #     perplexity = torch_exp(torch.tensor(trainer.eval_loss))
-    #     metrics = {'perplexity': perplexity.item()}
-    #     # write_metrics_to_csv(metrics, 'metrics.csv')
-
-    #     with open('metrics.csv', 'a', newline='') as file:
-    #         writer = csv.writer(file)
-    #         for key, value in metrics.items():
-    #             writer.writerow([training_args.global_step, key, value])
-
-    #     return metrics
-
-    # def compute_metrics(eval_pred):
-    #     predictions, labels = eval_pred
-    #     # predictions, labels = torch.from_numpy(predictions), torch.from_numpy(labels)
-    #     # predictions = predictions.view(-1,predictions.shape[-1])
-    #     # labels = labels.view(-1)
-    #     # loss = torch.nn.functional.cross_entropy(predictions, labels)
-    
-
-    #     # Ensure predictions and labels are tensors
-    #     predictions = torch.tensor(predictions)
-    #     labels = torch.tensor(labels)
-        
-    #     # Reshape predictions and labels to be compatible with CrossEntropyLoss
-    #     predictions = predictions.view(-1, predictions.shape[-1])
-    #     labels = labels.view(-1)
-        
-    #     # Define the loss function
-    #     loss_fct = torch.nn.CrossEntropyLoss(ignore_index=tokenizer.pad_token_id)
-        
-    #     # Compute the loss
-    #     loss = loss_fct(predictions, labels)
-
-
-    #     #loss = torch.tensor(trainer.eval_loss)
-    #     perplexity = torch.exp(loss)
-    #     metrics = {'perplexity': perplexity.item(), 'comp_loss': loss.item()}
-
-    #     # Save metrics to a text file
-    #     with open('metrics.txt', 'a') as file:
-    #         file.write(f'Global step: {trainer.state.global_step}, Perplexity: {perplexity.item()}\n')
-
-    #     print("Perplexity:", perplexity.item())
-
-    #     return metrics
-
     # Use this to periodically trigger events during training
     class CustomCallback(TrainerCallback):
         def __init__(self, trainer):
@@ -191,14 +143,15 @@ try:
 
         def on_epoch_end(self, args, state, control, **kwargs):
             # Perform custom evaluation at the end of each epoch
+            global tic
             if args.evaluation_strategy == "epoch":
                 self.custom_evaluation()
+            tic,toc = toc,time.time()
+            print("Time per epoch: ",(toc-tic)/60,"m")
+
 
         def on_log(self, args, state, control, **kwargs):
-            global tic
-            toc = time.time()
-            print("Duration: ",(toc-tic)/60,"m")
-            tic = toc
+            self.custom_evaluation()
 
         def custom_evaluation(self):
             # Access the model
