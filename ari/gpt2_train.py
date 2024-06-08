@@ -155,7 +155,7 @@ try:
 
         def custom_evaluation(self):
             # Access the model
-            print("\nEvaluation at the end of epoch:\n")
+            print("\nEvaluation at the end of epoch (log):\n")
             results = self.trainer.evaluate()
             loss = results['eval_loss']
             perplexity = np.exp(loss)
