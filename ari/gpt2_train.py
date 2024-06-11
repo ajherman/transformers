@@ -126,7 +126,7 @@ try:
         logging_steps= args.logging_steps, # Number of steps between logs
         seed=args.seed, # Random seed
         save_total_limit=args.save_total_limit, # limit the total amount of checkpoints and deletes the older checkpoints
-        evaluation_strategy="epoch", # evaluation strategy to adopt during training
+        evaluation_strategy="steps", # evaluation strategy to adopt during training
         fp16=args.mixed_precision, # Mix percision
         ddp_find_unused_parameters=False,
         dataloader_num_workers=4,
