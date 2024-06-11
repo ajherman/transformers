@@ -48,7 +48,7 @@ from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerCon
 from datasets import load_dataset
 import logging
 
-tic = time.time()
+tic,toc = 0.0,time.time()
 
 try:
     dist.init_process_group(backend='nccl')
@@ -85,7 +85,7 @@ try:
     # train_dataset = train_dataset.shuffle(seed=42, buffer_size=10_000)
     # eval_dataset = eval_dataset.shuffle(seed=42, buffer_size=10_000)
 
-    # train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
+    #train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
     eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
 
     print("Finished loading datasets")
@@ -143,15 +143,21 @@ try:
 
         def on_epoch_end(self, args, state, control, **kwargs):
             # Perform custom evaluation at the end of each epoch
-            global tic
+            global tic,toc
             if args.evaluation_strategy == "epoch":
-                self.custom_evaluation()
+                pass
+                #self.custom_evaluation()
             tic,toc = toc,time.time()
             print("Time per epoch: ",(toc-tic)/60,"m")
 
 
         def on_log(self, args, state, control, **kwargs):
-            self.custom_evaluation()
+            pass
+            #self.custom_evaluation()
+
+        def on_step_end(self, args, state, control, **kwargs):
+            if state.global_step % args.logging_steps == 0:
+                self.custom_evaluation()
 
         def custom_evaluation(self):
             # Access the model

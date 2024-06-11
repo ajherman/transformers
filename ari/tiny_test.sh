@@ -2,8 +2,8 @@
 #SBATCH --job-name=main
 #SBATCH --time 10:00:00
 #SBATCH -N 1           
-#SBATCH -p shared-gpu
-#SBATCH -C gpu_count:2
+#SBATCH -p shared-redstone
+#SBATCH -C gpu_count:4
 #SBATCH --mem=0
 #SBATCH --exclusive
 #SBATCH --cpus-per-task=16
@@ -20,7 +20,7 @@ source activate /vast/home/ajherman/miniconda3/envs/transformer
 #pip install datasets
 #export PATH="/vast/home/ajherman/miniconda3/envs/transformer/bin:$PATH"
 
-srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 2 gpt2_train.py --output_dir checkpoints --num_train_epochs 2 --config_file medium.json --per_device_train_batch_size 16 --mixed_precision --save_steps 100 --logging_steps 40 --gradient_accumulation_steps 8 &
+srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 4 gpt2_train.py --output_dir checkpoints --num_train_epochs 2 --config_file medium.json --per_device_train_batch_size 12 --mixed_precision --save_steps 100000 --logging_steps 500 --gradient_accumulation_steps 8 &
 
 #nvidia-smi
 
