@@ -157,28 +157,37 @@ try:
                 print(f"Evaluation results at step {state.global_step}:")
                 for key, value in metrics.items():
                     print(f"  {key}: {value:.4f}")
+            results = metrics
+            loss = results['eval_loss']
+            perplexity = np.exp(loss)
+            print("Loss:", loss)
+            print("Perplexity:", perplexity)
+        
+            with open('metrics.csv', 'a', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow([results['epoch'], loss, perplexity])
 
         def on_log(self, args, state, control, **kwargs):
             pass
             #self.custom_evaluation()
 
-        def on_step_end(self, args, state, control, **kwargs):
-            if state.global_step % args.logging_steps == 0:
-                print("This is from the on_step_end method...")
-                self.custom_evaluation()
+        # def on_step_end(self, args, state, control, **kwargs):
+        #     if state.global_step % args.logging_steps == 0:
+        #         print("This is from the on_step_end method...")
+        #         self.custom_evaluation()
 
-        def custom_evaluation(self):
-            # Access the model
-            print("\nEvaluation at the end of epoch (log):\n")
-            results = self.trainer.evaluate()
-            loss = results['eval_loss']
-            perplexity = np.exp(loss)
-            print("Loss:", loss)
-            print("Perplexity:", perplexity)
+        # def custom_evaluation(self):
+        #     # Access the model
+        #     print("\nEvaluation at the end of epoch (log):\n")
+        #     results = self.trainer.evaluate()
+        #     loss = results['eval_loss']
+        #     perplexity = np.exp(loss)
+        #     print("Loss:", loss)
+        #     print("Perplexity:", perplexity)
             
-            with open('metrics.csv', 'a', newline='') as file:
-                writer = csv.writer(file)
-                writer.writerow([results['epoch'], loss, perplexity])
+        #     with open('metrics.csv', 'a', newline='') as file:
+        #         writer = csv.writer(file)
+        #         writer.writerow([results['epoch'], loss, perplexity])
 
 
     # Define trainer
