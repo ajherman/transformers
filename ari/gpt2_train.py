@@ -31,13 +31,14 @@ parser.add_argument('--mixed_precision', action='store_true', help='Use mixed pr
 parser.add_argument('--seed', type=int, default=42, help='Random seed')
 parser.add_argument('--gradient_accumulation_steps', type=int, default=16, help='Number of gradient accumulation steps')
 parser.add_argument('--logging_steps', type=int, default=2500, help='Number of steps between logs')
+parser.add_argument('--eval_steps', type=int, default=1000, help='Number of steps before evaluation')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
 use_local_transformers = args.use_local_transformers
 if use_local_transformers:
     # Path to the 'src' directory of your local transformers repository
-    path_to_transformers = '../transformers/src'
+    path_to_transformers = '../src/transformers'
 
     # Prepend this path to sys.path
     if path_to_transformers not in sys.path:
@@ -129,7 +130,7 @@ try:
         fp16=args.mixed_precision, # Mix percision
         ddp_find_unused_parameters=False,
         dataloader_num_workers=4,
-        # eval_steps=1000, # number of steps before evaluation
+        eval_steps=args.eval_steps, # number of steps before evaluation
         warmup_steps=500, # number of warmup steps for learning rate scheduler
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         max_steps=5000,
@@ -150,6 +151,12 @@ try:
             tic,toc = toc,time.time()
             print("Time per epoch: ",(toc-tic)/60,"m")
 
+        def on_evaluate(self, args, state, control, metrics=None, **kwargs):
+            print("This is from the on_evaluate method...")
+            if metrics is not None:
+                print(f"Evaluation results at step {state.global_step}:")
+                for key, value in metrics.items():
+                    print(f"  {key}: {value:.4f}")
 
         def on_log(self, args, state, control, **kwargs):
             pass
@@ -157,6 +164,7 @@ try:
 
         def on_step_end(self, args, state, control, **kwargs):
             if state.global_step % args.logging_steps == 0:
+                print("This is from the on_step_end method...")
                 self.custom_evaluation()
 
         def custom_evaluation(self):
