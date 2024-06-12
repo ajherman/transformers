@@ -9,7 +9,7 @@ from datasets import load_dataset
 
 
 
-config = GPT2Config()
+config = GPT2Config.from_json_file('tiny.json')
 
 # Load pre-trained model and tokenizer
 model_name = 'gpt2'
@@ -29,7 +29,7 @@ def encode(examples):
     # return tokenizer(examples['text']) # Previous version
 
 train_dataset = train_dataset.map(encode, batched=True)
-eval_dataset = eval_dataset.map(encode, batched=True)
+#eval_dataset = eval_dataset.map(encode, batched=True)
 
 # Define data collator
 data_collator = DataCollatorForLanguageModeling(
@@ -38,10 +38,12 @@ data_collator = DataCollatorForLanguageModeling(
 
 # Define training arguments
 training_args = TrainingArguments(
+    per_device_train_batch_size=512,
     output_dir='tmp', # output directory
     ddp_find_unused_parameters=False,
     dataloader_num_workers=4,
-)
+    max_steps=5000
+    )
 
 # Define trainer
 trainer = Trainer(
