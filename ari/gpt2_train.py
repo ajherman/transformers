@@ -75,7 +75,7 @@ try:
     print("Number of model parameters:", num_params)
 
     # Load the dataset
-    logging.getLogger("datasets").setLevel(logging.DEBUG)
+    #logging.getLogger("datasets").setLevel(logging.DEBUG)
 
 
     dataset_name = "monology/pile-uncopyrighted"
@@ -87,7 +87,7 @@ try:
     # eval_dataset = eval_dataset.shuffle(seed=42, buffer_size=10_000)
 
     #train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
-    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation',block_size=655360)
+    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
 
     print("Finished loading datasets")
 
