@@ -34,6 +34,8 @@ parser.add_argument('--logging_steps', type=int, default=2500, help='Number of s
 parser.add_argument('--eval_steps', type=int, default=1000, help='Number of steps before evaluation')
 args = parser.parse_args()
 
+
+"""
 # Path to the 'src' directory of your local transformers repository
 use_local_transformers = args.use_local_transformers
 if use_local_transformers:
@@ -43,7 +45,7 @@ if use_local_transformers:
     # Prepend this path to sys.path
     if path_to_transformers not in sys.path:
         sys.path.insert(0, path_to_transformers)
-
+"""
 from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, AutoModelForCausalLM, GPT2Config
 from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerControl
 from datasets import load_dataset
@@ -56,18 +58,15 @@ try:
 
 
     # Read in config file
-    if args.config_file is not None:
-        config = GPT2Config.from_json_file(args.config_file)
-    else:
-        config = GPT2Config()
+    
+    config = GPT2Config.from_json_file("medium.json")
 
     # Load pre-trained model and tokenizer
     model_name = 'gpt2'
     tokenizer = GPT2Tokenizer.from_pretrained(model_name)
     tokenizer.pad_token = tokenizer.eos_token # Add pad token
-    # model = GPT2LMHeadModel.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_config(config)
-
+    """
     print("Config:\n", model.config)
 
     # Print number of model parameters
@@ -76,7 +75,7 @@ try:
 
     # Load the dataset
     logging.getLogger("datasets").setLevel(logging.DEBUG)
-
+    """
 
     dataset_name = "monology/pile-uncopyrighted"
     # train_dataset = load_dataset(dataset_name, subsets = ['hacker_news', 'enron_emails'])
@@ -89,7 +88,7 @@ try:
     #train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
     eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
 
-    print("Finished loading datasets")
+    #print("Finished loading datasets")
 
     # Tokenize the dataset
     def encode(examples):
@@ -205,11 +204,11 @@ try:
     trainer.add_callback(CustomCallback(trainer))
 
     # Train model
-    trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
+    trainer.train() # More precise version would be to pass args.checkpoint_dir explicitly
 
     # Save model
-    model.save_pretrained(args.output_dir)
-
+    #model.save_pretrained(args.output_dir)
+    """
     # Evaluate model
     eval_results = trainer.evaluate()
     print("Evaluation results:\n", eval_results)
@@ -220,7 +219,10 @@ try:
 
     toc = time.time()
     print("Duration: ",(toc-tic)/60,"m")
+    """
 except Exception as e:
     # Print the full traceback
     print("Exception occurred:", e)
     traceback.print_exc()
+
+

@@ -1,0 +1,473 @@
+[2024-06-11 23:34:44,655] torch.distributed.run: [WARNING] 
+[2024-06-11 23:34:44,655] torch.distributed.run: [WARNING] *****************************************
+[2024-06-11 23:34:44,655] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-06-11 23:34:44,655] torch.distributed.run: [WARNING] *****************************************
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1628.24 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1613.81 examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1662.33 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1656.33 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1698.94 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1637.23 examples/s]
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1652.78 examples/s]max_steps is given, it will override any value given in num_train_epochs
+Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1714.46 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1706.58 examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1746.82 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1683.99 examples/s]
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1690.28 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1630.26 examples/s]max_steps is given, it will override any value given in num_train_epochs
+Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1738.21 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1655.13 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1781.73 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1718.21 examples/s]
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1713.70 examples/s]max_steps is given, it will override any value given in num_train_epochs
+cn0:3297112:3297112 [0] NCCL INFO Bootstrap : Using ib0:192.168.81.1<0>
+cn0:3297112:3297112 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn0:3297112:3297112 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.19.3+cuda12.3
+cn0:3297113:3297113 [1] NCCL INFO cudaDriverVersion 12040
+cn0:3297114:3297114 [2] NCCL INFO cudaDriverVersion 12040
+cn0:3297113:3297113 [1] NCCL INFO Bootstrap : Using ib0:192.168.81.1<0>
+cn0:3297114:3297114 [2] NCCL INFO Bootstrap : Using ib0:192.168.81.1<0>
+cn0:3297114:3297114 [2] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn0:3297113:3297113 [1] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn0:3297113:3297264 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ib0:192.168.81.1<0>
+cn0:3297113:3297264 [1] NCCL INFO Using non-device net plugin version 0
+cn0:3297113:3297264 [1] NCCL INFO Using network IB
+cn0:3297112:3297262 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ib0:192.168.81.1<0>
+cn0:3297112:3297262 [0] NCCL INFO Using non-device net plugin version 0
+cn0:3297112:3297262 [0] NCCL INFO Using network IB
+cn0:3297114:3297263 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ib0:192.168.81.1<0>
+cn0:3297114:3297263 [2] NCCL INFO Using non-device net plugin version 0
+cn0:3297114:3297263 [2] NCCL INFO Using network IB
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1758.09 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1686.79 examples/s]
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+cn0:3297115:3297115 [3] NCCL INFO cudaDriverVersion 12040
+cn0:3297115:3297115 [3] NCCL INFO Bootstrap : Using ib0:192.168.81.1<0>
+cn0:3297115:3297115 [3] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn0:3297115:3297274 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ib0:192.168.81.1<0>
+cn0:3297115:3297274 [3] NCCL INFO Using non-device net plugin version 0
+cn0:3297115:3297274 [3] NCCL INFO Using network IB
+cn0:3297115:3297274 [3] NCCL INFO comm 0xa351340 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c1000 commId 0x4435b3b23d3700e5 - Init START
+cn0:3297114:3297263 [2] NCCL INFO comm 0x9b0c240 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 81000 commId 0x4435b3b23d3700e5 - Init START
+cn0:3297113:3297264 [1] NCCL INFO comm 0xb752e40 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 41000 commId 0x4435b3b23d3700e5 - Init START
+cn0:3297112:3297262 [0] NCCL INFO comm 0xb488400 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 1000 commId 0x4435b3b23d3700e5 - Init START
+cn0:3297115:3297274 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,ffffffff,00000000,00000000,ffffffff,ffffffff,00000000,00000000
+cn0:3297115:3297274 [3] NCCL INFO NVLS multicast support is not available on dev 3
+cn0:3297114:3297263 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,ffffffff,00000000,00000000,ffffffff,ffffffff,00000000,00000000
+cn0:3297114:3297263 [2] NCCL INFO NVLS multicast support is not available on dev 2
+cn0:3297113:3297264 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,ffffffff,00000000,00000000,ffffffff,ffffffff
+cn0:3297113:3297264 [1] NCCL INFO NVLS multicast support is not available on dev 1
+cn0:3297112:3297262 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,ffffffff,00000000,00000000,ffffffff,ffffffff
+cn0:3297112:3297262 [0] NCCL INFO NVLS multicast support is not available on dev 0
+cn0:3297112:3297262 [0] NCCL INFO Channel 00/24 :    0   1   2   3
+cn0:3297114:3297263 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1 [4] 1/-1/-1->2->0 [5] 1/-1/-1->2->0 [6] 1/-1/-1->2->0 [7] 1/-1/-1->2->0 [8] -1/-1/-1->2->3 [9] -1/-1/-1->2->3 [10] -1/-1/-1->2->3 [11] -1/-1/-1->2->3 [12] 3/-1/-1->2->1 [13] 3/-1/-1->2->1 [14] 3/-1/-1->2->1 [15] 3/-1/-1->2->1 [16] 1/-1/-1->2->0 [17] 1/-1/-1->2->0 [18] 1/-1/-1->2->0 [19] 1/-1/-1->2->0 [20] -1/-1/-1->2->3 [21] -1/-1/-1->2->3 [22] -1/-1/-1->2->3 [23] -1/-1/-1->2->3
+cn0:3297114:3297263 [2] NCCL INFO P2P Chunksize set to 524288
+cn0:3297112:3297262 [0] NCCL INFO Channel 01/24 :    0   1   3   2
+cn0:3297112:3297262 [0] NCCL INFO Channel 02/24 :    0   2   3   1
+cn0:3297112:3297262 [0] NCCL INFO Channel 03/24 :    0   2   1   3
+cn0:3297112:3297262 [0] NCCL INFO Channel 04/24 :    0   3   1   2
+cn0:3297113:3297264 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0 [4] 3/-1/-1->1->2 [5] 3/-1/-1->1->2 [6] 3/-1/-1->1->2 [7] 3/-1/-1->1->2 [8] 0/-1/-1->1->-1 [9] 0/-1/-1->1->-1 [10] 0/-1/-1->1->-1 [11] 0/-1/-1->1->-1 [12] 2/-1/-1->1->0 [13] 2/-1/-1->1->0 [14] 2/-1/-1->1->0 [15] 2/-1/-1->1->0 [16] 3/-1/-1->1->2 [17] 3/-1/-1->1->2 [18] 3/-1/-1->1->2 [19] 3/-1/-1->1->2 [20] 0/-1/-1->1->-1 [21] 0/-1/-1->1->-1 [22] 0/-1/-1->1->-1 [23] 0/-1/-1->1->-1
+cn0:3297112:3297262 [0] NCCL INFO Channel 05/24 :    0   3   2   1
+cn0:3297113:3297264 [1] NCCL INFO P2P Chunksize set to 524288
+cn0:3297112:3297262 [0] NCCL INFO Channel 06/24 :    0   1   2   3
+cn0:3297112:3297262 [0] NCCL INFO Channel 07/24 :    0   1   3   2
+cn0:3297112:3297262 [0] NCCL INFO Channel 08/24 :    0   2   3   1
+cn0:3297112:3297262 [0] NCCL INFO Channel 09/24 :    0   2   1   3
+cn0:3297112:3297262 [0] NCCL INFO Channel 10/24 :    0   3   1   2
+cn0:3297112:3297262 [0] NCCL INFO Channel 11/24 :    0   3   2   1
+cn0:3297112:3297262 [0] NCCL INFO Channel 12/24 :    0   1   2   3
+cn0:3297112:3297262 [0] NCCL INFO Channel 13/24 :    0   1   3   2
+cn0:3297112:3297262 [0] NCCL INFO Channel 14/24 :    0   2   3   1
+cn0:3297112:3297262 [0] NCCL INFO Channel 15/24 :    0   2   1   3
+cn0:3297112:3297262 [0] NCCL INFO Channel 16/24 :    0   3   1   2
+cn0:3297112:3297262 [0] NCCL INFO Channel 17/24 :    0   3   2   1
+cn0:3297112:3297262 [0] NCCL INFO Channel 18/24 :    0   1   2   3
+cn0:3297112:3297262 [0] NCCL INFO Channel 19/24 :    0   1   3   2
+cn0:3297112:3297262 [0] NCCL INFO Channel 20/24 :    0   2   3   1
+cn0:3297112:3297262 [0] NCCL INFO Channel 21/24 :    0   2   1   3
+cn0:3297112:3297262 [0] NCCL INFO Channel 22/24 :    0   3   1   2
+cn0:3297112:3297262 [0] NCCL INFO Channel 23/24 :    0   3   2   1
+cn0:3297112:3297262 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1 [4] 2/-1/-1->0->-1 [5] 2/-1/-1->0->-1 [6] 2/-1/-1->0->-1 [7] 2/-1/-1->0->-1 [8] 3/-1/-1->0->1 [9] 3/-1/-1->0->1 [10] 3/-1/-1->0->1 [11] 3/-1/-1->0->1 [12] 1/-1/-1->0->-1 [13] 1/-1/-1->0->-1 [14] 1/-1/-1->0->-1 [15] 1/-1/-1->0->-1 [16] 2/-1/-1->0->-1 [17] 2/-1/-1->0->-1 [18] 2/-1/-1->0->-1 [19] 2/-1/-1->0->-1 [20] 3/-1/-1->0->1 [21] 3/-1/-1->0->1 [22] 3/-1/-1->0->1 [23] 3/-1/-1->0->1
+cn0:3297112:3297262 [0] NCCL INFO P2P Chunksize set to 524288
+cn0:3297115:3297274 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] -1/-1/-1->3->2 [3] -1/-1/-1->3->2 [4] -1/-1/-1->3->1 [5] -1/-1/-1->3->1 [6] -1/-1/-1->3->1 [7] -1/-1/-1->3->1 [8] 2/-1/-1->3->0 [9] 2/-1/-1->3->0 [10] 2/-1/-1->3->0 [11] 2/-1/-1->3->0 [12] -1/-1/-1->3->2 [13] -1/-1/-1->3->2 [14] -1/-1/-1->3->2 [15] -1/-1/-1->3->2 [16] -1/-1/-1->3->1 [17] -1/-1/-1->3->1 [18] -1/-1/-1->3->1 [19] -1/-1/-1->3->1 [20] 2/-1/-1->3->0 [21] 2/-1/-1->3->0 [22] 2/-1/-1->3->0 [23] 2/-1/-1->3->0
+cn0:3297115:3297274 [3] NCCL INFO P2P Chunksize set to 524288
+cn0:3297114:3297263 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 02/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 06/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 08/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 12/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 14/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 18/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 20/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 04/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 06/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 06/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 10/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 12/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 12/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 13/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 16/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 18/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 18/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 19/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 22/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 01/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 00/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 03/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 07/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 09/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 13/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 03/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 15/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 06/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 19/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 09/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 21/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 12/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 15/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 18/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 21/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 02/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 02/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 01/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 03/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 04/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 04/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 08/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 08/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 07/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 09/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 10/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 10/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 14/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 14/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 13/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 15/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 16/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 16/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 20/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 20/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 19/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 21/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 22/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 22/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 01/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 02/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 04/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 03/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 05/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 05/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 05/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 05/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 07/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 08/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 10/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 09/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 11/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 11/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 11/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 11/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 13/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 14/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 16/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 15/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 17/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 17/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 17/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 17/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 19/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 20/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 22/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 21/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 23/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 23/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 23/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 23/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Connected all rings
+cn0:3297115:3297274 [3] NCCL INFO Connected all rings
+cn0:3297114:3297263 [2] NCCL INFO Connected all rings
+cn0:3297112:3297262 [0] NCCL INFO Connected all rings
+cn0:3297112:3297262 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 08/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 09/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 08/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 10/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 10/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 11/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 03/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 11/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 14/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 09/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 20/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 15/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 10/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 02/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 22/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 20/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 11/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 03/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 23/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 21/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 13/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 05/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 22/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 15/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 07/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 23/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 21/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 13/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 22/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 14/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 23/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 15/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 17/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 19/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 04/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 05/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 05/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 06/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 06/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 04/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 07/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 07/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 05/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 17/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 16/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 06/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 05/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 18/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 17/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 16/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 06/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 19/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 18/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 17/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 17/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 19/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 18/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 18/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 02/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 03/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 08/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 09/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 10/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 08/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 12/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 09/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 14/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 20/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 00/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 00/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 15/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297112:3297262 [0] NCCL INFO Channel 21/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 20/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 02/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 03/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 21/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 04/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 09/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Channel 22/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 06/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 10/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 07/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 12/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 12/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 13/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 13/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 15/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 14/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 21/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 16/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297113:3297264 [1] NCCL INFO Channel 22/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 18/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297114:3297263 [2] NCCL INFO Channel 19/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3297115:3297274 [3] NCCL INFO Connected all trees
+cn0:3297114:3297263 [2] NCCL INFO Connected all trees
+cn0:3297115:3297274 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn0:3297114:3297263 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn0:3297115:3297274 [3] NCCL INFO 24 coll channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+cn0:3297114:3297263 [2] NCCL INFO 24 coll channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+cn0:3297113:3297264 [1] NCCL INFO Connected all trees
+cn0:3297113:3297264 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn0:3297113:3297264 [1] NCCL INFO 24 coll channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+cn0:3297112:3297262 [0] NCCL INFO Connected all trees
+cn0:3297112:3297262 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn0:3297112:3297262 [0] NCCL INFO 24 coll channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+cn0:3297114:3297263 [2] NCCL INFO comm 0x9b0c240 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 81000 commId 0x4435b3b23d3700e5 - Init COMPLETE
+cn0:3297113:3297264 [1] NCCL INFO comm 0xb752e40 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 41000 commId 0x4435b3b23d3700e5 - Init COMPLETE
+cn0:3297112:3297262 [0] NCCL INFO comm 0xb488400 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 1000 commId 0x4435b3b23d3700e5 - Init COMPLETE
+cn0:3297115:3297274 [3] NCCL INFO comm 0xa351340 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c1000 commId 0x4435b3b23d3700e5 - Init COMPLETE
+  0%|          | 0/5000 [00:00<?, ?it/s]  0%|          | 1/5000 [00:11<15:31:55, 11.19s/it]  0%|          | 2/5000 [00:15<9:31:03,  6.86s/it]   0%|          | 3/5000 [00:18<7:39:02,  5.51s/it]  0%|          | 4/5000 [00:22<6:45:18,  4.87s/it]  0%|          | 5/5000 [00:26<6:16:20,  4.52s/it]  0%|          | 6/5000 [00:30<5:58:52,  4.31s/it]  0%|          | 7/5000 [00:34<5:47:22,  4.17s/it]  0%|          | 8/5000 [00:38<5:38:30,  4.07s/it]  0%|          | 9/5000 [00:42<5:32:58,  4.00s/it]  0%|          | 10/5000 [00:46<5:30:14,  3.97s/it]  0%|          | 11/5000 [00:55<7:44:57,  5.59s/it]  0%|          | 12/5000 [00:59<7:02:11,  5.08s/it]  0%|          | 13/5000 [01:03<6:31:42,  4.71s/it]  0%|          | 14/5000 [01:07<6:12:18,  4.48s/it]  0%|          | 15/5000 [01:10<5:57:27,  4.30s/it]  0%|          | 16/5000 [01:14<5:46:59,  4.18s/it]  0%|          | 17/5000 [01:18<5:39:34,  4.09s/it]  0%|          | 18/5000 [01:22<5:34:13,  4.03s/it]  0%|          | 19/5000 [01:26<5:30:20,  3.98s/it]  0%|          | 20/5000 [01:30<5:27:54,  3.95s/it]  0%|          | 21/5000 [01:39<7:26:02,  5.38s/it]  0%|          | 22/5000 [01:43<6:50:02,  4.94s/it]  0%|          | 23/5000 [01:46<6:23:34,  4.62s/it]  0%|          | 24/5000 [01:50<6:05:00,  4.40s/it]  0%|          | 25/5000 [01:54<5:51:44,  4.24s/it]  1%|          | 26/5000 [01:58<5:42:21,  4.13s/it]  1%|          | 27/5000 [02:02<5:37:20,  4.07s/it]  1%|          | 28/5000 [02:06<5:31:01,  3.99s/it]  1%|          | 29/5000 [02:10<5:27:53,  3.96s/it]  1%|          | 30/5000 [02:14<5:25:32,  3.93s/it]  1%|          | 31/5000 [02:17<5:24:21,  3.92s/it]  1%|          | 32/5000 [02:26<7:22:41,  5.35s/it]  1%|          | 33/5000 [02:30<6:49:00,  4.94s/it]  1%|          | 34/5000 [02:34<6:22:22,  4.62s/it]  1%|          | 35/5000 [02:38<6:03:47,  4.40s/it]  1%|          | 36/5000 [02:42<5:50:43,  4.24s/it]  1%|          | 37/5000 [02:46<5:41:38,  4.13s/it]  1%|          | 38/5000 [02:49<5:35:01,  4.05s/it]  1%|          | 39/5000 [02:53<5:30:{'loss': 9.9327, 'grad_norm': 1.933508038520813, 'learning_rate': 5e-06, 'epoch': 0.01}
+11,  3.99s/it]  1%|          | 40/5000 [02:57<5:27:15,  3.96s/it]  1%|          | 41/5000 [03:01<5:25:03,  3.93s/it]  1%|          | 42/5000 [03:10<7:18:08,  5.30s/it]  1%|          | 43/5000 [03:13<6:42:32,  4.87s/it]  1%|          | 44/5000 [03:17<6:17:30,  4.57s/it]  1%|          | 45/5000 [03:21<5:59:53,  4.36s/it]  1%|          | 46/5000 [03:25<5:47:52,  4.21s/it]  1%|          | 47/5000 [03:29<5:39:08,  4.11s/it]  1%|          | 48/5000 [03:33<5:34:28,  4.05s/it]  1%|          | 49/5000 [03:37<5:29:52,  4.00s/it]  1%|          | 50/5000 [03:41<5:26:38,  3.96s/it]                                                     1%|          | 50/5000 [03:41<5:26:38,  3.96s/it]
+  0%|          | 0/118 [00:00<?, ?it/s][A
+  2%|▏         | 2/118 [00:00<00:05, 19.77it/s][A
+  3%|▎         | 4/118 [00:00<00:09, 12.45it/s][A
+  5%|▌         | 6/118 [00:00<00:10, 11.15it/s][A
+  7%|▋         | 8/118 [00:00<00:10, 10.63it/s][A
+  8%|▊         | 10/118 [00:00<00:10, 10.36it/s][A
+ 10%|█         | 12/118 [00:01<00:10, 10.20it/s][A
+ 12%|█▏        | 14/118 [00:01<00:10, 10.11it/s][A
+ 14%|█▎        | 16/118 [00:01<00:10, 10.05it/s][A
+ 15%|█▌        | 18/118 [00:01<00:10, 10.00it/s][A
+ 17%|█▋        | 20/118 [00:01<00:09,  9.97it/s][A
+ 19%|█▊        | 22/118 [00:02<00:09,  9.95it/s][A
+ 19%|█▉        | 23/118 [00:02<00:09,  9.95it/s][A
+ 20%|██        | 24/118 [00:02<00:09,  9.94it/s][A
+ 21%|██        | 25/118 [00:02<00:09,  9.93it/s][A
+ 22%|██▏       | 26/118 [00:02<00:09,  9.92it/s][A
+ 23%|██▎       | 27/118 [00:02<00:09,  9.92it/s][A
+ 24%|██▎       | 28/118 [00:02<00:09,  9.92it/s][A
+ 25%|██▍       | 29/118 [00:02<00:08,  9.92it/s][A
+ 25%|██▌       | 30/118 [00:02<00:08,  9.92it/s][A
+ 26%|██▋       | 31/118 [00:03<00:08,  9.91it/s][A
+ 27%|██▋       | 32/118 [00:03<00:08,  9.91it/s][A
+ 28%|██▊       | 33/118 [00:03<00:08,  9.92it/s][A
+ 29%|██▉       | 34/118 [00:03<00:08,  9.91it/s][A
+ 30%|██▉       | 35/118 [00:03<00:08,  9.91it/s][A
+ 31%|███       | 36/118 [00:03<00:08,  9.92it/s][A
+ 31%|███▏      | 37/118 [00:03<00:08,  9.92it/s][A
+ 32%|███▏      | 38/118 [00:03<00:08,  9.92it/s][A
+ 33%|███▎      | 39/118 [00:03<00:07,  9.92it/s][A
+ 34%|███▍      | 40/118 [00:03<00:07,  9.91it/s][A
+ 35%|███▍      | 41/118 [00:04<00:07,  9.90it/s][A
+ 36%|███▌      | 42/118 [00:04<00:07,  9.91it/s][A
+ 36%|███▋      | 43/118 [00:04<00:07,  9.91it/s][A
+ 37%|███▋      | 44/118 [00:04<00:07,  9.91it/s][A
+ 38%|███▊      | 45/118 [00:04<00:07,  9.91it/s][A
+ 39%|███▉      | 46/118 [00:04<00:07,  9.92it/s][A
+ 40%|███▉      | 47/118 [00:04<00:07,  9.84it/s][A
+ 41%|████      | 48/118 [00:04<00:07,  9.84it/s][A
+ 42%|████▏     | 49/118 [00:04<00:07,  9.85it/s][A
+ 42%|████▏     | 50/118 [00:04<00:06,  9.88it/s][A
+ 43%|████▎     | 51/118 [00:05<00:06,  9.89it/s][A
+ 44%|████▍     | 52/118 [00:05<00:06,  9.90it/s][A
+ 45%|████▍     | 53/118 [00:05<00:06,  9.89it/s][A
+ 46%|████▌     | 54/118 [00:05<00:06,  9.90it/s][A
+ 47%|████▋     | 55/118 [00:05<00:06,  9.91it/s][A
+ 47%|████▋     | 56/118 [00:05<00:06,  9.91it/s][A
+ 48%|████▊     | 57/118 [00:05<00:06,  9.91it/s][A
+ 49%|████▉     | 58/118 [00:05<00:06,  9.92it/s][A
+ 50%|█████     | 59/118 [00:05<00:05,  9.87it/s][A
+ 51%|█████     | 60/118 [00:05<00:05,  9.88it/s][A
+ 52%|█████▏    | 61/118 [00:06<00:05,  9.89it/s][A
+ 53%|█████▎    | 62/118 [00:06<00:05,  9.89it/s][A
+ 53%|█████▎    | 63/118 [00:06<00:05,  9.77it/s][A
+ 54%|█████▍    | 64/118 [00:06<00:05,  9.81it/s][A
+ 55%|█████▌    | 65/118 [00:06<00:05,  9.84it/s][A
+ 56%|█████▌    | 66/118 [00:06<00:05,  9.86it/s][A
+ 57%|█████▋    | 67/118 [00:06<00:05,  9.72it/s][A
+ 58%|█████▊    | 68/118 [00:06<00:05,  9.74it/s][A
+ 58%|█████▊    | 69/118 [00:06<00:05,  9.79it/s][A
+ 59%|█████▉    | 70/118 [00:06<00:04,  9.82it/s][A
+ 60%|██████    | 71/118 [00:07<00:04,  9.85it/s][A
+ 61%|██████    | 72/118 [00:07<00:04,  9.86it/s][A
+ 62%|██████▏   | 73/118 [00:07<00:04,  9.88it/s][A
+ 63%|██████▎   | 74/118 [00:07<00:04,  9.89it/s][A
+ 64%|██████▎   | 75/118 [00:07<00:04,  9.90it/s][A
+ 64%|██████▍   | 76/118 [00:07<00:04,  9.90it/s][A
+ 65%|██████▌   | 77/118 [00:07<00:04,  9.91it/s][A
+ 66%|██████▌   | 78/118 [00:07<00:04,  9.90it/s][A
+ 67%|██████▋   | 79/118 [00:07<00:03,  9.91it/s][A
+ 68%|██████▊   | 80/118 [00:07<00:03,  9.84it/s][A
+ 69%|██████▊   | 81/118 [00:08<00:03,  9.85it/s][A
+ 69%|██████▉   | 82/118 [00:08<00:03,  9.87it/s][A
+ 70%|███████   | 83/118 [00:08<00:03,  9.89it/s][A
+ 71%|███████   | 84/118 [00:08<00:03,  9.89it/s][A
+ 72%|███████▏  | 85/118 [00:08<00:03,  9.90it/s][A
+ 73%|███████▎  | 86/118 [00:08<00:03,  9.89it/s][A
+ 74%|███████▎  | 87/118 [00:08<00:03,  9.90it/s][A
+ 75%|███████▍  | 88/118 [00:08<00:03,  9.91it/s][A
+ 75%|███████▌  | 89/118 [00:08<00:02,  9.91it/s][A
+ 76%|███████▋  | 90/118 [00:08<00:02,  9.91it/s][A
+ 77%|███████▋  | 91/118 [00:09<00:02,  9.90it/s][A
+ 78%|███████▊  | 92/118 [00:09<00:02,  9.90it/s][A
+ 79%|███████▉  | 93/118 [00:09<00:02,  9.90it/s][A
+ 80%|███████▉  | 94/118 [00:09<00:02,  9.91it/s][A
+ 81%|████████  | 95/118 [00:09<00:02,  9.91it/s][A
+ 81%|████████▏ | 96/118 [00:09<00:02,  9.91it/s][A
+ 82%|████████▏ | 97/118 [00:09<00:02,  9.91it/s][A
+ 83%|████████▎ | 98/118 [00:09<00:02,  9.91it/s][A
+ 84%|████████▍ | 99/118 [00:09<00:01,  9.92it/s][A
+ 85%|████████▍ | 100/118 [00:10<00:01,  9.91it/s][A
+ 86%|████████▌ | 101/118 [00:10<00:01,  9.91it/s][A
+ 86%|████████▋ | 102/118 [00:10<00:01,  9.91it/s][A
+ 87%|████████▋ | 103/118 [00:10<00:01,  9.91it/s][A
+ 88%|████████▊ | 104/118 [00:10<00:01,  9.91it/s][A
+ 89%|████████▉ | 105/118 [00:10<00:01,  9.91it/s][A
+ 90%|████████▉ | 106/118 [00:10<00:01,  9.91it/s][A
+ 91%|█████████ | 107/118 [00:10<00:01,  9.92it/s][A
+ 92%|█████████▏| 108/118 [00:10<00:01,  9.91it/s][A
+ 92%|█████████▏| 109/118 [00:10<00:00,  9.91it/s][A
+ 93%|█████████▎| 110/118 [00:11<00:00,  9.92it/s][A
+ 94%|█████████▍| 111/118 [00:11<00:00,  9.93it/s][A
+ 95%|█████████▍| 112/118 [00:11<00:00,  9.94it/s][A
+ 96%|█████████▌| 113/118 [00:11<00:00,  9.95it/s][A
+ 97%|█████████▋| 114/118 [00:11<00:00,  9.95it/s][A
+ 97%|█████████▋| 115/118 [00:11<00:00,  9.93it/s][A
+ 98%|█████████▊| 116/118 [00:11<00:00,  9.94it/s][A
+ 99%|█████████▉| 117/118 [00:11<00:00,  9.95it/s][A
+This is from the on_evaluate method...
+Evaluation results at step 50:
+  eval_loss: 9.9723
+  eval_runtime: 12.2761
+  eval_samples_per_second: 306.2850
+  eval_steps_per_second: 9.6120
+  epoch: 0.0100
+Loss: 9.972317695617676
+Perplexity: This is from the on_evaluate method...
+Evaluation results at step 50:
+  eval_loss: 9.9723
+  eval_runtime: 12.2768
+  eval_samples_per_second: 306.2680
+  eval_steps_per_second: 9.6120
+  epoch: 0.0100
+This is from the on_evaluate method...Loss:
+ 21425.084675017395Evaluation results at step 50:9.972317695617676
+
+
+Perplexity:{'eval_loss': 9.972317695617676, 'eval_runtime': 12.277, 'eval_samples_per_second': 306.265, 'eval_steps_per_second': 9.612, 'epoch': 0.01} 
+100%|██████████| 118/118 [00:11<00:00,  8.30it/s][A                                                   
+  eval_loss: 9.9723
+  eval_runtime: 12.2735
+  eval_samples_per_second: 306.3520
+  eval_steps_per_second: 9.6140
+  epoch: 0.0100
+21425.084675017395
+Loss: 9.972317695617676
+                                                 [A  1%|          | 50/5000 [03:53<5:26:38,  3.96s/it]
+Perplexity: 21425.084675017395
+100%|██████████| 118/118 [00:11<00:00,  8.30it/s][A
+This is from the on_evaluate method...
+Evaluation results at step 50:
+  eval_loss: 9.9723
+  eval_runtime: 12.2770
+  eval_samples_per_second: 306.2650
+  eval_steps_per_second: 9.6120
+  epoch: 0.0100
+Loss: 9.972317695617676
+Perplexity: 21425.084675017395
+                                                 [A  1%|          | 51/5000 [03:57<10:29:08,  7.63s/it]  1%|          | 52/5000 [04:06<11:15:09,  8.19s/it]  1%|          | 53/5000 [04:10<9:28:37,  6.90s/it]   1%|          | 54/5000 [04:14<8:15:28,  6.01s/it]  1%|          | 55/5000 [04:18<7:22:34,  5.37s/it]  1%|          | 56/5000 [04:22<6:45:43,  4.92s/it]  1%|          | 57/5000 [04:26<6:21:19,  4.63s/it]  1%|          | 58/5000 [04:30<6:02:28,  4.40s/it]  1%|          | 59/5000 [04:33<5:49:11,  4.24s/it]  1%|          | 60/5000 [04:37<5:41:46,  4.15s/it]  1%|          | 61/5000 [04:41<5:34:42,  4.07s/it]  1%|          | 62/5000 [04:45<5:31:31,  4.03s/it]  1%|▏         | 63/5000 [04:54<7:36:00,  5.54s/it]  1%|▏         | 64/5000 [04:58<6:54:39,  5.04s/it]  1%|▏         | 65/5000 [05:02<6:25:35,  4.69s/it]  1%|▏         | 66/5000 [05:06<6:07:00,  4.46s/it]  1%|▏         | 67/5000 [05:10<5:52:14,  4.28s/it]  1%|▏         | 68/5000 [05:14<5:41:58,  4.16s/it]  1%|▏         | 69/5000 [05:18<5:36:22,  4.09s/it]  1%|▏         | 70/5000 [05:22<5:32:08,  4.04s/it]  1%|▏         | 71/5000 [05:25<5:27:51,  3.99s/it]  1%|▏         | 72/5000 [05:29<5:24:47,  3.95s/it]  1%|▏         | 73/5000 [05:39<7:38:58,  5.59s/it]  1%|▏         | 74/5000 [05:43<6:56:31,  5.07s/it]  2%|▏         | 75/5000 [05:46<6:27:02,  4.72s/it]  2%|▏         | 76/5000 [05:50<6:06:20,  4.46s/it]  2%|▏         | 77/5000 [05:54<5:51:35,  4.29s/it]  2%|▏         | 78/5000 [05:58<5:41:05,  4.16s/it]  2%|▏         | 79/5000 [06:02<5:33:47,  4.07s/it]  2%|▏         | 80/5000 [06:06<5:28:49,  4.01s/it]  2%|▏         | 81/5000 [06:10<5:25:09,  3.97s/it]  2%|▏         | 82/5000 [06:14<5:22:47,  3.94s/it]  2%|▏         | 83/5000 [06:17<5:23:00,  3.94s/it]  2%|▏         | 84/5000 [06:27<7:30:01,  5.49s/it]  2%|▏         | 85/5000 [06:30<6:50:05,  5.01s/it]  2%|▏         | 86/5000 [06:34<6:22:00,  4.66s/it]slurmstepd: error: *** STEP 15857991.0 ON cn0 CANCELLED AT 2024-06-11T23:41:51 ***
+[2024-06-11 23:41:51,602] torch.distributed.elastic.agent.server.api: [WARNING] Received 15 death signal, shutting down workers
+[2024-06-11 23:41:51,603] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3297112 closing signal SIGTERM
+[2024-06-11 23:41:51,603] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3297113 closing signal SIGTERM
+[2024-06-11 23:41:51,604] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3297114 closing signal SIGTERM
+[2024-06-11 23:41:51,611] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3297115 closing signal SIGTERM

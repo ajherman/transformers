@@ -87,7 +87,7 @@ try:
     # eval_dataset = eval_dataset.shuffle(seed=42, buffer_size=10_000)
 
     #train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
-    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
+    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation',block_size=655360)
 
     print("Finished loading datasets")
 
