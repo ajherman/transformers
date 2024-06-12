@@ -1,7 +1,7 @@
-[2024-06-11 22:51:02,731] torch.distributed.run: [WARNING] 
-[2024-06-11 22:51:02,731] torch.distributed.run: [WARNING] *****************************************
-[2024-06-11 22:51:02,731] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-[2024-06-11 22:51:02,731] torch.distributed.run: [WARNING] *****************************************
+[2024-06-12 00:40:59,019] torch.distributed.run: [WARNING] 
+[2024-06-12 00:40:59,019] torch.distributed.run: [WARNING] *****************************************
+[2024-06-12 00:40:59,019] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-06-12 00:40:59,019] torch.distributed.run: [WARNING] *****************************************
 /vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
   from pandas.core import (
 /vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
@@ -12,6 +12,47 @@
   from pandas.core import (
 Config:
  GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.2",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Config:
+ Number of model parameters: 124439808
+GPT2Config {
   "_name_or_path": "gpt2",
   "activation_function": "gelu_new",
   "architectures": [
@@ -133,136 +174,462 @@ Config:
 }
 
 Number of model parameters: 124439808
-Config:
- GPT2Config {
-  "_name_or_path": "gpt2",
-  "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
-  "attn_pdrop": 0.1,
-  "bos_token_id": 50256,
-  "embd_pdrop": 0.1,
-  "eos_token_id": 50256,
-  "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
-  "model_type": "gpt2",
-  "n_ctx": 1024,
-  "n_embd": 768,
-  "n_head": 12,
-  "n_inner": null,
-  "n_layer": 12,
-  "n_positions": 1024,
-  "reorder_and_upcast_attn": false,
-  "resid_pdrop": 0.1,
-  "scale_attn_by_inverse_layer_idx": false,
-  "scale_attn_weights": true,
-  "summary_activation": null,
-  "summary_first_dropout": 0.1,
-  "summary_proj_to_labels": true,
-  "summary_type": "cls_index",
-  "summary_use_proj": true,
-  "task_specific_params": {
-    "text-generation": {
-      "do_sample": true,
-      "max_length": 50
-    }
-  },
-  "transformers_version": "4.41.2",
-  "use_cache": true,
-  "vocab_size": 50257
-}
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+Finished loading datasets
+Finished loading datasets
+Finished loading datasets
+Finished loading datasets
+Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1688.91 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1707.12 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1701.96 examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1668.82 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1689.45 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1693.39 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1722.16 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1723.75 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1744.13 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1749.25 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1707.85 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1766.51 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1785.25 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1697.60 examples/s]
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1710.95 examples/s]
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1791.72 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1728.89 examples/s]
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1756.06 examples/s]Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1795.35 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1735.63 examples/s]
+/vast/home/ajherman/.local/lib/python3.11/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+max_steps is given, it will override any value given in num_train_epochs
+max_steps is given, it will override any value given in num_train_epochs
+cn0:3308990:3308990 [0] NCCL INFO Bootstrap : Using ib0:192.168.81.1<0>
+cn0:3308990:3308990 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn0:3308990:3308990 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.19.3+cuda12.3
+cn0:3308991:3308991 [1] NCCL INFO cudaDriverVersion 12040
+cn0:3308991:3308991 [1] NCCL INFO Bootstrap : Using ib0:192.168.81.1<0>
+cn0:3308991:3308991 [1] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+max_steps is given, it will override any value given in num_train_epochs
+cn0:3308992:3308992 [2] NCCL INFO cudaDriverVersion 12040
+cn0:3308992:3308992 [2] NCCL INFO Bootstrap : Using ib0:192.168.81.1<0>
+cn0:3308992:3308992 [2] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn0:3308991:3309146 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ib0:192.168.81.1<0>
+cn0:3308991:3309146 [1] NCCL INFO Using non-device net plugin version 0
+cn0:3308991:3309146 [1] NCCL INFO Using network IB
+cn0:3308990:3309145 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ib0:192.168.81.1<0>
+cn0:3308990:3309145 [0] NCCL INFO Using non-device net plugin version 0
+cn0:3308990:3309145 [0] NCCL INFO Using network IB
+cn0:3308992:3309147 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ib0:192.168.81.1<0>
+cn0:3308992:3309147 [2] NCCL INFO Using non-device net plugin version 0
+cn0:3308992:3309147 [2] NCCL INFO Using network IB
+cn0:3308993:3308993 [3] NCCL INFO cudaDriverVersion 12040
+cn0:3308993:3308993 [3] NCCL INFO Bootstrap : Using ib0:192.168.81.1<0>
+cn0:3308993:3308993 [3] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn0:3308993:3309151 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [RO]; OOB ib0:192.168.81.1<0>
+cn0:3308993:3309151 [3] NCCL INFO Using non-device net plugin version 0
+cn0:3308993:3309151 [3] NCCL INFO Using network IB
+cn0:3308993:3309151 [3] NCCL INFO comm 0xa2a2300 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c1000 commId 0x8636d64aa30b9e90 - Init START
+cn0:3308992:3309147 [2] NCCL INFO comm 0x98fbc80 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 81000 commId 0x8636d64aa30b9e90 - Init START
+cn0:3308990:3309145 [0] NCCL INFO comm 0x9b64ac0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 1000 commId 0x8636d64aa30b9e90 - Init START
+cn0:3308991:3309146 [1] NCCL INFO comm 0xb782480 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 41000 commId 0x8636d64aa30b9e90 - Init START
+cn0:3308993:3309151 [3] NCCL INFO Setting affinity for GPU 3 to ffffffff,ffffffff,00000000,00000000,ffffffff,ffffffff,00000000,00000000
+cn0:3308993:3309151 [3] NCCL INFO NVLS multicast support is not available on dev 3
+cn0:3308990:3309145 [0] NCCL INFO Setting affinity for GPU 0 to ffffffff,ffffffff,00000000,00000000,ffffffff,ffffffff
+cn0:3308990:3309145 [0] NCCL INFO NVLS multicast support is not available on dev 0
+cn0:3308992:3309147 [2] NCCL INFO Setting affinity for GPU 2 to ffffffff,ffffffff,00000000,00000000,ffffffff,ffffffff,00000000,00000000
+cn0:3308992:3309147 [2] NCCL INFO NVLS multicast support is not available on dev 2
+cn0:3308991:3309146 [1] NCCL INFO Setting affinity for GPU 1 to ffffffff,ffffffff,00000000,00000000,ffffffff,ffffffff
+cn0:3308991:3309146 [1] NCCL INFO NVLS multicast support is not available on dev 1
+cn0:3308990:3309145 [0] NCCL INFO Channel 00/24 :    0   1   2   3
+cn0:3308990:3309145 [0] NCCL INFO Channel 01/24 :    0   1   3   2
+cn0:3308990:3309145 [0] NCCL INFO Channel 02/24 :    0   2   3   1
+cn0:3308990:3309145 [0] NCCL INFO Channel 03/24 :    0   2   1   3
+cn0:3308990:3309145 [0] NCCL INFO Channel 04/24 :    0   3   1   2
+cn0:3308990:3309145 [0] NCCL INFO Channel 05/24 :    0   3   2   1
+cn0:3308990:3309145 [0] NCCL INFO Channel 06/24 :    0   1   2   3
+cn0:3308990:3309145 [0] NCCL INFO Channel 07/24 :    0   1   3   2
+cn0:3308993:3309151 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] -1/-1/-1->3->2 [3] -1/-1/-1->3->2 [4] -1/-1/-1->3->1 [5] -1/-1/-1->3->1 [6] -1/-1/-1->3->1 [7] -1/-1/-1->3->1 [8] 2/-1/-1->3->0 [9] 2/-1/-1->3->0 [10] 2/-1/-1->3->0 [11] 2/-1/-1->3->0 [12] -1/-1/-1->3->2 [13] -1/-1/-1->3->2 [14] -1/-1/-1->3->2 [15] -1/-1/-1->3->2 [16] -1/-1/-1->3->1 [17] -1/-1/-1->3->1 [18] -1/-1/-1->3->1 [19] -1/-1/-1->3->1 [20] 2/-1/-1->3->0 [21] 2/-1/-1->3->0 [22] 2/-1/-1->3->0 [23] 2/-1/-1->3->0
+cn0:3308990:3309145 [0] NCCL INFO Channel 08/24 :    0   2   3   1
+cn0:3308992:3309147 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1 [4] 1/-1/-1->2->0 [5] 1/-1/-1->2->0 [6] 1/-1/-1->2->0 [7] 1/-1/-1->2->0 [8] -1/-1/-1->2->3 [9] -1/-1/-1->2->3 [10] -1/-1/-1->2->3 [11] -1/-1/-1->2->3 [12] 3/-1/-1->2->1 [13] 3/-1/-1->2->1 [14] 3/-1/-1->2->1 [15] 3/-1/-1->2->1 [16] 1/-1/-1->2->0 [17] 1/-1/-1->2->0 [18] 1/-1/-1->2->0 [19] 1/-1/-1->2->0 [20] -1/-1/-1->2->3 [21] -1/-1/-1->2->3 [22] -1/-1/-1->2->3 [23] -1/-1/-1->2->3
+cn0:3308993:3309151 [3] NCCL INFO P2P Chunksize set to 524288
+cn0:3308990:3309145 [0] NCCL INFO Channel 09/24 :    0   2   1   3
+cn0:3308992:3309147 [2] NCCL INFO P2P Chunksize set to 524288
+cn0:3308990:3309145 [0] NCCL INFO Channel 10/24 :    0   3   1   2
+cn0:3308990:3309145 [0] NCCL INFO Channel 11/24 :    0   3   2   1
+cn0:3308990:3309145 [0] NCCL INFO Channel 12/24 :    0   1   2   3
+cn0:3308990:3309145 [0] NCCL INFO Channel 13/24 :    0   1   3   2
+cn0:3308990:3309145 [0] NCCL INFO Channel 14/24 :    0   2   3   1
+cn0:3308990:3309145 [0] NCCL INFO Channel 15/24 :    0   2   1   3
+cn0:3308990:3309145 [0] NCCL INFO Channel 16/24 :    0   3   1   2
+cn0:3308990:3309145 [0] NCCL INFO Channel 17/24 :    0   3   2   1
+cn0:3308990:3309145 [0] NCCL INFO Channel 18/24 :    0   1   2   3
+cn0:3308990:3309145 [0] NCCL INFO Channel 19/24 :    0   1   3   2
+cn0:3308990:3309145 [0] NCCL INFO Channel 20/24 :    0   2   3   1
+cn0:3308990:3309145 [0] NCCL INFO Channel 21/24 :    0   2   1   3
+cn0:3308990:3309145 [0] NCCL INFO Channel 22/24 :    0   3   1   2
+cn0:3308990:3309145 [0] NCCL INFO Channel 23/24 :    0   3   2   1
+cn0:3308990:3309145 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1 [4] 2/-1/-1->0->-1 [5] 2/-1/-1->0->-1 [6] 2/-1/-1->0->-1 [7] 2/-1/-1->0->-1 [8] 3/-1/-1->0->1 [9] 3/-1/-1->0->1 [10] 3/-1/-1->0->1 [11] 3/-1/-1->0->1 [12] 1/-1/-1->0->-1 [13] 1/-1/-1->0->-1 [14] 1/-1/-1->0->-1 [15] 1/-1/-1->0->-1 [16] 2/-1/-1->0->-1 [17] 2/-1/-1->0->-1 [18] 2/-1/-1->0->-1 [19] 2/-1/-1->0->-1 [20] 3/-1/-1->0->1 [21] 3/-1/-1->0->1 [22] 3/-1/-1->0->1 [23] 3/-1/-1->0->1
+cn0:3308990:3309145 [0] NCCL INFO P2P Chunksize set to 524288
+cn0:3308991:3309146 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0 [4] 3/-1/-1->1->2 [5] 3/-1/-1->1->2 [6] 3/-1/-1->1->2 [7] 3/-1/-1->1->2 [8] 0/-1/-1->1->-1 [9] 0/-1/-1->1->-1 [10] 0/-1/-1->1->-1 [11] 0/-1/-1->1->-1 [12] 2/-1/-1->1->0 [13] 2/-1/-1->1->0 [14] 2/-1/-1->1->0 [15] 2/-1/-1->1->0 [16] 3/-1/-1->1->2 [17] 3/-1/-1->1->2 [18] 3/-1/-1->1->2 [19] 3/-1/-1->1->2 [20] 0/-1/-1->1->-1 [21] 0/-1/-1->1->-1 [22] 0/-1/-1->1->-1 [23] 0/-1/-1->1->-1
+cn0:3308991:3309146 [1] NCCL INFO P2P Chunksize set to 524288
+cn0:3308993:3309151 [3] NCCL INFO Channel 00/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 02/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 04/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 03/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 06/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 06/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 06/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 06/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 08/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 10/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 09/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 12/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 12/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 12/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 12/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 13/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 14/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 16/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 15/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 18/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 18/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 18/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 18/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 19/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 20/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 22/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 21/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 01/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 01/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 02/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 02/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 04/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 03/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 03/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 04/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 07/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 07/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 08/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 08/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 10/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 09/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 09/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 10/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 13/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 13/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 14/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 14/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 16/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 15/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 15/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 16/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 19/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 19/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 20/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 20/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 22/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 21/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 21/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 22/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 03/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 04/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 02/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 01/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 05/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 05/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 05/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 05/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 09/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 10/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 08/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 07/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 11/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 11/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 11/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 11/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 15/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 16/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 14/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 13/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 17/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 17/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 17/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 17/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 21/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 22/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 20/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 19/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 23/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 23/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 23/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 23/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Connected all rings
+cn0:3308993:3309151 [3] NCCL INFO Connected all rings
+cn0:3308992:3309147 [2] NCCL INFO Connected all rings
+cn0:3308991:3309146 [1] NCCL INFO Connected all rings
+cn0:3308990:3309145 [0] NCCL INFO Channel 02/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 08/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 09/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 10/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 08/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 11/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 03/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 14/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 10/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 09/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 15/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 11/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 10/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 02/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 20/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 20/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 11/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 03/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 21/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 22/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 13/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 05/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 22/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 23/0 : 3[3] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 15/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 07/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 23/0 : 0[0] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 21/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 13/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 22/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 14/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 23/0 : 2[2] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 15/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 17/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 19/0 : 1[1] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 05/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 06/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 07/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 04/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 04/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 17/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 05/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 05/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 06/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 06/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 16/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 07/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 17/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 16/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 05/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 18/0 : 1[1] -> 3[3] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 18/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 17/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 06/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 19/0 : 3[3] -> 1[1] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 18/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 17/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 19/0 : 0[0] -> 2[2] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 18/0 : 2[2] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 02/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 03/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 08/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 09/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 10/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 12/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 14/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 08/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 00/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 15/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 09/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 20/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 20/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 03/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 00/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 21/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308990:3309145 [0] NCCL INFO Channel 21/0 : 0[0] -> 3[3] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 09/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308993:3309151 [3] NCCL INFO Channel 22/0 : 3[3] -> 2[2] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 10/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 02/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 12/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 04/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 13/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 06/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 15/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 07/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 21/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 12/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308991:3309146 [1] NCCL INFO Channel 22/0 : 1[1] -> 0[0] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 13/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 14/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 16/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 18/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Channel 19/0 : 2[2] -> 1[1] via P2P/CUMEM/read
+cn0:3308992:3309147 [2] NCCL INFO Connected all trees
+cn0:3308993:3309151 [3] NCCL INFO Connected all trees
+cn0:3308990:3309145 [0] NCCL INFO Connected all trees
+cn0:3308992:3309147 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn0:3308992:3309147 [2] NCCL INFO 24 coll channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+cn0:3308991:3309146 [1] NCCL INFO Connected all trees
+cn0:3308993:3309151 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn0:3308993:3309151 [3] NCCL INFO 24 coll channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+cn0:3308990:3309145 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn0:3308990:3309145 [0] NCCL INFO 24 coll channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+cn0:3308991:3309146 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn0:3308991:3309146 [1] NCCL INFO 24 coll channels, 0 nvls channels, 32 p2p channels, 8 p2p channels per peer
+cn0:3308993:3309151 [3] NCCL INFO comm 0xa2a2300 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c1000 commId 0x8636d64aa30b9e90 - Init COMPLETE
+cn0:3308991:3309146 [1] NCCL INFO comm 0xb782480 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 41000 commId 0x8636d64aa30b9e90 - Init COMPLETE
+cn0:3308992:3309147 [2] NCCL INFO comm 0x98fbc80 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 81000 commId 0x8636d64aa30b9e90 - Init COMPLETE
+cn0:3308990:3309145 [0] NCCL INFO comm 0x9b64ac0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 1000 commId 0x8636d64aa30b9e90 - Init COMPLETE
+  0%|          | 0/5000 [00:00<?, ?it/s]  0%|          | 1/5000 [00:11<15:21:27, 11.06s/it]  0%|          | 2/5000 [00:15<9:34:16,  6.89s/it]   0%|          | 3/5000 [00:18<7:41:47,  5.54s/it]  0%|          | 4/5000 [00:22<6:46:37,  4.88s/it]  0%|          | 5/5000 [00:26<6:17:43,  4.54s/it]  0%|          | 6/5000 [00:30<6:02:29,  4.36s/it]  0%|          | 7/5000 [00:34<5:50:51,  4.22s/it]  0%|          | 8/5000 [00:38<5:41:11,  4.10s/it]  0%|          | 9/5000 [00:42<5:34:41,  4.02s/it]  0%|          | 10/5000 [00:46<5:30:48,  3.98s/it]  0%|          | 11/5000 [00:55<7:50:22,  5.66s/it]  0%|          | 12/5000 [00:59<7:06:32,  5.13s/it]  0%|          | 13/5000 [01:03<6:35:04,  4.75s/it]  0%|          | 14/5000 [01:07<6:17:06,  4.54s/it]  0%|          | 15/5000 [01:11<5:59:56,  4.33s/it]  0%|          | 16/5000 [01:15<5:47:57,  4.19s/it]  0%|          | 17/5000 [01:19<5:41:55,  4.12s/it]  0%|          | 18/5000 [01:23<5:35:26,  4.04s/it]  0%|          | 19/5000 [01:26<5:31:17,  3.99s/it]  0%|          | 20/5000 [01:30<5:26:49,  3.94s/it]  0%|          | 21/5000 [01:39<7:31:51,  5.45s/it]  0%|          | 22/5000 [01:43<6:52:14,  4.97s/it]  0%|          | 23/5000 [01:47<6:24:07,  4.63s/it]  0%|          | 24/5000 [01:51<6:06:56,  4.42s/it]  0%|          | 25/5000 [01:55<5:53:13,  4.26s/it]  1%|          | 26/5000 [01:59<5:43:05,  4.14s/it]  1%|          | 27/5000 [02:03<5:38:04,  4.08s/it]  1%|          | 28/5000 [02:07<5:34:04,  4.03s/it]  1%|          | 29/5000 [02:10<5:30:07,  3.98s/it]  1%|          | 30/5000 [02:14<5:27:37,  3.96s/it]  1%|          | 31/5000 [02:18<5:25:34,  3.93s/it]  1%|          | 32/5000 [02:27<7:20:52,  5.32s/it]  1%|          | 33/5000 [02:31<6:44:20,  4.88s/it]  1%|          | 34/5000 [02:34<6:19:25,  4.58s/it]  1%|          | 35/5000 [02:38<6:01:48,  4.37s/it]  1%|          | 36/5000 [02:42<5:49:22,  4.22s/it]  1%|          | 37/5000 [02:46<5:40:17,  4.11s/it]  1%|          | 38/5000 [02:50<5:35:42,  4.06s/it]  1%|          | 39/5000 [02:54<5:31:{'loss': 10.0407, 'grad_norm': 1.9701753854751587, 'learning_rate': 5e-06, 'epoch': 0.01}
+09,  4.01s/it]  1%|          | 40/5000 [02:58<5:29:15,  3.98s/it]  1%|          | 41/5000 [03:02<5:27:32,  3.96s/it]  1%|          | 42/5000 [03:10<7:18:59,  5.31s/it]  1%|          | 43/5000 [03:14<6:41:45,  4.86s/it]  1%|          | 44/5000 [03:18<6:18:37,  4.58s/it]  1%|          | 45/5000 [03:22<6:00:20,  4.36s/it]  1%|          | 46/5000 [03:26<5:48:16,  4.22s/it]  1%|          | 47/5000 [03:30<5:41:08,  4.13s/it]  1%|          | 48/5000 [03:33<5:33:59,  4.05s/it]  1%|          | 49/5000 [03:37<5:30:54,  4.01s/it]  1%|          | 50/5000 [03:41<5:27:35,  3.97s/it]                                                     1%|          | 50/5000 [03:41<5:27:35,  3.97s/it]
+  0%|          | 0/118 [00:00<?, ?it/s][A
+  2%|▏         | 2/118 [00:00<00:05, 19.79it/s][A
+  3%|▎         | 4/118 [00:00<00:09, 12.47it/s][A
+  5%|▌         | 6/118 [00:00<00:10, 11.16it/s][A
+  7%|▋         | 8/118 [00:00<00:10, 10.65it/s][A
+  8%|▊         | 10/118 [00:00<00:10, 10.38it/s][A
+ 10%|█         | 12/118 [00:01<00:10, 10.22it/s][A
+ 12%|█▏        | 14/118 [00:01<00:10, 10.13it/s][A
+ 14%|█▎        | 16/118 [00:01<00:10, 10.06it/s][A
+ 15%|█▌        | 18/118 [00:01<00:09, 10.02it/s][A
+ 17%|█▋        | 20/118 [00:01<00:09, 10.00it/s][A
+ 19%|█▊        | 22/118 [00:02<00:09,  9.98it/s][A
+ 20%|██        | 24/118 [00:02<00:09,  9.96it/s][A
+ 21%|██        | 25/118 [00:02<00:09,  9.96it/s][A
+ 22%|██▏       | 26/118 [00:02<00:09,  9.95it/s][A
+ 23%|██▎       | 27/118 [00:02<00:09,  9.94it/s][A
+ 24%|██▎       | 28/118 [00:02<00:09,  9.94it/s][A
+ 25%|██▍       | 29/118 [00:02<00:08,  9.94it/s][A
+ 25%|██▌       | 30/118 [00:02<00:08,  9.94it/s][A
+ 26%|██▋       | 31/118 [00:03<00:08,  9.93it/s][A
+ 27%|██▋       | 32/118 [00:03<00:08,  9.93it/s][A
+ 28%|██▊       | 33/118 [00:03<00:08,  9.93it/s][A
+ 29%|██▉       | 34/118 [00:03<00:08,  9.94it/s][A
+ 30%|██▉       | 35/118 [00:03<00:08,  9.94it/s][A
+ 31%|███       | 36/118 [00:03<00:08,  9.93it/s][A
+ 31%|███▏      | 37/118 [00:03<00:08,  9.94it/s][A
+ 32%|███▏      | 38/118 [00:03<00:08,  9.93it/s][A
+ 33%|███▎      | 39/118 [00:03<00:07,  9.93it/s][A
+ 34%|███▍      | 40/118 [00:03<00:07,  9.92it/s][A
+ 35%|███▍      | 41/118 [00:04<00:07,  9.92it/s][A
+ 36%|███▌      | 42/118 [00:04<00:07,  9.93it/s][A
+ 36%|███▋      | 43/118 [00:04<00:07,  9.93it/s][A
+ 37%|███▋      | 44/118 [00:04<00:07,  9.93it/s][A
+ 38%|███▊      | 45/118 [00:04<00:07,  9.93it/s][A
+ 39%|███▉      | 46/118 [00:04<00:07,  9.94it/s][A
+ 40%|███▉      | 47/118 [00:04<00:07,  9.93it/s][A
+ 41%|████      | 48/118 [00:04<00:07,  9.93it/s][A
+ 42%|████▏     | 49/118 [00:04<00:06,  9.93it/s][A
+ 42%|████▏     | 50/118 [00:04<00:06,  9.94it/s][A
+ 43%|████▎     | 51/118 [00:05<00:06,  9.87it/s][A
+ 44%|████▍     | 52/118 [00:05<00:06,  9.88it/s][A
+ 45%|████▍     | 53/118 [00:05<00:06,  9.90it/s][A
+ 46%|████▌     | 54/118 [00:05<00:06,  9.91it/s][A
+ 47%|████▋     | 55/118 [00:05<00:06,  9.92it/s][A
+ 47%|████▋     | 56/118 [00:05<00:06,  9.92it/s][A
+ 48%|████▊     | 57/118 [00:05<00:06,  9.93it/s][A
+ 49%|████▉     | 58/118 [00:05<00:06,  9.93it/s][A
+ 50%|█████     | 59/118 [00:05<00:05,  9.93it/s][A
+ 51%|█████     | 60/118 [00:05<00:05,  9.93it/s][A
+ 52%|█████▏    | 61/118 [00:06<00:05,  9.93it/s][A
+ 53%|█████▎    | 62/118 [00:06<00:05,  9.94it/s][A
+ 53%|█████▎    | 63/118 [00:06<00:05,  9.93it/s][A
+ 54%|█████▍    | 64/118 [00:06<00:05,  9.93it/s][A
+ 55%|█████▌    | 65/118 [00:06<00:05,  9.93it/s][A
+ 56%|█████▌    | 66/118 [00:06<00:05,  9.85it/s][A
+ 57%|█████▋    | 67/118 [00:06<00:05,  9.85it/s][A
+ 58%|█████▊    | 68/118 [00:06<00:05,  9.85it/s][A
+ 58%|█████▊    | 69/118 [00:06<00:04,  9.86it/s][A
+ 59%|█████▉    | 70/118 [00:06<00:04,  9.86it/s][A
+ 60%|██████    | 71/118 [00:07<00:04,  9.86it/s][A
+ 61%|██████    | 72/118 [00:07<00:04,  9.85it/s][A
+ 62%|██████▏   | 73/118 [00:07<00:04,  9.85it/s][A
+ 63%|██████▎   | 74/118 [00:07<00:04,  9.85it/s][A
+ 64%|██████▎   | 75/118 [00:07<00:04,  9.86it/s][A
+ 64%|██████▍   | 76/118 [00:07<00:04,  9.86it/s][A
+ 65%|██████▌   | 77/118 [00:07<00:04,  9.82it/s][A
+ 66%|██████▌   | 78/118 [00:07<00:04,  9.85it/s][A
+ 67%|██████▋   | 79/118 [00:07<00:03,  9.88it/s][A
+ 68%|██████▊   | 80/118 [00:07<00:03,  9.90it/s][A
+ 69%|██████▊   | 81/118 [00:08<00:03,  9.91it/s][A
+ 69%|██████▉   | 82/118 [00:08<00:03,  9.92it/s][A
+ 70%|███████   | 83/118 [00:08<00:03,  9.85it/s][A
+ 71%|███████   | 84/118 [00:08<00:03,  9.86it/s][A
+ 72%|███████▏  | 85/118 [00:08<00:03,  9.88it/s][A
+ 73%|███████▎  | 86/118 [00:08<00:03,  9.89it/s][A
+ 74%|███████▎  | 87/118 [00:08<00:03,  9.91it/s][A
+ 75%|███████▍  | 88/118 [00:08<00:03,  9.91it/s][A
+ 75%|███████▌  | 89/118 [00:08<00:02,  9.92it/s][A
+ 76%|███████▋  | 90/118 [00:08<00:02,  9.93it/s][A
+ 77%|███████▋  | 91/118 [00:09<00:02,  9.93it/s][A
+ 78%|███████▊  | 92/118 [00:09<00:02,  9.93it/s][A
+ 79%|███████▉  | 93/118 [00:09<00:02,  9.93it/s][A
+ 80%|███████▉  | 94/118 [00:09<00:02,  9.93it/s][A
+ 81%|████████  | 95/118 [00:09<00:02,  9.93it/s][A
+ 81%|████████▏ | 96/118 [00:09<00:02,  9.93it/s][A
+ 82%|████████▏ | 97/118 [00:09<00:02,  9.93it/s][A
+ 83%|████████▎ | 98/118 [00:09<00:02,  9.94it/s][A
+ 84%|████████▍ | 99/118 [00:09<00:01,  9.94it/s][A
+ 85%|████████▍ | 100/118 [00:09<00:01,  9.94it/s][A
+ 86%|████████▌ | 101/118 [00:10<00:01,  9.93it/s][A
+ 86%|████████▋ | 102/118 [00:10<00:01,  9.93it/s][A
+ 87%|████████▋ | 103/118 [00:10<00:01,  9.93it/s][A
+ 88%|████████▊ | 104/118 [00:10<00:01,  9.94it/s][A
+ 89%|████████▉ | 105/118 [00:10<00:01,  9.93it/s][A
+ 90%|████████▉ | 106/118 [00:10<00:01,  9.93it/s][A
+ 91%|█████████ | 107/118 [00:10<00:01,  9.93it/s][A
+ 92%|█████████▏| 108/118 [00:10<00:01,  9.94it/s][A
+ 92%|█████████▏| 109/118 [00:10<00:00,  9.82it/s][A
+ 93%|█████████▎| 110/118 [00:10<00:00,  9.83it/s][A
+ 94%|█████████▍| 111/118 [00:11<00:00,  9.88it/s][A
+ 95%|█████████▍| 112/118 [00:11<00:00,  9.89it/s][A
+ 96%|█████████▌| 113/118 [00:11<00:00,  9.92it/s][A
+ 97%|█████████▋| 114/118 [00:11<00:00,  9.94it/s][A
+ 97%|█████████▋| 115/118 [00:11<00:00,  9.86it/s][A
+ 98%|█████████▊| 116/118 [00:11<00:00,  9.90it/s][A
+ 99%|█████████▉| 117/118 [00:11<00:00,  9.93it/s][A
+This is from the on_evaluate method...
+This is from the on_evaluate method...Evaluation results at step 50:
 
-Number of model parameters: 124439808
-Dataset info for monology/pile-uncopyrighted is not completely ready yet.
-Dataset info for monology/pile-uncopyrighted is not completely ready yet.
-Dataset info for monology/pile-uncopyrighted is not completely ready yet.
-Dataset info for monology/pile-uncopyrighted is not completely ready yet.
-No config specified, defaulting to the single config: pile-uncopyrighted/default
-Using custom data configuration default-block_size=655360
-Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
-The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
-No config specified, defaulting to the single config: pile-uncopyrighted/default
-Using custom data configuration default-block_size=655360
-Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
-The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
-No config specified, defaulting to the single config: pile-uncopyrighted/default
-Using custom data configuration default-block_size=655360
-Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
-The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
-No config specified, defaulting to the single config: pile-uncopyrighted/default
-Using custom data configuration default-block_size=655360
-Loading Dataset Infos from /vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/packaged_modules/json
-The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
-No dataset info for wikitext available (HTTPError: 500 Server Error: Internal Server Error for url: https://datasets-server.huggingface.co/info?dataset=wikitext)
-No dataset info for wikitext available (HTTPError: 500 Server Error: Internal Server Error for url: https://datasets-server.huggingface.co/info?dataset=wikitext)
-No dataset info for wikitext available (HTTPError: 500 Server Error: Internal Server Error for url: https://datasets-server.huggingface.co/info?dataset=wikitext)
-No dataset info for wikitext available (HTTPError: 500 Server Error: Internal Server Error for url: https://datasets-server.huggingface.co/info?dataset=wikitext)
-Exception occurred: BuilderConfig ParquetConfig(name='wikitext-2-raw-v1', version=0.0.0, data_dir=None, data_files={'test': ['wikitext-2-raw-v1/test-*'], 'train': ['wikitext-2-raw-v1/train-*'], 'validation': ['wikitext-2-raw-v1/validation-*']}, description=None, batch_size=None, columns=None, features=None) doesn't have a 'block_size' key.
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 90, in <module>
-    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation',block_size=655360)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/load.py", line 2592, in load_dataset
-    builder_instance = load_dataset_builder(
-                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/load.py", line 2301, in load_dataset_builder
-    builder_instance: DatasetBuilder = builder_cls(
-                                       ^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/builder.py", line 374, in __init__
-    self.config, self.config_id = self._create_builder_config(
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/builder.py", line 620, in _create_builder_config
-    raise ValueError(f"BuilderConfig {builder_config} doesn't have a '{key}' key.")
-ValueError: BuilderConfig ParquetConfig(name='wikitext-2-raw-v1', version=0.0.0, data_dir=None, data_files={'test': ['wikitext-2-raw-v1/test-*'], 'train': ['wikitext-2-raw-v1/train-*'], 'validation': ['wikitext-2-raw-v1/validation-*']}, description=None, batch_size=None, columns=None, features=None) doesn't have a 'block_size' key.
-Exception occurred: BuilderConfig ParquetConfig(name='wikitext-2-raw-v1', version=0.0.0, data_dir=None, data_files={'test': ['wikitext-2-raw-v1/test-*'], 'train': ['wikitext-2-raw-v1/train-*'], 'validation': ['wikitext-2-raw-v1/validation-*']}, description=None, batch_size=None, columns=None, features=None) doesn't have a 'block_size' key.
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 90, in <module>
-    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation',block_size=655360)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/load.py", line 2592, in load_dataset
-    builder_instance = load_dataset_builder(
-                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/load.py", line 2301, in load_dataset_builder
-    builder_instance: DatasetBuilder = builder_cls(
-                                       ^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/builder.py", line 374, in __init__
-    self.config, self.config_id = self._create_builder_config(
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/builder.py", line 620, in _create_builder_config
-    raise ValueError(f"BuilderConfig {builder_config} doesn't have a '{key}' key.")
-ValueError: BuilderConfig ParquetConfig(name='wikitext-2-raw-v1', version=0.0.0, data_dir=None, data_files={'test': ['wikitext-2-raw-v1/test-*'], 'train': ['wikitext-2-raw-v1/train-*'], 'validation': ['wikitext-2-raw-v1/validation-*']}, description=None, batch_size=None, columns=None, features=None) doesn't have a 'block_size' key.
-Exception occurred: BuilderConfig ParquetConfig(name='wikitext-2-raw-v1', version=0.0.0, data_dir=None, data_files={'test': ['wikitext-2-raw-v1/test-*'], 'train': ['wikitext-2-raw-v1/train-*'], 'validation': ['wikitext-2-raw-v1/validation-*']}, description=None, batch_size=None, columns=None, features=None) doesn't have a 'block_size' key.
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 90, in <module>
-    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation',block_size=655360)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/load.py", line 2592, in load_dataset
-    builder_instance = load_dataset_builder(
-                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/load.py", line 2301, in load_dataset_builder
-    builder_instance: DatasetBuilder = builder_cls(
-                                       ^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/builder.py", line 374, in __init__
-    self.config, self.config_id = self._create_builder_config(
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/builder.py", line 620, in _create_builder_config
-    raise ValueError(f"BuilderConfig {builder_config} doesn't have a '{key}' key.")
-ValueError: BuilderConfig ParquetConfig(name='wikitext-2-raw-v1', version=0.0.0, data_dir=None, data_files={'test': ['wikitext-2-raw-v1/test-*'], 'train': ['wikitext-2-raw-v1/train-*'], 'validation': ['wikitext-2-raw-v1/validation-*']}, description=None, batch_size=None, columns=None, features=None) doesn't have a 'block_size' key.
-Exception occurred: BuilderConfig ParquetConfig(name='wikitext-2-raw-v1', version=0.0.0, data_dir=None, data_files={'test': ['wikitext-2-raw-v1/test-*'], 'train': ['wikitext-2-raw-v1/train-*'], 'validation': ['wikitext-2-raw-v1/validation-*']}, description=None, batch_size=None, columns=None, features=None) doesn't have a 'block_size' key.
-Traceback (most recent call last):
-  File "/vast/home/ajherman/transformers/ari/gpt2_train.py", line 90, in <module>
-    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation',block_size=655360)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/load.py", line 2592, in load_dataset
-    builder_instance = load_dataset_builder(
-                       ^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/load.py", line 2301, in load_dataset_builder
-    builder_instance: DatasetBuilder = builder_cls(
-                                       ^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/builder.py", line 374, in __init__
-    self.config, self.config_id = self._create_builder_config(
-                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/vast/home/ajherman/.local/lib/python3.11/site-packages/datasets/builder.py", line 620, in _create_builder_config
-    raise ValueError(f"BuilderConfig {builder_config} doesn't have a '{key}' key.")
-ValueError: BuilderConfig ParquetConfig(name='wikitext-2-raw-v1', version=0.0.0, data_dir=None, data_files={'test': ['wikitext-2-raw-v1/test-*'], 'train': ['wikitext-2-raw-v1/train-*'], 'validation': ['wikitext-2-raw-v1/validation-*']}, description=None, batch_size=None, columns=None, features=None) doesn't have a 'block_size' key.
+Evaluation results at step 50:  eval_loss: 10.0364
+
+  eval_runtime: 12.3040
+  eval_loss: 10.0364  eval_samples_per_second: 305.5920
+
+  eval_runtime: 12.3030  eval_steps_per_second: 9.5900
+
+  eval_samples_per_second: 305.6170  epoch: 0.0100
+
+  eval_steps_per_second: 9.5910
+  epoch: 0.0100
+Loss: 10.036398887634277Loss:
+ Perplexity: 10.036398887634277
+Perplexity: 22842.974506732993
+22842.974506732993
+100%|██████████| 118/118 [00:11<00:00,  8.33it/s][A                                                   
+{'eval_loss': 10.036398887634277, 'eval_runtime': 12.3033, 'eval_samples_per_second': 305.61, 'eval_steps_per_second': 9.591, 'epoch': 0.01}
+This is from the on_evaluate method...
+Evaluation results at step 50:
+  eval_loss: 10.0364
+  eval_runtime: 12.3037
+  eval_samples_per_second: 305.6000
+  eval_steps_per_second: 9.5910
+                                                 [A  1%|          | 50/5000 [03:54<5:27:35,  3.97s/it]
+  epoch: 0.0100
+Loss: 10.036398887634277
+Perplexity: 22842.974506732993
+100%|██████████| 118/118 [00:11<00:00,  8.33it/s][A
+This is from the on_evaluate method...
+Evaluation results at step 50:
+  eval_loss: 10.0364
+  eval_runtime: 12.3033
+  eval_samples_per_second: 305.6100
+  eval_steps_per_second: 9.5910
+  epoch: 0.0100
+Loss: 10.036398887634277
+Perplexity: 22842.974506732993
+                                                 [A  1%|          | 51/5000 [03:57<10:31:14,  7.65s/it]  1%|          | 52/5000 [04:07<11:17:42,  8.22s/it]  1%|          | 53/5000 [04:11<9:31:12,  6.93s/it]   1%|          | 54/5000 [04:15<8:14:59,  6.00s/it]  1%|          | 55/5000 [04:19<7:22:17,  5.37s/it]  1%|          | 56/5000 [04:23<6:45:22,  4.92s/it]  1%|          | 57/5000 [04:26<6:19:26,  4.61s/it]  1%|          | 58/5000 [04:30<6:02:37,  4.40s/it]  1%|          | 59/5000 [04:34<5:49:33,  4.24s/it]  1%|          | 60/5000 [04:38<5:40:19,  4.13s/it]  1%|          | 61/5000 [04:42<5:33:23,  4.05s/it]  1%|          | 62/5000 [04:46<5:30:16,  4.01s/it]  1%|▏         | 63/5000 [04:55<7:28:44,  5.45s/it]  1%|▏         | 64/5000 [04:59<6:49:26,  4.98s/it]  1%|▏         | 65/5000 [05:02<6:22:05,  4.65s/it]  1%|▏         | 66/5000 [05:06<6:03:02,  4.41s/it]  1%|▏         | 67/5000 [05:10<5:49:36,  4.25s/it]  1%|▏         | 68/5000 [05:14<5:40:08,  4.14s/it]  1%|▏         | 
