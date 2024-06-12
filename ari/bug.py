@@ -34,18 +34,16 @@ parser.add_argument('--logging_steps', type=int, default=2500, help='Number of s
 parser.add_argument('--eval_steps', type=int, default=1000, help='Number of steps before evaluation')
 args = parser.parse_args()
 
+# # Path to the 'src' directory of your local transformers repository
+# use_local_transformers = args.use_local_transformers
+# if use_local_transformers:
+#     # Path to the 'src' directory of your local transformers repository
+#     path_to_transformers = '../src/transformers'
 
-"""
-# Path to the 'src' directory of your local transformers repository
-use_local_transformers = args.use_local_transformers
-if use_local_transformers:
-    # Path to the 'src' directory of your local transformers repository
-    path_to_transformers = '../src/transformers'
+#     # Prepend this path to sys.path
+#     if path_to_transformers not in sys.path:
+#         sys.path.insert(0, path_to_transformers)
 
-    # Prepend this path to sys.path
-    if path_to_transformers not in sys.path:
-        sys.path.insert(0, path_to_transformers)
-"""
 from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, AutoModelForCausalLM, GPT2Config
 from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerControl
 from datasets import load_dataset
@@ -58,15 +56,17 @@ try:
 
 
     # Read in config file
-    
-    config = GPT2Config.from_json_file("medium.json")
+    if args.config_file is not None:
+        config = GPT2Config.from_json_file(args.config_file)
+    else:
+        config = GPT2Config()
 
     # Load pre-trained model and tokenizer
     model_name = 'gpt2'
     tokenizer = GPT2Tokenizer.from_pretrained(model_name)
     tokenizer.pad_token = tokenizer.eos_token # Add pad token
     model = AutoModelForCausalLM.from_config(config)
-    """
+
     print("Config:\n", model.config)
 
     # Print number of model parameters
@@ -75,32 +75,14 @@ try:
 
     # Load the dataset
     logging.getLogger("datasets").setLevel(logging.DEBUG)
-    """
+
 
     dataset_name = "monology/pile-uncopyrighted"
-    # train_dataset = load_dataset(dataset_name, subsets = ['hacker_news', 'enron_emails'])
     train_dataset = load_dataset(dataset_name, split='train', streaming=True, block_size=655360)
-    # eval_dataset = load_dataset(dataset_name, split='train', streaming=True)
-
-    # train_dataset = train_dataset.shuffle(seed=42, buffer_size=10_000)
-    # eval_dataset = eval_dataset.shuffle(seed=42, buffer_size=10_000)
-
-    #train_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='train')
-    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
-
-    #print("Finished loading datasets")
+    eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation',block_size=655360)
 
     # Tokenize the dataset
     def encode(examples):
-        # tokens = tokenizer(example['text'])
-        # tokens = tokens[:max_len]  # Truncate to 100 tokens
-        # example['text'] = tokenizer.convert_tokens_to_string(tokens)
-        
-        # # Tokenize each string in the 'text' field
-        # tokenized_texts = [tokenizer.tokenize(text)[:max_len] for text in example['text']]
-        # # Convert the tokens back to strings
-        # example['text'] = [tokenizer.convert_tokens_to_string(tokens) for tokens in tokenized_texts]
-        # return example
 
         tokenized_texts = tokenizer(examples['text'], truncation=True, max_length=model.config.n_ctx, padding='max_length')
         return tokenized_texts
@@ -133,7 +115,6 @@ try:
         warmup_steps=500, # number of warmup steps for learning rate scheduler
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         max_steps=5000,
-        # weight_decay=0.01, 
     )
 
     # Use this to periodically trigger events during training
@@ -168,27 +149,7 @@ try:
 
         def on_log(self, args, state, control, **kwargs):
             pass
-            #self.custom_evaluation()
-
-        # def on_step_end(self, args, state, control, **kwargs):
-        #     if state.global_step % args.logging_steps == 0:
-        #         print("This is from the on_step_end method...")
-        #         self.custom_evaluation()
-
-        # def custom_evaluation(self):
-        #     # Access the model
-        #     print("\nEvaluation at the end of epoch (log):\n")
-        #     results = self.trainer.evaluate()
-        #     loss = results['eval_loss']
-        #     perplexity = np.exp(loss)
-        #     print("Loss:", loss)
-        #     print("Perplexity:", perplexity)
-            
-        #     with open('metrics.csv', 'a', newline='') as file:
-        #         writer = csv.writer(file)
-        #         writer.writerow([results['epoch'], loss, perplexity])
-
-
+     
     # Define trainer
     trainer = Trainer(
         model=model,
@@ -196,19 +157,17 @@ try:
         data_collator=data_collator,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        # compute_metrics=compute_metrics,
-        # resume_from_checkpoint=True
-        # resume_from_checkpoint=args.checkpoint_dir
+
     )
 
     trainer.add_callback(CustomCallback(trainer))
 
     # Train model
-    trainer.train() # More precise version would be to pass args.checkpoint_dir explicitly
+    trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
 
     # Save model
-    #model.save_pretrained(args.output_dir)
-    """
+    model.save_pretrained(args.output_dir)
+
     # Evaluate model
     eval_results = trainer.evaluate()
     print("Evaluation results:\n", eval_results)
@@ -219,10 +178,7 @@ try:
 
     toc = time.time()
     print("Duration: ",(toc-tic)/60,"m")
-    """
 except Exception as e:
     # Print the full traceback
     print("Exception occurred:", e)
     traceback.print_exc()
-
-
