@@ -163,7 +163,7 @@ try:
             print("Loss:", loss)
             print("Perplexity:", perplexity)
         
-            with open('metrics.csv', 'a', newline='') as file:
+            with open(args.output_dir+'/metrics.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow([results['epoch'], loss, perplexity])
 
