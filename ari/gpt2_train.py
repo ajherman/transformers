@@ -133,7 +133,7 @@ try:
         eval_steps=args.eval_steps, # number of steps before evaluation
         warmup_steps=500, # number of warmup steps for learning rate scheduler
         gradient_accumulation_steps=args.gradient_accumulation_steps,
-        max_steps=5000,
+        max_steps=100000,
         # weight_decay=0.01, 
     )
 
@@ -152,7 +152,6 @@ try:
             print("Time per epoch: ",(toc-tic)/60,"m")
 
         def on_evaluate(self, args, state, control, metrics=None, **kwargs):
-            print("This is from the on_evaluate method...")
             if metrics is not None:
                 print(f"Evaluation results at step {state.global_step}:")
                 for key, value in metrics.items():
