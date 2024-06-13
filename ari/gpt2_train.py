@@ -32,6 +32,7 @@ parser.add_argument('--seed', type=int, default=42, help='Random seed')
 parser.add_argument('--gradient_accumulation_steps', type=int, default=16, help='Number of gradient accumulation steps')
 parser.add_argument('--logging_steps', type=int, default=2500, help='Number of steps between logs')
 parser.add_argument('--eval_steps', type=int, default=1000, help='Number of steps before evaluation')
+parser.add_argument('--max_steps', type=int, default=100000, help='Maximum number of steps')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -133,7 +134,7 @@ try:
         eval_steps=args.eval_steps, # number of steps before evaluation
         warmup_steps=500, # number of warmup steps for learning rate scheduler
         gradient_accumulation_steps=args.gradient_accumulation_steps,
-        max_steps=100000,
+        max_steps=args.max_steps,
         # weight_decay=0.01, 
     )
 
