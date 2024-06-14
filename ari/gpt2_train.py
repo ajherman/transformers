@@ -33,6 +33,7 @@ parser.add_argument('--gradient_accumulation_steps', type=int, default=16, help=
 parser.add_argument('--logging_steps', type=int, default=2500, help='Number of steps between logs')
 parser.add_argument('--eval_steps', type=int, default=1000, help='Number of steps before evaluation')
 parser.add_argument('--max_steps', type=int, default=100000, help='Maximum number of steps')
+parser.add_argument('--no_train', action='store_true', help='Use pretrained model for evaluation')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -67,7 +68,10 @@ try:
     tokenizer = GPT2Tokenizer.from_pretrained(model_name)
     tokenizer.pad_token = tokenizer.eos_token # Add pad token
     # model = GPT2LMHeadModel.from_pretrained(model_name)
-    model = AutoModelForCausalLM.from_config(config)
+    if args.no_train:
+        model = AutoModelForCausalLM.from_pretrained(model_name)
+    else:
+        model = AutoModelForCausalLM.from_config(config)
 
     print("Config:\n", model.config)
 
@@ -205,7 +209,8 @@ try:
     trainer.add_callback(CustomCallback(trainer))
 
     # Train model
-    trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
+    if not args.no_train:
+        trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
 
     # Save model
     model.save_pretrained(args.output_dir)
