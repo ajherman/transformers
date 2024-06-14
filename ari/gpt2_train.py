@@ -1,4 +1,5 @@
 import torch
+from torch.optim import Adam
 import torch.distributed as dist
 import traceback
 
@@ -47,7 +48,7 @@ if use_local_transformers:
         sys.path.insert(0, path_to_transformers)
 
 from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, AutoModelForCausalLM, GPT2Config
-from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerControl
+from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerControl, get_cosine_schedule_with_warmup
 from datasets import load_dataset
 import logging
 
@@ -136,10 +137,12 @@ try:
         ddp_find_unused_parameters=False,
         dataloader_num_workers=4,
         eval_steps=args.eval_steps, # number of steps before evaluation
-        warmup_steps=500, # number of warmup steps for learning rate scheduler
+        warmup_steps=2000, # number of warmup steps for learning rate scheduler
+        learning_rate=2.5e-4, # learning rate
+        learning_rate_scheduler_type='cosine', # learning rate scheduler type
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         max_steps=args.max_steps,
-        # weight_decay=0.01, 
+        weight_decay=0.01, 
     )
 
     # Use this to periodically trigger events during training
@@ -194,6 +197,14 @@ try:
         #         writer.writerow([results['epoch'], loss, perplexity])
 
 
+# # Create the optimizer and scheduler
+# def get_optimizer_and_scheduler(model, num_warmup_steps, num_training_steps):
+#     optimizer = Adam(model.parameters(), lr=2.5e-4, weight_decay=0.01)
+#     scheduler = get_cosine_schedule_with_warmup(optimizer, num_warmup_steps, num_training_steps)
+#     return optimizer, scheduler
+
+# optimizer, scheduler = get_optimizer_and_scheduler(model, warmup_steps, total_training_steps)
+
     # Define trainer
     trainer = Trainer(
         model=model,
@@ -201,9 +212,6 @@ try:
         data_collator=data_collator,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        # compute_metrics=compute_metrics,
-        # resume_from_checkpoint=True
-        # resume_from_checkpoint=args.checkpoint_dir
     )
 
     trainer.add_callback(CustomCallback(trainer))
