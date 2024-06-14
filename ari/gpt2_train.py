@@ -35,6 +35,7 @@ parser.add_argument('--logging_steps', type=int, default=2500, help='Number of s
 parser.add_argument('--eval_steps', type=int, default=1000, help='Number of steps before evaluation')
 parser.add_argument('--max_steps', type=int, default=100000, help='Maximum number of steps')
 parser.add_argument('--no_train', action='store_true', help='Use pretrained model for evaluation')
+parser.add_argument('--learning_rate', type=float, default=2.5e-4, help='Learning rate')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -138,7 +139,7 @@ try:
         dataloader_num_workers=4,
         eval_steps=args.eval_steps, # number of steps before evaluation
         warmup_steps=2000, # number of warmup steps for learning rate scheduler
-        learning_rate=2.5e-4, # learning rate
+        learning_rate=args.learning_rate, # learning rate
         learning_rate_scheduler_type='cosine', # learning rate scheduler type
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         max_steps=args.max_steps,
