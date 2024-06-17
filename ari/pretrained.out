@@ -1,0 +1,351 @@
+[2024-06-14 15:32:27,454] torch.distributed.run: [WARNING] 
+[2024-06-14 15:32:27,454] torch.distributed.run: [WARNING] *****************************************
+[2024-06-14 15:32:27,454] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-06-14 15:32:27,454] torch.distributed.run: [WARNING] *****************************************
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.2",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 124439808
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.2",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 124439808
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.2",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 124439808
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+Finished loading datasets
+Finished loading datasets
+Finished loading datasets
+Config:
+ GPT2Config {
+  "_name_or_path": "gpt2",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "transformers_version": "4.41.2",
+  "use_cache": true,
+  "vocab_size": 50257
+}
+
+Number of model parameters: 124439808
+Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1607.64 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1610.73 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1604.80 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1602.21 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1596.29 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1598.23 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1643.87 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1634.38 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1625.08 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1675.03 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1663.57 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1620.05 examples/s]
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1603.76 examples/s]
+Map: 100%|██████████| 3760/3760 [00:02<00:00, 1659.39 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1603.28 examples/s]
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+max_steps is given, it will override any value given in num_train_epochs
+max_steps is given, it will override any value given in num_train_epochs
+max_steps is given, it will override any value given in num_train_epochs
+cn4072:1444445:1444445 [0] NCCL INFO Bootstrap : Using eth0:192.168.101.17<0>
+cn4072:1444445:1444445 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn4072:1444445:1444445 [0] NCCL INFO cudaDriverVersion 12040
+NCCL version 2.19.3+cuda12.3
+cn4072:1444448:1444448 [3] NCCL INFO cudaDriverVersion 12040
+cn4072:1444446:1444446 [1] NCCL INFO cudaDriverVersion 12040
+cn4072:1444448:1444448 [3] NCCL INFO Bootstrap : Using eth0:192.168.101.17<0>
+cn4072:1444446:1444446 [1] NCCL INFO Bootstrap : Using eth0:192.168.101.17<0>
+cn4072:1444446:1444446 [1] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn4072:1444448:1444448 [3] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn4072:1444448:1444573 [3] NCCL INFO NET/IB : No device found.
+cn4072:1444446:1444574 [1] NCCL INFO NET/IB : No device found.
+cn4072:1444446:1444574 [1] NCCL INFO NET/Socket : Using [0]eth0:192.168.101.17<0>
+cn4072:1444448:1444573 [3] NCCL INFO NET/Socket : Using [0]eth0:192.168.101.17<0>
+cn4072:1444446:1444574 [1] NCCL INFO Using non-device net plugin version 0
+cn4072:1444446:1444574 [1] NCCL INFO Using network Socket
+cn4072:1444448:1444573 [3] NCCL INFO Using non-device net plugin version 0
+cn4072:1444448:1444573 [3] NCCL INFO Using network Socket
+cn4072:1444445:1444572 [0] NCCL INFO NET/IB : No device found.
+cn4072:1444445:1444572 [0] NCCL INFO NET/Socket : Using [0]eth0:192.168.101.17<0>
+cn4072:1444445:1444572 [0] NCCL INFO Using non-device net plugin version 0
+cn4072:1444445:1444572 [0] NCCL INFO Using network Socket
+The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
+Finished loading datasets
+Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1577.10 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1575.81 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1618.31 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1655.38 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1598.22 examples/s]
+max_steps is given, it will override any value given in num_train_epochs
+cn4072:1444447:1444447 [2] NCCL INFO cudaDriverVersion 12040
+cn4072:1444447:1444447 [2] NCCL INFO Bootstrap : Using eth0:192.168.101.17<0>
+cn4072:1444447:1444447 [2] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn4072:1444447:1444607 [2] NCCL INFO NET/IB : No device found.
+cn4072:1444447:1444607 [2] NCCL INFO NET/Socket : Using [0]eth0:192.168.101.17<0>
+cn4072:1444447:1444607 [2] NCCL INFO Using non-device net plugin version 0
+cn4072:1444447:1444607 [2] NCCL INFO Using network Socket
+cn4072:1444447:1444607 [2] NCCL INFO comm 0x17d2ec00 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 81000 commId 0xe0225ebc6bddd7dd - Init START
+cn4072:1444445:1444572 [0] NCCL INFO comm 0xa99c200 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 1000 commId 0xe0225ebc6bddd7dd - Init START
+cn4072:1444448:1444573 [3] NCCL INFO comm 0x16cacb00 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c1000 commId 0xe0225ebc6bddd7dd - Init START
+cn4072:1444446:1444574 [1] NCCL INFO comm 0x16251600 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 25000 commId 0xe0225ebc6bddd7dd - Init START
+cn4072:1444447:1444607 [2] NCCL INFO Setting affinity for GPU 2 to ffff0000,ffff0000
+cn4072:1444447:1444607 [2] NCCL INFO NVLS multicast support is not available on dev 2
+cn4072:1444445:1444572 [0] NCCL INFO Setting affinity for GPU 0 to ffff,0000ffff
+cn4072:1444445:1444572 [0] NCCL INFO NVLS multicast support is not available on dev 0
+cn4072:1444448:1444573 [3] NCCL INFO Setting affinity for GPU 3 to ffff0000,ffff0000
+cn4072:1444448:1444573 [3] NCCL INFO NVLS multicast support is not available on dev 3
+cn4072:1444446:1444574 [1] NCCL INFO Setting affinity for GPU 1 to ffff,0000ffff
+cn4072:1444446:1444574 [1] NCCL INFO NVLS multicast support is not available on dev 1
+cn4072:1444448:1444573 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2
+cn4072:1444448:1444573 [3] NCCL INFO P2P Chunksize set to 131072
+cn4072:1444447:1444607 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1
+cn4072:1444447:1444607 [2] NCCL INFO P2P Chunksize set to 131072
+cn4072:1444446:1444574 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0
+cn4072:1444446:1444574 [1] NCCL INFO P2P Chunksize set to 131072
+cn4072:1444445:1444572 [0] NCCL INFO Channel 00/02 :    0   1   2   3
+cn4072:1444445:1444572 [0] NCCL INFO Channel 01/02 :    0   1   2   3
+cn4072:1444445:1444572 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+cn4072:1444445:1444572 [0] NCCL INFO P2P Chunksize set to 131072
+cn4072:1444447:1444607 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[3] via P2P/CUMEM
+cn4072:1444448:1444573 [3] NCCL INFO Channel 00/0 : 3[3] -> 0[0] via P2P/CUMEM
+cn4072:1444447:1444607 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[3] via P2P/CUMEM
+cn4072:1444448:1444573 [3] NCCL INFO Channel 01/0 : 3[3] -> 0[0] via P2P/CUMEM
+cn4072:1444446:1444574 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[2] via P2P/CUMEM
+cn4072:1444446:1444574 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[2] via P2P/CUMEM
+cn4072:1444445:1444572 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[1] via P2P/CUMEM
+cn4072:1444445:1444572 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/CUMEM
+cn4072:1444447:1444607 [2] NCCL INFO Connected all rings
+cn4072:1444446:1444574 [1] NCCL INFO Connected all rings
+cn4072:1444448:1444573 [3] NCCL INFO Connected all rings
+cn4072:1444448:1444573 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[2] via P2P/CUMEM
+cn4072:1444445:1444572 [0] NCCL INFO Connected all rings
+cn4072:1444447:1444607 [2] NCCL INFO Channel 00/0 : 2[2] -> 1[1] via P2P/CUMEM
+cn4072:1444447:1444607 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[1] via P2P/CUMEM
+cn4072:1444448:1444573 [3] NCCL INFO Channel 01/0 : 3[3] -> 2[2] via P2P/CUMEM
+cn4072:1444446:1444574 [1] NCCL INFO Channel 00/0 : 1[1] -> 0[0] via P2P/CUMEM
+cn4072:1444446:1444574 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[0] via P2P/CUMEM
+cn4072:1444448:1444573 [3] NCCL INFO Connected all trees
+cn4072:1444448:1444573 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn4072:1444448:1444573 [3] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn4072:1444445:1444572 [0] NCCL INFO Connected all trees
+cn4072:1444445:1444572 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn4072:1444445:1444572 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn4072:1444447:1444607 [2] NCCL INFO Connected all trees
+cn4072:1444447:1444607 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn4072:1444447:1444607 [2] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn4072:1444446:1444574 [1] NCCL INFO Connected all trees
+cn4072:1444446:1444574 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+cn4072:1444446:1444574 [1] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn4072:1444447:1444607 [2] NCCL INFO comm 0x17d2ec00 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 81000 commId 0xe0225ebc6bddd7dd - Init COMPLETE
+cn4072:1444445:1444572 [0] NCCL INFO comm 0xa99c200 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 1000 commId 0xe0225ebc6bddd7dd - Init COMPLETE
+cn4072:1444446:1444574 [1] NCCL INFO comm 0x16251600 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 25000 commId 0xe0225ebc6bddd7dd - Init COMPLETE
+cn4072:1444448:1444573 [3] NCCL INFO comm 0x16cacb00 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c1000 commId 0xe0225ebc6bddd7dd - Init COMPLETE
+  0%|          | 0/1 [00:00<?, ?it/s]'(MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /repos/99/35/9935dee04084bb74832fce856cb379b35566630297ca5b5aceddc39b237261ce/403571313469c4fe46770e6d905262ced6b332412f09539f55a62418daf91596?response-content-disposition=inline%3B+filename*%3DUTF-8%27%2702.jsonl.zst%3B+filename%3D%2202.jsonl.zst%22%3B&Expires=1718659976&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxODY1OTk3Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy85OS8zNS85OTM1ZGVlMDQwODRiYjc0ODMyZmNlODU2Y2IzNzliMzU1NjY2MzAyOTdjYTViNWFjZWRkYzM5YjIzNzI2MWNlLzQwMzU3MTMxMzQ2OWM0ZmU0Njc3MGU2ZDkwNTI2MmNlZDZiMzMyNDEyZjA5NTM5ZjU1YTYyNDE4ZGFmOTE1OTY~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=X~4tmswTNDzCHNuhE3lY19KMiJ6srcRCkuQNlPBXrWYldwau0kIHLt64OLdczs~dYwtH8sLsRFMKuvZ0VA9pMW3N3w5ac5vPueslEYdWj8UP-cQt7pIochpg2wqQNaiY93V6DujfLtDT4wE30jXbV7p31NGvCs8LBDsDhwPS954oUNUwsq39u-AjpPeJJE-wLqxEAFZS9e90GnGpPGXOZSlTyrR2P1Ogj3M8mSJjhU2Ynxp3N9nT8pzWa9KvGmDlxq2sZjAarxWN~~xLi95Oy5MEczb-KQFJA7TmBuWm967yiqcZHWf1CIYUuC2ECaHTOpuRMbMHdgvmZJLPMZP-2w__&Key-Pair-Id=K3ESJI6DHPFC7 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x148c66699e50>, 'Connection to proxyout.lanl.gov timed out. (connect timeout=10)'))"), '(Request ID: ed1c0ec0-30c4-4f24-b363-64e9607870fd)')' thrown while requesting GET https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/3be90335b66f24456a5d6659d9c8d208c0357119/train/02.jsonl.zst
+Retrying in 1s [Retry 1/5].
+Time per epoch:  0.6970844030380249 m
+Time per epoch:  0.6971015254656474 m
+Time per epoch:  0.6971885323524475 m
+Time per epoch:  0.6973187685012817 m
+{'train_runtime': 19.7869, 'train_samples_per_second': 42.048, 'train_steps_per_second': 0.051, 'train_loss': 3.3457086086273193, 'epoch': 1.0}
+100%|██████████| 1/1 [00:19<00:00, 19.68s/it]                                             100%|██████████| 1/1 [00:19<00:00, 19.68s/it]100%|██████████| 1/1 [00:19<00:00, 19.80s/it]
+  0%|          | 0/118 [00:00<?, ?it/s]  2%|▏         | 2/118 [00:00<00:09, 12.67it/s]  3%|▎         | 4/118 [00:00<00:14,  8.02it/s]  4%|▍         | 5/118 [00:00<00:15,  7.38it/s]  5%|▌         | 6/118 [00:00<00:15,  7.05it/s]  6%|▌         | 7/118 [00:00<00:16,  6.83it/s]  7%|▋         | 8/118 [00:01<00:16,  6.67it/s]  8%|▊         | 9/118 [00:01<00:16,  6.57it/s]  8%|▊         | 10/118 [00:01<00:16,  6.48it/s]  9%|▉         | 11/118 [00:01<00:16,  6.43it/s] 10%|█         | 12/118 [00:01<00:16,  6.39it/s] 11%|█         | 13/118 [00:01<00:16,  6.38it/s] 12%|█▏        | 14/118 [00:02<00:16,  6.38it/s] 13%|█▎        | 15/118 [00:02<00:16,  6.35it/s] 14%|█▎        | 16/118 [00:02<00:16,  6.35it/s] 14%|█▍        | 17/118 [00:02<00:15,  6.35it/s] 15%|█▌        | 18/118 [00:02<00:15,  6.35it/s] 16%|█▌        | 19/118 [00:02<00:15,  6.34it/s] 17%|█▋        | 20/118 [00:03<00:15,  6.33it/s] 18%|█▊        | 21/118 [00:03<00:15,  6.33it/s] 19%|█▊        | 22/118 [00:03<00:15,  6.34it/s] 19%|█▉        | 23/118 [00:03<00:14,  6.34it/s] 20%|██        | 24/118 [00:03<00:14,  6.33it/s] 21%|██        | 25/118 [00:03<00:14,  6.33it/s] 22%|██▏       | 26/118 [00:03<00:14,  6.32it/s] 23%|██▎       | 27/118 [00:04<00:14,  6.30it/s] 24%|██▎       | 28/118 [00:04<00:14,  6.30it/s] 25%|██▍       | 29/118 [00:04<00:14,  6.31it/s] 25%|██▌       | 30/118 [00:04<00:14,  6.27it/s] 26%|██▋       | 31/118 [00:04<00:13,  6.28it/s] 27%|██▋       | 32/118 [00:04<00:13,  6.29it/s] 28%|██▊       | 33/118 [00:05<00:13,  6.30it/s] 29%|██▉       | 34/118 [00:05<00:13,  6.28it/s] 30%|██▉       | 35/118 [00:05<00:13,  6.27it/s] 31%|███       | 36/118 [00:05<00:13,  6.23it/s] 31%|███▏      | 37/118 [00:05<00:12,  6.24it/s] 32%|███▏      | 38/118 [00:05<00:12,  6.25it/s] 33%|███▎      | 39/118 [00:06<00:12,  6.28it/s] 34%|███▍      | 40/118 [00:06<00:12,  6.22it/s] 35%|███▍      | 41/118 [00:06<00:12,  6.23it/s] 36%|███▌      | 42/118 [00:06<00:12,  6.26it/s] 36%|███▋      | 43/118 [00:06<00:11,  6.28it/s] 37%|███▋      | 44/118 [00:06<00:11,  6.29it/s] 38%|███▊      | 45/118 [00:06<00:11,  6.31it/s] 39%|███▉      | 46/118 [00:07<00:11,  6.32it/s] 40%|███▉      | 47/118 [00:07<00:11,  6.31it/s] 41%|████      | 48/118 [00:07<00:11,  6.31it/s] 42%|████▏     | 49/118 [00:07<00:10,  6.30it/s] 42%|████▏     | 50/118 [00:07<00:10,  6.29it/s] 43%|████▎     | 51/118 [00:07<00:10,  6.31it/s] 44%|████▍     | 52/118 [00:08<00:10,  6.31it/s] 45%|████▍     | 53/118 [00:08<00:10,  6.33it/s] 46%|████▌     | 54/118 [00:08<00:10,  6.34it/s] 47%|████▋     | 55/118 [00:08<00:09,  6.31it/s] 47%|████▋     | 56/118 [00:08<00:09,  6.31it/s] 48%|████▊     | 57/118 [00:08<00:09,  6.32it/s] 49%|████▉     | 58/118 [00:09<00:09,  6.33it/s] 50%|█████     | 59/118 [00:09<00:09,  6.33it/s] 51%|█████     | 60/118 [00:09<00:09,  6.34it/s] 52%|█████▏    | 61/118 [00:09<00:08,  6.34it/s] 53%|█████▎    | 62/118 [00:09<00:08,  6.33it/s] 53%|█████▎    | 63/118 [00:09<00:08,  6.32it/s] 54%|█████▍    | 64/118 [00:09<00:08,  6.32it/s] 55%|█████▌    | 65/118 [00:10<00:08,  6.33it/s] 56%|█████▌    | 66/118 [00:10<00:08,  6.34it/s] 57%|█████▋    | 67/118 [00:10<00:08,  6.35it/s] 58%|█████▊    | 68/118 [00:10<00:07,  6.33it/s] 58%|█████▊    | 69/118 [00:10<00:07,  6.33it/s] 59%|█████▉    | 70/118 [00:10<00:07,  6.33it/s] 60%|██████    | 71/118 [00:11<00:07,  6.34it/s] 61%|██████    | 72/118 [00:11<00:07,  6.34it/s] 62%|██████▏   | 73/118 [00:11<00:07,  6.32it/s] 63%|██████▎   | 74/118 [00:11<00:06,  6.33it/s] 64%|██████▎   | 75/118 [00:11<00:06,  6.34it/s] 64%|██████▍   | 76/118 [00:11<00:06,  6.33it/s] 65%|██████▌   | 77/118 [00:12<00:06,  6.33it/s] 66%|██████▌   | 78/118 [00:12<00:06,  6.34it/s] 67%|██████▋   | 79/118 [00:12<00:06,  6.33it/s] 68%|██████▊   | 80/118 [00:12<00:06,  6.32it/s] 69%|██████▊   | 81/118 [00:12<00:05,  6.33it/s] 69%|██████▉   | 82/118 [00:12<00:05,  6.34it/s] 70%|███████   | 83/118 [00:12<00:05,  6.33it/s] 71%|███████   | 84/118 [00:13<00:05,  6.33it/s] 72%|███████▏  | 85/118 [00:13<00:05,  6.33it/s] 73%|███████▎  | 86/118 [00:13<00:05,  6.34it/s] 74%|███████▎  | 87/118 [00:13<00:04,  6.35it/s] 75%|███████▍  | 88/118 [00:13<00:04,  6.34it/s] 75%|███████▌  | 89/118 [00:13<00:04,  6.34it/s] 76%|███████▋  | 90/118 [00:14<00:04,  6.35it/s] 77%|███████▋  | 91/118 [00:14<00:04,  6.34it/s] 78%|███████▊  | 92/118 [00:14<00:04,  6.34it/s] 79%|███████▉  | 93/118 [00:14<00:03,  6.34it/s] 80%|███████▉  | 94/118 [00:14<00:03,  6.35it/s] 81%|████████  | 95/118 [00:14<00:03,  6.35it/s] 81%|████████▏ | 96/118 [00:15<00:03,  6.33it/s] 82%|████████▏ | 97/118 [00:15<00:03,  6.34it/s] 83%|████████▎ | 98/118 [00:15<00:03,  6.34it/s] 84%|████████▍ | 99/118 [00:15<00:02,  6.33it/s] 85%|████████▍ | 100/118 [00:15<00:02,  6.33it/s] 86%|████████▌ | 101/118 [00:15<00:02,  6.34it/s] 86%|████████▋ | 102/118 [00:15<00:02,  6.32it/s] 87%|████████▋ | 103/118 [00:16<00:02,  6.32it/s] 88%|████████▊ | 104/118 [00:16<00:02,  6.31it/s] 89%|████████▉ | 105/118 [00:16<00:02,  6.32it/s] 90%|████████▉ | 10Evaluation results at step 1:
+  eval_loss: 4.1244
+  eval_runtime: 19.1335
+  eval_samples_per_second: 196.5140
+  eval_steps_per_second: 6.1670
+  epoch: 1.0000
+Loss: 4.124404430389404
+Perplexity: 61.83097363348005
+6/118 [00:16<00:01,  6.31it/s] 91%|█████████ | 107/118 [00:16<00:01,  6.29it/s] 92%|█████████▏| 108/118 [00:16<00:01,  6.30it/s] 92%|█████████▏| 109/118 [00:17<00:01,  6.30it/s] 93%|█████████▎| 110/118 [00:17<00:01,  6.32it/s] 94%|█████████▍| 111/118 [00:17<00:01,  6.34it/s] 95%|█████████▍| 112/118 [00:17<00:00,  6.35it/s] 96%|█████████▌| 113/118 [00:17<00:00,  6.34it/s] 97%|█████████▋| 114/118 [00:17<00:00,  6.35it/s] 97%|█████████▋| 115/118 [00:18<00:00,  6.35it/s] 98%|█████████▊| 116/118 [00:18<00:00,  6.35it/s] 99%|█████████▉| 117/118 [00:18<00:00,  6.36it/s]100%|██████████| 118/118 [00:18<00:00,  5.44it/s]100%|██████████| 118/118 [00:18<00:00,  6.34it/s]
+Evaluation results at step 1:
+  eval_loss: 4.1244
+  eval_runtime: 18.9805
+  eval_samples_per_second: 198.0980
+  eval_steps_per_second: 6.2170
+  epoch: 1.0000
+Loss: 4.124404430389404
+Perplexity: Evaluation results at step 1:
+  eval_loss: 4.124461.83097363348005
+
+  eval_runtime: 19.1424
+  eval_samples_per_second: 196.4230
+  eval_steps_per_second: 6.1640
+  epoch: 1.0000
+Evaluation results at step 1:
+  eval_loss: 4.1244
+  eval_runtime: 18.9423Loss:
+   eval_samples_per_second: 198.4970
+4.124404430389404  eval_steps_per_second: 6.2290
+
+Perplexity:   epoch: 1.0000
+61.83097363348005Loss:
+ 4.124404430389404
+Perplexity: 61.83097363348005
+Evaluation results:
+ {'eval_loss': 4.124404430389404, 'eval_runtime': 19.1335, 'eval_samples_per_second': 196.514, 'eval_steps_per_second': 6.167, 'epoch': 1.0}
+Evaluation results:
+Evaluation results:
+Evaluation results:
+   {'eval_loss': 4.124404430389404, 'eval_runtime': 18.9805, 'eval_samples_per_second': 198.098, 'eval_steps_per_second': 6.217, 'epoch': 1.0}{'eval_loss': 4.124404430389404, 'eval_runtime': 19.1424, 'eval_samples_per_second': 196.423, 'eval_steps_per_second': 6.164, 'epoch': 1.0}
+{'eval_loss': 4.124404430389404, 'eval_runtime': 18.9423, 'eval_samples_per_second': 198.497, 'eval_steps_per_second': 6.229, 'epoch': 1.0}
+
+Perplexity:Perplexity:  Perplexity:Perplexity:  tensor(61.8310)
+Duration:  1.0393157680829366 m
+tensor(61.8310)
+Duration:  1.0393111785252889 m
+tensor(61.8310)
+Duration:  1.0393161296844482 m
+tensor(61.8310)
+Duration:  1.0393137653668723 m
+cn4072:1444446:1444610 [1] NCCL INFO [Service thread] Connection closed by localRank 2
+cn4072:1444447:1444608 [2] NCCL INFO [Service thread] Connection closed by localRank 2
+cn4072:1444448:1444609 [3] NCCL INFO [Service thread] Connection closed by localRank 2
+cn4072:1444445:1444611 [0] NCCL INFO [Service thread] Connection closed by localRank 3
+cn4072:1444448:1444609 [3] NCCL INFO [Service thread] Connection closed by localRank 3
+cn4072:1444447:1444608 [2] NCCL INFO [Service thread] Connection closed by localRank 3
+cn4072:1444445:1444611 [0] NCCL INFO [Service thread] Connection closed by localRank 1
+cn4072:1444447:1444608 [2] NCCL INFO [Service thread] Connection closed by localRank 1
+cn4072:1444446:1444610 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+cn4072:1444447:1444447 [2] NCCL INFO comm 0x17d2ec00 rank 2 nranks 4 cudaDev 2 busId 81000 - Abort COMPLETE
+cn4072:1444445:1444611 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+cn4072:1444448:1444609 [3] NCCL INFO [Service thread] Connection closed by localRank 0
+cn4072:1444446:1444610 [1] NCCL INFO [Service thread] Connection closed by localRank 0
+cn4072:1444448:1444448 [3] NCCL INFO comm 0x16cacb00 rank 3 nranks 4 cudaDev 3 busId c1000 - Abort COMPLETE
+cn4072:1444446:1444446 [1] NCCL INFO comm 0x16251600 rank 1 nranks 4 cudaDev 1 busId 25000 - Abort COMPLETE
+cn4072:1444445:1444445 [0] NCCL INFO comm 0xa99c200 rank 0 nranks 4 cudaDev 0 busId 1000 - Abort COMPLETE

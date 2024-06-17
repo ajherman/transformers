@@ -1,4 +1,5 @@
 import torch
+from torch.optim import Adam
 import torch.distributed as dist
 import traceback
 
@@ -34,6 +35,7 @@ parser.add_argument('--logging_steps', type=int, default=2500, help='Number of s
 parser.add_argument('--eval_steps', type=int, default=1000, help='Number of steps before evaluation')
 parser.add_argument('--max_steps', type=int, default=100000, help='Maximum number of steps')
 parser.add_argument('--no_train', action='store_true', help='Use pretrained model for evaluation')
+parser.add_argument('--learning_rate', type=float, default=2.5e-4, help='Learning rate')
 args = parser.parse_args()
 
 # Path to the 'src' directory of your local transformers repository
@@ -47,7 +49,7 @@ if use_local_transformers:
         sys.path.insert(0, path_to_transformers)
 
 from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, AutoModelForCausalLM, GPT2Config
-from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerControl
+from transformers import Trainer, TrainingArguments, TrainerCallback, TrainerControl, get_cosine_schedule_with_warmup
 from datasets import load_dataset
 import logging
 
@@ -136,10 +138,12 @@ try:
         ddp_find_unused_parameters=False,
         dataloader_num_workers=4,
         eval_steps=args.eval_steps, # number of steps before evaluation
-        warmup_steps=500, # number of warmup steps for learning rate scheduler
+        warmup_steps=2000, # number of warmup steps for learning rate scheduler
+        learning_rate=args.learning_rate, # learning rate
+        lr_scheduler_type='cosine', # learning rate scheduler type
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         max_steps=args.max_steps,
-        # weight_decay=0.01, 
+        weight_decay=0.01, 
     )
 
     # Use this to periodically trigger events during training
@@ -194,6 +198,14 @@ try:
         #         writer.writerow([results['epoch'], loss, perplexity])
 
 
+# # Create the optimizer and scheduler
+# def get_optimizer_and_scheduler(model, num_warmup_steps, num_training_steps):
+#     optimizer = Adam(model.parameters(), lr=2.5e-4, weight_decay=0.01)
+#     scheduler = get_cosine_schedule_with_warmup(optimizer, num_warmup_steps, num_training_steps)
+#     return optimizer, scheduler
+
+# optimizer, scheduler = get_optimizer_and_scheduler(model, warmup_steps, total_training_steps)
+
     # Define trainer
     trainer = Trainer(
         model=model,
@@ -201,9 +213,6 @@ try:
         data_collator=data_collator,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        # compute_metrics=compute_metrics,
-        # resume_from_checkpoint=True
-        # resume_from_checkpoint=args.checkpoint_dir
     )
 
     trainer.add_callback(CustomCallback(trainer))
