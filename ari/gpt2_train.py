@@ -140,7 +140,7 @@ try:
         eval_steps=args.eval_steps, # number of steps before evaluation
         warmup_steps=2000, # number of warmup steps for learning rate scheduler
         learning_rate=args.learning_rate, # learning rate
-        learning_rate_scheduler_type='cosine', # learning rate scheduler type
+        lr_scheduler_type='cosine', # learning rate scheduler type
         gradient_accumulation_steps=args.gradient_accumulation_steps,
         max_steps=args.max_steps,
         weight_decay=0.01, 
@@ -218,7 +218,7 @@ try:
     trainer.add_callback(CustomCallback(trainer))
 
     # Train model
-    if not args.no_train:
+    if True: #not args.no_train:
         trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
 
     # Save model
