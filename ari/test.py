@@ -139,7 +139,7 @@ trainer = Trainer(
 )
 
 # Evaluate the model in smaller chunks
-chunk_size = 512  # Adjust chunk size as necessary
+chunk_size = 64  # Adjust chunk size as necessary
 num_chunks = len(tokenized_eval_dataset) // chunk_size + 1
 all_nlls = []
 
