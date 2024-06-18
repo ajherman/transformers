@@ -7,7 +7,7 @@ model = GPT2LMHeadModel.from_pretrained(model_id).to(device)
 tokenizer = GPT2TokenizerFast.from_pretrained(model_id)
 tokenizer.pad_token = tokenizer.eos_token
 
-local_rank = int(os.getenv('LOCAL_RANK', '0'))
+local_rank = 0 # int(os.getenv('LOCAL_RANK', '0'))
 
 
 from datasets import load_dataset
@@ -85,8 +85,8 @@ for batch in trainer.get_eval_dataloader():
     with torch.no_grad():
         outputs = model(input_ids, labels=labels)
         loss = outputs.loss
-        print(attention_mask.sum().item())
-    if attention_mask.sum().item()>=1200:
+        #print(attention_mask.sum().item())
+    if attention_mask.sum().item()>1000:
         all_losses.append(loss.item())
 
 # if dist.is_initialized():
