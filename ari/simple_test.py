@@ -51,8 +51,8 @@ model = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 
 # Load the Wikitext-2 dataset
-dataset = load_dataset("wikitext", "wikitext-2-raw-v1")
-eval_dataset = dataset['test']
+eval_dataset = load_dataset("wikitext", "wikitext-2-raw-v1", split="validation")
+# eval_dataset = dataset['test']
 
 # Preprocess the dataset
 def preprocess_function(examples):
