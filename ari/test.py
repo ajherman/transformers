@@ -89,8 +89,7 @@
 # results = trainer.evaluate()
 # print(f"Perplexity: {results['eval_perplexity']}")
 
-
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, Trainer, TrainingArguments
+from transformers import GPT2LMHeadModel, GPT2Tokenizer, TrainingArguments, Trainer
 from datasets import load_dataset
 import torch
 import numpy as np
@@ -141,17 +140,26 @@ trainer = Trainer(
 # Evaluate the model in smaller chunks
 chunk_size = 64  # Adjust chunk size as necessary
 num_chunks = len(tokenized_eval_dataset) // chunk_size + 1
-all_nlls = []
+all_losses = []
 
 for i in range(num_chunks):
     start_idx = i * chunk_size
     end_idx = min((i + 1) * chunk_size, len(tokenized_eval_dataset))
     chunk = tokenized_eval_dataset.select(range(start_idx, end_idx))
     
-    outputs = trainer.predict(chunk)
-    all_nlls.append(outputs.metrics['eval_loss'])
+    # Create a DataLoader for the chunk
+    dataloader = torch.utils.data.DataLoader(chunk, batch_size=1)
+    
+    # Manually compute the loss for each chunk
+    for batch in dataloader:
+        input_ids = batch["input_ids"].to("cuda")
+        labels = batch["input_ids"].to("cuda")
+        with torch.no_grad():
+            outputs = model(input_ids, labels=labels)
+            loss = outputs.loss
+        all_losses.append(loss.item())
 
 # Calculate overall perplexity
-avg_nll = np.mean(all_nlls)
-perplexity = np.exp(avg_nll)
+avg_loss = np.mean(all_losses)
+perplexity = np.exp(avg_loss)
 print(f"Perplexity: {perplexity}")
