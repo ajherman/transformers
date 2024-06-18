@@ -9,6 +9,7 @@ tokenizer.pad_token = tokenizer.eos_token
 from datasets import load_dataset
 import torch
 from tqdm import tqdm
+import torch.distributed as dist
 
 test = load_dataset("wikitext", "wikitext-2-raw-v1", split="test")
 encodings = tokenizer("\n\n".join(test["text"]), return_tensors="pt")
@@ -55,8 +56,8 @@ tokenized_eval_dataset.set_format(type='torch',columns=['input_ids','attention_m
 # Set up the training arguments
 training_args = TrainingArguments(
     output_dir="./results",
-    per_device_eval_batch_size=4,  # Use smaller batch size to manage memory
-    dataloader_num_workers=4,
+    per_device_eval_batch_size=16,  # Use smaller batch size to manage memory
+    dataloader_num_workers=2,
 )
 
 # Initialize the Trainer
@@ -80,7 +81,7 @@ all_losses = []
 #     dataloader = torch.utils.data.DataLoader(chunk, batch_size=1)
     
 # Manually compute the loss for each chunk
-for batch in trainer.get_eval_dataloader:
+for batch in trainer.get_eval_dataloader():
     input_ids = batch["input_ids"].to("cuda")
     #print(input_ids)
     #assert(0)
@@ -91,9 +92,15 @@ for batch in trainer.get_eval_dataloader:
     with torch.no_grad():
         outputs = model(input_ids, labels=labels)
         loss = outputs.loss
+        print(attention_mask.sum().item())
         if torch.isnan(loss):
             print(attention_mask)
     all_losses.append(loss.item())
+
+if dist.is_initialized():
+    dist.all_reduce(torch.tensor(all_losses), op=dist.ReduceOp.SUM)
+    all_losses = all_losses.tolist()
+
 
 # Calculate overall perplexity
 print(all_losses)
