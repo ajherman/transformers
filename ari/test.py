@@ -1,5 +1,5 @@
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast, TrainingArguments, Trainer
-
+import numpy as np
 device = "cuda"
 model_id = "openai-community/gpt2"
 model = GPT2LMHeadModel.from_pretrained(model_id).to(device)
@@ -55,7 +55,7 @@ tokenized_eval_dataset.set_format(type='torch',columns=['input_ids'])
 # Set up the training arguments
 training_args = TrainingArguments(
     output_dir="./results",
-    per_device_eval_batch_size=1,  # Use smaller batch size to manage memory
+    per_device_eval_batch_size=4,  # Use smaller batch size to manage memory
     dataloader_num_workers=4,
 )
 
