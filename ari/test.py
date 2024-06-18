@@ -93,7 +93,7 @@ for batch in trainer.get_eval_dataloader():
         outputs = model(input_ids, labels=labels)
         loss = outputs.loss
         print(attention_mask.sum().item())
-    if attention_mask.sum().item()>=1024:
+    if attention_mask.sum().item()>=1200:
         all_losses.append(loss.item())
 
 # if dist.is_initialized():
