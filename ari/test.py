@@ -58,7 +58,6 @@ training_args = TrainingArguments(
     output_dir="./results",
     per_device_eval_batch_size=16,  # Use smaller batch size to manage memory
     dataloader_num_workers=2,
-    device=device,
 )
 
 # Initialize the Trainer
@@ -94,9 +93,8 @@ for batch in trainer.get_eval_dataloader():
         outputs = model(input_ids, labels=labels)
         loss = outputs.loss
         print(attention_mask.sum().item())
-        if torch.isnan(loss):
-            print(attention_mask)
-    all_losses.append(loss.item())
+    if attention_mask.sum().item()>=1024:
+        all_losses.append(loss.item())
 
 # if dist.is_initialized():
 #     dist.all_reduce(torch.tensor(all_losses), op=dist.ReduceOp.SUM)
