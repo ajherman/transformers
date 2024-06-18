@@ -99,6 +99,7 @@ device = "cuda"
 model_id = "openai-community/gpt2"
 model = GPT2LMHeadModel.from_pretrained(model_id).to(device)
 tokenizer = GPT2TokenizerFast.from_pretrained(model_id)
+tokenizer.pad_token = tokenizer.eos_token
 
 from datasets import load_dataset
 
@@ -158,6 +159,7 @@ for i in range(num_chunks):
         input_ids = batch["input_ids"].to("cuda")
         # labels = batch["input_ids"].to("cuda")
         labels = input_ids.clone()
+        labels[:,-1]=-100
         # labels = input_ids.clone()
         # labels[:,:-1] = input_ids[:, 1:]
         # labels[:,-1]=-100
