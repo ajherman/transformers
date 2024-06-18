@@ -1,10 +1,14 @@
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast, TrainingArguments, Trainer
 import numpy as np
+import os
 device = "cuda"
 model_id = "openai-community/gpt2"
 model = GPT2LMHeadModel.from_pretrained(model_id).to(device)
 tokenizer = GPT2TokenizerFast.from_pretrained(model_id)
 tokenizer.pad_token = tokenizer.eos_token
+
+local_rank = int(os.getenv('LOCAL_RANK', '0'))
+
 
 from datasets import load_dataset
 import torch
@@ -66,20 +70,8 @@ trainer = Trainer(
     args=training_args,
     eval_dataset=tokenized_eval_dataset,
 )
-
-# # Evaluate the model in smaller chunks
-# chunk_size = 1  # Adjust chunk size as necessary
-# num_chunks = len(tokenized_eval_dataset) // chunk_size + 1
 all_losses = []
 
-# for i in range(num_chunks):
-#     start_idx = i * chunk_size
-#     end_idx = min((i + 1) * chunk_size, len(tokenized_eval_dataset))
-#     chunk = tokenized_eval_dataset.select(range(start_idx, end_idx))
-    
-#     # Create a DataLoader for the chunk
-#     dataloader = torch.utils.data.DataLoader(chunk, batch_size=1)
-    
 # Manually compute the loss for each chunk
 for batch in trainer.get_eval_dataloader():
     input_ids = batch["input_ids"].to("cuda")
@@ -100,9 +92,10 @@ for batch in trainer.get_eval_dataloader():
 #     dist.all_reduce(torch.tensor(all_losses), op=dist.ReduceOp.SUM)
 #     all_losses = all_losses.tolist()
 
+if local_rank == 0:
 
-# Calculate overall perplexity
-print(all_losses)
-avg_loss = np.mean(all_losses)
-perplexity = np.exp(avg_loss)
-print(f"Perplexity: {perplexity}")
+    # Calculate overall perplexity
+    print(all_losses)
+    avg_loss = np.mean(all_losses)
+    perplexity = np.exp(avg_loss)
+    print(f"Perplexity: {perplexity}")
