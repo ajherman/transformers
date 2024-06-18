@@ -15,7 +15,7 @@ import torch
 from tqdm import tqdm
 import torch.distributed as dist
 
-test = load_dataset("wikitext", "wikitext-2-raw-v1", split="test")
+test = load_dataset("wikitext", "wikitext-2-raw-v1", split="test",shuffle=True)
 encodings = tokenizer("\n\n".join(test["text"]), return_tensors="pt")
 
 max_length = model.config.n_positions
