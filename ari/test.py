@@ -66,34 +66,34 @@ trainer = Trainer(
     eval_dataset=tokenized_eval_dataset,
 )
 
-# Evaluate the model in smaller chunks
-chunk_size = 1  # Adjust chunk size as necessary
-num_chunks = len(tokenized_eval_dataset) // chunk_size + 1
+# # Evaluate the model in smaller chunks
+# chunk_size = 1  # Adjust chunk size as necessary
+# num_chunks = len(tokenized_eval_dataset) // chunk_size + 1
 all_losses = []
 
-for i in range(num_chunks):
-    start_idx = i * chunk_size
-    end_idx = min((i + 1) * chunk_size, len(tokenized_eval_dataset))
-    chunk = tokenized_eval_dataset.select(range(start_idx, end_idx))
+# for i in range(num_chunks):
+#     start_idx = i * chunk_size
+#     end_idx = min((i + 1) * chunk_size, len(tokenized_eval_dataset))
+#     chunk = tokenized_eval_dataset.select(range(start_idx, end_idx))
     
-    # Create a DataLoader for the chunk
-    dataloader = torch.utils.data.DataLoader(chunk, batch_size=1)
+#     # Create a DataLoader for the chunk
+#     dataloader = torch.utils.data.DataLoader(chunk, batch_size=1)
     
-    # Manually compute the loss for each chunk
-    for batch in dataloader:
-        input_ids = batch["input_ids"].to("cuda")
-        #print(input_ids)
-        #assert(0)
-        
-        labels = input_ids.clone()
-        attention_mask = batch["attention_mask"].to("cuda")
-        labels[attention_mask==0]=-100
-        with torch.no_grad():
-            outputs = model(input_ids, labels=labels)
-            loss = outputs.loss
-            if torch.isnan(loss):
-                print(attention_mask)
-        all_losses.append(loss.item())
+# Manually compute the loss for each chunk
+for batch in trainer.get_eval_dataloader:
+    input_ids = batch["input_ids"].to("cuda")
+    #print(input_ids)
+    #assert(0)
+    
+    labels = input_ids.clone()
+    attention_mask = batch["attention_mask"].to("cuda")
+    labels[attention_mask==0]=-100
+    with torch.no_grad():
+        outputs = model(input_ids, labels=labels)
+        loss = outputs.loss
+        if torch.isnan(loss):
+            print(attention_mask)
+    all_losses.append(loss.item())
 
 # Calculate overall perplexity
 print(all_losses)
