@@ -101,7 +101,7 @@ tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token
 
 # Load the Wikitext-2 dataset
-eval_dataset = load_dataset("wikitext", "wikitext-2-raw-v1", split="validation")
+eval_dataset = load_dataset("wikitext", "wikitext-2-raw-v1", split="test")
 
 # Preprocess the dataset in smaller chunks
 max_length = model.config.n_positions
@@ -121,6 +121,7 @@ training_args = TrainingArguments(
 )
 
 # Define the compute_metrics function
+"""
 def compute_metrics(eval_pred):
     logits, labels = eval_pred
     shift_logits = logits[..., :-1, :].contiguous()
@@ -129,13 +130,13 @@ def compute_metrics(eval_pred):
     loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
     perplexity = torch.exp(loss)
     return {"perplexity": perplexity.item()}
-
+"""
 # Initialize the Trainer
 trainer = Trainer(
     model=model,
     args=training_args,
     eval_dataset=tokenized_eval_dataset,
-    compute_metrics=compute_metrics,
+#    compute_metrics=compute_metrics,
 )
 
 # Evaluate the model in smaller chunks
@@ -154,7 +155,10 @@ for i in range(num_chunks):
     # Manually compute the loss for each chunk
     for batch in dataloader:
         input_ids = batch["input_ids"].to("cuda")
-        labels = batch["input_ids"].to("cuda")
+        #labels = batch["input_ids"].to("cuda")
+        labels = input_ids.clone()
+        labels[:,:-1] = input_ids[:, 1:]
+        labels[:,-1]=-100
         with torch.no_grad():
             outputs = model(input_ids, labels=labels)
             loss = outputs.loss
