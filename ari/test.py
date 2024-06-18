@@ -89,7 +89,7 @@
 # results = trainer.evaluate()
 # print(f"Perplexity: {results['eval_perplexity']}")
 
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, TrainingArguments, Trainer
+from transformers import GPT2LMHeadModel, GPT2TokenizerFast, TrainingArguments, Trainer
 from datasets import load_dataset
 import torch
 import numpy as np
