@@ -94,14 +94,15 @@ from datasets import load_dataset
 import torch
 import numpy as np
 
-# Load the pretrained model and tokenizer
-model_name = "openai-community/gpt2"
-model = GPT2LMHeadModel.from_pretrained(model_name).to("cuda")
-tokenizer = GPT2Tokenizer.from_pretrained(model_name)
-tokenizer.pad_token = tokenizer.eos_token
 
-# Load the Wikitext-2 dataset
-eval_dataset = load_dataset("wikitext", "wikitext-2-raw-v1", split="test")
+device = "cuda"
+model_id = "openai-community/gpt2"
+model = GPT2LMHeadModel.from_pretrained(model_id).to(device)
+tokenizer = GPT2TokenizerFast.from_pretrained(model_id)
+
+from datasets import load_dataset
+
+test = load_dataset("wikitext", "wikitext-2-raw-v1", split="test")
 
 # Preprocess the dataset in smaller chunks
 max_length = model.config.n_positions
@@ -110,7 +111,7 @@ stride = 512
 def preprocess_function(examples):
     return tokenizer(examples["text"], truncation=True, padding="max_length", max_length=max_length)
 
-tokenized_eval_dataset = eval_dataset.map(preprocess_function, batched=True)
+tokenized_eval_dataset = test.map(preprocess_function, batched=True)
 tokenized_eval_dataset.set_format(type='torch',columns=['input_ids'])
 
 # Set up the training arguments
