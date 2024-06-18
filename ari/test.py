@@ -49,10 +49,11 @@ import numpy as np
 model_name = "gpt2"
 model = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+tokenizer.pad_token = tokenizer.eos_token
 
 # Load the Wikitext-2 dataset
-eval_dataset = load_dataset("wikitext", "wikitext-2-raw-v1", split="validation")
-# eval_dataset = dataset['test']
+eval_dataset = load_dataset("wikitext", "wikitext-2-raw-v1",split="validation")
+# eval_dataset = dataset['validation']
 
 # Preprocess the dataset
 def preprocess_function(examples):
@@ -63,7 +64,7 @@ tokenized_eval_dataset = eval_dataset.map(preprocess_function, batched=True)
 # Set up the training arguments
 training_args = TrainingArguments(
     output_dir="./results",
-    per_device_eval_batch_size=8,
+    per_device_eval_batch_size=12,
 )
 
 # Define the compute_metrics function
