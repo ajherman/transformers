@@ -95,7 +95,7 @@ import torch
 import numpy as np
 
 # Load the pretrained model and tokenizer
-model_name = "gpt2"
+model_name = "openai-community/gpt2"
 model = GPT2LMHeadModel.from_pretrained(model_name).to("cuda")
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token
@@ -155,10 +155,11 @@ for i in range(num_chunks):
     # Manually compute the loss for each chunk
     for batch in dataloader:
         input_ids = batch["input_ids"].to("cuda")
-        #labels = batch["input_ids"].to("cuda")
+        # labels = batch["input_ids"].to("cuda")
         labels = input_ids.clone()
-        labels[:,:-1] = input_ids[:, 1:]
-        labels[:,-1]=-100
+        # labels = input_ids.clone()
+        # labels[:,:-1] = input_ids[:, 1:]
+        # labels[:,-1]=-100
         with torch.no_grad():
             outputs = model(input_ids, labels=labels)
             loss = outputs.loss
