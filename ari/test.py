@@ -111,6 +111,7 @@ def preprocess_function(examples):
     return tokenizer(examples["text"], truncation=True, padding="max_length", max_length=max_length)
 
 tokenized_eval_dataset = eval_dataset.map(preprocess_function, batched=True)
+tokenized_eval_dataset.set_format(type='torch',columns=['input_ids'])
 
 # Set up the training arguments
 training_args = TrainingArguments(
