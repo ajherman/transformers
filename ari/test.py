@@ -58,6 +58,7 @@ training_args = TrainingArguments(
     output_dir="./results",
     per_device_eval_batch_size=16,  # Use smaller batch size to manage memory
     dataloader_num_workers=2,
+    device=device,
 )
 
 # Initialize the Trainer
@@ -97,9 +98,9 @@ for batch in trainer.get_eval_dataloader():
             print(attention_mask)
     all_losses.append(loss.item())
 
-if dist.is_initialized():
-    dist.all_reduce(torch.tensor(all_losses), op=dist.ReduceOp.SUM)
-    all_losses = all_losses.tolist()
+# if dist.is_initialized():
+#     dist.all_reduce(torch.tensor(all_losses), op=dist.ReduceOp.SUM)
+#     all_losses = all_losses.tolist()
 
 
 # Calculate overall perplexity
