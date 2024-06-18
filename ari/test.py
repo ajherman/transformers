@@ -14,7 +14,7 @@ test = load_dataset("wikitext", "wikitext-2-raw-v1", split="test")
 encodings = tokenizer("\n\n".join(test["text"]), return_tensors="pt")
 
 max_length = model.config.n_positions
-stride = 512
+stride = model.config.n_positions  #  512
 seq_len = encodings.input_ids.size(1)
 
 nlls = []
@@ -77,11 +77,12 @@ for i in range(num_chunks):
     chunk = tokenized_eval_dataset.select(range(start_idx, end_idx))
     
     # Create a DataLoader for the chunk
-    dataloader = torch.utils.data.DataLoader(chunk, batch_size=1)
+    dataloader = torch.utils.data.DataLoader(chunk, batch_size=32)
     
     # Manually compute the loss for each chunk
     for batch in dataloader:
         input_ids = batch["input_ids"].to("cuda")
+        
         labels = input_ids.clone()
 
         with torch.no_grad():
