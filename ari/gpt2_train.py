@@ -182,7 +182,7 @@ try:
             model.eval()
 
             test = load_dataset("wikitext", "wikitext-2-raw-v1", split="test")
-            test = test.shuffle()
+            # test = test.shuffle()
             encodings = tokenizer("\n\n".join(test["text"]), return_tensors="pt")
 
             max_length = model.config.n_positions
@@ -221,25 +221,6 @@ try:
 
         def on_log(self, args, state, control, **kwargs):
             pass
-            #self.custom_evaluation()
-
-        # def on_step_end(self, args, state, control, **kwargs):
-        #     if state.global_step % args.logging_steps == 0:
-        #         print("This is from the on_step_end method...")
-        #         self.custom_evaluation()
-
-        # def custom_evaluation(self):
-        #     # Access the model
-        #     print("\nEvaluation at the end of epoch (log):\n")
-        #     results = self.trainer.evaluate()
-        #     loss = results['eval_loss']
-        #     perplexity = np.exp(loss)
-        #     print("Loss:", loss)
-        #     print("Perplexity:", perplexity)
-            
-        #     with open('metrics.csv', 'a', newline='') as file:
-        #         writer = csv.writer(file)
-        #         writer.writerow([results['epoch'], loss, perplexity])
 
 
 # # Create the optimizer and scheduler
@@ -262,8 +243,7 @@ try:
     trainer.add_callback(CustomCallback(trainer,tokenizer))
 
     # Train model
-    if True: #not args.no_train:
-        trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
+    trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
 
     # Save model
     model.save_pretrained(args.output_dir)
