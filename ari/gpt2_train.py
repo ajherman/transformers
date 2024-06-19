@@ -102,15 +102,6 @@ try:
 
     # Tokenize the dataset
     def encode(examples):
-        # tokens = tokenizer(example['text'])
-        # tokens = tokens[:max_len]  # Truncate to 100 tokens
-        # example['text'] = tokenizer.convert_tokens_to_string(tokens)
-        
-        # # Tokenize each string in the 'text' field
-        # tokenized_texts = [tokenizer.tokenize(text)[:max_len] for text in example['text']]
-        # # Convert the tokens back to strings
-        # example['text'] = [tokenizer.convert_tokens_to_string(tokens) for tokens in tokenized_texts]
-        # return example
 
         tokenized_texts = tokenizer(examples['text'], truncation=True, max_length=model.config.n_ctx, padding='max_length')
         return tokenized_texts
@@ -168,11 +159,11 @@ try:
                 print(f"Evaluation results at step {state.global_step}:")
                 for key, value in metrics.items():
                     print(f"  {key}: {value:.4f}")
-            results = metrics
-            loss = results['eval_loss']
-            perplexity = np.exp(loss)
-            print("Loss:", loss)
-            print("Perplexity:", perplexity)
+            # results = metrics
+            # loss = results['eval_loss']
+            # perplexity = np.exp(loss)
+            # print("Loss:", loss)
+            # print("Perplexity:", perplexity)
 
             #### Directly compute from model ####
             model = self.trainer.model
@@ -217,7 +208,7 @@ try:
         
             with open(args.output_dir+'/metrics.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
-                writer.writerow([results['epoch'], loss, perplexity])
+                writer.writerow([state.epoch, perplexity])
 
         def on_log(self, args, state, control, **kwargs):
             pass
