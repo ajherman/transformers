@@ -1,56 +1,11 @@
-[2024-06-14 15:32:27,454] torch.distributed.run: [WARNING] 
-[2024-06-14 15:32:27,454] torch.distributed.run: [WARNING] *****************************************
-[2024-06-14 15:32:27,454] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-[2024-06-14 15:32:27,454] torch.distributed.run: [WARNING] *****************************************
+[2024-06-19 13:08:34,284] torch.distributed.run: [WARNING] 
+[2024-06-19 13:08:34,284] torch.distributed.run: [WARNING] *****************************************
+[2024-06-19 13:08:34,284] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2024-06-19 13:08:34,284] torch.distributed.run: [WARNING] *****************************************
 /vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
   from pandas.core import (
 /vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
   from pandas.core import (
-/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
-  from pandas.core import (
-/vast/home/ajherman/.local/lib/python3.11/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
-  from pandas.core import (
-Config:
- GPT2Config {
-  "_name_or_path": "gpt2",
-  "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
-  "attn_pdrop": 0.1,
-  "bos_token_id": 50256,
-  "embd_pdrop": 0.1,
-  "eos_token_id": 50256,
-  "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
-  "model_type": "gpt2",
-  "n_ctx": 1024,
-  "n_embd": 768,
-  "n_head": 12,
-  "n_inner": null,
-  "n_layer": 12,
-  "n_positions": 1024,
-  "reorder_and_upcast_attn": false,
-  "resid_pdrop": 0.1,
-  "scale_attn_by_inverse_layer_idx": false,
-  "scale_attn_weights": true,
-  "summary_activation": null,
-  "summary_first_dropout": 0.1,
-  "summary_proj_to_labels": true,
-  "summary_type": "cls_index",
-  "summary_use_proj": true,
-  "task_specific_params": {
-    "text-generation": {
-      "do_sample": true,
-      "max_length": 50
-    }
-  },
-  "transformers_version": "4.41.2",
-  "use_cache": true,
-  "vocab_size": 50257
-}
-
-Number of model parameters: 124439808
 Config:
  GPT2Config {
   "_name_or_path": "gpt2",
@@ -135,217 +90,88 @@ Config:
 Number of model parameters: 124439808
 The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
 The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
-The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
 Finished loading datasets
 Finished loading datasets
-Finished loading datasets
-Config:
- GPT2Config {
-  "_name_or_path": "gpt2",
-  "activation_function": "gelu_new",
-  "architectures": [
-    "GPT2LMHeadModel"
-  ],
-  "attn_pdrop": 0.1,
-  "bos_token_id": 50256,
-  "embd_pdrop": 0.1,
-  "eos_token_id": 50256,
-  "initializer_range": 0.02,
-  "layer_norm_epsilon": 1e-05,
-  "model_type": "gpt2",
-  "n_ctx": 1024,
-  "n_embd": 768,
-  "n_head": 12,
-  "n_inner": null,
-  "n_layer": 12,
-  "n_positions": 1024,
-  "reorder_and_upcast_attn": false,
-  "resid_pdrop": 0.1,
-  "scale_attn_by_inverse_layer_idx": false,
-  "scale_attn_weights": true,
-  "summary_activation": null,
-  "summary_first_dropout": 0.1,
-  "summary_proj_to_labels": true,
-  "summary_type": "cls_index",
-  "summary_use_proj": true,
-  "task_specific_params": {
-    "text-generation": {
-      "do_sample": true,
-      "max_length": 50
-    }
-  },
-  "transformers_version": "4.41.2",
-  "use_cache": true,
-  "vocab_size": 50257
-}
-
-Number of model parameters: 124439808
-Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1607.64 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1610.73 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1604.80 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1602.21 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1596.29 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1598.23 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1643.87 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1634.38 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1625.08 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1675.03 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1663.57 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1620.05 examples/s]
-Map: 100%|██████████| 3760/3760 [00:02<00:00, 1603.76 examples/s]
-Map: 100%|██████████| 3760/3760 [00:02<00:00, 1659.39 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1603.28 examples/s]
+Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1874.69 examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1876.53 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1847.93 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:00, 1859.39 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1897.22 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1909.20 examples/s]Map: 100%|██████████| 3760/3760 [00:01<00:00, 1939.26 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1871.79 examples/s]
 Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Map: 100%|██████████| 3760/3760 [00:01<00:00, 1917.93 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1862.75 examples/s]
 max_steps is given, it will override any value given in num_train_epochs
-max_steps is given, it will override any value given in num_train_epochs
-max_steps is given, it will override any value given in num_train_epochs
-cn4072:1444445:1444445 [0] NCCL INFO Bootstrap : Using eth0:192.168.101.17<0>
-cn4072:1444445:1444445 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
-cn4072:1444445:1444445 [0] NCCL INFO cudaDriverVersion 12040
+cn656:2807567:2807567 [0] NCCL INFO Bootstrap : Using eth0:192.168.100.144<0>
+cn656:2807567:2807567 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn656:2807567:2807567 [0] NCCL INFO cudaDriverVersion 12040
 NCCL version 2.19.3+cuda12.3
-cn4072:1444448:1444448 [3] NCCL INFO cudaDriverVersion 12040
-cn4072:1444446:1444446 [1] NCCL INFO cudaDriverVersion 12040
-cn4072:1444448:1444448 [3] NCCL INFO Bootstrap : Using eth0:192.168.101.17<0>
-cn4072:1444446:1444446 [1] NCCL INFO Bootstrap : Using eth0:192.168.101.17<0>
-cn4072:1444446:1444446 [1] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
-cn4072:1444448:1444448 [3] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
-cn4072:1444448:1444573 [3] NCCL INFO NET/IB : No device found.
-cn4072:1444446:1444574 [1] NCCL INFO NET/IB : No device found.
-cn4072:1444446:1444574 [1] NCCL INFO NET/Socket : Using [0]eth0:192.168.101.17<0>
-cn4072:1444448:1444573 [3] NCCL INFO NET/Socket : Using [0]eth0:192.168.101.17<0>
-cn4072:1444446:1444574 [1] NCCL INFO Using non-device net plugin version 0
-cn4072:1444446:1444574 [1] NCCL INFO Using network Socket
-cn4072:1444448:1444573 [3] NCCL INFO Using non-device net plugin version 0
-cn4072:1444448:1444573 [3] NCCL INFO Using network Socket
-cn4072:1444445:1444572 [0] NCCL INFO NET/IB : No device found.
-cn4072:1444445:1444572 [0] NCCL INFO NET/Socket : Using [0]eth0:192.168.101.17<0>
-cn4072:1444445:1444572 [0] NCCL INFO Using non-device net plugin version 0
-cn4072:1444445:1444572 [0] NCCL INFO Using network Socket
-The JSON loader parameter `block_size` is deprecated. Please use `chunksize` instead
-Finished loading datasets
-Map:   0%|          | 0/3760 [00:00<?, ? examples/s]Map:  27%|██▋       | 1000/3760 [00:00<00:01, 1577.10 examples/s]Map:  53%|█████▎    | 2000/3760 [00:01<00:01, 1575.81 examples/s]Map:  80%|███████▉  | 3000/3760 [00:01<00:00, 1618.31 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1655.38 examples/s]Map: 100%|██████████| 3760/3760 [00:02<00:00, 1598.22 examples/s]
+cn656:2807567:2807651 [0] NCCL INFO NET/IB : No device found.
+cn656:2807567:2807651 [0] NCCL INFO NET/Socket : Using [0]eth0:192.168.100.144<0>
+cn656:2807567:2807651 [0] NCCL INFO Using non-device net plugin version 0
+cn656:2807567:2807651 [0] NCCL INFO Using network Socket
 max_steps is given, it will override any value given in num_train_epochs
-cn4072:1444447:1444447 [2] NCCL INFO cudaDriverVersion 12040
-cn4072:1444447:1444447 [2] NCCL INFO Bootstrap : Using eth0:192.168.101.17<0>
-cn4072:1444447:1444447 [2] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
-cn4072:1444447:1444607 [2] NCCL INFO NET/IB : No device found.
-cn4072:1444447:1444607 [2] NCCL INFO NET/Socket : Using [0]eth0:192.168.101.17<0>
-cn4072:1444447:1444607 [2] NCCL INFO Using non-device net plugin version 0
-cn4072:1444447:1444607 [2] NCCL INFO Using network Socket
-cn4072:1444447:1444607 [2] NCCL INFO comm 0x17d2ec00 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 81000 commId 0xe0225ebc6bddd7dd - Init START
-cn4072:1444445:1444572 [0] NCCL INFO comm 0xa99c200 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 1000 commId 0xe0225ebc6bddd7dd - Init START
-cn4072:1444448:1444573 [3] NCCL INFO comm 0x16cacb00 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c1000 commId 0xe0225ebc6bddd7dd - Init START
-cn4072:1444446:1444574 [1] NCCL INFO comm 0x16251600 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 25000 commId 0xe0225ebc6bddd7dd - Init START
-cn4072:1444447:1444607 [2] NCCL INFO Setting affinity for GPU 2 to ffff0000,ffff0000
-cn4072:1444447:1444607 [2] NCCL INFO NVLS multicast support is not available on dev 2
-cn4072:1444445:1444572 [0] NCCL INFO Setting affinity for GPU 0 to ffff,0000ffff
-cn4072:1444445:1444572 [0] NCCL INFO NVLS multicast support is not available on dev 0
-cn4072:1444448:1444573 [3] NCCL INFO Setting affinity for GPU 3 to ffff0000,ffff0000
-cn4072:1444448:1444573 [3] NCCL INFO NVLS multicast support is not available on dev 3
-cn4072:1444446:1444574 [1] NCCL INFO Setting affinity for GPU 1 to ffff,0000ffff
-cn4072:1444446:1444574 [1] NCCL INFO NVLS multicast support is not available on dev 1
-cn4072:1444448:1444573 [3] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2
-cn4072:1444448:1444573 [3] NCCL INFO P2P Chunksize set to 131072
-cn4072:1444447:1444607 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1
-cn4072:1444447:1444607 [2] NCCL INFO P2P Chunksize set to 131072
-cn4072:1444446:1444574 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0
-cn4072:1444446:1444574 [1] NCCL INFO P2P Chunksize set to 131072
-cn4072:1444445:1444572 [0] NCCL INFO Channel 00/02 :    0   1   2   3
-cn4072:1444445:1444572 [0] NCCL INFO Channel 01/02 :    0   1   2   3
-cn4072:1444445:1444572 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
-cn4072:1444445:1444572 [0] NCCL INFO P2P Chunksize set to 131072
-cn4072:1444447:1444607 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[3] via P2P/CUMEM
-cn4072:1444448:1444573 [3] NCCL INFO Channel 00/0 : 3[3] -> 0[0] via P2P/CUMEM
-cn4072:1444447:1444607 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[3] via P2P/CUMEM
-cn4072:1444448:1444573 [3] NCCL INFO Channel 01/0 : 3[3] -> 0[0] via P2P/CUMEM
-cn4072:1444446:1444574 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[2] via P2P/CUMEM
-cn4072:1444446:1444574 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[2] via P2P/CUMEM
-cn4072:1444445:1444572 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[1] via P2P/CUMEM
-cn4072:1444445:1444572 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/CUMEM
-cn4072:1444447:1444607 [2] NCCL INFO Connected all rings
-cn4072:1444446:1444574 [1] NCCL INFO Connected all rings
-cn4072:1444448:1444573 [3] NCCL INFO Connected all rings
-cn4072:1444448:1444573 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[2] via P2P/CUMEM
-cn4072:1444445:1444572 [0] NCCL INFO Connected all rings
-cn4072:1444447:1444607 [2] NCCL INFO Channel 00/0 : 2[2] -> 1[1] via P2P/CUMEM
-cn4072:1444447:1444607 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[1] via P2P/CUMEM
-cn4072:1444448:1444573 [3] NCCL INFO Channel 01/0 : 3[3] -> 2[2] via P2P/CUMEM
-cn4072:1444446:1444574 [1] NCCL INFO Channel 00/0 : 1[1] -> 0[0] via P2P/CUMEM
-cn4072:1444446:1444574 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[0] via P2P/CUMEM
-cn4072:1444448:1444573 [3] NCCL INFO Connected all trees
-cn4072:1444448:1444573 [3] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
-cn4072:1444448:1444573 [3] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
-cn4072:1444445:1444572 [0] NCCL INFO Connected all trees
-cn4072:1444445:1444572 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
-cn4072:1444445:1444572 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
-cn4072:1444447:1444607 [2] NCCL INFO Connected all trees
-cn4072:1444447:1444607 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
-cn4072:1444447:1444607 [2] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
-cn4072:1444446:1444574 [1] NCCL INFO Connected all trees
-cn4072:1444446:1444574 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
-cn4072:1444446:1444574 [1] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
-cn4072:1444447:1444607 [2] NCCL INFO comm 0x17d2ec00 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 81000 commId 0xe0225ebc6bddd7dd - Init COMPLETE
-cn4072:1444445:1444572 [0] NCCL INFO comm 0xa99c200 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 1000 commId 0xe0225ebc6bddd7dd - Init COMPLETE
-cn4072:1444446:1444574 [1] NCCL INFO comm 0x16251600 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 25000 commId 0xe0225ebc6bddd7dd - Init COMPLETE
-cn4072:1444448:1444573 [3] NCCL INFO comm 0x16cacb00 rank 3 nranks 4 cudaDev 3 nvmlDev 3 busId c1000 commId 0xe0225ebc6bddd7dd - Init COMPLETE
-  0%|          | 0/1 [00:00<?, ?it/s]'(MaxRetryError("HTTPSConnectionPool(host='cdn-lfs.huggingface.co', port=443): Max retries exceeded with url: /repos/99/35/9935dee04084bb74832fce856cb379b35566630297ca5b5aceddc39b237261ce/403571313469c4fe46770e6d905262ced6b332412f09539f55a62418daf91596?response-content-disposition=inline%3B+filename*%3DUTF-8%27%2702.jsonl.zst%3B+filename%3D%2202.jsonl.zst%22%3B&Expires=1718659976&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxODY1OTk3Nn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9yZXBvcy85OS8zNS85OTM1ZGVlMDQwODRiYjc0ODMyZmNlODU2Y2IzNzliMzU1NjY2MzAyOTdjYTViNWFjZWRkYzM5YjIzNzI2MWNlLzQwMzU3MTMxMzQ2OWM0ZmU0Njc3MGU2ZDkwNTI2MmNlZDZiMzMyNDEyZjA5NTM5ZjU1YTYyNDE4ZGFmOTE1OTY~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIn1dfQ__&Signature=X~4tmswTNDzCHNuhE3lY19KMiJ6srcRCkuQNlPBXrWYldwau0kIHLt64OLdczs~dYwtH8sLsRFMKuvZ0VA9pMW3N3w5ac5vPueslEYdWj8UP-cQt7pIochpg2wqQNaiY93V6DujfLtDT4wE30jXbV7p31NGvCs8LBDsDhwPS954oUNUwsq39u-AjpPeJJE-wLqxEAFZS9e90GnGpPGXOZSlTyrR2P1Ogj3M8mSJjhU2Ynxp3N9nT8pzWa9KvGmDlxq2sZjAarxWN~~xLi95Oy5MEczb-KQFJA7TmBuWm967yiqcZHWf1CIYUuC2ECaHTOpuRMbMHdgvmZJLPMZP-2w__&Key-Pair-Id=K3ESJI6DHPFC7 (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x148c66699e50>, 'Connection to proxyout.lanl.gov timed out. (connect timeout=10)'))"), '(Request ID: ed1c0ec0-30c4-4f24-b363-64e9607870fd)')' thrown while requesting GET https://huggingface.co/datasets/monology/pile-uncopyrighted/resolve/3be90335b66f24456a5d6659d9c8d208c0357119/train/02.jsonl.zst
-Retrying in 1s [Retry 1/5].
-Time per epoch:  0.6970844030380249 m
-Time per epoch:  0.6971015254656474 m
-Time per epoch:  0.6971885323524475 m
-Time per epoch:  0.6973187685012817 m
-{'train_runtime': 19.7869, 'train_samples_per_second': 42.048, 'train_steps_per_second': 0.051, 'train_loss': 3.3457086086273193, 'epoch': 1.0}
-100%|██████████| 1/1 [00:19<00:00, 19.68s/it]                                             100%|██████████| 1/1 [00:19<00:00, 19.68s/it]100%|██████████| 1/1 [00:19<00:00, 19.80s/it]
-  0%|          | 0/118 [00:00<?, ?it/s]  2%|▏         | 2/118 [00:00<00:09, 12.67it/s]  3%|▎         | 4/118 [00:00<00:14,  8.02it/s]  4%|▍         | 5/118 [00:00<00:15,  7.38it/s]  5%|▌         | 6/118 [00:00<00:15,  7.05it/s]  6%|▌         | 7/118 [00:00<00:16,  6.83it/s]  7%|▋         | 8/118 [00:01<00:16,  6.67it/s]  8%|▊         | 9/118 [00:01<00:16,  6.57it/s]  8%|▊         | 10/118 [00:01<00:16,  6.48it/s]  9%|▉         | 11/118 [00:01<00:16,  6.43it/s] 10%|█         | 12/118 [00:01<00:16,  6.39it/s] 11%|█         | 13/118 [00:01<00:16,  6.38it/s] 12%|█▏        | 14/118 [00:02<00:16,  6.38it/s] 13%|█▎        | 15/118 [00:02<00:16,  6.35it/s] 14%|█▎        | 16/118 [00:02<00:16,  6.35it/s] 14%|█▍        | 17/118 [00:02<00:15,  6.35it/s] 15%|█▌        | 18/118 [00:02<00:15,  6.35it/s] 16%|█▌        | 19/118 [00:02<00:15,  6.34it/s] 17%|█▋        | 20/118 [00:03<00:15,  6.33it/s] 18%|█▊        | 21/118 [00:03<00:15,  6.33it/s] 19%|█▊        | 22/118 [00:03<00:15,  6.34it/s] 19%|█▉        | 23/118 [00:03<00:14,  6.34it/s] 20%|██        | 24/118 [00:03<00:14,  6.33it/s] 21%|██        | 25/118 [00:03<00:14,  6.33it/s] 22%|██▏       | 26/118 [00:03<00:14,  6.32it/s] 23%|██▎       | 27/118 [00:04<00:14,  6.30it/s] 24%|██▎       | 28/118 [00:04<00:14,  6.30it/s] 25%|██▍       | 29/118 [00:04<00:14,  6.31it/s] 25%|██▌       | 30/118 [00:04<00:14,  6.27it/s] 26%|██▋       | 31/118 [00:04<00:13,  6.28it/s] 27%|██▋       | 32/118 [00:04<00:13,  6.29it/s] 28%|██▊       | 33/118 [00:05<00:13,  6.30it/s] 29%|██▉       | 34/118 [00:05<00:13,  6.28it/s] 30%|██▉       | 35/118 [00:05<00:13,  6.27it/s] 31%|███       | 36/118 [00:05<00:13,  6.23it/s] 31%|███▏      | 37/118 [00:05<00:12,  6.24it/s] 32%|███▏      | 38/118 [00:05<00:12,  6.25it/s] 33%|███▎      | 39/118 [00:06<00:12,  6.28it/s] 34%|███▍      | 40/118 [00:06<00:12,  6.22it/s] 35%|███▍      | 41/118 [00:06<00:12,  6.23it/s] 36%|███▌      | 42/118 [00:06<00:12,  6.26it/s] 36%|███▋      | 43/118 [00:06<00:11,  6.28it/s] 37%|███▋      | 44/118 [00:06<00:11,  6.29it/s] 38%|███▊      | 45/118 [00:06<00:11,  6.31it/s] 39%|███▉      | 46/118 [00:07<00:11,  6.32it/s] 40%|███▉      | 47/118 [00:07<00:11,  6.31it/s] 41%|████      | 48/118 [00:07<00:11,  6.31it/s] 42%|████▏     | 49/118 [00:07<00:10,  6.30it/s] 42%|████▏     | 50/118 [00:07<00:10,  6.29it/s] 43%|████▎     | 51/118 [00:07<00:10,  6.31it/s] 44%|████▍     | 52/118 [00:08<00:10,  6.31it/s] 45%|████▍     | 53/118 [00:08<00:10,  6.33it/s] 46%|████▌     | 54/118 [00:08<00:10,  6.34it/s] 47%|████▋     | 55/118 [00:08<00:09,  6.31it/s] 47%|████▋     | 56/118 [00:08<00:09,  6.31it/s] 48%|████▊     | 57/118 [00:08<00:09,  6.32it/s] 49%|████▉     | 58/118 [00:09<00:09,  6.33it/s] 50%|█████     | 59/118 [00:09<00:09,  6.33it/s] 51%|█████     | 60/118 [00:09<00:09,  6.34it/s] 52%|█████▏    | 61/118 [00:09<00:08,  6.34it/s] 53%|█████▎    | 62/118 [00:09<00:08,  6.33it/s] 53%|█████▎    | 63/118 [00:09<00:08,  6.32it/s] 54%|█████▍    | 64/118 [00:09<00:08,  6.32it/s] 55%|█████▌    | 65/118 [00:10<00:08,  6.33it/s] 56%|█████▌    | 66/118 [00:10<00:08,  6.34it/s] 57%|█████▋    | 67/118 [00:10<00:08,  6.35it/s] 58%|█████▊    | 68/118 [00:10<00:07,  6.33it/s] 58%|█████▊    | 69/118 [00:10<00:07,  6.33it/s] 59%|█████▉    | 70/118 [00:10<00:07,  6.33it/s] 60%|██████    | 71/118 [00:11<00:07,  6.34it/s] 61%|██████    | 72/118 [00:11<00:07,  6.34it/s] 62%|██████▏   | 73/118 [00:11<00:07,  6.32it/s] 63%|██████▎   | 74/118 [00:11<00:06,  6.33it/s] 64%|██████▎   | 75/118 [00:11<00:06,  6.34it/s] 64%|██████▍   | 76/118 [00:11<00:06,  6.33it/s] 65%|██████▌   | 77/118 [00:12<00:06,  6.33it/s] 66%|██████▌   | 78/118 [00:12<00:06,  6.34it/s] 67%|██████▋   | 79/118 [00:12<00:06,  6.33it/s] 68%|██████▊   | 80/118 [00:12<00:06,  6.32it/s] 69%|██████▊   | 81/118 [00:12<00:05,  6.33it/s] 69%|██████▉   | 82/118 [00:12<00:05,  6.34it/s] 70%|███████   | 83/118 [00:12<00:05,  6.33it/s] 71%|███████   | 84/118 [00:13<00:05,  6.33it/s] 72%|███████▏  | 85/118 [00:13<00:05,  6.33it/s] 73%|███████▎  | 86/118 [00:13<00:05,  6.34it/s] 74%|███████▎  | 87/118 [00:13<00:04,  6.35it/s] 75%|███████▍  | 88/118 [00:13<00:04,  6.34it/s] 75%|███████▌  | 89/118 [00:13<00:04,  6.34it/s] 76%|███████▋  | 90/118 [00:14<00:04,  6.35it/s] 77%|███████▋  | 91/118 [00:14<00:04,  6.34it/s] 78%|███████▊  | 92/118 [00:14<00:04,  6.34it/s] 79%|███████▉  | 93/118 [00:14<00:03,  6.34it/s] 80%|███████▉  | 94/118 [00:14<00:03,  6.35it/s] 81%|████████  | 95/118 [00:14<00:03,  6.35it/s] 81%|████████▏ | 96/118 [00:15<00:03,  6.33it/s] 82%|████████▏ | 97/118 [00:15<00:03,  6.34it/s] 83%|████████▎ | 98/118 [00:15<00:03,  6.34it/s] 84%|████████▍ | 99/118 [00:15<00:02,  6.33it/s] 85%|████████▍ | 100/118 [00:15<00:02,  6.33it/s] 86%|████████▌ | 101/118 [00:15<00:02,  6.34it/s] 86%|████████▋ | 102/118 [00:15<00:02,  6.32it/s] 87%|████████▋ | 103/118 [00:16<00:02,  6.32it/s] 88%|████████▊ | 104/118 [00:16<00:02,  6.31it/s] 89%|████████▉ | 105/118 [00:16<00:02,  6.32it/s] 90%|████████▉ | 10Evaluation results at step 1:
+cn656:2807568:2807568 [1] NCCL INFO cudaDriverVersion 12040
+cn656:2807568:2807568 [1] NCCL INFO Bootstrap : Using eth0:192.168.100.144<0>
+cn656:2807568:2807568 [1] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+cn656:2807568:2807652 [1] NCCL INFO NET/IB : No device found.
+cn656:2807568:2807652 [1] NCCL INFO NET/Socket : Using [0]eth0:192.168.100.144<0>
+cn656:2807568:2807652 [1] NCCL INFO Using non-device net plugin version 0
+cn656:2807568:2807652 [1] NCCL INFO Using network Socket
+cn656:2807568:2807652 [1] NCCL INFO comm 0x15c32340 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId d8000 commId 0x5ef284a365aa689a - Init START
+cn656:2807567:2807651 [0] NCCL INFO comm 0x176014c0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 86000 commId 0x5ef284a365aa689a - Init START
+cn656:2807568:2807652 [1] NCCL INFO Setting affinity for GPU 1 to ffff,f00000ff,fff00000
+cn656:2807567:2807651 [0] NCCL INFO Setting affinity for GPU 0 to ffff,f00000ff,fff00000
+cn656:2807568:2807652 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0
+cn656:2807567:2807651 [0] NCCL INFO Channel 00/02 :    0   1
+cn656:2807567:2807651 [0] NCCL INFO Channel 01/02 :    0   1
+cn656:2807568:2807652 [1] NCCL INFO P2P Chunksize set to 131072
+cn656:2807567:2807651 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+cn656:2807567:2807651 [0] NCCL INFO P2P Chunksize set to 131072
+cn656:2807568:2807652 [1] NCCL INFO Channel 00 : 1[1] -> 0[0] via SHM/direct/direct
+cn656:2807568:2807652 [1] NCCL INFO Channel 01 : 1[1] -> 0[0] via SHM/direct/direct
+cn656:2807567:2807651 [0] NCCL INFO Channel 00 : 0[0] -> 1[1] via SHM/direct/direct
+cn656:2807567:2807651 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/direct/direct
+cn656:2807567:2807651 [0] NCCL INFO Connected all rings
+cn656:2807567:2807651 [0] NCCL INFO Connected all trees
+cn656:2807568:2807652 [1] NCCL INFO Connected all rings
+cn656:2807568:2807652 [1] NCCL INFO Connected all trees
+cn656:2807568:2807652 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cn656:2807568:2807652 [1] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn656:2807567:2807651 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+cn656:2807567:2807651 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+cn656:2807567:2807651 [0] NCCL INFO comm 0x176014c0 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 86000 commId 0x5ef284a365aa689a - Init COMPLETE
+cn656:2807568:2807652 [1] NCCL INFO comm 0x15c32340 rank 1 nranks 2 cudaDev 1 nvmlDev 1 busId d8000 commId 0x5ef284a365aa689a - Init COMPLETE
+Time per epoch:  0.5437348127365113 m
+Time per epoch:  0.5438113371531169 m
+{'train_runtime': 20.923, 'train_samples_per_second': 19.882, 'train_steps_per_second': 0.048, 'train_loss': 3.3292410373687744, 'epoch': 1.0}
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:20<00:00, 20.88s/it]                                             100%|██████████| 1/1 [00:20<00:00, 20.88s/it]100%|██████████| 1/1 [00:20<00:00, 20.93s/it]
+  0%|          | 0/235 [00:00<?, ?it/s]  1%|          | 2/235 [00:00<00:23,  9.88it/s]  1%|▏         | 3/235 [00:00<00:33,  6.97it/s]  2%|▏         | 4/235 [00:00<00:38,  6.04it/s]  2%|▏         | 5/235 [00:00<00:41,  5.61it/s]  3%|▎         | 6/235 [00:01<00:42,  5.37it/s]  3%|▎         | 7/235 [00:01<00:43,  5.21it/s]  3%|▎         | 8/235 [00:01<00:44,  5.12it/s]  4%|▍         | 9/235 [00:01<00:44,  5.06it/s]  4%|▍         | 10/235 [00:01<00:44,  5.02it/s]  5%|▍         | 11/235 [00:02<00:44,  4.99it/s]  5%|▌         | 12/235 [00:02<00:44,  4.97it/s]  6%|▌         | 13/235 [00:02<00:44,  4.95it/s]  6%|▌         | 14/235 [00:02<00:44,  4.94it/s]  6%|▋         | 15/235 [00:02<00:44,  4.93it/s]  7%|▋         | 16/235 [00:03<00:44,  4.93it/s]  7%|▋         | 17/235 [00:03<00:44,  4.93it/s]  8%|▊         | 18/235 [00:03<00:43,  4.94it/s]  8%|▊         | 19/235 [00:03<00:43,  4.95it/s]  9%|▊         | 20/235 [00:03<00:43,  4.96it/s]  9%|▉         | 21/235 [00:04<00:43,  4.97it/s]  9%|▉         | 22/235 [00:04<00:42,  4.98it/s] 10%|▉         | 23/235 [00:04<00:42,  4.98it/s] 10%|█         | 24/235 [00:04<00:42,  4.98it/s] 11%|█         | 25/235 [00:04<00:42,  4.98it/s] 11%|█         | 26/235 [00:05<00:41,  4.98it/s] 11%|█▏        | 27/235 [00:05<00:41,  4.97it/s] 12%|█▏        | 28/235 [00:05<00:41,  4.97it/s] 12%|█▏        | 29/235 [00:05<00:41,  4.97it/s] 13%|█▎        | 30/235 [00:05<00:41,  4.98it/s] 13%|█▎        | 31/235 [00:06<00:40,  4.98it/s] 14%|█▎        | 32/235 [00:06<00:40,  4.98it/s] 14%|█▍        | 33/235 [00:06<00:40,  4.98it/s] 14%|█▍        | 34/235 [00:06<00:40,  4.98it/s] 15%|█▍        | 35/235 [00:06<00:40,  4.98it/s] 15%|█▌        | 36/235 [00:07<00:39,  4.98it/s] 16%|█▌        | 37/235 [00:07<00:39,  4.98it/s] 16%|█▌        | 38/235 [00:07<00:39,  4.99it/s] 17%|█▋        | 39/235 [00:07<00:39,  4.98it/s] 17%|█▋        | 40/235 [00:07<00:39,  4.98it/s] 17%|█▋        | 41/235 [00:08<00:38,  4.98it/s] 18%|█▊        | 42/235 [00:08<00:38,  4.98it/s] 18%|█▊        | 43/235 [00:08<00:38,  4.98it/s] 19%|█▊        | 44/235 [00:08<00:38,  4.99it/s] 19%|█▉        | 45/235 [00:08<00:38,  4.99it/s] 20%|█▉        | 46/235 [00:09<00:37,  4.98it/s] 20%|██        | 47/235 [00:09<00:37,  4.98it/s] 20%|██        | 48/235 [00:09<00:37,  4.98it/s] 21%|██        | 49/235 [00:09<00:37,  4.98it/s] 21%|██▏       | 50/235 [00:09<00:37,  4.98it/s] 22%|██▏       | 51/235 [00:10<00:36,  4.98it/s] 22%|██▏       | 52/235 [00:10<00:36,  4.98it/s] 23%|██▎       | 53/235 [00:10<00:36,  4.98it/s] 23%|██▎       | 54/235 [00:10<00:36,  4.99it/s] 23%|██▎       | 55/235 [00:10<00:36,  4.99it/s] 24%|██▍       | 56/235 [00:11<00:35,  4.99it/s] 24%|██▍       | 57/235 [00:11<00:35,  4.99it/s] 25%|██▍       | 58/235 [00:11<00:35,  4.99it/s] 25%|██▌       | 59/235 [00:11<00:35,  4.99it/s] 26%|██▌       | 60/235 [00:11<00:35,  4.98it/s] 26%|██▌       | 61/235 [00:12<00:34,  4.98it/s] 26%|██▋       | 62/235 [00:12<00:34,  4.99it/s] 27%|██▋       | 63/235 [00:12<00:34,  4.99it/s] 27%|██▋       | 64/235 [00:12<00:34,  4.99it/s] 28%|██▊       | 65/235 [00:12<00:34,  4.99it/s] 28%|██▊       | 66/235 [00:13<00:33,  4.98it/s] 29%|██▊       | 67/235 [00:13<00:33,  4.99it/s] 29%|██▉       | 68/235 [00:13<00:33,  4.99it/s] 29%|██▉       | 69/235 [00:13<00:33,  4.99it/s] 30%|██▉       | 70/235 [00:13<00:33,  4.99it/s] 30%|███       | 71/235 [00:14<00:32,  4.99it/s] 31%|███       | 72/235 [00:14<00:32,  4.99it/s] 31%|███       | 73/235 [00:14<00:32,  4.99it/s] 31%|███▏      | 74/235 [00:14<00:32,  4.99it/s] 32%|███▏      | 75/235 [00:14<00:32,  4.99it/s] 32%|███▏      | 76/235 [00:15<00:31,  4.99it/s] 33%|███▎      | 77/235 [00:15<00:31,  4.99it/s] 33%|███▎      | 78/235 [00:15<00:31,  4.99it/s] 34%|███▎      | 79/235 [00:15<00:31,  4.99it/s] 34%|███▍      | 80/235 [00:15<00:31,  4.99it/s] 34%|███▍      | 81/235 [00:16<00:30,  4.99it/s] 35%|███▍      | 82/235 [00:16<00:30,  4.99it/s] 35%|███▌      | 83/235 [00:16<00:30,  4.99it/s] 36%|███▌      | 84/235 [00:16<00:30,  4.99it/s] 36%|███▌      | 85/235 [00:16<00:30,  4.99it/s] 37%|███▋      | 86/235 [00:17<00:29,  4.99it/s] 37%|███▋      | 87/235 [00:17<00:29,  4.98it/s] 37%|███▋      | 88/235 [00:17<00:29,  4.98it/s] 38%|███▊      | 89/235 [00:17<00:29,  4.98it/s] 38%|███▊      | 90/235 [00:17<00:29,  4.98it/s] 39%|███▊      | 91/235 [00:18<00:28,  4.99it/s] 39%|███▉      | 92/235 [00:18<00:28,  4.99it/s] 40%|███▉      | 93/235 [00:18<00:28,  4.99it/s] 40%|████      | 94/235 [00:18<00:28,  4.99it/s] 40%|████      | 95/235 [00:18<00:28,  4.99it/s] 41%|████      | 96/235 [00:19<00:27,  4.99it/s] 41%|████▏     | 97/235 [00:19<00:27,  4.98it/s] 42%|████▏     | 98/235 [00:19<00:27,  4.99it/s] 42%|████▏     | 99/235 [00:19<00:27,  4.99it/s] 43%|████▎     | 100/235 [00:19<00:27,  4.99it/s] 43%|████▎     | 101/235 [00:20<00:26,  4.99it/s] 43%|████▎     | 102/235 [00:20<00:26,  4.99it/s] 44%|████▍     | 103/235 [00:20<00:26,  4.99it/s] 44%|████▍     | 104/235 [00:20<00:26,  4.99it/s] 45%|████▍     | 105/235 [00:20<00:26,  4.99it/s] 45%|████▌     | 106/235 [00:21<00:25,  4.99it/s] 46%|████▌     | 107/235 [00:21<00:25,  4.99it/s] 46%|████▌     | 108/235 [00:21<00:25,  4.99it/s] 46%|████▋     | 109/235 [00:21<00:25,  4.99it/s] 47%|████▋     | 110/235 [00:21<00:25,  4.99it/s] 47%|████▋     | 111/235 [00:22<00:24,  4.99it/s] 48%|████▊     | 112/235 [00:22<00:24,  4.99it/s] 48%|████▊     | 113/235 [00:22<00:24,  4.99it/s] 49%|████▊     | 114/235 [00:22<00:24,  4.99it/s] 49%|████▉     | 115/235 [00:22<00:24,  4.99it/s] 49%|████▉     | 116/235 [00:23<00:23,  4.99it/s] 50%|████▉     | 117/235 [00:23<00:23,  4.99it/s] 50%|█████     | 118/235 [00:23<00:23,  4.99it/s] 51%|█████     | 119/235 [00:23<00:23,  4.99it/s] 51%|█████     | 120/235 [00:23<00:23,  4.99it/s] 51%|█████▏    | 121/235 [00:24<00:22,  4.99it/s] 52%|█████▏    | 122/235 [00:24<00:22,  4.99it/s] 52%|█████▏    | 123/235 [00:24<00:22,  4.99it/s] 53%|█████▎    | 124/235 [00:24<00:22,  4.99it/s] 53%|█████▎    | 125/235 [00:24<00:22,  4.99it/s] 54%|█████▎    | 126/235 [00:25<00:21,  4.99it/s] 54%|█████▍    | 127/235 [00:25<00:21,  4.99it/s] 54%|█████▍    | 128/235 [00:25<00:21,  4.99it/s] 55%|█████▍    | 129/235 [00:25<00:21,  4.99it/s] 55%|█████▌    | 130/235 [00:25<00:21,  4.99it/s] 56%|█████▌    | 131/235 [00:26<00:20,  4.99it/s] 56%|█████▌    | 132/235 [00:26<00:20,  4.99it/s] 57%|█████▋    | 133/235 [00:26<00:20,  4.99it/s] 57%|█████▋    | 134/235 [00:26<00:20,  4.99it/s] 57%|█████▋    | 135/235 [00:26<00:20,  4.99it/s] 58%|█████▊    | 136/235 [00:27<00:19,  4.99it/s] 58%|█████▊    | 137/235 [00:27<00:19,  4.99it/s] 59%|█████▊    | 138/235 [00:27<00:19,  4.99it/s] 59%|█████▉    | 139/235 [00:27<00:19,  4.99it/s] 60%|█████▉    | 140/235 [00:27<00:19,  4.99it/s] 60%|██████    | 141/235 [00:28<00:18,  4.98it/s] 60%|██████    | 142/235 [00:28<00:18,  4.98it/s] 61%|██████    | 143/235 [00:28<00:18,  4.99it/s] 61%|██████▏   | 144/235 [00:28<00:18,  4.99it/s] 62%|██████▏   | 145/235 [00:28<00:18,  4.99it/s] 62%|██████▏   | 146/235 [00:29<00:17,  4.99it/s] 63%|██████▎   | 147/235 [00:29<00:17,  4.99it/s] 63%|██████▎   | 148/235 [00:29<00:17,  4.99it/s] 63%|██████▎   | 149/235 [00:29<00:17,  4.99it/s] 64%|██████▍   | 150/235 [00:29<00:17,  4.99it/s] 64%|██████▍   | 151/235 [00:30<00:16,  4.99it/s] 65%|██████▍   | 152/235 [00:30<00:16,  4.99it/s] 65%|██████▌   | 153/235 [00:30<00:16,  4.99it/s] 66%|██████▌   | 154/235 [00:30<00:16,  4.99it/s] 66%|██████▌   | 155/235 [00:30<00:16,  4.98it/s] 66%|██████▋   | 156/235 [00:31<00:15,  4.99it/s] 67%|██████▋   | 157/235 [00:31<00:15,  4.99it/s] 67%|██████▋   | 158/235 [00:31<00:15,  4.99it/s] 68%|██████▊   | 159/235 [00:31<00:15,  4.99it/s] 68%|██████▊   | 160/235 [00:31<00:15,  4.99it/s] 69%|██████▊   | 161/235 [00:32<00:14,  4.99it/s] 69%|██████▉   | 162/235 [00:32<00:14,  4.99it/s] 69%|██████▉   | 163/235 [00:32<00:14,  4.99it/s] 70%|██████▉   | 164/235 [00:32<00:14,  4.99it/s] 70%|███████   | 165/235 [00:32<00:14,  4.99it/s] 71%|███████   | 166/235 [00:33<00:13,  4.99it/s] 71%|███████   | 167/235 [00:33<00:13,  4.99it/s] 71%|███████▏  | 168/235 [00:33<00:13,  4.99it/s] 72%|███████▏  | 169/235 [00:33<00:13,  4.99it/s] 72%|███████▏  | 170/235 [00:33<00:13,  4.99it/s] 73%|███████▎  | 171/235 [00:34<00:12,  4.99it/s] 73%|███████▎  | 172/235 [00:34<00:12,  4.99it/s] 74%|███████▎  | 173/235 [00:34<00:12,  4.99it/s] 74%|███████▍  | 174/235 [00:34<00:12,  4.99it/s] 74%|███████▍  | 175/235 [00:34<00:12,  4.99it/s] 75%|███████▍  | 176/235 [00:35<00:11,  4.99it/s] 75%|███████▌  | 177/235 [00:35<00:11,  4.99it/s] 76%|███████▌  | 178/235 [00:35<00:11,  4.99it/s] 76%|███████▌  | 179/235 [00:35<00:11,  4.99it/s] 77%|███████▋  | 180/235 [00:35<00:11,  4.99it/s] 77%|███████▋  | 181/235 [00:36<00:10,  4.99it/s] 77%|███████▋  | 182/235 [00:36<00:10,  4.99it/s] 78%|███████▊  | 183/235 [00:36<00:10,  4.99it/s] 78%|███████▊  | 184/235 [00:36<00:10,  4.99it/s] 79%|███████▊  | 185/235 [00:36<00:10,  4.99it/s] 79%|███████▉  | 186/235 [00:37<00:09,  4.99it/s] 80%|███████▉  | 187/235 [00:37<00:09,  4.99it/s] 80%|████████  | 188/235 [00:37<00:09,  4.99it/s] 80%|████████  | 189/235 [00:37<00:09,  4.99it/s] 81%|████████  | 190/235 [00:37<00:09,  4.99it/s] 81%|████████▏ | 191/235 [00:38<00:08,  4.99it/s] 82%|████████▏ | 192/235 [00:38<00:08,  4.99it/s] 82%|████████▏ | 193/235 [00:38<00:08,  4.98it/s] 83%|████████▎ | 194/235 [00:38<00:08,  4.97it/s] 83%|████████▎ | 195/235 [00:38<00:08,  4.97it/s] 83%|████████▎ | 196/235 [00:39<00:07,  4.97it/s] 84%|████████▍ | 197/235 [00:39<00:07,  4.98it/s] 84%|████████▍ | 198/235 [00:39<00:07,  4.98it/s] 85%|████████▍ | 199/235 [00:39<00:07,  4.98it/s] 85%|████████▌ | 200/235 [00:39<00:07,  4.98it/s] 86%|████████▌ | 201/235 [00:40<00:06,  4.99it/s] 86%|████████▌ | 202/235 [00:40<00:06,  4.99it/s] 86%|████████▋ | 203/235 [00:40<00:06,  4.99it/s] 87%|████████▋ | 204/235 [00:40<00:06,  4.99it/s] 87%|████████▋ | 205/235 [00:40<00:06,  4.99it/s] 88%|████████▊ | 206/235 [00:41<00:05,  4.99it/s] 88%|████████▊ | 207/235 [00:41<00:05,  4.99it/s] 89%|████████▊ | 208/235 [00:41<00:05,  4.99it/s] 89%|████████▉ | 209/235 [00:41<00:05,  4.99it/s] 89%|████████▉ | 210/235 [00:41<00:05,  4.99it/s] 90%|████████▉ | 211/235 [00:42<00:04,  4.99it/s] 90%|█████████ | 212/235 [00:42<00:04,  4.99it/s] 91%|█████████ | 213/235 [00:42<00:04,  4.99it/s] 91%|█████████ | 214/235 [00:42<00:04,  4.99it/s] 91%|█████████▏| 215/235 [00:42<00:04,  4.99it/s] 92%|█████████▏| 216/235 [00:43<00:03,  4.99it/s] 92%|█████████▏| 217/235 [00:43<00:03,  4.99it/s] 93%|█████████▎| 218/235 [00:43<00:03,  4.99it/s] 93%|█████████▎| 219/235 [00:43<00:03,  4.99it/s] 94%|█████████▎| 220/235 [00:43<00:03,  4.99it/s] 94%|█████████▍| 221/235 [00:44<00:02,  4.99it/s] 94%|█████████▍| 222/235 [00:44<00:02,  4.99it/s] 95%|█████████▍| 223/235 [0Evaluation results at step 1:
   eval_loss: 4.1244
-  eval_runtime: 19.1335
-  eval_samples_per_second: 196.5140
-  eval_steps_per_second: 6.1670
+  eval_runtime: 47.2863
+  eval_samples_per_second: 79.5160
+  eval_steps_per_second: 4.9700
   epoch: 1.0000
-Loss: 4.124404430389404
-Perplexity: 61.83097363348005
-6/118 [00:16<00:01,  6.31it/s] 91%|█████████ | 107/118 [00:16<00:01,  6.29it/s] 92%|█████████▏| 108/118 [00:16<00:01,  6.30it/s] 92%|█████████▏| 109/118 [00:17<00:01,  6.30it/s] 93%|█████████▎| 110/118 [00:17<00:01,  6.32it/s] 94%|█████████▍| 111/118 [00:17<00:01,  6.34it/s] 95%|█████████▍| 112/118 [00:17<00:00,  6.35it/s] 96%|█████████▌| 113/118 [00:17<00:00,  6.34it/s] 97%|█████████▋| 114/118 [00:17<00:00,  6.35it/s] 97%|█████████▋| 115/118 [00:18<00:00,  6.35it/s] 98%|█████████▊| 116/118 [00:18<00:00,  6.35it/s] 99%|█████████▉| 117/118 [00:18<00:00,  6.36it/s]100%|██████████| 118/118 [00:18<00:00,  5.44it/s]100%|██████████| 118/118 [00:18<00:00,  6.34it/s]
+Loss: 4.12440824508667
+Perplexity: 61.831209500375984
+0:44<00:02,  4.99it/s] 95%|█████████▌| 224/235 [00:44<00:02,  4.99it/s] 96%|█████████▌| 225/235 [00:44<00:02,  4.99it/s] 96%|█████████▌| 226/235 [00:45<00:01,  4.99it/s] 97%|█████████▋| 227/235 [00:45<00:01,  4.99it/s] 97%|█████████▋| 228/235 [00:45<00:01,  4.99it/s] 97%|█████████▋| 229/235 [00:45<00:01,  5.00it/s] 98%|█████████▊| 230/235 [00:45<00:01,  5.00it/s] 98%|█████████▊| 231/235 [00:46<00:00,  5.00it/s] 99%|█████████▊| 232/235 [00:46<00:00,  5.00it/s] 99%|█████████▉| 233/235 [00:46<00:00,  5.00it/s]100%|█████████▉| 234/235 [00:46<00:00,  5.00it/s]100%|██████████| 235/235 [00:46<00:00,  4.77it/s]100%|██████████| 235/235 [00:46<00:00,  5.00it/s]
 Evaluation results at step 1:
   eval_loss: 4.1244
-  eval_runtime: 18.9805
-  eval_samples_per_second: 198.0980
-  eval_steps_per_second: 6.2170
+  eval_runtime: 47.2865
+  eval_samples_per_second: 79.5150
+  eval_steps_per_second: 4.9700
   epoch: 1.0000
-Loss: 4.124404430389404
-Perplexity: Evaluation results at step 1:
-  eval_loss: 4.124461.83097363348005
+Loss: 4.12440824508667
+Perplexity: 61.831209500375984
+Token indices sequence length is longer than the specified maximum sequence length for this model (287644 > 1024). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (287644 > 1024). Running this sequence through the model will result in indexing errors
+  0%|          | 0/281 [00:00<?, ?it/s]  0%|          | 0/281 [00:00<?, ?it/s]  1%|          | 3/281 [00:00<00:09, 29.02it/s]  1%|          | 3/281 [00:00<00:09, 28.70it/s]  2%|▏         | 6/281 [00:00<00:09, 29.35it/s]  2%|▏         | 6/281 [00:00<00:09, 29.08it/s]  3%|▎         | 9/281 [00:00<00:09, 29.47it/s]  3%|▎         | 9/281 [00:00<00:09, 29.22it/s]  4%|▍         | 12/281 [00:00<00:09, 29.52it/s]  4%|▍         | 12/281 [00:00<00:09, 29.28it/s]  5%|▌         | 15/281 [00:00<00:09, 29.55it/s]  5%|▌         | 15/281 [00:00<00:09, 29.32it/s]  6%|▋         | 18/281 [00:00<00:08, 29.58it/s]  6%|▋         | 18/281 [00:00<00:08, 29.36it/s]  7%|▋         | 21/281 [00:00<00:08, 29.59it/s]  7%|▋         | 21/281 [00:00<00:08, 29.38it/s]  9%|▊         | 24/281 [00:00<00:08, 29.60it/s]  9%|▊         | 24/281 [00:00<00:08, 29.38it/s] 10%|▉         | 27/281 [00:00<00:08, 29.61it/s] 10%|▉         | 27/281 [00:00<00:08, 29.39it/s] 11%|█         | 30/281 [00:01<00:08, 29.61it/s] 11%|█         | 30/281 [00:01<00:08, 29.39it/s] 12%|█▏        | 33/281 [00:01<00:08, 29.61it/s] 12%|█▏        | 33/281 [00:01<00:08, 29.40it/s] 13%|█▎        | 36/281 [00:01<00:08, 29.61it/s] 13%|█▎        | 36/281 [00:01<00:08, 29.40it/s] 14%|█▍        | 39/281 [00:01<00:08, 29.30it/s] 14%|█▍        | 39/281 [00:01<00:08, 29.40it/s] 15%|█▍        | 42/281 [00:01<00:08, 29.40it/s] 15%|█▍        | 42/281 [00:01<00:08, 29.40it/s] 16%|█▌        | 45/281 [00:01<00:08, 29.46it/s] 16%|█▌        | 45/281 [00:01<00:08, 29.40it/s] 17%|█▋        | 48/281 [00:01<00:07, 29.52it/s] 17%|█▋        | 48/281 [00:01<00:07, 29.40it/s] 18%|█▊        | 51/281 [00:01<00:07, 29.56it/s] 18%|█▊        | 51/281 [00:01<00:07, 29.42it/s] 19%|█▉        | 54/281 [00:01<00:07, 29.58it/s] 19%|█▉        | 54/281 [00:01<00:07, 29.41it/s] 20%|██        | 57/281 [00:01<00:07, 29.59it/s] 20%|██        | 57/281 [00:01<00:07, 29.41it/s] 21%|██▏       | 60/281 [00:02<00:07, 29.61it/s] 21%|██▏       | 60/281 [00:02<00:07, 29.41it/s] 22%|██▏       | 63/281 [00:02<00:07, 29.61it/s] 22%|██▏       | 63/281 [00:02<00:07, 29.41it/s] 23%|██▎       | 66/281 [00:02<00:07, 29.61it/s] 23%|██▎       | 66/281 [00:02<00:07, 29.41it/s] 25%|██▍       | 69/281 [00:02<00:07, 29.61it/s] 25%|██▍       | 69/281 [00:02<00:07, 29.41it/s] 26%|██▌       | 72/281 [00:02<00:07, 29.61it/s] 26%|██▌       | 72/281 [00:02<00:07, 29.41it/s] 27%|██▋       | 75/281 [00:02<00:06, 29.62it/s] 27%|██▋       | 75/281 [00:02<00:07, 29.42it/s] 28%|██▊       | 78/281 [00:02<00:06, 29.63it/s] 28%|██▊       | 78/281 [00:02<00:06, 29.42it/s] 29%|██▉       | 81/281 [00:02<00:06, 29.62it/s] 29%|██▉       | 81/281 [00:02<00:06, 29.42it/s] 30%|██▉       | 84/281 [00:02<00:06, 29.62it/s] 30%|██▉       | 84/281 [00:02<00:06, 29.41it/s] 31%|███       | 87/281 [00:02<00:06, 29.61it/s] 31%|███       | 87/281 [00:02<00:06, 29.41it/s] 32%|███▏      | 90/281 [00:03<00:06, 29.62it/s] 32%|███▏      | 90/281 [00:03<00:06, 29.41it/s] 33%|███▎      | 93/281 [00:03<00:06, 29.62it/s] 33%|███▎      | 93/281 [00:03<00:06, 29.40it/s] 34%|███▍      | 96/281 [00:03<00:06, 29.64it/s] 34%|███▍      | 96/281 [00:03<00:06, 29.39it/s] 35%|███▌      | 99/281 [00:03<00:06, 29.60it/s] 35%|███▌      | 99/281 [00:03<00:06, 29.35it/s] 36%|███▋      | 102/281 [00:03<00:06, 29.59it/s] 36%|███▋      | 102/281 [00:03<00:06, 29.36it/s] 37%|███▋      | 105/281 [00:03<00:05, 29.61it/s] 37%|███▋      | 105/281 [00:03<00:05, 29.38it/s] 38%|███▊      | 108/281 [00:03<00:05, 29.62it/s] 38%|███▊      | 108/281 [00:03<00:05, 29.39it/s] 40%|███▉      | 111/281 [00:03<00:05, 29.59it/s] 40%|███▉      | 111/281 [00:03<00:05, 29.36it/s] 41%|████      | 114/281 [00:03<00:05, 29.59it/s] 41%|████      | 114/281 [00:03<00:05, 29.38it/s] 42%|████▏     | 117/281 [00:03<00:05, 29.60it/s] 42%|████▏     | 117/281 [00:03<00:05, 29.39it/s] 43%|████▎     | 120/281 [00:04<00:05, 29.47it/s] 43%|████▎     | 120/281 [00:04<00:05, 29.39it/s] 44%|████▍     | 123/281 [00:04<00:05, 29.50it/s] 44%|████▍     | 123/281 [00:04<00:05, 29.39it/s] 45%|████▍     | 126/281 [00:04<00:05, 29.53it/s] 45%|████▍     | 126/281 [00:04<00:05, 29.40it/s] 46%|████▌     | 129/281 [00:04<00:05, 29.56it/s] 46%|████▌     | 129/281 [00:04<00:05, 29.39it/s] 47%|████▋     | 132/281 [00:04<00:05, 29.57it/s] 47%|████▋     | 132/281 [00:04<00:05, 29.40it/s] 48%|████▊     | 135/281 [00:04<00:04, 29.59it/s] 48%|████▊     | 135/281 [00:04<00:04, 29.41it/s] 49%|████▉     | 138/281 [00:04<00:04, 29.60it/s] 49%|████▉     | 138/281 [00:04<00:04, 29.41it/s] 50%|█████     | 141/281 [00:04<00:04, 29.61it/s] 50%|█████     | 141/281 [00:04<00:04, 29.41it/s] 51%|█████     | 144/281 [00:04<00:04, 29.61it/s] 51%|█████     | 144/281 [00:04<00:04, 29.41it/s] 52%|█████▏    | 147/281 [00:04<00:04, 29.61it/s] 52%|█████▏    | 147/281 [00:05<00:04, 29.41it/s] 53%|█████▎    | 150/281 [00:05<00:04, 29.62it/s] 53%|█████▎    | 150/281 [00:05<00:04, 29.41it/s] 54%|█████▍    | 153/281 [00:05<00:04, 29.62it/s] 54%|█████▍    | 153/281 [00:05<00:04, 29.40it/s] 56%|█████▌    | 156/281 [00:05<00:04, 29.62it/s] 56%|█████▌    | 156/281 [00:05<00:04, 29.40it/s] 57%|█████▋    | 159/281 [00:05<00:04, 29.59it/s] 57%|█████▋    | 159/281 [00:05<00:04, 29.40it/s] 58%|█████▊    | 162/281 [00:05<00:04, 29.61it/s] 58%|█████▊    | 162/281 [00:05<00:04, 29.40it/s] 59%|█████▊    | 165/281 [00:05<00:03, 29.62it/s] 59%|█████▊    | 165/281 [00:05<00:03, 29.41it/s] 60%|█████▉    | 168/281 [00:05<00:03, 29.63it/s] 60%|█████▉    | 168/281 [00:05<00:03, 29.41it/s] 61%|██████    | 171/281 [00:05<00:03, 29.64it/s] 61%|██████    | 171/281 [00:05<00:03, 29.40it/s] 62%|██████▏   | 174/281 [00:05<00:03, 29.61it/s] 62%|██████▏   | 174/281 [00:05<00:03, 29.41it/s] 63%|██████▎   | 177/281 [00:05<00:03, 29.60it/s] 63%|██████▎   | 177/281 [00:06<00:03, 29.40it/s] 64%|██████▍   | 180/281 [00:06<00:03, 29.61it/s] 64%|██████▍   | 180/281 [00:06<00:03, 29.40it/s] 65%|██████▌   | 183/281 [00:06<00:03, 29.61it/s] 65%|██████▌   | 183/281 [00:06<00:03, 29.40it/s] 66%|██████▌   | 186/281 [00:06<00:03, 29.61it/s] 66%|██████▌   | 186/281 [00:06<00:03, 29.39it/s] 67%|██████▋   | 189/281 [00:06<00:03, 29.62it/s] 67%|██████▋   | 189/281 [00:06<00:03, 29.40it/s] 68%|██████▊   | 192/281 [00:06<00:03, 29.62it/s] 68%|██████▊   | 192/281 [00:06<00:03, 29.40it/s] 69%|██████▉   | 195/281 [00:06<00:02, 29.62it/s] 69%|██████▉   | 195/281 [00:06<00:02, 29.40it/s] 70%|███████   | 198/281 [00:06<00:02, 29.62it/s] 70%|███████   | 198/281 [00:06<00:02, 29.41it/s] 72%|███████▏  | 201/281 [00:06<00:02, 29.61it/s] 72%|███████▏  | 201/281 [00:06<00:02, 29.40it/s] 73%|███████▎  | 204/281 [00:06<00:02, 29.60it/s] 73%|███████▎  | 204/281 [00:06<00:02, 29.40it/s] 74%|███████▎  | 207/281 [00:06<00:02, 29.61it/s] 74%|███████▎  | 207/281 [00:07<00:02, 29.39it/s] 75%|███████▍  | 210/281 [00:07<00:02, 29.61it/s] 75%|███████▍  | 210/281 [00:07<00:02, 29.38it/s] 76%|███████▌  | 213/281 [00:07<00:02, 29.61it/s] 76%|███████▌  | 213/281 [00:07<00:02, 29.39it/s] 77%|███████▋  | 216/281 [00:07<00:02, 29.61it/s] 77%|███████▋  | 216/281 [00:07<00:02, 29.35it/s] 78%|███████▊  | 219/281 [00:07<00:02, 29.35it/s] 78%|███████▊  | 219/281 [00:07<00:02, 29.34it/s] 79%|███████▉  | 222/281 [00:07<00:02, 29.41it/s] 79%|███████▉  | 222/281 [00:07<00:02, 29.37it/s] 80%|████████  | 225/281 [00:07<00:01, 29.47it/s] 80%|████████  | 225/281 [00:07<00:01, 29.40it/s] 81%|████████  | 228/281 [00:07<00:01, 29.52it/s] 81%|████████  | 228/281 [00:07<00:01, 29.25it/s] 82%|████████▏ | 231/281 [00:07<00:01, 29.55it/s] 82%|████████▏ | 231/281 [00:07<00:01, 29.30it/s] 83%|████████▎ | 234/281 [00:07<00:01, 29.54it/s] 83%|████████▎ | 234/281 [00:07<00:01, 29.32it/s] 84%|████████▍ | 237/281 [00:08<00:01, 29.57it/s] 84%|████████▍ | 237/281 [00:08<00:01, 29.34it/s] 85%|████████▌ | 240/281 [00:08<00:01, 29.58it/s] 85%|████████▌ | 240/281 [00:08<00:01, 29.35it/s] 86%|████████▋ | 243/281 [00:08<00:01, 29.58it/s] 86%|████████▋ | 243/281 [00:08<00:01, 29.36it/s] 88%|████████▊ | 246/281 [00:08<00:01, 29.58it/s] 88%|████████▊ | 246/281 [00:08<00:01, 29.37it/s] 89%|████████▊ | 249/281 [00:08<00:01, 29.59it/s] 89%|████████▊ | 249/281 [00:08<00:01, 29.38it/s] 90%|████████▉ | 252/281 [00:08<00:00, 29.60it/s] 90%|████████▉ | 252/281 [00:08<00:00, 29.39it/s] 91%|█████████ | 255/281 [00:08<00:00, 29.60it/s] 91%|█████████ | 255/281 [00:08<00:00, 29.39it/s] 92%|█████████▏| 258/281 [00:08<00:00, 29.62it/s] 92%|█████████▏| 258/281 [00:08<00:00, 29.40it/s] 93%|█████████▎| 261/281 [00:08<00:00, 29.61it/s] 93%|█████████▎| 261/281 [00:08<00:00, 29.40it/s] 94%|█████████▍| 264/281 [00:08<00:00, 29.62it/s] 94%|█████████▍| 264/281 [00:08<00:00, 29.41it/s] 95%|█████████▌| 267/281 [00:09<00:00, 29.62it/s] 95%|█████████▌| 267/281 [00:09<00:00, 29.41it/s] 96%|█████████▌| 270/281 [00:09<00:00, 29.60it/s] 97%|█████████▋| 273/281 [00:09<00:00, 29.61it/s] 96%|█████████▌| 270/281 [00:09<00:00, 29.39it/s] 98%|█████████▊| 276/281 [00:09<00:00, 29.61it/s] 97%|█████████▋| 273/281 [00:09<00:00, 29.40it/s] 99%|█████████▉| 279/281 [00:09<00:00, 29.60it/s] 98%|█████████▊| 276/281 [00:09<00:00, 29.39it/s]100%|█████████▉| 280/281 [00:09<00:00, 29.44it/s]
+ 99%|█████████▉| 279/281 [00:09<00:00, 29.36it/s]100%|█████████▉| 280/281 [00:09<00:00, 29.27it/s]
+Perplexity (single string version):  Perplexity (single string version):  tensor(44.4227, device='cuda:1')
+tensor(44.4227, device='cuda:0')
+Evaluation results:
+ {'eval_loss': 4.12440824508667, 'eval_runtime': 47.2865, 'eval_samples_per_second': 79.515, 'eval_steps_per_second': 4.97, 'epoch': 1.0}
+Evaluation results:
+ {'eval_loss': 4.12440824508667, 'eval_runtime': 47.2863, 'eval_samples_per_second': 79.516, 'eval_steps_per_second': 4.97, 'epoch': 1.0}
+Perplexity: Perplexity: tensor(61.8312)tensor(61.8312)
 
-  eval_runtime: 19.1424
-  eval_samples_per_second: 196.4230
-  eval_steps_per_second: 6.1640
-  epoch: 1.0000
-Evaluation results at step 1:
-  eval_loss: 4.1244
-  eval_runtime: 18.9423Loss:
-   eval_samples_per_second: 198.4970
-4.124404430389404  eval_steps_per_second: 6.2290
-
-Perplexity:   epoch: 1.0000
-61.83097363348005Loss:
- 4.124404430389404
-Perplexity: 61.83097363348005
-Evaluation results:
- {'eval_loss': 4.124404430389404, 'eval_runtime': 19.1335, 'eval_samples_per_second': 196.514, 'eval_steps_per_second': 6.167, 'epoch': 1.0}
-Evaluation results:
-Evaluation results:
-Evaluation results:
-   {'eval_loss': 4.124404430389404, 'eval_runtime': 18.9805, 'eval_samples_per_second': 198.098, 'eval_steps_per_second': 6.217, 'epoch': 1.0}{'eval_loss': 4.124404430389404, 'eval_runtime': 19.1424, 'eval_samples_per_second': 196.423, 'eval_steps_per_second': 6.164, 'epoch': 1.0}
-{'eval_loss': 4.124404430389404, 'eval_runtime': 18.9423, 'eval_samples_per_second': 198.497, 'eval_steps_per_second': 6.229, 'epoch': 1.0}
-
-Perplexity:Perplexity:  Perplexity:Perplexity:  tensor(61.8310)
-Duration:  1.0393157680829366 m
-tensor(61.8310)
-Duration:  1.0393111785252889 m
-tensor(61.8310)
-Duration:  1.0393161296844482 m
-tensor(61.8310)
-Duration:  1.0393137653668723 m
-cn4072:1444446:1444610 [1] NCCL INFO [Service thread] Connection closed by localRank 2
-cn4072:1444447:1444608 [2] NCCL INFO [Service thread] Connection closed by localRank 2
-cn4072:1444448:1444609 [3] NCCL INFO [Service thread] Connection closed by localRank 2
-cn4072:1444445:1444611 [0] NCCL INFO [Service thread] Connection closed by localRank 3
-cn4072:1444448:1444609 [3] NCCL INFO [Service thread] Connection closed by localRank 3
-cn4072:1444447:1444608 [2] NCCL INFO [Service thread] Connection closed by localRank 3
-cn4072:1444445:1444611 [0] NCCL INFO [Service thread] Connection closed by localRank 1
-cn4072:1444447:1444608 [2] NCCL INFO [Service thread] Connection closed by localRank 1
-cn4072:1444446:1444610 [1] NCCL INFO [Service thread] Connection closed by localRank 1
-cn4072:1444447:1444447 [2] NCCL INFO comm 0x17d2ec00 rank 2 nranks 4 cudaDev 2 busId 81000 - Abort COMPLETE
-cn4072:1444445:1444611 [0] NCCL INFO [Service thread] Connection closed by localRank 0
-cn4072:1444448:1444609 [3] NCCL INFO [Service thread] Connection closed by localRank 0
-cn4072:1444446:1444610 [1] NCCL INFO [Service thread] Connection closed by localRank 0
-cn4072:1444448:1444448 [3] NCCL INFO comm 0x16cacb00 rank 3 nranks 4 cudaDev 3 busId c1000 - Abort COMPLETE
-cn4072:1444446:1444446 [1] NCCL INFO comm 0x16251600 rank 1 nranks 4 cudaDev 1 busId 25000 - Abort COMPLETE
-cn4072:1444445:1444445 [0] NCCL INFO comm 0xa99c200 rank 0 nranks 4 cudaDev 0 busId 1000 - Abort COMPLETE
+Duration:  1.6023505409558614 m
+Duration:  1.6023512164751688 m
+cn656:2807568:2807653 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+cn656:2807567:2807654 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+cn656:2807568:2807568 [1] NCCL INFO comm 0x15c32340 rank 1 nranks 2 cudaDev 1 busId d8000 - Abort COMPLETE
+cn656:2807567:2807567 [0] NCCL INFO comm 0x176014c0 rank 0 nranks 2 cudaDev 0 busId 86000 - Abort COMPLETE

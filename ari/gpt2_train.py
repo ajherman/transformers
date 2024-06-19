@@ -150,8 +150,9 @@ try:
 
     # Use this to periodically trigger events during training
     class CustomCallback(TrainerCallback):
-        def __init__(self, trainer):
+        def __init__(self, trainer,tokenizer):
             self.trainer = trainer
+            self.tokenizer = tokenizer
 
         def on_epoch_end(self, args, state, control, **kwargs):
             # Perform custom evaluation at the end of each epoch
@@ -174,10 +175,10 @@ try:
             print("Perplexity:", perplexity)
 
             #### Directly compute from model ####
-            model = kwargs['model']
-            tokenizer = kwargs['tokenizer']
-            device = kwargs['device']
-
+            model = self.trainer.model
+            tokenizer = self.tokenizer
+            device = model.device
+            
             model.eval()
 
             test = load_dataset("wikitext", "wikitext-2-raw-v1", split="test")
@@ -258,7 +259,7 @@ try:
         eval_dataset=eval_dataset,
     )
 
-    trainer.add_callback(CustomCallback(trainer))
+    trainer.add_callback(CustomCallback(trainer,tokenizer))
 
     # Train model
     if True: #not args.no_train:
