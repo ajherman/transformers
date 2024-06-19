@@ -20,7 +20,7 @@ test = test.shuffle()
 encodings = tokenizer("\n\n".join(test["text"]), return_tensors="pt")
 
 max_length = model.config.n_positions
-stride = model.config.n_positions  #  512
+stride = model.config.n_positions 
 seq_len = encodings.input_ids.size(1)
 
 nlls = []
