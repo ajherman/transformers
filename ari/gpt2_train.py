@@ -238,6 +238,7 @@ try:
 
     # Save model
     model.save_pretrained(args.output_dir)
+    print("Model saved")
 
     # Evaluate model
     eval_results = trainer.evaluate()
