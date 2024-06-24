@@ -208,7 +208,7 @@ try:
         
             with open(args.output_dir+'/metrics.csv', 'a', newline='') as file:
                 writer = csv.writer(file)
-                writer.writerow([state.epoch, ppl])
+                writer.writerow([state.epoch, ppl.item()])
 
         def on_log(self, args, state, control, **kwargs):
             pass
