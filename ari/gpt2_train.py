@@ -58,8 +58,8 @@ import logging
 tic,toc = 0.0,time.time()
 
 try:
+    local_rank = int(os.environ["LOCAL_RANK"])
     dist.init_process_group(backend='nccl')
-
 
     # Read in config file
     if args.config_file is not None:
@@ -166,6 +166,7 @@ try:
             # print("Perplexity:", perplexity)
 
             #### Directly compute from model ####
+            
             model = self.trainer.model
             tokenizer = self.tokenizer
             device = model.device
@@ -200,7 +201,8 @@ try:
                     break
 
             ppl = torch.exp(torch.stack(nlls).mean())
-            print("Perplexity (single string version): ",ppl)
+            if local_rank==0:
+                print("Perplexity (single string version): ",ppl)
 
             model.train()
 

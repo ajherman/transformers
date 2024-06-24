@@ -24,7 +24,7 @@ source activate /vast/home/ajherman/miniconda3/envs/transformer
 
 #srun -o relu.out --ntasks=1 -N 1 torchrun --nproc_per_node 4 gpt2_train.py --output_dir relu --num_train_epochs 2 --config_file relu.json --per_device_train_batch_size 13 --mixed_precision --save_steps 200 --logging_steps 50 --eval_steps 50 --gradient_accumulation_steps 10 --max_steps 200000 &
 
-srun -o fast.out --ntasks=1 -N 1 torchrun --nproc_per_node 4 gpt2_train.py --output_dir fast --num_train_epochs 2 --config_file medium.json --per_device_train_batch_size 13 --mixed_precision --save_steps 200 --logging_steps 50 --eval_steps 50 --gradient_accumulation_steps 10 --max_step 200000 --learning_rate 3e-3 &
+srun -o fast.out --ntasks=1 -N 1 torchrun --nproc_per_node 4 gpt2_train.py --output_dir fast --num_train_epochs 2 --config_file medium.json --per_device_train_batch_size 13 --mixed_precision --save_steps 200 --logging_steps 50 --eval_steps 50 --gradient_accumulation_steps 10 --max_step 200000 --learning_rate 1e-2 --load_from_checkpoint &
 
 # srun -o pretrained.out --ntasks=1 -N 1 torchrun --nproc_per_node 2 gpt2_train.py --output_dir pretrained --num_train_epochs 2 --config_file medium.json --per_device_train_batch_size 13 --mixed_precision --logging_steps 50 --eval_steps 50 --max_step 1 --no_train --learning_rate 0.0 &
 
