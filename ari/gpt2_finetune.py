@@ -3,7 +3,7 @@ from torch.optim import Adam
 import torch.distributed as dist
 import traceback
 
-Ensure CUDA is available
+#Ensure CUDA is available
 if not torch.cuda.is_available():
     raise EnvironmentError("CUDA is not available. Mixed precision training requires CUDA-enabled GPUs.")
 
@@ -83,7 +83,7 @@ try:
     #logging.getLogger("datasets").setLevel(logging.DEBUG)
 
     dataset_name = "monology/pile-uncopyrighted"
-    train_dataset = load_dataset(dataset_name, split='train', streaming=True, block_size=655360)
+    train_dataset = load_dataset(dataset_name, split='train', streaming=True) #, block_size=655360)
     eval_dataset = load_dataset('wikitext', 'wikitext-2-raw-v1', split='validation')
 
     print("Finished loading datasets")
