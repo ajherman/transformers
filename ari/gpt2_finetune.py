@@ -216,14 +216,16 @@ try:
     trainer.add_callback(CustomCallback(trainer,tokenizer))    
     
     # Evaluate model before fine-tuning
+    print("Before fine-tuning")
     eval_results = trainer.evaluate()
-    print("Evaluation results:\n", eval_results)
+    # print("Evaluation results:\n", eval_results)
 
-    # Perplexity
-    perplexity = torch.exp(torch.tensor(eval_results['eval_loss']))
-    print("Perplexity:", perplexity)
+    # # Perplexity
+    # perplexity = torch.exp(torch.tensor(eval_results['eval_loss']))
+    # print("Perplexity:", perplexity)
 
     # Fine-tune model
+    print("...Fine-tuning model...")
     trainer.train(resume_from_checkpoint=args.load_from_checkpoint) # More precise version would be to pass args.checkpoint_dir explicitly
 
     # Save model
@@ -231,12 +233,13 @@ try:
     print("Model saved")
 
     # Evaluate model
+    print("After fine-tuning")
     eval_results = trainer.evaluate()
-    print("Evaluation results:\n", eval_results)
+    # print("Evaluation results:\n", eval_results)
 
-    # Perplexity
-    perplexity = torch.exp(torch.tensor(eval_results['eval_loss']))
-    print("Perplexity:", perplexity)
+    # # Perplexity
+    # perplexity = torch.exp(torch.tensor(eval_results['eval_loss']))
+    # print("Perplexity:", perplexity)
 
     toc = time.time()
     print("Duration: ",(toc-tic)/60,"m")
