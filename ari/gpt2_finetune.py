@@ -3,9 +3,9 @@ from torch.optim import Adam
 import torch.distributed as dist
 import traceback
 
-# Ensure CUDA is available
-# if not torch.cuda.is_available():
-#     raise EnvironmentError("CUDA is not available. Mixed precision training requires CUDA-enabled GPUs.")
+Ensure CUDA is available
+if not torch.cuda.is_available():
+    raise EnvironmentError("CUDA is not available. Mixed precision training requires CUDA-enabled GPUs.")
 
 import sys
 import argparse
@@ -20,12 +20,11 @@ os.environ["HF_DATASETS_OFFLINE"] = "0"
 # Parse command line arguments
 parser = argparse.ArgumentParser(description='GPT-2 Training')
 parser.add_argument('--output_dir', type=str, default='./gpt2-wikitext', help='Output directory')
-parser.add_argument('--num_train_epochs', type=int, default=20, help='Number of training epochs')
 parser.add_argument('--per_device_train_batch_size', type=int, default=8, help='Batch size for training')
 parser.add_argument('--save_steps', type=int, default=10000, help='Number of updates steps before checkpoint saves')
 parser.add_argument('--save_total_limit', type=int, default=2, help='Limit the total amount of checkpoints and deletes the older checkpoints')
 parser.add_argument('--use_local_transformers', action='store_true', help='Use local transformers repository')
-parser.add_argument('--config_file', type=str, default=None, help='Config file')
+# parser.add_argument('--config_file', type=str, default=None, help='Config file')
 parser.add_argument('--checkpoint_dir', type=str, default=None, help='Checkpoint directory')
 parser.add_argument('--context_length', type=int, default=256, help='Context length')
 parser.add_argument('--load_from_checkpoint', action='store_true', help='Load from checkpoint')
@@ -35,7 +34,6 @@ parser.add_argument('--gradient_accumulation_steps', type=int, default=16, help=
 parser.add_argument('--logging_steps', type=int, default=2500, help='Number of steps between logs')
 parser.add_argument('--eval_steps', type=int, default=1000, help='Number of steps before evaluation')
 parser.add_argument('--max_steps', type=int, default=100000, help='Maximum number of steps')
-parser.add_argument('--no_train', action='store_true', help='Use pretrained model for evaluation')
 parser.add_argument('--learning_rate', type=float, default=2.5e-4, help='Learning rate')
 args = parser.parse_args()
 
@@ -60,12 +58,11 @@ from transformers.activations import ACT2FN
 tic,toc = 0.0,time.time()
 
 try:
-    # local_rank = int(os.environ["LOCAL_RANK"])
-    # dist.init_process_group(backend='nccl')
+    local_rank = int(os.environ["LOCAL_RANK"])
+    dist.init_process_group(backend='nccl')
 
     # Read in config file
-
-    config = GPT2Config.from_pretrained('gpt2')
+    # config = GPT2Config.from_pretrained('gpt2')
     tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
     tokenizer.pad_token = tokenizer.eos_token # Add pad token
 
@@ -76,9 +73,7 @@ try:
     for block in model.transformer.h:
         block.mlp.act = ACT2FN['relu']
 
-
-
-    print("Config:\n", model.config)
+    # print("Config:\n", model.config)
 
     # Print number of model parameters
     num_params = sum(p.numel() for p in model.parameters())
@@ -86,7 +81,6 @@ try:
 
     # Load the dataset
     #logging.getLogger("datasets").setLevel(logging.DEBUG)
-
 
     dataset_name = "monology/pile-uncopyrighted"
     train_dataset = load_dataset(dataset_name, split='train', streaming=True, block_size=655360)
@@ -112,7 +106,6 @@ try:
     training_args = TrainingArguments(
         output_dir=args.output_dir, # output directory
         overwrite_output_dir=True, # overwrite the content of the output directory
-        # num_train_epochs=args.num_train_epochs, # number of training epochs
         per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
         save_steps=args.save_steps, # number of updates steps before checkpoint saves
         logging_steps= args.logging_steps, # Number of steps between logs
