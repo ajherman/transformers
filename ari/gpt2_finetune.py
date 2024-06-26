@@ -112,7 +112,7 @@ try:
     training_args = TrainingArguments(
         output_dir=args.output_dir, # output directory
         overwrite_output_dir=True, # overwrite the content of the output directory
-        num_train_epochs=args.num_train_epochs, # number of training epochs
+        # num_train_epochs=args.num_train_epochs, # number of training epochs
         per_device_train_batch_size=args.per_device_train_batch_size, # batch size for training
         save_steps=args.save_steps, # number of updates steps before checkpoint saves
         logging_steps= args.logging_steps, # Number of steps between logs
