@@ -34,4 +34,4 @@ source activate /vast/home/ajherman/miniconda3/envs/transformer
 
 #srun -o tiny_test.out --ntasks=1 -N 1 torchrun --nproc_per_node 2 gpt2_train.py --output_dir /tmp/test-clm --num_train_epochs 100 --config_file config.json --per_device_train_batch_size 12 --mixed_precision --save_steps 2000 &
 
-srun -o finetune.out --ntasks=1 -N 1 torchrun --nproc_per_node 4 gpt2_finetune.py --output_dir finetune --per_device_train_batch_size 13 --mixed_precision --save_steps 200 --logging_steps 50 --eval_steps 50 --gradient_accumulation_steps 10 --max_step 200000 --learning_rate 1e-3 --load_from_checkpoint &
+srun -o finetune.out --ntasks=1 -N 1 torchrun --nproc_per_node 4 gpt2_finetune.py --output_dir finetune --per_device_train_batch_size 13 --mixed_precision --save_steps 200 --logging_steps 50 --eval_steps 50 --gradient_accumulation_steps 10 --max_step 200000 --learning_rate 1e-3 &
